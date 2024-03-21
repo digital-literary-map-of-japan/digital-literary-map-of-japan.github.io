@@ -22,6 +22,7 @@
     "vue-tsc": "^1.8.25"
   },
   "dependencies": {
+    "@vercel/edge": "^1.1.1",
     "vue-gtag": "^2.0.1",
     "vuetify": "^3.5.11"
   }
