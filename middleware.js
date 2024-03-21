@@ -1,6 +1,9 @@
 import { next } from "@vercel/edge";
 
 export default function middleware(request) {
+  return next();
+
+  /*
   const authorizationHeader = request.headers.get("authorization");
 
   if (authorizationHeader) {
@@ -18,4 +21,5 @@ export default function middleware(request) {
       "WWW-Authenticate": 'Basic realm="Secure Area"',
     },
   });
+  */
 }
