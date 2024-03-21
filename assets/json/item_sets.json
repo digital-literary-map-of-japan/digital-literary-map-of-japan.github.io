@@ -1,0 +1,1537 @@
+{
+  "data": [
+    {
+      "id": "ono",
+      "attributes": {
+        "dcterms:title": [
+          "小野秀雄関係資料"
+        ],
+        "public": [
+          "1"
+        ],
+        "level": [
+          "1"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_res",
+      "attributes": {
+        "dcterms:title": [
+          "小野秀雄研究資料"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "ono"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col",
+      "attributes": {
+        "dcterms:title": [
+          "小野秀雄コレクション"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "ono"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k",
+      "attributes": {
+        "dcterms:title": [
+          "小野秀雄コレクションかわら版"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col"
+        ],
+        "level": [
+          "3"
+        ],
+        "default_close": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_a",
+      "attributes": {
+        "dcterms:title": [
+          "火事"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_b",
+      "attributes": {
+        "dcterms:title": [
+          "地震"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_c",
+      "attributes": {
+        "dcterms:title": [
+          "風雷水害"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_d",
+      "attributes": {
+        "dcterms:title": [
+          "噴火"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_e",
+      "attributes": {
+        "dcterms:title": [
+          "政争"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_f",
+      "attributes": {
+        "dcterms:title": [
+          "将軍関係"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_g",
+      "attributes": {
+        "dcterms:title": [
+          "朝廷関係"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_h",
+      "attributes": {
+        "dcterms:title": [
+          "対外関係"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_i",
+      "attributes": {
+        "dcterms:title": [
+          "歌舞伎番付"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_j",
+      "attributes": {
+        "dcterms:title": [
+          "武鑑"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_k",
+      "attributes": {
+        "dcterms:title": [
+          "敵討"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_l",
+      "attributes": {
+        "dcterms:title": [
+          "珍事奇談"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_m",
+      "attributes": {
+        "dcterms:title": [
+          "世相風刺"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_n",
+      "attributes": {
+        "dcterms:title": [
+          "神仏祈願"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_o",
+      "attributes": {
+        "dcterms:title": [
+          "引札"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_p",
+      "attributes": {
+        "dcterms:title": [
+          "祭礼"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_q",
+      "attributes": {
+        "dcterms:title": [
+          "番付"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_r",
+      "attributes": {
+        "dcterms:title": [
+          "養生"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_s",
+      "attributes": {
+        "dcterms:title": [
+          "施行付"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_t",
+      "attributes": {
+        "dcterms:title": [
+          "見世物"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_k_u",
+      "attributes": {
+        "dcterms:title": [
+          "その他"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_k"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn",
+      "attributes": {
+        "dcterms:title": [
+          "小野秀雄コレクション新聞錦絵"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col"
+        ],
+        "level": [
+          "3"
+        ],
+        "default_close": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_a",
+      "attributes": {
+        "dcterms:title": [
+          "大阪新聞錦画"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_b",
+      "attributes": {
+        "dcterms:title": [
+          "大阪錦絵新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_c",
+      "attributes": {
+        "dcterms:title": [
+          "大阪錦絵新話"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_d1",
+      "attributes": {
+        "dcterms:title": [
+          "大阪錦画日々新聞紙"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_d2",
+      "attributes": {
+        "dcterms:title": [
+          "大阪日々新聞紙"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_e",
+      "attributes": {
+        "dcterms:title": [
+          "各種新聞図解"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_f",
+      "attributes": {
+        "dcterms:title": [
+          "鹿子島新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_g1",
+      "attributes": {
+        "dcterms:title": [
+          "かなよみ"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_g2",
+      "attributes": {
+        "dcterms:title": [
+          "かなよみ新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_h",
+      "attributes": {
+        "dcterms:title": [
+          "歌舞伎新報"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_i",
+      "attributes": {
+        "dcterms:title": [
+          "官許勧善懲悪錦画新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_j",
+      "attributes": {
+        "dcterms:title": [
+          "官許錦画百事新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_k",
+      "attributes": {
+        "dcterms:title": [
+          "勧善懲悪読切講釈"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_l",
+      "attributes": {
+        "dcterms:title": [
+          "近世人物誌"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_m",
+      "attributes": {
+        "dcterms:title": [
+          "諸国日々新聞集"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_n",
+      "attributes": {
+        "dcterms:title": [
+          "新聞図会"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_o",
+      "attributes": {
+        "dcterms:title": [
+          "新聞図解"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_p",
+      "attributes": {
+        "dcterms:title": [
+          "大日本国絵入新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_q",
+      "attributes": {
+        "dcterms:title": [
+          "朝野新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_r",
+      "attributes": {
+        "dcterms:title": [
+          "東京絵入新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_s",
+      "attributes": {
+        "dcterms:title": [
+          "東京各社撰抜新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_t",
+      "attributes": {
+        "dcterms:title": [
+          "東京日々新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_u",
+      "attributes": {
+        "dcterms:title": [
+          "日々新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_v",
+      "attributes": {
+        "dcterms:title": [
+          "貼込帖"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_w",
+      "attributes": {
+        "dcterms:title": [
+          "報知新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_x",
+      "attributes": {
+        "dcterms:title": [
+          "明治八年大阪錦画新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_y",
+      "attributes": {
+        "dcterms:title": [
+          "郵便報知新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_sn_z",
+      "attributes": {
+        "dcterms:title": [
+          "郵便報知錦画"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_sn"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_n",
+      "attributes": {
+        "dcterms:title": [
+          "小野秀雄コレクション錦絵"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col"
+        ],
+        "level": [
+          "3"
+        ],
+        "default_close": [
+          "1"
+        ]
+      }
+    },
+    {
+      "id": "o_col_n_a",
+      "attributes": {
+        "dcterms:title": [
+          "鯰絵"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_n"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_n_b",
+      "attributes": {
+        "dcterms:title": [
+          "役者絵"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_n"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "o_col_n_c",
+      "attributes": {
+        "dcterms:title": [
+          "その他"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "o_col_n"
+        ],
+        "level": [
+          "4"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "lib_print",
+      "attributes": {
+        "dcterms:title": [
+          "図書室所蔵摺物"
+        ],
+        "public": [
+          "1"
+        ],
+        "level": [
+          "1"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "warposters",
+      "attributes": {
+        "dcterms:title": [
+          "戦時ポスター"
+        ],
+        "public": [
+          "1"
+        ],
+        "level": [
+          "1"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "ww1",
+      "attributes": {
+        "dcterms:title": [
+          "第一次世界大戦プロパガンダポスター"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "warposters"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "lib_ww2",
+      "attributes": {
+        "dcterms:title": [
+          "日中戦争・太平洋戦争　ポスターコレクション"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "warposters"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "tsuboi",
+      "attributes": {
+        "dcterms:title": [
+          "坪井家関係資料"
+        ],
+        "public": [
+          "1"
+        ],
+        "level": [
+          "1"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "t_syo",
+      "attributes": {
+        "dcterms:title": [
+          "坪井正五郎関係資料"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "tsuboi"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "t_shin",
+      "attributes": {
+        "dcterms:title": [
+          "坪井信道・信良関係資料"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "tsuboi"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "newspaper",
+      "attributes": {
+        "dcterms:title": [
+          "社会情報研究資料センター所蔵 新聞原紙資料"
+        ],
+        "public": [
+          "1"
+        ],
+        "level": [
+          "1"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "cj",
+      "attributes": {
+        "dcterms:title": [
+          "長春実業新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "newspaper"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "sn",
+      "attributes": {
+        "dcterms:title": [
+          "新聞之日本"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "newspaper"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "koushin",
+      "attributes": {
+        "dcterms:title": [
+          "新聞興信所報"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "newspaper"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "nikkan_koushin",
+      "attributes": {
+        "dcterms:title": [
+          "日刊新聞興信所報"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "newspaper"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "nks",
+      "attributes": {
+        "dcterms:title": [
+          "日本毛織物新報"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "newspaper"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "nis",
+      "attributes": {
+        "dcterms:title": [
+          "日本糸物新報"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "newspaper"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "mky",
+      "attributes": {
+        "dcterms:title": [
+          "蒙疆新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "newspaper"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "mk",
+      "attributes": {
+        "dcterms:title": [
+          "蒙古新聞"
+        ],
+        "public": [
+          "1"
+        ],
+        "parent": [
+          "newspaper"
+        ],
+        "level": [
+          "2"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "oi",
+      "attributes": {
+        "dcterms:title": [
+          "大井第一小学校寄贈資料"
+        ],
+        "public": [
+          "1"
+        ],
+        "level": [
+          "1"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "mori",
+      "attributes": {
+        "dcterms:title": [
+          "森恭三コレクション"
+        ],
+        "public": [
+          "1"
+        ],
+        "level": [
+          "1"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "cc_by",
+      "attributes": {
+        "dcterms:title": [
+          "CC BY相当"
+        ],
+        "public": [
+          "1"
+        ],
+        "level": [
+          "-1"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "ng",
+      "attributes": {
+        "dcterms:title": [
+          "要申請"
+        ],
+        "public": [
+          "1"
+        ],
+        "level": [
+          "-1"
+        ],
+        "default_close": [
+          "0"
+        ]
+      }
+    }
+  ]
+}
