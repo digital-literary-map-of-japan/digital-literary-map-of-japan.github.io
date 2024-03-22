@@ -149,7 +149,7 @@ const customFilter: any = (
         <nuxt-link
           :to="
             localePath({
-              name: 'resources-documents-id',
+              name: 'resources-id',
               params: { id: item.field_id },
             })
           "
