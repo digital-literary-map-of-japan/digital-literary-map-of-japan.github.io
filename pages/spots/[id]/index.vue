@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiArrowLeftBold, mdiPencil } from "@mdi/js";
+import { mdiArrowLeftBold } from "@mdi/js";
 
 const route = useRoute();
 
@@ -7,7 +7,7 @@ const id = route.params.id as string;
 
 const url = "https://drupal.aws.ldas.jp/dlm/";
 
-const endpoint = `${url}jsonapi/node/documents`;
+const endpoint = `${url}jsonapi/node/spots`;
 
 const params: { [key: string]: string } = {
   "filter[field_id]": id,
@@ -23,20 +23,20 @@ const attributes = item?.attributes;
 
 const did = attributes?.drupal_internal__nid;
 
-const title = `"${attributes?.title} / ${attributes?.field_document_name_romaji}"の情報`;
+const title = `"${attributes?.title} / ${attributes?.field_spot_name_romaji}"の情報`;
 
 const fields = [
   {
-    title: "題名",
+    title: "地名（漢字）",
     value: "title",
   },
   {
-    title: "題名（ふりがな）",
-    value: "field_document_name_furigana",
+    title: "地名（ふりがな）",
+    value: "field_spot_name_furigana",
   },
   {
-    title: "題名（ローマ字）",
-    value: "field_document_name_romaji",
+    title: "地名（ローマ字）",
+    value: "field_spot_name_romaji",
   },
   {
     title: "刊・完成・編纂（年）",
@@ -88,53 +88,51 @@ const bh = [
   {
     title: t("documents"),
     disabled: false,
-    to: localePath({ name: "resources-documents" }),
+    to: localePath({ name: "resources" }),
   },
   {
     title: title,
     disabled: false,
   },
 ];
+
+const layout_ = ref("poems");
 </script>
 <template>
-  <LayoutsCommon :title="title" :items="bh">
-    <template v-for="field in fields">
-      <v-row dense v-if="attributes?.[field.value]">
-        <v-col :md="3" cols="12">
-          <b>{{ field.title }}：</b>
-        </v-col>
-        <v-col :md="9" cols="12">
-          <template v-if="field.value === 'field_link'">
-            <a :href="attributes?.[field.value].uri" target="_blank">{{
-              attributes?.[field.value].uri
-            }}</a>
-          </template>
-          <template v-else>
-            {{ attributes?.[field.value] }}
-          </template>
-        </v-col>
-      </v-row>
+  <LayoutsCommon :title="title" :items="bh" fluid>
+    <template v-if="layout_ === 'poems'">
+      <PagesSpotsPoems :uuid="item.id"></PagesSpotsPoems>
+    </template>
+
+    <template v-else>
+      <template v-for="field in fields">
+        <v-row dense v-if="attributes?.[field.value]">
+          <v-col :md="3" cols="12">
+            <b>{{ field.title }}：</b>
+          </v-col>
+          <v-col :md="9" cols="12">
+            <template v-if="field.value === 'field_link'">
+              <a :href="attributes?.[field.value].uri" target="_blank">{{
+                attributes?.[field.value].uri
+              }}</a>
+            </template>
+            <template v-else>
+              {{ attributes?.[field.value] }}
+            </template>
+          </v-col>
+        </v-row>
+      </template>
     </template>
 
     <v-row class="my-4">
       <v-col>
-        <v-btn
-          variant="outlined"
-          :to="localePath({ name: 'resources-documents' })"
-        >
+        <v-btn variant="outlined" :to="localePath({ name: 'resources' })">
           <v-icon>{{ mdiArrowLeftBold }}</v-icon>
           戻る
         </v-btn>
       </v-col>
-      <v-col class="text-right">
-        <v-btn
-          variant="outlined"
-          :href="`${url}node/${did}/edit`"
-          target="_blank"
-        >
-          <v-icon>{{ mdiPencil }}</v-icon>
-          編集
-        </v-btn>
+      <v-col>
+        <CommonBlockEdit :id="did" />
       </v-col>
     </v-row>
   </LayoutsCommon>

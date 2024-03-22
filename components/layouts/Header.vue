@@ -23,7 +23,7 @@ const menuList = [
   {
     text: "Resources",
     to: {
-      name: "resources-documents",
+      name: "resources",
     },
   },
   {
