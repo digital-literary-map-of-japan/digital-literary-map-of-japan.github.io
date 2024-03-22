@@ -51,7 +51,7 @@ const attributes = computed(() => {
           <CommonBtnAdd
             class="mb-4"
             label="翻訳を追加"
-            type="poems"
+            type="poems_translations"
           ></CommonBtnAdd>
 
           <template v-for="item in data.data">

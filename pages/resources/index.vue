@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiMagnify, mdiPencil, mdiPlus } from "@mdi/js";
+import { mdiMagnify, mdiPencil, mdiPlus, mdiCheck } from "@mdi/js";
 
 const fields: { [key: string]: string } = {
   "fields[node--documents]": [
@@ -55,21 +55,34 @@ const headers = [
 ];
 
 const desserts = computed(() => {
-  return data.value?.data.map((item: any) => {
-    return {
-      title: item.attributes.title,
-      field_document_name_romaji: item.attributes.field_document_name_romaji,
-      field_author_name_kanji: item.attributes.field_author_name_kanji,
-      field_id: item.attributes.field_id,
-      drupal_internal__nid: item.attributes.drupal_internal__nid,
-      field_genre: item.attributes.field_genre,
-      field_author_name_romaji: item.attributes.field_author_name_romaji,
-      changed: item.attributes.changed,
-      field_author_name_furigana: item.attributes.field_author_name_furigana,
-      field_document_name_furigana:
-        item.attributes.field_document_name_furigana,
-    };
-  });
+  return data.value?.data
+    .map((item: any) => {
+      const genre = item.attributes.field_genre;
+
+      const fixedGenre = genre.split("（")[0];
+
+      if (
+        selectedValues.value.length > 0 &&
+        !selectedValues.value.includes(fixedGenre)
+      ) {
+        return null;
+      }
+
+      return {
+        title: item.attributes.title,
+        field_document_name_romaji: item.attributes.field_document_name_romaji,
+        field_author_name_kanji: item.attributes.field_author_name_kanji,
+        field_id: item.attributes.field_id,
+        drupal_internal__nid: item.attributes.drupal_internal__nid,
+        field_genre: item.attributes.field_genre,
+        field_author_name_romaji: item.attributes.field_author_name_romaji,
+        changed: item.attributes.changed,
+        field_author_name_furigana: item.attributes.field_author_name_furigana,
+        field_document_name_furigana:
+          item.attributes.field_document_name_furigana,
+      };
+    })
+    .filter((item: any) => item != null);
 });
 
 const localePath = useLocalePath();
@@ -109,33 +122,65 @@ const customFilter: any = (
       .indexOf(query.toLowerCase().split(" ").join("")) !== -1
   );
 };
+
+const selectedValues = ref<string[]>([]);
+
+const update = (item: string) => {
+  if (selectedValues.value.includes(item)) {
+    selectedValues.value.splice(selectedValues.value.indexOf(item), 1);
+  } else {
+    selectedValues.value.push(item);
+  }
+};
 </script>
 <template>
   <LayoutsCommon :title="title" :items="bh" fluid>
-    <v-row dense class="mb-10">
-      <v-col>
-        <v-text-field
-          v-model="search"
-          label="Search"
-          :prepend-inner-icon="mdiMagnify"
-          variant="outlined"
-          hide-details
-          single-line
-          density="compact"
-        ></v-text-field>
-      </v-col>
-      <v-col class="text-right">
+    <div class="mb-10">
+      <v-row dense class="mb-4">
+        <v-col cols="12" md="4">
+          <v-text-field
+            v-model="search"
+            label="Search"
+            :prepend-inner-icon="mdiMagnify"
+            variant="outlined"
+            hide-details
+            single-line
+            density="compact"
+          ></v-text-field>
+        </v-col>
+        <v-col class="text-right">
+          <v-btn
+            color="primary"
+            variant="outlined"
+            :href="`${url}node/add/documents`"
+            target="_blank"
+          >
+            <v-icon>{{ mdiPlus }}</v-icon>
+            作品を追加
+          </v-btn>
+        </v-col>
+      </v-row>
+
+      <div>
+        <b>ジャンル：</b>
+
         <v-btn
-          color="primary"
-          variant="outlined"
-          :href="`${url}node/add/documents`"
-          target="_blank"
+          class="ma-1"
+          v-for="item in ['勅撰和歌集', '物語', '謡曲']"
+          :variant="selectedValues.includes(item) ? 'flat' : 'outlined'"
+          @click="update(item)"
+          :color="selectedValues.includes(item) ? 'primary' : 'default'"
         >
-          <v-icon>{{ mdiPlus }}</v-icon>
-          作品を追加
+          {{ item }}
+
+          <template v-if="selectedValues.includes(item)">
+            <v-icon class="ml-2">
+              {{ mdiCheck }}
+            </v-icon>
+          </template>
         </v-btn>
-      </v-col>
-    </v-row>
+      </div>
+    </div>
 
     <v-data-table
       density="compact"
