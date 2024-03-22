@@ -1,22 +1,23 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { mdiChevronUp } from '@mdi/js'
+import { ref } from "vue";
+import { mdiChevronUp } from "@mdi/js";
 
-const model = ref(false)
+const model = ref(false);
 
-function onScroll () {
-  model.value = window.scrollY > 200
+function onScroll() {
+  model.value = window.scrollY > 200;
 }
 
-function onClick () {
+function onClick() {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth',
-  })
+    behavior: "smooth",
+  });
 }
 </script>
 
 <template>
+  <client-only>
     <v-layout-item
       v-scroll="onScroll"
       class="text-end pointer-events-none"
@@ -37,16 +38,15 @@ function onClick () {
         </v-fab-transition>
       </div>
     </v-layout-item>
-  </template>
-  
- 
-  
-  <style scoped>
-    .pointer-events-none {
-      pointer-events: none;
-    }
-  
-    .pointer-events-initial {
-      pointer-events: initial;
-    }
-  </style>
+  </client-only>
+</template>
+
+<style scoped>
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-initial {
+  pointer-events: initial;
+}
+</style>

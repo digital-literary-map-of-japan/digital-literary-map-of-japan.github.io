@@ -134,5 +134,11 @@ export default {
     "no": "No",
     "画像": "Image",
     "冊次": "冊次",
-    "著録内容": "著録内容"
+    "著録内容": "著録内容",
+    "documents": "Documents",
+    "Resources": "Resources",
+    "Literary Places": "Literary Places",
+    "Home": "Home",
+    "Contact": "Contact",
+    "Digital Literary Map of Japan": "Digital Literary Map of Japan",
 }

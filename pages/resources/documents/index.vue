@@ -2,15 +2,27 @@
 import { mdiMagnify, mdiPencil, mdiPlus } from "@mdi/js";
 
 const fields: { [key: string]: string } = {
-  "fields[node--documents]":
-    "title,field_document_name_romaji,field_author_name_kanji,field_id,drupal_internal__nid,field_genre,field_author_name_romaji,changed",
+  "fields[node--documents]": [
+    "title",
+    "field_document_name_romaji",
+    "field_document_name_furigana",
+    "field_author_name_kanji",
+    "field_id",
+    "drupal_internal__nid",
+    "field_genre",
+    "field_author_name_romaji",
+    "field_author_name_furigana",
+    "changed",
+  ].join(","),
 };
 
 const url = "https://drupal.aws.ldas.jp/dlm/";
 
 const endpoint = `${url}jsonapi/node/documents`;
 
-const params: { [key: string]: string } = {};
+const params: { [key: string]: string } = {
+  "page[limit]": "100",
+};
 
 for (const key in fields) {
   params[key] = fields[key];
@@ -26,11 +38,19 @@ const search = ref("");
 
 const headers = [
   { title: "タイトル", value: "title", sortable: true },
-  { title: "題名（ローマ字）", value: "field_document_name_romaji" },
-  { title: "著者", value: "field_author_name_kanji" },
-  { title: "著者（ローマ字）", value: "field_author_name_romaji" },
-  { title: "ジャンル", value: "field_genre" },
-  { title: "更新日", value: "changed" },
+  {
+    title: "題名（ローマ字）",
+    value: "field_document_name_romaji",
+    sortable: true,
+  },
+  { title: "著者", value: "field_author_name_kanji", sortable: true },
+  {
+    title: "著者（ローマ字）",
+    value: "field_author_name_romaji",
+    sortable: true,
+  },
+  { title: "ジャンル", value: "field_genre", sortable: true },
+  { title: "更新日", value: "changed", sortable: true },
   { title: "アクション", value: "field_id" },
 ];
 
@@ -45,6 +65,9 @@ const desserts = computed(() => {
       field_genre: item.attributes.field_genre,
       field_author_name_romaji: item.attributes.field_author_name_romaji,
       changed: item.attributes.changed,
+      field_author_name_furigana: item.attributes.field_author_name_furigana,
+      field_document_name_furigana:
+        item.attributes.field_document_name_furigana,
     };
   });
 });
@@ -64,9 +87,31 @@ const bh = [
     disabled: false,
   },
 ];
+
+const customFilter: any = (
+  value: string,
+  query: string,
+  item: { raw: any }
+) => {
+  return (
+    value != null &&
+    query != null &&
+    typeof value === "string" &&
+    [
+      value.toString(),
+      item.raw.field_document_name_furigana,
+      item.raw.field_author_name_furigana,
+    ]
+      .join(",")
+      .toLowerCase()
+      .split(" ")
+      .join("")
+      .indexOf(query.toLowerCase().split(" ").join("")) !== -1
+  );
+};
 </script>
 <template>
-  <LayoutsCommon :title="title" :items="bh">
+  <LayoutsCommon :title="title" :items="bh" fluid>
     <v-row dense class="mb-10">
       <v-col>
         <v-text-field
@@ -98,6 +143,7 @@ const bh = [
       :headers="headers"
       :items="desserts"
       :search="search"
+      :custom-filter="customFilter"
     >
       <template v-slot:item.title="{ item }: any">
         <nuxt-link

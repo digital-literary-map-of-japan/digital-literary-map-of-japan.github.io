@@ -1,7 +1,14 @@
 <script setup lang="ts">
+import type { JsonApiItem, JsonApiObject } from "~/types/jsonapi";
+
 const localePath = useLocalePath();
 
 // const { data } = await useAsyncData("home", () => queryContent("/").findOne());
+
+const url =
+  "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c";
+
+const { data: contact } = await useFetch<JsonApiItem>(url);
 </script>
 <template>
   <div>
@@ -17,21 +24,8 @@ const localePath = useLocalePath();
       </v-card>
       -->
 
-      <div class="text-center">
-        <small>
-          {{
-            $t("Title image")
-          }}:『改正日本輿地路程全図』（長久保赤水：江戸後期）<img
-            draggable="false"
-            src="https://literarymaps.nijl.ac.jp/assets/public_domain_mark_white.svg.png"
-            width="14px"
-          />
-          {{ $t("Public domain") }}
-        </small>
-      </div>
-
-      <v-alert variant="tonal" dense class="mt-10" type="info">
-        <p>
+      <v-alert variant="tonal" dense type="info">
+        <p class="mb-2">
           <template v-if="$i18n.locale === 'ja'">
             アンケートを実施しています。以下のリンクからアンケートにご協力下さい。
           </template>
@@ -45,9 +39,18 @@ const localePath = useLocalePath();
           >https://forms.gle/1wEiSoheov2ToBFf7</a
         >
       </v-alert>
+
+      <div class="py-10">
+        <h2>{{ $t("歌枕・名所アノテーションツール") }}</h2>
+        <br />
+        <!-- <nuxt-content :document="page" /> -->
+        <PagesHomeAbout />
+
+        <PagesHomeLegend class="my-10" />
+      </div>
     </v-container>
 
-    <div class="py-10 bg-sub text-center">
+    <div class="py-10 bg-sub">
       <!--
       <v-container class="pa-10">
         <p class="mb-5">
@@ -66,14 +69,16 @@ const localePath = useLocalePath();
         <h2>{{ "文学地図" }}</h2>
         <br />
         <!-- <nuxt-content :document="page" /> -->
+        <CommonMap></CommonMap>
       </v-container>
     </div>
 
-    <v-sheet class="py-10 text-center">
+    <v-sheet class="py-10">
       <v-container class="py-10">
         <h2>{{ $t("Coordination and contact") }}</h2>
         <br />
         <!-- <nuxt-content :document="page" /> -->
+        <PagesContactBlock :item="contact" />
       </v-container>
     </v-sheet>
   </div>

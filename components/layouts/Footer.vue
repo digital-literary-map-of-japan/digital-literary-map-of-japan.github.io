@@ -1,12 +1,7 @@
-<script setup lang="ts">
-import type { Menu } from "~/types";
-
-const appConfig = useAppConfig();
-const map: Menu[] = appConfig.menus2;
-</script>
+<script setup lang="ts"></script>
 <template>
-  <v-footer color="#2b3e50" dark>
-    <v-col class="text-center" cols="12">
+  <footer>
+    <v-sheet color="#2b3e50" dark class="text-center py-4">
       <!--  py-10 -->
       <small
         >Copyright ©2015-{{ new Date().getFullYear() }} Judit Árokay – Page by
@@ -18,6 +13,6 @@ const map: Menu[] = appConfig.menus2;
         >Logos and favicon made with
         <a href="https://www.designevo.com/">DesignEvo</a></small
       >
-    </v-col>
-  </v-footer>
+    </v-sheet>
+  </footer>
 </template>

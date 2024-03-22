@@ -40,6 +40,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/i18n",
     "nuxt-jsonld",
+    "nuxt3-leaflet",
     // "@kgierke/nuxt-basic-auth"
   ],
   /*

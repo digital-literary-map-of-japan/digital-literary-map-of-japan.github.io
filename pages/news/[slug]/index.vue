@@ -7,6 +7,8 @@ const res = await fetch(url);
 const json = await res.json();
 const item = json.data.attributes;
 
+const did = item.drupal_internal__nid;
+
 const localePath = useLocalePath();
 const { t } = useI18n();
 
@@ -27,7 +29,7 @@ const bh = [
   },
 ];
 
-const isoDateString = item.created
+const isoDateString = item.created;
 const date = new Date(isoDateString);
 // ユーザーのローカルタイムゾーンに合わせて日時を表示
 const localDateString = date.toLocaleString().split(" ")[0];
@@ -35,6 +37,9 @@ const localDateString = date.toLocaleString().split(" ")[0];
 <template>
   <LayoutsCommon :title="`${localDateString} ${item.title}`" :items="bh">
     <!-- <ContentRenderer :value="item" /> -->
-    <span v-html="item.body.value"></span>
+
+    <CommonBlockEdit :id="did">
+      <span v-html="item.body.value"></span>
+    </CommonBlockEdit>
   </LayoutsCommon>
 </template>

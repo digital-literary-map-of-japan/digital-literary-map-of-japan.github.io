@@ -21,7 +21,7 @@ withDefaults(defineProps<PropType>(), {
         :items="items"
       ></LayoutsBreadCrumbs>
     </ClientOnly>
-    <v-container class="mt-5 mb-10" fluid>
+    <v-container class="mt-5 mb-10" :fluid="fluid === true">
       <div class="mb-5 text-center">
         <h1 style="color: #990500">{{ title }}</h1>
         <p v-if="sub">{{ sub }}</p>
