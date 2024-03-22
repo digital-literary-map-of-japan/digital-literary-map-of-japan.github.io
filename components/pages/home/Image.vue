@@ -38,7 +38,7 @@ const localePath = useLocalePath();
               style="background-color: #2b3e50"
               class="text-white"
               flat
-              :to="localePath({ name: 'basic' })"
+              :to="localePath({ name: 'spots' })"
               >閲覧する
             </v-btn>
           </p>

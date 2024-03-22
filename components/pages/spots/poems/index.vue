@@ -61,6 +61,10 @@ const selectPoem = (item: ResourceObject) => {
 </script>
 <template>
   <div>
+    <div class="mb-4 text-right">
+      <CommonBtnAdd type="poems"></CommonBtnAdd>
+    </div>
+
     <v-data-table
       density="compact"
       :items-per-page="-1"

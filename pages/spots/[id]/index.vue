@@ -96,33 +96,43 @@ const bh = [
   },
 ];
 
-const layout_ = ref("poems");
+const tab = ref("poems");
+
+const items: string[] = ["basic", "poems"];
 </script>
 <template>
   <LayoutsCommon :title="title" :items="bh" fluid>
-    <template v-if="layout_ === 'poems'">
-      <PagesSpotsPoems :uuid="item.id"></PagesSpotsPoems>
-    </template>
+    <v-tabs v-model="tab" grow color="primary">
+      <v-tab v-for="item in items" :key="item" :value="item">
+        {{ item }}
+      </v-tab>
+    </v-tabs>
 
-    <template v-else>
-      <template v-for="field in fields">
-        <v-row dense v-if="attributes?.[field.value]">
-          <v-col :md="3" cols="12">
-            <b>{{ field.title }}：</b>
-          </v-col>
-          <v-col :md="9" cols="12">
-            <template v-if="field.value === 'field_link'">
-              <a :href="attributes?.[field.value].uri" target="_blank">{{
-                attributes?.[field.value].uri
-              }}</a>
-            </template>
-            <template v-else>
-              {{ attributes?.[field.value] }}
-            </template>
-          </v-col>
-        </v-row>
-      </template>
-    </template>
+    <v-window v-model="tab" class="pa-4">
+      <v-window-item :value="'basic'">
+        <template v-for="field in fields">
+          <v-row dense v-if="attributes?.[field.value]">
+            <v-col :md="3" cols="12">
+              <b>{{ field.title }}：</b>
+            </v-col>
+            <v-col :md="9" cols="12">
+              <template v-if="field.value === 'field_link'">
+                <a :href="attributes?.[field.value].uri" target="_blank">{{
+                  attributes?.[field.value].uri
+                }}</a>
+              </template>
+              <template v-else>
+                {{ attributes?.[field.value] }}
+              </template>
+            </v-col>
+          </v-row>
+        </template>
+      </v-window-item>
+
+      <v-window-item :value="'poems'">
+        <PagesSpotsPoems :uuid="item.id"></PagesSpotsPoems>
+      </v-window-item>
+    </v-window>
 
     <v-row class="my-4">
       <v-col>
