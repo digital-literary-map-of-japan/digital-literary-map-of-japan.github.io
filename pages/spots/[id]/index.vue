@@ -39,36 +39,36 @@ const fields = [
     value: "field_spot_name_romaji",
   },
   {
-    title: "刊・完成・編纂（年）",
-    value: "field_year",
+    title: "旧国名",
+    value: "field_kuni",
   },
   {
-    title: "ジャンル",
-    value: "field_genre",
+    title: "都道府県",
+    value: "field_prefecture",
   },
   {
-    title: "著者",
-    value: "field_author_name_kanji",
+    title: "「緯度経度」",
+    value: "field_geo",
   },
   {
-    title: "著者（ふりがな）",
-    value: "field_author_name_furigana",
+    title: "歌枕",
+    value: "field_utamakura",
   },
   {
-    title: "依拠本文",
-    value: "field_source_text",
+    title: "名所",
+    value: "field_meisho",
   },
   {
-    title: "出版社",
-    value: "field_publisher",
+    title: "歌枕としての意味",
+    value: "field_utamakura_meaning",
   },
   {
-    title: "出版年",
-    value: "field_publication_year",
+    title: "歌枕としての特徴",
+    value: "field_utamakura_features",
   },
   {
-    title: "出版地",
-    value: "field_publication_location",
+    title: "連想（歌枕として何を呼び起こしているか）",
+    value: "field_utamakura_associations",
   },
   {
     title: "URL",
@@ -96,9 +96,18 @@ const bh = [
   },
 ];
 
-const tab = ref("poems");
+// const tab = ref("poems");
+const tab = ref("basic");
 
 const items: string[] = ["basic", "poems"];
+
+const markers = [
+  {
+    lat: attributes?.field_geo?.lat,
+    lng: attributes?.field_geo?.lon,
+    title: attributes?.title,
+  },
+];
 </script>
 <template>
   <LayoutsCommon :title="title" :items="bh" fluid>
@@ -110,6 +119,8 @@ const items: string[] = ["basic", "poems"];
 
     <v-window v-model="tab" class="pa-4">
       <v-window-item :value="'basic'">
+        <CommonMap class="mb-4" :markers="markers"></CommonMap>
+
         <template v-for="field in fields">
           <v-row dense v-if="attributes?.[field.value]">
             <v-col :md="3" cols="12">
@@ -120,6 +131,10 @@ const items: string[] = ["basic", "poems"];
                 <a :href="attributes?.[field.value].uri" target="_blank">{{
                   attributes?.[field.value].uri
                 }}</a>
+              </template>
+              <template v-else-if="field.value === 'field_geo'">
+                <b>緯度：</b> {{ attributes?.[field.value]?.lat }}&nbsp;
+                <b>経度：</b> {{ attributes?.[field.value]?.lon }}
               </template>
               <template v-else>
                 {{ attributes?.[field.value] }}

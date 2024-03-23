@@ -3,7 +3,7 @@ import { mdiPlus } from "@mdi/js";
 // interface
 interface PropType {
   type: string;
-  label: string;
+  label?: string;
 }
 
 const props = withDefaults(defineProps<PropType>(), {

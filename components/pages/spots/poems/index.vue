@@ -92,9 +92,13 @@ const selectPoem = (item: ResourceObject) => {
         </v-card-text>
 
         <v-card-actions>
-          <v-spacer></v-spacer>
-
-          <v-btn text="Close Dialog" @click="dialog = false"></v-btn>
+          <v-btn
+            block
+            text="Close Dialog"
+            color="primary"
+            variant="flat"
+            @click="dialog = false"
+          ></v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
