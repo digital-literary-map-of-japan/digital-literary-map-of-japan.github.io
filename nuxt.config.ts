@@ -155,6 +155,7 @@ export default defineNuxtConfig({
       // routes
     },
   },
+  /*
   hooks: {
     async "nitro:config"(nitroConfig) {
       if (nitroConfig.dev) {
@@ -171,13 +172,14 @@ export default defineNuxtConfig({
           `/spots/${mount.attributes.field_id}`
         );
 
-        /*
+        
         nitroConfig.prerender?.routes?.push(
           `/en/spots/${mount.attributes.field_id}`
         );
-        */
+        
         // return `/spots/${mount.attributes.field_id}`;
       });
     },
   },
+  */
 });
