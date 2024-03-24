@@ -78,7 +78,7 @@ const { data: contact } = await useFetch<JsonApiItem>(url);
         <h2>{{ $t("Coordination and contact") }}</h2>
         <br />
         <!-- <nuxt-content :document="page" /> -->
-        <PagesContactBlock :item="contact" />
+        <PagesContactBlock :attributes="contact?.data.attributes" />
       </v-container>
     </v-sheet>
   </div>

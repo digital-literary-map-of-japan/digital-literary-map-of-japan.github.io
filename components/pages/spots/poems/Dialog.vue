@@ -1,19 +1,21 @@
 <script setup lang="ts">
-import type { ResourceObject } from "~/types/jsonapi";
+import type { ResourceObject, JsonApiItems } from "~/types/jsonapi";
 
 interface PropType {
   item: ResourceObject | null;
+  translations: JsonApiItems;
 }
 
 const props = withDefaults(defineProps<PropType>(), {
   item: null,
+  translations: () => ({} as JsonApiItems),
 });
 
+/*
 const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems_translations?filter[field_poem.id]=${props.item?.id}`;
 
 const { data }: { [data: string]: any } = await useFetch(url);
-
-console.log({ data });
+*/
 
 const fields = [
   {
@@ -96,21 +98,21 @@ const manifest = computed(() => {
             type="poems_translations"
           ></CommonBtnAdd>
 
-          <template v-for="item in data.data">
+          <template v-for="item in translations.data">
             <div>
               <v-row dense>
                 <v-col :md="12" cols="12">
-                  <b>{{ "テクスト" }}：</b>{{ item.attributes.field_text }}
+                  <b>{{ "テクスト" }}：</b>{{ item.attributes?.field_text }}
                 </v-col>
               </v-row>
 
               <v-row dense>
                 <v-col :md="12" cols="12">
-                  <b>{{ "著者・出典" }}：</b>{{ item.attributes.field_source }}
+                  <b>{{ "著者・出典" }}：</b>{{ item.attributes?.field_source }}
                 </v-col>
               </v-row>
 
-              <CommonBlockEdit :id="item.attributes.drupal_internal__nid">
+              <CommonBlockEdit :id="item.attributes?.drupal_internal__nid">
               </CommonBlockEdit>
             </div>
           </template>

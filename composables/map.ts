@@ -5,8 +5,47 @@ export const useMap = () => {
 
   const results = useState<JsonApiItems | null>("results", () => null);
 
+  const documents = useState<JsonApiItems | null>("documents", () => null);
+
+  const selectedDocumentIds = useState<string[]>(
+    "selectedDocumentIds",
+    () => []
+  );
+
+  const documentSpotMap = useState<{ [key: string]: string[] }>(
+    "documentSpotMap",
+    () => ({})
+  );
+
+  const spotTypeCount = useState<{ [key: string]: { [key: string]: number } }>(
+    "spotTypeCount",
+    () => ({})
+  );
+
+  const selectedSpotsByDocumentIds = computed(() => {
+    const spotIds: string[] = [];
+
+    for (const documentId of selectedDocumentIds.value) {
+      const spots = documentSpotMap.value[documentId] || [];
+      for (const spotId of spots) {
+        if (spotIds.includes(spotId)) {
+          continue;
+        }
+        spotIds.push(spotId);
+      }
+    }
+
+    // 重複を削除
+    return spotIds;
+  });
+
   return {
     selectedSpotId,
     results,
+    documents,
+    selectedDocumentIds,
+    documentSpotMap,
+    spotTypeCount,
+    selectedSpotsByDocumentIds,
   };
 };

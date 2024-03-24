@@ -1,17 +1,21 @@
 <script setup lang="ts">
-import type { ResourceObject } from "~/types/jsonapi";
+import type { JsonApiItems, ResourceObject } from "~/types/jsonapi";
 
 interface PropType {
-  uuid: string;
+  raw: JsonApiItems;
+  translations: JsonApiItems;
 }
 
 const props = withDefaults(defineProps<PropType>(), {
-  uuid: "",
+  raw: () => ({} as JsonApiItems),
+  translations: () => ({} as JsonApiItems),
 });
 
+/*
 const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems?filter[field_spot.id]=${props.uuid}`;
 
 const { data }: { [data: string]: any } = await useFetch(url);
+*/
 
 const headers = [
   {
@@ -37,7 +41,7 @@ const headers = [
 ];
 
 const desserts = computed(() => {
-  return data.value?.data.map((item: any) => {
+  return props.raw?.data.map((item: any) => {
     return {
       data: item,
       id: item.id,

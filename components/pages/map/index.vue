@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { mdiMagnify, mdiViewList, mdiLayers, mdiInformation } from "@mdi/js";
-
-const { selectedSpotId } = useMap();
+// import { LIcon } from "nuxt3-leaflet";
+const { selectedSpotId, selectedSpotsByDocumentIds } = useMap();
 
 const { results } = useMap();
 
@@ -19,6 +19,7 @@ interface Marker {
   lng: number;
   title: string;
   id?: string;
+  icon?: string;
 }
 
 interface PropType {
@@ -41,12 +42,17 @@ const markers = computed(() => {
       lng: item.attributes.field_geo.lon,
       title: item.attributes.title,
       id: item.attributes.field_id, // drupal_internal__nid,
+      icon:
+        selectedSpotId.value === item.attributes.field_id
+          ? "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png"
+          : selectedSpotsByDocumentIds.value.includes(item.attributes.field_id)
+          ? "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png"
+          : "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png",
     };
   });
 });
 
 const center: any = computed(() => {
-  console.log(markers.value.length, selectedSpotId.value);
   if (markers.value.length === 0) {
     return [47.21322, -1.559482];
   }
@@ -70,12 +76,15 @@ const center: any = computed(() => {
   return [lat, lng];
 });
 
-const height = props.full ? "100vh" : "40vh";
+const height = ref<string>("40vh"); // props.full ? "80vh" : "40vh";
 
-const updateLayout = () => {
-  // zoom.value = zoom.value === 8 ? 12 : 8;
-  console.log("table");
-};
+onMounted(() => {
+  const windowHeight = window.innerHeight;
+
+  if (props.full) {
+    height.value = `${windowHeight - 64}px`;
+  }
+});
 
 const localePath = useLocalePath();
 
@@ -83,26 +92,18 @@ const selectMarker = (marker: Marker) => {
   const id = marker.id || "";
   selectedSpotId.value = id;
 };
-
-/*
-watch(
-  () => selectedSpotId.value,
-  () => {
-    
-  }
-);
-*/
-
-const menu = ref(false);
 </script>
 <template>
   <div :style="`height: ${height}; width: 100%`">
+    <!--
+
+      <p>選択されたスポットのIDs: {{ selectedSpotsByDocumentIds }}</p>
+
     <p>選択されたスポットのID: {{ selectedSpotId }}</p>
 
     <p>サイズ: {{ size }}</p>
 
-    <p>センター: {{ center }}</p>
-
+    <p>センター: {{ center }}</p>-->
     <LMap ref="map" :zoom="zoom" :center="center">
       <LTileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -110,14 +111,23 @@ const menu = ref(false);
         name="OpenStreetMap"
       />
 
+      <!-- :icon="redIcon" -->
       <template v-for="marker in markers">
         <LMarker
           @click="selectMarker(marker)"
           :lat-lng="[marker.lat, marker.lng]"
         >
-          <LPopup>
-            {{ marker.title }}
-          </LPopup>
+          <LIcon
+            :iconUrl="marker.icon"
+            :iconSize="[25, 41]"
+            :iconAnchor="[12, 41]"
+            :popupAnchor="[1, -34]"
+            :tooltipAnchor="[16, -28]"
+            shadowUrl="https://esm.sh/leaflet@1.9.2/dist/images/marker-shadow.png"
+            :shadowSize="[41, 41]"
+            :shadowAnchor="[12, 41]"
+          ></LIcon>
+          >
         </LMarker>
       </template>
 
@@ -142,13 +152,7 @@ const menu = ref(false);
 
       <PagesMapSearch></PagesMapSearch>
 
-      <LControl position="topright">
-        <div class="leaflet-bar">
-          <a @click="updateLayout()" style="cursor: pointer">
-            <v-icon small>{{ mdiLayers }}</v-icon>
-          </a>
-        </div>
-      </LControl>
+      <PagesMapDocuments></PagesMapDocuments>
 
       <PagesMapInfo></PagesMapInfo>
     </LMap>

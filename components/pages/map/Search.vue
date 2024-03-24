@@ -1,23 +1,9 @@
 <script setup lang="ts">
-import { mdiMagnify, mdiViewList, mdiLayers } from "@mdi/js";
+import { mdiMagnify } from "@mdi/js";
 
 const { selectedSpotId } = useMap();
 
 const { results } = useMap();
-
-/*
-const spots = computed(() => {
-  if (!results.value) {
-    return [];
-  }
-  return results.value.data.map((item: any) => {
-    return {
-      title: item.attributes.title,
-      value: item.attributes.field_id,
-    };
-  });
-});
-*/
 
 const spots = ref<{ title: string; value: string }[]>([]);
 
@@ -45,14 +31,6 @@ const selectMarker = () => {
   if (!spot.value) return;
   selectedSpotId.value = spot.value.value;
 };
-
-/*
-@click="updateLayout()" 
-const updateLayout = () => {
-  // zoom.value = zoom.value === 8 ? 12 : 8;
-  console.log("table");
-};
-*/
 </script>
 <template>
   <LControl position="topleft">
@@ -80,7 +58,7 @@ const updateLayout = () => {
             <v-btn
               :disabled="!spot?.value"
               color="primary"
-              variant="outlined"
+              variant="flat"
               @click="selectMarker()"
             >
               <v-icon>{{ mdiMagnify }}</v-icon>

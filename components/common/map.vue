@@ -46,28 +46,10 @@ const center: any = computed(() => {
 
 const height = "40vh";
 
-const updateLayout = () => {
-  // zoom.value = zoom.value === 8 ? 12 : 8;
-  console.log("table");
-};
-
-const localePath = useLocalePath();
-
 const selectMarker = (marker: Marker) => {
   const id = marker.id || "";
   selectedSpotId.value = id;
 };
-
-/*
-watch(
-  () => selectedSpotId.value,
-  () => {
-    
-  }
-);
-*/
-
-const menu = ref(false);
 </script>
 <template>
   <div :style="`height: ${height}; width: 100%`">

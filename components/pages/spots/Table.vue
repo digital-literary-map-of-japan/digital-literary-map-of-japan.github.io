@@ -2,7 +2,7 @@
 import { mdiMagnify, mdiMap, mdiPencil, mdiPlus } from "@mdi/js";
 import type { JsonApiItems, ResourceObject } from "~/types/jsonapi";
 
-const { results } = useMap();
+const { results, spotTypeCount } = useMap();
 
 /*
 interface PropType {
@@ -31,13 +31,27 @@ const headers = [
     title: "経緯度",
     value: "lonlat",
   },
-  { title: "更新日", value: "changed", sortable: true },
+  {
+    title: "和歌・漢詩・俳諧",
+    value: "poems",
+    sortable: true,
+  },
+  {
+    title: "物語・説話",
+    value: "sanbuns",
+    sortable: true,
+  },
+  {
+    title: "謡曲",
+    value: "yokyokus",
+    sortable: true,
+  },
+  { title: "更新日時", value: "changed", sortable: true },
   { title: "アクション", value: "field_id" },
 ];
 
 // props.items
 const desserts = computed(() => {
-  console.log(results.value);
   if (!results.value) return [];
   return results.value.data.map((item: any) => {
     return {
@@ -45,6 +59,15 @@ const desserts = computed(() => {
       title: item.attributes.title,
       field_id: item.attributes.field_id,
       field_spot_name_romaji: item.attributes.field_spot_name_romaji,
+      poems: spotTypeCount.value[item.attributes.field_id]
+        ? spotTypeCount.value[item.attributes.field_id].poems
+        : 0,
+      sanbuns: spotTypeCount.value[item.attributes.field_id]
+        ? spotTypeCount.value[item.attributes.field_id].sanbuns
+        : 0,
+      yokyokus: spotTypeCount.value[item.attributes.field_id]
+        ? spotTypeCount.value[item.attributes.field_id].yokyokus
+        : 0,
       changed: item.attributes.changed,
       lonlat: item.attributes.field_geo
         ? item.attributes.field_geo.lon + " /" + item.attributes.field_geo.lat
@@ -76,63 +99,72 @@ const customFilter: any = (
 };
 </script>
 <template>
-  <v-row dense class="mb-10">
-    <v-col>
-      <v-text-field
-        v-model="search"
-        label="Search"
-        :prepend-inner-icon="mdiMagnify"
-        variant="outlined"
-        hide-details
-        single-line
-        density="compact"
-      ></v-text-field>
-    </v-col>
-    <v-col> </v-col>
+  <div>
+    <v-btn
+      class="mb-4"
+      variant="flat"
+      color="primary"
+      :active="false"
+      :to="
+        localePath({
+          name: 'spots',
+          query: { layout: 'map' },
+        })
+      "
+    >
+      <v-icon>{{ mdiMap }}</v-icon>
+      地図表示
+    </v-btn>
+    <v-row dense class="mb-10">
+      <v-col>
+        <v-text-field
+          v-model="search"
+          label="Search"
+          :prepend-inner-icon="mdiMagnify"
+          variant="outlined"
+          hide-details
+          single-line
+          density="compact"
+        ></v-text-field>
+      </v-col>
+      <v-col> </v-col>
 
-    <v-col class="text-right">
-      <v-btn
-        color="primary"
-        variant="outlined"
-        :href="`${url}node/add/spots`"
-        target="_blank"
-      >
-        <v-icon>{{ mdiPlus }}</v-icon>
-        文学名所を追加
-      </v-btn>
-    </v-col>
-  </v-row>
+      <v-col class="text-right">
+        <CommonBtnAdd type="spots"></CommonBtnAdd>
+      </v-col>
+    </v-row>
 
-  <v-data-table
-    density="compact"
-    :items-per-page="-1"
-    :headers="headers"
-    :items="desserts"
-    :search="search"
-    :custom-filter="customFilter"
-  >
-    <template v-slot:item.title="{ item }: any">
-      <nuxt-link
-        :to="
-          localePath({
-            name: 'spots-id',
-            params: { id: item.field_id },
-          })
-        "
-        >{{ item.title }}</nuxt-link
-      >
-    </template>
+    <v-data-table
+      density="compact"
+      :items-per-page="-1"
+      :headers="headers"
+      :items="desserts"
+      :search="search"
+      :custom-filter="customFilter"
+    >
+      <template v-slot:item.title="{ item }: any">
+        <nuxt-link
+          :to="
+            localePath({
+              name: 'spots-id',
+              params: { id: item.field_id },
+            })
+          "
+          >{{ item.title }}</nuxt-link
+        >
+      </template>
 
-    <template v-slot:item.field_id="{ item }: any">
-      <v-btn
-        size="small"
-        variant="outlined"
-        color="warning"
-        target="_blank"
-        :href="`${url}/node/${item.drupal_internal__nid}/edit`"
-      >
-        <v-icon>{{ mdiPencil }}</v-icon>
-      </v-btn>
-    </template>
-  </v-data-table>
+      <template v-slot:item.field_id="{ item }: any">
+        <v-btn
+          size="small"
+          variant="outlined"
+          color="warning"
+          target="_blank"
+          :href="`${url}/node/${item.drupal_internal__nid}/edit`"
+        >
+          <v-icon>{{ mdiPencil }}</v-icon>
+        </v-btn>
+      </template>
+    </v-data-table>
+  </div>
 </template>

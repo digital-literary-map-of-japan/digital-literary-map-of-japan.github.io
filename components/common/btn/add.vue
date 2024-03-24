@@ -14,7 +14,7 @@ const props = withDefaults(defineProps<PropType>(), {
 const url = `https://drupal.aws.ldas.jp/dlm/node/add/${props.type}`;
 </script>
 <template>
-  <v-btn :href="url" target="_blank" color="primary" variant="outlined">
+  <v-btn :href="url" target="_blank" color="success" variant="flat">
     <v-icon>{{ mdiPlus }}</v-icon>
     {{ label }}
   </v-btn>

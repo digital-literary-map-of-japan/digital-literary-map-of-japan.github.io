@@ -1,38 +1,112 @@
 <script setup lang="ts">
 import { mdiMagnify, mdiMap, mdiPencil, mdiPlus } from "@mdi/js";
 
-const { results } = useMap();
+const { results, documents, documentSpotMap, spotTypeCount } = useMap();
 
-const fields: { [key: string]: string } = {
-  "fields[node--spots]": [
-    "title",
-    "field_id",
-    "field_spots_name_furigana",
-    "drupal_internal__nid",
-    "changed",
-    "field_geo",
-    "field_spot_name_furigana",
-    "field_spot_name_romaji",
-  ].join(","),
+const getSpots = async () => {
+  const fields: { [key: string]: string } = {
+    "fields[node--spots]": [
+      "title",
+      "field_id",
+      "field_spots_name_furigana",
+      "drupal_internal__nid",
+      "changed",
+      "field_geo",
+      "field_spot_name_furigana",
+      "field_spot_name_romaji",
+    ].join(","),
+  };
+
+  const url = "https://drupal.aws.ldas.jp/dlm/";
+
+  const endpoint = `${url}jsonapi/node/spots`;
+
+  const params: { [key: string]: string } = {
+    "page[limit]": "100",
+  };
+
+  for (const key in fields) {
+    params[key] = fields[key];
+  }
+
+  const { data }: { [data: string]: any } = await useFetch(endpoint, {
+    query: params,
+  });
+
+  results.value = data.value;
 };
 
-const url = "https://drupal.aws.ldas.jp/dlm/";
+const getDocuments = async () => {
+  const fields: { [key: string]: string } = {
+    "fields[node--documents]": ["title", "field_id"].join(","),
+  };
 
-const endpoint = `${url}jsonapi/node/spots`;
+  const url = "https://drupal.aws.ldas.jp/dlm/";
 
-const params: { [key: string]: string } = {
-  "page[limit]": "100",
+  const endpoint = `${url}jsonapi/node/documents`;
+
+  const params: { [key: string]: string } = {
+    "page[limit]": "100",
+  };
+
+  for (const key in fields) {
+    params[key] = fields[key];
+  }
+
+  const { data }: { [data: string]: any } = await useFetch(endpoint, {
+    query: params,
+  });
+
+  documents.value = data.value;
 };
 
-for (const key in fields) {
-  params[key] = fields[key];
+getSpots();
+getDocuments();
+
+const types = ["poems", "sanbuns", "yokyokus"];
+
+const _documentSpotMap: { [key: string]: string[] } = {};
+const _spotTypeCount: { [key: string]: { [key: string]: number } } = {};
+
+for (const type_ of types) {
+  const fields: { [key: string]: string } = {
+    [`fields[node--${type_}]`]: ["field_poem", "field_document"].join(","),
+  };
+
+  const url = "https://drupal.aws.ldas.jp/dlm/";
+
+  const endpoint = `${url}api/${type_}`;
+
+  const { data }: { [data: string]: any } = await useFetch(endpoint);
+
+  if (!data?.value) continue;
+
+  for (const item of data?.value) {
+    const spot = item.spot_id;
+    const document = item.document_id;
+    if (!_documentSpotMap[document]) {
+      _documentSpotMap[document] = [];
+    }
+    if (!_documentSpotMap[document].includes(spot)) {
+      _documentSpotMap[document].push(spot);
+    }
+
+    if (!_spotTypeCount[spot]) {
+      _spotTypeCount[spot] = {};
+    }
+
+    if (!_spotTypeCount[spot][type_]) {
+      _spotTypeCount[spot][type_] = 0;
+    }
+
+    _spotTypeCount[spot][type_] += 1;
+  }
 }
 
-const { data }: { [data: string]: any } = await useFetch(endpoint, {
-  query: params,
-});
+console.log({ _spotTypeCount });
 
-results.value = data.value;
+documentSpotMap.value = _documentSpotMap;
+spotTypeCount.value = _spotTypeCount;
 
 const title = "spots";
 
@@ -74,20 +148,6 @@ watch(
 
   <template v-else>
     <LayoutsCommon :title="title" :items="bh" fluid>
-      <v-btn
-        class="mb-4"
-        variant="outlined"
-        :to="
-          localePath({
-            name: 'spots',
-            query: { layout: 'map' },
-          })
-        "
-      >
-        <v-icon>{{ mdiMap }}</v-icon>
-        地図表示
-      </v-btn>
-
       <PagesSpotsTable></PagesSpotsTable>
     </LayoutsCommon>
   </template>

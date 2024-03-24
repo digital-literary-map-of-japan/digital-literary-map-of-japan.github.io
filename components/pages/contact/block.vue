@@ -1,17 +1,17 @@
 <script setup lang="ts">
 // interface
 interface PropType {
-  item: any;
+  attributes: any;
 }
 
 const props = withDefaults(defineProps<PropType>(), {
-  item: () => ({}),
+  attributes: () => ({}),
 });
 
-const value = props.item.data.attributes.body.value;
+const value = props.attributes.body.value;
 
 //
-const id = props.item.data.attributes.drupal_internal__nid;
+const id = props.attributes.drupal_internal__nid;
 </script>
 <template>
   <CommonBlockEdit :id="id">
