@@ -1,36 +1,15 @@
 <script setup lang="ts">
-import type { ResourceObject } from "~/types/jsonapi";
+import type { JsonApiItems, ResourceObject } from "~/types/jsonapi";
 
 interface PropType {
-  uuid: string;
+  raw: JsonApiItems;
+  translations?: JsonApiItems;
 }
 
 const props = withDefaults(defineProps<PropType>(), {
-  uuid: "",
+  raw: () => ({} as JsonApiItems),
+  translations: () => ({} as JsonApiItems),
 });
-
-const getSanbuns = async () => {
-  const type_ = "sanbuns";
-
-  const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/${type_}?filter[field_spot.id]=${props.uuid}&include=field_document&fields[node--documents]=title`;
-
-  const { data }: { [data: string]: any } = await useFetch(url);
-
-  return data.value;
-};
-
-const getTranslations = async (uuid: string) => {
-  const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems_translations?filter[field_poem.id]=${uuid}`;
-
-  const { data }: { [data: string]: any } = await useFetch(url);
-
-  return data.value;
-};
-
-const sanbuns = await getSanbuns();
-const translations = await getTranslations(sanbuns.data.id);
-
-console.log({ sanbuns, translations });
 
 const headers = [
   {
@@ -67,21 +46,23 @@ const headers = [
 ];
 
 const desserts = computed(() => {
-  return sanbuns?.data.map((item: any) => {
-    const documentId = item.relationships.field_document.data.id;
+  return props.raw?.data.map((item: any) => {
+    const field_document_value = item.relationships.field_document.data;
 
-    const documentName = sanbuns?.included.map((i: ResourceObject) => {
-      if (i.id === documentId) {
-        return i.attributes?.title;
-      }
-    });
+    let documentName: string = "";
 
-    // console.log({ documentName });
+    if (field_document_value !== null) {
+      const documentId = field_document_value.id;
+
+      documentName = props.raw?.included?.find(
+        (i: ResourceObject) => i.id === documentId
+      )?.attributes?.title;
+    }
 
     return {
       data: item,
       id: item.id,
-      field_document: documentName.join(","),
+      field_document: documentName,
       field_chapter: item.attributes.field_chapter,
       field_page_number: item.attributes.field_page_number,
       field_text: item.attributes.field_text,
@@ -89,8 +70,6 @@ const desserts = computed(() => {
     };
   });
 });
-
-// const localePath = useLocalePath();
 
 const selectedPoem = ref<ResourceObject | null>(null);
 const documentName = ref<string>("");
@@ -134,10 +113,10 @@ const selectPoem = (item: ResourceObject, documentName_: string) => {
           {{ documentName }}
         </v-card-title>
         <v-card-text>
-          <PagesSpotsSanbunsDialog
+          <PagesSpotsYokyokusDialog
             :item="selectedPoem"
             :translations="translations"
-          ></PagesSpotsSanbunsDialog>
+          ></PagesSpotsYokyokusDialog>
         </v-card-text>
 
         <v-card-actions>

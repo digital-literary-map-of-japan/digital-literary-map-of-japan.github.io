@@ -92,7 +92,10 @@ const selectPoem = (item: ResourceObject) => {
           {{ selectedPoem?.attributes?.field_document_numbering }}
         </v-card-title>
         <v-card-text>
-          <PagesSpotsPoemsDialog :item="selectedPoem"></PagesSpotsPoemsDialog>
+          <PagesSpotsPoemsDialog
+            :item="selectedPoem"
+            :translations="translations"
+          ></PagesSpotsPoemsDialog>
         </v-card-text>
 
         <v-card-actions>

@@ -3,7 +3,7 @@ import type { ResourceObject, JsonApiItems } from "~/types/jsonapi";
 
 interface PropType {
   item: ResourceObject | null;
-  translations: JsonApiItems | null;
+  translations?: JsonApiItems | null;
 }
 
 const props = withDefaults(defineProps<PropType>(), {
@@ -57,7 +57,8 @@ const attributes = computed(() => {
       </v-row>
     </template>
 
-    <v-expansion-panels class="mt-10">
+    <!--
+    <v-expansion-panels class="mt-10" v-if="false">
       <v-expansion-panel elevation="0">
         <v-expansion-panel-title class="bg-sub">翻訳</v-expansion-panel-title>
         <v-expansion-panel-text class="pa-4">
@@ -92,5 +93,6 @@ const attributes = computed(() => {
         </v-expansion-panel-text>
       </v-expansion-panel>
     </v-expansion-panels>
+    -->
   </div>
 </template>

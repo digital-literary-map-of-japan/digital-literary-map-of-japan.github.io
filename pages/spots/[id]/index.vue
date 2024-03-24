@@ -80,7 +80,6 @@ for (const type_ of types) {
   };
 }
 
-// const item = data.value?.data[0];
 const item = spot; // spot.data[0];
 
 const attributes = item?.attributes;
@@ -110,9 +109,29 @@ const bh = [
 ];
 
 // const tab = ref("poems");
-const tab = ref("basic");
+
+const route = useRoute();
+
+const tab = ref(route.query.layout || "basic");
 
 const items: string[] = ["basic", "history", "poems", "sanbuns", "yokyokus"];
+
+watch(
+  () => tab.value,
+  (value) => {
+    const route = useRoute();
+    const router = useRouter();
+
+    router.push(
+      localePath({
+        path: route.path,
+        query: {
+          layout: value,
+        },
+      })
+    );
+  }
+);
 </script>
 <template>
   <LayoutsCommon :title="title" :items="bh" fluid>
@@ -122,6 +141,8 @@ const items: string[] = ["basic", "history", "poems", "sanbuns", "yokyokus"];
         {{ typedValues[item] ? `(${typedValues[item].raw.data.length})` : "" }}
       </v-tab>
     </v-tabs>
+
+    <!--
 
     <v-window v-model="tab" class="pa-4">
       <v-window-item :value="'basic'">
@@ -146,12 +167,43 @@ const items: string[] = ["basic", "history", "poems", "sanbuns", "yokyokus"];
         ></PagesSpotsSanbuns>
       </v-window-item>
 
-      <v-window-item :value="'yokyukus'">
+      <v-window-item :value="'yokyokus'">
         <PagesSpotsYokyokus
           :raw="typedValues.yokyokus.raw"
         ></PagesSpotsYokyokus>
       </v-window-item>
     </v-window>
+
+    -->
+
+    <div class="pa-4">
+      <PagesSpotsBasic
+        :attributes="attributes"
+        v-if="tab === 'basic'"
+      ></PagesSpotsBasic>
+
+      <PagesSpotsBasic
+        :attributes="attributes"
+        v-if="tab === 'history'"
+      ></PagesSpotsBasic>
+
+      <PagesSpotsPoems
+        :raw="typedValues.poems.raw"
+        :translations="typedValues.poems.translations"
+        v-if="tab === 'poems'"
+      ></PagesSpotsPoems>
+
+      <PagesSpotsSanbuns
+        :raw="typedValues.sanbuns.raw"
+        :translations="typedValues.sanbuns.translations"
+        v-if="tab === 'sanbuns'"
+      ></PagesSpotsSanbuns>
+
+      <PagesSpotsYokyokus
+        v-if="tab === 'yokyokus'"
+        :raw="typedValues.yokyokus.raw"
+      ></PagesSpotsYokyokus>
+    </div>
 
     <v-row class="my-4">
       <v-col>

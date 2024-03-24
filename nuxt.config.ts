@@ -1,5 +1,6 @@
 import { headConfig } from "./meta.config";
 import { getIds } from "./utils/routes";
+import axios from "axios";
 
 const baseURL = process.env.BASE_URL || "";
 const origin = process.env.ORIGIN || "";
@@ -13,8 +14,10 @@ const publicRuntimeConfig = {
   appURL,
 };
 
-const getRoutes = async () => {
+const getRoutes: any = async () => {
   const routes: string[] = [];
+
+  /*
 
   const ids = await getIds();
 
@@ -25,6 +28,21 @@ const getRoutes = async () => {
     routes.push(`/basic/${id}`);
     routes.push(`/en/basic/${id}`);
   }
+
+  */
+
+  const url = "https://drupal.aws.ldas.jp/dlm/";
+
+  const endpoint = `${url}jsonapi/node/spots`;
+
+  const { data }: { [data: string]: any } = await useFetch(endpoint);
+
+  for (const item of data.value.data) {
+    const id = item.attributes.field_id;
+    routes.push(`/spots/${id}`);
+    routes.push(`/en/spots/${id}`);
+  }
+
   return routes;
 };
 
@@ -133,7 +151,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      // routes: getRoutes,
+
       // routes
     },
   },
@@ -142,11 +160,24 @@ export default defineNuxtConfig({
       if (nitroConfig.dev) {
         return;
       }
-      // ..Async logic..
+      const res = await axios.get(
+        "https://drupal.aws.ldas.jp/dlm/jsonapi/node/spots"
+      );
+      if (nitroConfig.prerender?.routes === undefined) {
+        return;
+      }
+      res.data.data.map((mount: any) => {
+        nitroConfig.prerender?.routes?.push(
+          `/spots/${mount.attributes.field_id}`
+        );
 
-      // const routes = await getRoutes();
-
-      // nitroConfig.prerender?.routes?.push(...routes);
+        /*
+        nitroConfig.prerender?.routes?.push(
+          `/en/spots/${mount.attributes.field_id}`
+        );
+        */
+        // return `/spots/${mount.attributes.field_id}`;
+      });
     },
   },
 });

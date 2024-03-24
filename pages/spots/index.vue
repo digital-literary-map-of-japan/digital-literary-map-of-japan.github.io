@@ -103,8 +103,6 @@ for (const type_ of types) {
   }
 }
 
-console.log({ _spotTypeCount });
-
 documentSpotMap.value = _documentSpotMap;
 spotTypeCount.value = _spotTypeCount;
 
