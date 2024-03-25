@@ -151,11 +151,11 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-
+      concurrency: 1,
+      // interval: 5000,
       // routes
     },
   },
-  /*
   hooks: {
     async "nitro:config"(nitroConfig) {
       if (nitroConfig.dev) {
@@ -172,14 +172,14 @@ export default defineNuxtConfig({
           `/spots/${mount.attributes.field_id}`
         );
 
-        
         nitroConfig.prerender?.routes?.push(
           `/en/spots/${mount.attributes.field_id}`
         );
-        
+
         // return `/spots/${mount.attributes.field_id}`;
       });
     },
   },
-  */
+  /*
+   */
 });

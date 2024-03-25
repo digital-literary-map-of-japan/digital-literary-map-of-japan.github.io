@@ -116,7 +116,7 @@ const customFilter: any = (
       地図表示
     </v-btn>
     <v-row dense class="mb-10">
-      <v-col>
+      <v-col cols="12" md="6">
         <v-text-field
           v-model="search"
           label="Search"
@@ -127,9 +127,8 @@ const customFilter: any = (
           density="compact"
         ></v-text-field>
       </v-col>
-      <v-col> </v-col>
 
-      <v-col class="text-right">
+      <v-col cols="12" md="6" class="text-right">
         <CommonBtnAdd type="spots"></CommonBtnAdd>
       </v-col>
     </v-row>

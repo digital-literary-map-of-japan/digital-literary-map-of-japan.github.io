@@ -144,5 +144,5 @@ export default {
     "Home": "ホーム",
     "Contact": "お問い合わせ",
     "Digital Literary Map of Japan": "日本のデジタル文学地図",
-
+    "spots": "文学名所"
 }

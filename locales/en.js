@@ -141,4 +141,5 @@ export default {
     "Home": "Home",
     "Contact": "Contact",
     "Digital Literary Map of Japan": "Digital Literary Map of Japan",
+    "spots": "Literary Places"
 }

@@ -15,6 +15,6 @@ const id = props.attributes.drupal_internal__nid;
 </script>
 <template>
   <CommonBlockEdit :id="id">
-    <span v-html="value"></span>
+    <span v-html="value" style="word-wrap: break-word"></span>
   </CommonBlockEdit>
 </template>

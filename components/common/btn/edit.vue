@@ -12,7 +12,13 @@ const props = withDefaults(defineProps<PropType>(), {
 const url = `https://drupal.aws.ldas.jp/dlm/node/${props.id}/edit`;
 </script>
 <template>
-  <v-btn :href="url" target="_blank" color="warning" variant="outlined">
+  <v-btn
+    :href="url"
+    target="_blank"
+    color="warning"
+    variant="outlined"
+    class="ma-2"
+  >
     <v-icon>{{ mdiPencil }}</v-icon>
     編集
   </v-btn>

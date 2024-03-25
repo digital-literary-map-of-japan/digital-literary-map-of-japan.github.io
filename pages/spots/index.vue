@@ -106,11 +106,10 @@ for (const type_ of types) {
 documentSpotMap.value = _documentSpotMap;
 spotTypeCount.value = _spotTypeCount;
 
-const title = "spots";
+const { t } = useI18n();
+const title = t("spots");
 
 const localePath = useLocalePath();
-
-const { t } = useI18n();
 
 const bh = [
   {
@@ -119,7 +118,7 @@ const bh = [
     to: localePath({ name: "index" }),
   },
   {
-    title: t("spots"),
+    title,
     disabled: false,
   },
 ];

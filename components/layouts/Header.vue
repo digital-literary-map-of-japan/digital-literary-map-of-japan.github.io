@@ -5,8 +5,6 @@ const localePath = useLocalePath();
 
 const drawer = ref(false);
 
-const isSearch = ref(false);
-
 const menuList = [
   {
     text: "Home",
@@ -43,22 +41,6 @@ const changeLocale = (locale: string) => {
 <template>
   <div>
     <v-app-bar color="#2b3e50" flat :absolute="true">
-      <!--
-      <nuxt-link
-        v-if="!isMobile"
-        :to="localePath({ name: 'index' })"
-        class="mr-2"
-      >
-        <img
-          height="55px"
-          width="55px"
-          style="filter: invert(1)"
-          contain
-          src="/img/logo.png"
-        />
-      </nuxt-link>
-      -->
-
       <v-toolbar-title style="font-variant: small-caps">
         <nuxt-link
           style="color: inherit; text-decoration: inherit"
@@ -68,20 +50,20 @@ const changeLocale = (locale: string) => {
         ></v-toolbar-title
       >
 
-      <v-spacer />
+      <template v-slot:append>
+        <v-btn
+          href="https://digital-literary-maps.github.io/userguide/"
+          target="_blank"
+          icon
+          color="success"
+        >
+          <v-icon>{{ mdiBook }}</v-icon>
+        </v-btn>
 
-      <v-btn
-        href="https://digital-literary-maps.github.io/userguide/"
-        target="_blank"
-        icon
-        color="success"
-      >
-        <v-icon>{{ mdiBook }}</v-icon>
-      </v-btn>
-
-      <v-btn icon @click.stop="drawer = !drawer">
-        <v-icon>{{ mdiMenu }}</v-icon>
-      </v-btn>
+        <v-btn icon @click.stop="drawer = !drawer">
+          <v-icon>{{ mdiMenu }}</v-icon>
+        </v-btn>
+      </template>
     </v-app-bar>
 
     <client-only>
