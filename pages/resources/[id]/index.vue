@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { mdiArrowLeftBold, mdiPencil } from "@mdi/js";
-
 const route = useRoute();
 
 const id = route.params.id as string;
@@ -23,51 +21,56 @@ const attributes = item?.attributes;
 
 const did = attributes?.drupal_internal__nid;
 
-const title = `"${attributes?.title} / ${attributes?.field_document_name_romaji}"の情報`;
+const { t, locale } = useI18n();
+
+const title =
+  locale.value === "en"
+    ? `Datasheet of "${attributes?.title} / ${attributes?.field_document_name_romaji}"`
+    : `"${attributes?.title} / ${attributes?.field_document_name_romaji}"の情報`;
 
 const fields = [
   {
-    title: "題名",
+    title: t("Title"),
     value: "title",
   },
   {
-    title: "題名（ふりがな）",
+    title: t("Title (Furigana)"),
     value: "field_document_name_furigana",
   },
   {
-    title: "題名（ローマ字）",
+    title: t("Title (Romaji)"),
     value: "field_document_name_romaji",
   },
   {
-    title: "刊・完成・編纂（年）",
+    title: t("Year"),
     value: "field_year",
   },
   {
-    title: "ジャンル",
+    title: t("Genre"),
     value: "field_genre",
   },
   {
-    title: "著者",
+    title: t("Author"),
     value: "field_author_name_kanji",
   },
   {
-    title: "著者（ふりがな）",
+    title: t("Author (Rōmaji)"),
     value: "field_author_name_furigana",
   },
   {
-    title: "依拠本文",
+    title: t("Source text"),
     value: "field_source_text",
   },
   {
-    title: "出版社",
+    title: t("Publisher"),
     value: "field_publisher",
   },
   {
-    title: "出版年",
+    title: t("Publication year"),
     value: "field_publication_year",
   },
   {
-    title: "出版地",
+    title: t("Publication location"),
     value: "field_publication_location",
   },
   {
@@ -77,7 +80,6 @@ const fields = [
 ];
 
 const localePath = useLocalePath();
-const { t } = useI18n();
 
 const bh = [
   {
@@ -86,7 +88,7 @@ const bh = [
     to: localePath({ name: "index" }),
   },
   {
-    title: t("documents"),
+    title: t("Resources"),
     disabled: false,
     to: localePath({ name: "resources" }),
   },
@@ -118,20 +120,10 @@ const bh = [
 
     <v-row class="my-4">
       <v-col>
-        <v-btn variant="outlined" :to="localePath({ name: 'resources' })">
-          <v-icon>{{ mdiArrowLeftBold }}</v-icon>
-          戻る
-        </v-btn>
+        <CommonBtnBack type="resources"></CommonBtnBack>
       </v-col>
       <v-col class="text-right">
-        <v-btn
-          variant="outlined"
-          :href="`${url}node/${did}/edit`"
-          target="_blank"
-        >
-          <v-icon>{{ mdiPencil }}</v-icon>
-          編集
-        </v-btn>
+        <CommonBtnEdit :id="did"></CommonBtnEdit>
       </v-col>
     </v-row>
   </LayoutsCommon>

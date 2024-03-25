@@ -11,30 +11,31 @@ const props = withDefaults(defineProps<PropType>(), {
   translations: () => ({} as JsonApiItems),
 });
 
-/*
-const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems?filter[field_spot.id]=${props.uuid}`;
-
-const { data }: { [data: string]: any } = await useFetch(url);
-*/
+const { t } = useI18n();
 
 const headers = [
   {
-    title: "ID（国歌大観番号）",
+    title: t("Identifier (Number in Kokka taikan)"),
     value: "field_document_numbering",
     sortable: true,
   },
   {
-    title: "詞書",
+    title: t("Kotobagaki"),
     value: "field_kotobagaki",
-    sortable: false,
+    sortable: true,
   },
   {
-    title: "テクスト",
+    title: t("Text"),
     value: "field_text",
-    sortable: false,
+    sortable: true,
   },
   {
-    title: "アクション",
+    title: t("Keyword"),
+    value: "field_place_form",
+    sortable: true,
+  },
+  {
+    title: t("action"),
     value: "field_id",
     sortable: false,
   },
@@ -47,6 +48,7 @@ const desserts = computed(() => {
       id: item.id,
       field_document_numbering: item.attributes.field_document_numbering,
       field_kotobagaki: item.attributes.field_kotobagaki,
+      field_place_form: item.attributes.field_place_form,
       field_text: item.attributes.field_text,
       drupal_internal__nid: item.attributes.drupal_internal__nid,
     };
@@ -101,7 +103,7 @@ const selectPoem = (item: ResourceObject) => {
         <v-card-actions>
           <v-btn
             block
-            text="Close Dialog"
+            :text="$t('close')"
             color="primary"
             variant="flat"
             @click="dialog = false"

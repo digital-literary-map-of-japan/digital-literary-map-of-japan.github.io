@@ -11,39 +11,35 @@ const props = withDefaults(defineProps<PropType>(), {
   translations: () => ({} as JsonApiItems),
 });
 
-/*
-const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems_translations?filter[field_poem.id]=${props.item?.id}`;
-
-const { data }: { [data: string]: any } = await useFetch(url);
-*/
+const { t } = useI18n();
 
 const fields = [
   {
-    title: "巻・部立",
+    title: t("Volume"),
     value: "field_volume",
   },
   {
-    title: "詞書",
+    title: t("Kotobagaki"),
     value: "field_kotobagaki",
   },
   {
-    title: "テクスト",
+    title: t("Text"),
     value: "field_text",
   },
   {
-    title: "テクスト（ローマ字）",
+    title: t("Text (Rōmaji)"),
     value: "field_text_romaji",
   },
   {
-    title: "キーワード",
+    title: t("Keyword"),
     value: "field_place_form",
   },
   {
-    title: "著者",
+    title: t("Author"),
     value: "field_author",
   },
   {
-    title: "著者（ローマ字）",
+    title: t("Author (Rōmaji)"),
     value: "field_author_romaji",
   },
   {
@@ -90,7 +86,9 @@ const manifest = computed(() => {
 
     <v-expansion-panels class="mt-10">
       <v-expansion-panel elevation="0">
-        <v-expansion-panel-title class="bg-sub">翻訳</v-expansion-panel-title>
+        <v-expansion-panel-title class="bg-sub">{{
+          $t("translations")
+        }}</v-expansion-panel-title>
         <v-expansion-panel-text class="pa-4">
           <CommonBtnAdd
             class="mb-4"
@@ -102,13 +100,14 @@ const manifest = computed(() => {
             <div>
               <v-row dense>
                 <v-col :md="12" cols="12">
-                  <b>{{ "テクスト" }}：</b>{{ item.attributes?.field_text }}
+                  <b>{{ $t("Text") }}：</b>{{ item.attributes?.field_text }}
                 </v-col>
               </v-row>
 
               <v-row dense>
                 <v-col :md="12" cols="12">
-                  <b>{{ "著者・出典" }}：</b>{{ item.attributes?.field_source }}
+                  <b>{{ $t("author_source") }}：</b
+                  >{{ item.attributes?.field_source }}
                 </v-col>
               </v-row>
 

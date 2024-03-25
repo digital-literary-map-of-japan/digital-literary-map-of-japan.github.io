@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { mdiPencil } from "@mdi/js";
-// interface
+
+const { isAdmin } = useSettings();
+
 interface PropType {
   id: string | number;
 }
@@ -13,6 +15,7 @@ const url = `https://drupal.aws.ldas.jp/dlm/node/${props.id}/edit`;
 </script>
 <template>
   <v-btn
+    v-if="isAdmin"
     :href="url"
     target="_blank"
     color="warning"
@@ -20,6 +23,6 @@ const url = `https://drupal.aws.ldas.jp/dlm/node/${props.id}/edit`;
     class="ma-2"
   >
     <v-icon>{{ mdiPencil }}</v-icon>
-    編集
+    {{ $t("edit") }}
   </v-btn>
 </template>

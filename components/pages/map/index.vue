@@ -1,16 +1,8 @@
 <script setup lang="ts">
-import { mdiMagnify, mdiViewList, mdiLayers, mdiInformation } from "@mdi/js";
-// import { LIcon } from "nuxt3-leaflet";
+import { mdiViewList } from "@mdi/js";
 const { selectedSpotId, selectedSpotsByDocumentIds } = useMap();
 
 const { results } = useMap();
-
-const size = computed(() => {
-  if (!results.value) {
-    return 0;
-  }
-  return results.value.data.length;
-});
 
 const zoom = ref(8);
 
@@ -23,12 +15,10 @@ interface Marker {
 }
 
 interface PropType {
-  // markers?: Marker[];
   full?: boolean;
 }
 
 const props = withDefaults(defineProps<PropType>(), {
-  // markers: () => [],
   full: false,
 });
 
@@ -40,7 +30,7 @@ const markers = computed(() => {
     return {
       lat: item.attributes.field_geo.lat,
       lng: item.attributes.field_geo.lon,
-      title: item.attributes.title,
+      title: `${item.attributes.title} / ${item.attributes.field_spot_name_romaji}`,
       id: item.attributes.field_id, // drupal_internal__nid,
       icon:
         selectedSpotId.value === item.attributes.field_id

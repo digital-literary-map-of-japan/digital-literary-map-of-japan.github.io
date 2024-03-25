@@ -69,7 +69,7 @@ const changeLocale = (locale: string) => {
     <client-only>
       <v-navigation-drawer v-model="drawer" temporary location="right">
         <v-list class="text-center">
-          <v-list-item>メニュー</v-list-item>
+          <v-list-item>{{ $t("Menu") }}</v-list-item>
 
           <v-divider class="my-2"></v-divider>
 

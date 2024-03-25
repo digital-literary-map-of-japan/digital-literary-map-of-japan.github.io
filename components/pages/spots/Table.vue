@@ -1,54 +1,57 @@
 <script setup lang="ts">
-import { mdiMagnify, mdiMap, mdiPencil, mdiPlus } from "@mdi/js";
-import type { JsonApiItems, ResourceObject } from "~/types/jsonapi";
-
+import { mdiMagnify, mdiMap } from "@mdi/js";
+const { isAdmin } = useSettings();
 const { results, spotTypeCount } = useMap();
 
-/*
-interface PropType {
-  items: ResourceObject[];
-}
-
-const props = withDefaults(defineProps<PropType>(), {
-  items: () => [],
-});
-*/
+const { t } = useI18n();
 
 const localePath = useLocalePath();
-
-const url = "https://drupal.aws.ldas.jp/dlm/";
 
 const search = ref("");
 
 const headers = [
-  { title: "地名（漢字）", value: "title", sortable: true },
+  { title: t("Name (Kanji)"), value: "title", sortable: true },
   {
-    title: "地名（ローマ字）",
+    title: t("Name (Rōmaji)"),
     value: "field_spot_name_romaji",
     sortable: true,
   },
   {
-    title: "経緯度",
+    title: t("Lng / Lat"),
     value: "lonlat",
   },
   {
-    title: "和歌・漢詩・俳諧",
+    title: t("Poetry"),
     value: "poems",
     sortable: true,
   },
   {
-    title: "物語・説話",
+    title: t("Tales, images etc."),
     value: "sanbuns",
     sortable: true,
   },
   {
-    title: "謡曲",
+    title: t("Yōkyoku"),
     value: "yokyokus",
     sortable: true,
   },
-  { title: "更新日時", value: "changed", sortable: true },
-  { title: "アクション", value: "field_id" },
+  // { title: t("updated"), value: "changed", sortable: true },
+  // { title: t("action"), value: "field_id" },
 ];
+
+if (isAdmin.value) {
+  headers.push({
+    title: t("updated"),
+    value: "changed",
+    sortable: true,
+  });
+
+  headers.push({
+    title: t("action"),
+    value: "field_id",
+    sortable: false,
+  });
+}
 
 // props.items
 const desserts = computed(() => {
@@ -112,14 +115,14 @@ const customFilter: any = (
         })
       "
     >
-      <v-icon>{{ mdiMap }}</v-icon>
-      地図表示
+      <v-icon class="mr-2">{{ mdiMap }}</v-icon>
+      {{ $t("Map view") }}
     </v-btn>
     <v-row dense class="mb-10">
       <v-col cols="12" md="6">
         <v-text-field
           v-model="search"
-          label="Search"
+          :label="$t('search')"
           :prepend-inner-icon="mdiMagnify"
           variant="outlined"
           hide-details
@@ -154,15 +157,7 @@ const customFilter: any = (
       </template>
 
       <template v-slot:item.field_id="{ item }: any">
-        <v-btn
-          size="small"
-          variant="outlined"
-          color="warning"
-          target="_blank"
-          :href="`${url}/node/${item.drupal_internal__nid}/edit`"
-        >
-          <v-icon>{{ mdiPencil }}</v-icon>
-        </v-btn>
+        <CommonBtnEdit :id="item.drupal_internal__nid" />
       </template>
     </v-data-table>
   </div>

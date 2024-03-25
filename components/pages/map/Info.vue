@@ -6,6 +6,8 @@ const { selectedSpotId, results, spotTypeCount } = useMap();
 
 const menu = ref(false);
 
+const { t } = useI18n();
+
 const spot = ref<ResourceObject | null>(null);
 
 watch(selectedSpotId, () => {
@@ -36,30 +38,30 @@ const attributes = computed(() => {
 
 const fields = [
   {
-    title: "地名（漢字）",
+    title: t("Name (Rōmaji)"),
     key: "title",
   },
   {
-    title: "地名（ふりがな）",
+    title: t("Name (Furigana)"),
     key: "field_spot_name_furigana",
   },
   {
-    title: "地名（ローマ字）",
+    title: t("Name (Rōmaji)"),
     key: "field_spot_name_romaji",
   },
 ];
 
 const fieldsCount = [
   {
-    title: "和歌・漢詩・俳諧",
+    title: t("Poetry"),
     key: "poems",
   },
   {
-    title: "物語・説話",
+    title: t("Tales, images etc."),
     key: "sanbuns",
   },
   {
-    title: "謡曲",
+    title: t("Yōkyoku"),
     key: "yokyokus",
   },
 ];
@@ -92,10 +94,10 @@ const localePath = useLocalePath();
             })
           "
         >
-          <v-icon>
+          <v-icon class="mr-2">
             {{ mdiOpenInNew }}
           </v-icon>
-          データベースで表示
+          {{ $t("Show in database") }}
         </v-btn>
       </div>
 
@@ -113,7 +115,7 @@ const localePath = useLocalePath();
       </template>
 
       <div>
-        <strong>{{ "歴史" }}:</strong>
+        <strong>{{ $t("History") }}:</strong>
         <p>
           {{ attributes?.field_history }}
         </p>

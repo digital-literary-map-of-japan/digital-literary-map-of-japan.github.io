@@ -7,49 +7,51 @@ const props = withDefaults(defineProps<PropType>(), {
   attributes: () => ({}),
 });
 
+const { t } = useI18n();
+
 const fields = [
   {
-    title: "地名（漢字）",
+    title: t("Name (Kanji)"),
     value: "title",
   },
   {
-    title: "地名（ふりがな）",
+    title: t("Name (Furigana)"),
     value: "field_spot_name_furigana",
   },
   {
-    title: "地名（ローマ字）",
+    title: t("Name (Rōmaji)"),
     value: "field_spot_name_romaji",
   },
   {
-    title: "旧国名",
+    title: t("Kuni (Province)"),
     value: "field_kuni",
   },
   {
-    title: "都道府県",
+    title: t("Prefecture"),
     value: "field_prefecture",
   },
   {
-    title: "「緯度経度」",
+    title: t("Lng / Lat"),
     value: "field_geo",
   },
   {
-    title: "歌枕",
+    title: t("Utamakura"),
     value: "field_utamakura",
   },
   {
-    title: "名所",
+    title: t("Meisho"),
     value: "field_meisho",
   },
   {
-    title: "歌枕としての意味",
+    title: t("Utamakura meaning"),
     value: "field_utamakura_meaning",
   },
   {
-    title: "歌枕としての特徴",
+    title: t("Utamakura features"),
     value: "field_utamakura_features",
   },
   {
-    title: "連想（歌枕として何を呼び起こしているか）",
+    title: t("Utamakura associations"),
     value: "field_utamakura_associations",
   },
   {
@@ -62,7 +64,7 @@ const markers = [
   {
     lat: props.attributes?.field_geo?.lat,
     lng: props.attributes?.field_geo?.lon,
-    title: props.attributes?.title,
+    title: `${props.attributes?.title} / ${props.attributes?.field_spot_name_romaji}`,
   },
 ];
 </script>
@@ -70,25 +72,29 @@ const markers = [
 <template>
   <CommonMap class="mb-4" :markers="markers"></CommonMap>
 
-  <template v-for="field in fields">
-    <v-row dense v-if="attributes?.[field.value]">
-      <v-col :md="3" cols="12">
-        <b>{{ field.title }}：</b>
-      </v-col>
-      <v-col :md="9" cols="12">
-        <template v-if="field.value === 'field_link'">
-          <a :href="attributes?.[field.value].uri" target="_blank">{{
-            attributes?.[field.value].uri
-          }}</a>
-        </template>
-        <template v-else-if="field.value === 'field_geo'">
-          <b>緯度：</b> {{ attributes?.[field.value]?.lat }}&nbsp;
-          <b>経度：</b> {{ attributes?.[field.value]?.lon }}
-        </template>
-        <template v-else>
-          {{ attributes?.[field.value] }}
-        </template>
-      </v-col>
-    </v-row>
-  </template>
+  <div class="mt-4">
+    <template v-for="field in fields">
+      <v-row v-if="attributes?.[field.value]">
+        <v-col :md="3" cols="12">
+          <b>{{ field.title }}：</b>
+        </v-col>
+        <v-col :md="9" cols="12">
+          <template v-if="field.value === 'field_link'">
+            <a :href="attributes?.[field.value].uri" target="_blank">{{
+              attributes?.[field.value].uri
+            }}</a>
+          </template>
+          <template v-else-if="field.value === 'field_geo'">
+            <b>{{ $t("Latitude") }}：</b>
+            {{ attributes?.[field.value]?.lat }}&nbsp;
+            <b>{{ $t("Longitude") }}：</b>
+            {{ attributes?.[field.value]?.lon }}
+          </template>
+          <template v-else>
+            {{ attributes?.[field.value] }}
+          </template>
+        </v-col>
+      </v-row>
+    </template>
+  </div>
 </template>

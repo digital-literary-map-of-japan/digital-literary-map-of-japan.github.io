@@ -1,12 +1,61 @@
 <script setup lang="ts">
-import type { JsonApiItem, JsonApiObject } from "~/types/jsonapi";
+import type { JsonApiItem } from "~/types/jsonapi";
 
-const localePath = useLocalePath();
+const { results } = useMap();
 
-// const { data } = await useAsyncData("home", () => queryContent("/").findOne());
+const getSpots = async () => {
+  const fields: { [key: string]: string } = {
+    "fields[node--spots]": [
+      "title",
+      "field_id",
+      "drupal_internal__nid",
+      "changed",
+      "field_geo",
+      "field_spot_name_furigana",
+      "field_spot_name_romaji",
+    ].join(","),
+  };
 
-const url =
-  "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c";
+  const url = "https://drupal.aws.ldas.jp/dlm/";
+
+  const endpoint = `${url}jsonapi/node/spots`;
+
+  const params: { [key: string]: string } = {
+    "page[limit]": "100",
+  };
+
+  for (const key in fields) {
+    params[key] = fields[key];
+  }
+
+  const { data }: { [data: string]: any } = await useFetch(endpoint, {
+    query: params,
+  });
+
+  results.value = data.value;
+};
+
+getSpots();
+
+const markers = computed(() => {
+  if (!results.value) {
+    return [];
+  }
+  return results.value.data.map((item: any) => {
+    return {
+      lat: item.attributes.field_geo.lat,
+      lng: item.attributes.field_geo.lon,
+      title: `${item.attributes.title} / ${item.attributes.field_spot_name_romaji}`,
+      id: item.attributes.field_id,
+    };
+  });
+});
+
+const { locale } = useI18n();
+
+const url = `https://drupal.aws.ldas.jp/dlm/${
+  locale.value === "en" ? "en/" : ""
+}jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c`;
 
 const { data: contact } = await useFetch<JsonApiItem>(url);
 </script>
@@ -15,15 +64,6 @@ const { data: contact } = await useFetch<JsonApiItem>(url);
     <PagesHomeImage></PagesHomeImage>
 
     <v-container class="my-5">
-      <!--
-      <v-card variant="outlined">
-        <v-card-text>
-          
-          サイトの説明
-        </v-card-text>
-      </v-card>
-      -->
-
       <v-alert variant="tonal" dense type="info">
         <p class="mb-2">
           <template v-if="$i18n.locale === 'ja'">
@@ -41,9 +81,8 @@ const { data: contact } = await useFetch<JsonApiItem>(url);
       </v-alert>
 
       <div class="py-10">
-        <h2>{{ $t("歌枕・名所アノテーションツール") }}</h2>
+        <h2>{{ $t("An annotation tool for Japanese literary places") }}</h2>
         <br />
-        <!-- <nuxt-content :document="page" /> -->
         <PagesHomeAbout />
 
         <PagesHomeLegend class="my-10" />
@@ -51,25 +90,10 @@ const { data: contact } = await useFetch<JsonApiItem>(url);
     </v-container>
 
     <div class="py-10 bg-sub">
-      <!--
-      <v-container class="pa-10">
-        <p class="mb-5">
-          <b>{{ $t("news") }}</b>
-          <span class="ml-5"
-            ><nuxt-link :to="localePath({ name: 'news' })"
-              ><small>{{ $t("all") }}</small></nuxt-link
-            ></span
-          >
-        </p>
-
-        <CommonNewsList :size="5"></CommonNewsList>
-      </v-container>
-      -->
       <v-container class="py-10">
-        <h2>{{ "文学地図" }}</h2>
+        <h2>{{ $t("Literary Map (Overview)") }}</h2>
         <br />
-        <!-- <nuxt-content :document="page" /> -->
-        <CommonMap></CommonMap>
+        <CommonMap :markers="markers"></CommonMap>
       </v-container>
     </div>
 
@@ -77,7 +101,6 @@ const { data: contact } = await useFetch<JsonApiItem>(url);
       <v-container class="py-10">
         <h2>{{ $t("Coordination and contact") }}</h2>
         <br />
-        <!-- <nuxt-content :document="page" /> -->
         <PagesContactBlock :attributes="contact?.data.attributes" />
       </v-container>
     </v-sheet>

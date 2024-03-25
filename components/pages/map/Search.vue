@@ -61,8 +61,8 @@ const selectMarker = () => {
               variant="flat"
               @click="selectMarker()"
             >
-              <v-icon>{{ mdiMagnify }}</v-icon>
-              検索
+              <v-icon class="mr-2">{{ mdiMagnify }}</v-icon>
+              {{ $t("search") }}
             </v-btn>
           </v-card-text>
         </v-card>

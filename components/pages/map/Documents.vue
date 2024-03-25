@@ -9,7 +9,7 @@ const { t } = useI18n();
 
 const headers = [
   {
-    title: t("name"),
+    // title: t("name"),
     key: "name",
   },
 ];

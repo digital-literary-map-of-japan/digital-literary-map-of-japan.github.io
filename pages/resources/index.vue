@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { mdiMagnify, mdiPencil, mdiPlus, mdiCheck } from "@mdi/js";
+import type { CommonBtnAdd, CommonBtnEdit } from "#build/components";
+import { mdiMagnify, mdiCheck } from "@mdi/js";
+
+const { isAdmin } = useSettings();
 
 const fields: { [key: string]: string } = {
   "fields[node--documents]": [
@@ -32,27 +35,41 @@ const { data }: { [data: string]: any } = await useFetch(endpoint, {
   query: params,
 });
 
-const title = "資料";
+const { t } = useI18n();
+
+const title = t("Resources");
 
 const search = ref("");
 
 const headers = [
-  { title: "タイトル", value: "title", sortable: true },
+  { title: t("Title"), value: "title", sortable: true },
   {
-    title: "題名（ローマ字）",
+    title: t("Title (Romaji)"),
     value: "field_document_name_romaji",
     sortable: true,
   },
-  { title: "著者", value: "field_author_name_kanji", sortable: true },
+  { title: t("Author"), value: "field_author_name_kanji", sortable: true },
   {
-    title: "著者（ローマ字）",
+    title: t("Author (Rōmaji)"),
     value: "field_author_name_romaji",
     sortable: true,
   },
-  { title: "ジャンル", value: "field_genre", sortable: true },
-  { title: "更新日", value: "changed", sortable: true },
-  { title: "アクション", value: "field_id" },
+  { title: t("Genre"), value: "field_genre", sortable: true },
 ];
+
+if (isAdmin.value) {
+  headers.push({
+    title: t("updated"),
+    value: "changed",
+    sortable: true,
+  });
+
+  headers.push({
+    title: t("action"),
+    value: "field_id",
+    sortable: false,
+  });
+}
 
 const desserts = computed(() => {
   return data.value?.data
@@ -87,8 +104,6 @@ const desserts = computed(() => {
 
 const localePath = useLocalePath();
 
-const { t } = useI18n();
-
 const bh = [
   {
     title: t("top"),
@@ -96,7 +111,7 @@ const bh = [
     to: localePath({ name: "index" }),
   },
   {
-    title: t("documents"),
+    title,
     disabled: false,
   },
 ];
@@ -140,7 +155,7 @@ const update = (item: string) => {
         <v-col cols="12" md="4">
           <v-text-field
             v-model="search"
-            label="Search"
+            :label="$t('search')"
             :prepend-inner-icon="mdiMagnify"
             variant="outlined"
             hide-details
@@ -149,20 +164,12 @@ const update = (item: string) => {
           ></v-text-field>
         </v-col>
         <v-col class="text-right">
-          <v-btn
-            color="primary"
-            variant="outlined"
-            :href="`${url}node/add/documents`"
-            target="_blank"
-          >
-            <v-icon>{{ mdiPlus }}</v-icon>
-            作品を追加
-          </v-btn>
+          <CommonBtnAdd type="documents" label="作品を追加"></CommonBtnAdd>
         </v-col>
       </v-row>
 
       <div>
-        <b>ジャンル：</b>
+        <b>{{ $t("Genre") }}：</b>
 
         <v-btn
           class="ma-1"
@@ -203,15 +210,7 @@ const update = (item: string) => {
       </template>
 
       <template v-slot:item.field_id="{ item }: any">
-        <v-btn
-          size="small"
-          variant="outlined"
-          color="warning"
-          target="_blank"
-          :href="`${url}/node/${item.drupal_internal__nid}/edit`"
-        >
-          <v-icon>{{ mdiPencil }}</v-icon>
-        </v-btn>
+        <CommonBtnEdit :id="item.drupal_internal__nid" />
       </template>
     </v-data-table>
   </LayoutsCommon>

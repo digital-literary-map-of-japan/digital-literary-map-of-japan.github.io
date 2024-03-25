@@ -7,6 +7,8 @@ export const useMap = () => {
 
   const documents = useState<JsonApiItems | null>("documents", () => null);
 
+  const mode = useState<string>("mode", () => "map");
+
   const selectedDocumentIds = useState<string[]>(
     "selectedDocumentIds",
     () => []
@@ -47,5 +49,6 @@ export const useMap = () => {
     documentSpotMap,
     spotTypeCount,
     selectedSpotsByDocumentIds,
+    mode,
   };
 };

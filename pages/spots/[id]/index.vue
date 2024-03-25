@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { mdiArrowLeftBold } from "@mdi/js";
 import type { JsonApiItems } from "~/types/jsonapi";
 
 const getSpot = async () => {
@@ -86,10 +85,14 @@ const attributes = item?.attributes;
 
 const did = attributes?.drupal_internal__nid;
 
-const title = `"${attributes?.title} / ${attributes?.field_spot_name_romaji}"の情報`;
+const { t, locale } = useI18n();
+
+const title =
+  locale.value === "en"
+    ? `Datasheet of "${attributes?.title} / ${attributes?.field_spot_name_romaji}"`
+    : `"${attributes?.title} / ${attributes?.field_spot_name_romaji}"の情報`;
 
 const localePath = useLocalePath();
-const { t } = useI18n();
 
 const bh = [
   {
@@ -116,6 +119,14 @@ const tab = ref(route.query.layout || "basic");
 
 const items: string[] = ["basic", "history", "poems", "sanbuns", "yokyokus"];
 
+const labels: { [key: string]: string } = {
+  basic: t("Basic information"),
+  history: t("History"),
+  poems: t("Poetry"),
+  sanbuns: t("Tales, images etc."),
+  yokyokus: t("Yōkyoku"),
+};
+
 watch(
   () => tab.value,
   (value) => {
@@ -137,44 +148,10 @@ watch(
   <LayoutsCommon :title="title" :items="bh" fluid>
     <v-tabs v-model="tab" grow color="primary">
       <v-tab v-for="item in items" :key="item" :value="item">
-        {{ item }}
+        {{ labels[item] }}
         {{ typedValues[item] ? `(${typedValues[item].raw.data.length})` : "" }}
       </v-tab>
     </v-tabs>
-
-    <!--
-
-    <v-window v-model="tab" class="pa-4">
-      <v-window-item :value="'basic'">
-        <PagesSpotsBasic :attributes="attributes"></PagesSpotsBasic>
-      </v-window-item>
-
-      <v-window-item :value="'history'">
-        <PagesSpotsBasic :attributes="attributes"></PagesSpotsBasic>
-      </v-window-item>
-
-      <v-window-item :value="'poems'">
-        <PagesSpotsPoems
-          :raw="typedValues.poems.raw"
-          :translations="typedValues.poems.translations"
-        ></PagesSpotsPoems>
-      </v-window-item>
-
-      <v-window-item :value="'sanbuns'">
-        <PagesSpotsSanbuns
-          :raw="typedValues.sanbuns.raw"
-          :translations="typedValues.sanbuns.translations"
-        ></PagesSpotsSanbuns>
-      </v-window-item>
-
-      <v-window-item :value="'yokyokus'">
-        <PagesSpotsYokyokus
-          :raw="typedValues.yokyokus.raw"
-        ></PagesSpotsYokyokus>
-      </v-window-item>
-    </v-window>
-
-    -->
 
     <div class="pa-4">
       <PagesSpotsBasic
@@ -182,10 +159,10 @@ watch(
         v-if="tab === 'basic'"
       ></PagesSpotsBasic>
 
-      <PagesSpotsBasic
+      <PagesSpotsHistory
         :attributes="attributes"
         v-if="tab === 'history'"
-      ></PagesSpotsBasic>
+      ></PagesSpotsHistory>
 
       <PagesSpotsPoems
         :raw="typedValues.poems.raw"
@@ -207,14 +184,7 @@ watch(
 
     <v-row class="my-4">
       <v-col>
-        <v-btn
-          variant="flat"
-          color="primary"
-          :to="localePath({ name: 'spots' })"
-        >
-          <v-icon>{{ mdiArrowLeftBold }}</v-icon>
-          戻る
-        </v-btn>
+        <CommonBtnBack type="spots" />
       </v-col>
       <v-col>
         <CommonBlockEdit :id="did" />

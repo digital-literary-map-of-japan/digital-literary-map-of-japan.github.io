@@ -26,12 +26,6 @@ const localePath = useLocalePath();
             {{ $t("Digital Literary Map of Japan") }}
           </h1>
 
-          <!--
-        <h2 class="mt-5 text-center text-white">
-          らくらく検索で繋がるわくわく
-        </h2>
-        -->
-
           <p class="mt-10 text-center">
             <v-btn
               size="x-large"
@@ -39,7 +33,7 @@ const localePath = useLocalePath();
               class="text-white"
               flat
               :to="localePath({ name: 'spots' })"
-              >閲覧する
+              >{{ $t("Explore") }}
             </v-btn>
           </p>
         </v-container>

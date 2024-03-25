@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { mdiMagnify, mdiMap, mdiPencil, mdiPlus } from "@mdi/js";
-
-const { results, documents, documentSpotMap, spotTypeCount } = useMap();
+const { results, documents, documentSpotMap, spotTypeCount, mode } = useMap();
 
 const getSpots = async () => {
   const fields: { [key: string]: string } = {
@@ -69,9 +67,11 @@ const _documentSpotMap: { [key: string]: string[] } = {};
 const _spotTypeCount: { [key: string]: { [key: string]: number } } = {};
 
 for (const type_ of types) {
+  /*
   const fields: { [key: string]: string } = {
     [`fields[node--${type_}]`]: ["field_poem", "field_document"].join(","),
   };
+  */
 
   const url = "https://drupal.aws.ldas.jp/dlm/";
 
@@ -122,8 +122,6 @@ const bh = [
     disabled: false,
   },
 ];
-
-const mode = ref("map");
 
 const route = useRoute();
 
