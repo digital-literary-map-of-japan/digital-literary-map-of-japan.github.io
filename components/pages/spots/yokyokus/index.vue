@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { JsonApiItems, ResourceObject } from "~/types/jsonapi";
 
+const { isAdmin } = useSettings();
+
 interface PropType {
   raw: JsonApiItems;
   translations?: JsonApiItems;
@@ -11,61 +13,44 @@ const props = withDefaults(defineProps<PropType>(), {
   translations: () => ({} as JsonApiItems),
 });
 
+const { t } = useI18n();
+
 const headers = [
   {
-    title: "作品",
+    title: t("id_yokyoku"),
     value: "field_document",
     sortable: true,
   },
-
   {
-    title: "章段名・章段番号",
-    value: "field_chapter",
-    sortable: false,
-  },
-  {
-    title: "活字本頁（『新全集』）",
-    value: "field_page_number",
-    sortable: false,
-  },
-  {
-    title: "テクスト",
+    title: t("Text"),
     value: "field_text",
-    sortable: false,
+    sortable: true,
   },
   {
-    title: "キーワード",
+    title: t("Keyword"),
     value: "field_place_form",
-    sortable: false,
-  },
-  {
-    title: "アクション",
-    value: "field_id",
-    sortable: false,
+    sortable: true,
   },
 ];
 
+if (isAdmin.value) {
+  headers.push({
+    title: t("action"),
+    value: "field_id",
+    sortable: false,
+  });
+}
+
 const desserts = computed(() => {
   return props.raw?.data.map((item: any) => {
-    const field_document_value = item.relationships.field_document.data;
-
-    let documentName: string = "";
-
-    if (field_document_value !== null) {
-      const documentId = field_document_value.id;
-
-      documentName = props.raw?.included?.find(
-        (i: ResourceObject) => i.id === documentId
-      )?.attributes?.title;
-    }
-
     return {
       data: item,
       id: item.id,
-      field_document: documentName,
+      field_document: item.attributes.field_document_numbering,
       field_chapter: item.attributes.field_chapter,
       field_page_number: item.attributes.field_page_number,
       field_text: item.attributes.field_text,
+      field_place_form: item.attributes.field_place_form,
       drupal_internal__nid: item.attributes.drupal_internal__nid,
     };
   });
@@ -77,7 +62,7 @@ const dialog = ref(false);
 
 const selectPoem = (item: ResourceObject, documentName_: string) => {
   selectedPoem.value = item;
-  documentName.value = `${documentName_} ${item.attributes?.field_chapter} ${item.attributes?.field_page_number}`;
+  documentName.value = `${documentName_}`;
   dialog.value = true;
 };
 </script>
@@ -122,7 +107,7 @@ const selectPoem = (item: ResourceObject, documentName_: string) => {
         <v-card-actions>
           <v-btn
             block
-            text="Close Dialog"
+            :text="$t('close')"
             color="primary"
             variant="flat"
             @click="dialog = false"

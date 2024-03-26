@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { JsonApiItems, ResourceObject } from "~/types/jsonapi";
 
+const { isAdmin } = useSettings();
+
 interface PropType {
   raw: JsonApiItems;
   translations: JsonApiItems;
@@ -34,12 +36,15 @@ const headers = [
     value: "field_place_form",
     sortable: true,
   },
-  {
+];
+
+if (isAdmin.value) {
+  headers.push({
     title: t("action"),
     value: "field_id",
     sortable: false,
-  },
-];
+  });
+}
 
 const desserts = computed(() => {
   return props.raw?.data.map((item: any) => {
@@ -59,10 +64,18 @@ const desserts = computed(() => {
 
 const selectedPoem = ref<ResourceObject | null>(null);
 const dialog = ref(false);
+const translation = ref<ResourceObject | null>(null);
 
 const selectPoem = (item: ResourceObject) => {
   selectedPoem.value = item;
   dialog.value = true;
+
+  const poemId = item.id;
+
+  translation.value = props.translations.data.find(
+    (i: ResourceObject) =>
+      (i.relationships?.field_poem.data as ResourceObject).id === poemId
+  ) as ResourceObject;
 };
 </script>
 <template>
@@ -96,7 +109,7 @@ const selectPoem = (item: ResourceObject) => {
         <v-card-text>
           <PagesSpotsPoemsDialog
             :item="selectedPoem"
-            :translations="translations"
+            :translation="translation"
           ></PagesSpotsPoemsDialog>
         </v-card-text>
 

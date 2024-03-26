@@ -11,24 +11,41 @@ const props = withDefaults(defineProps<PropType>(), {
   translations: null,
 });
 
-// const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems_translations?filter[field_poem.id]=${props.item?.id}`;
-
-// const { data }: { [data: string]: any } = await useFetch(url);
+const { t } = useI18n();
 
 const fields = [
   {
-    title: "章段名・章段番号",
-    value: "field_chapter",
+    title: t("line"),
+    value: "field_line",
   },
   {
-    title: "活字本頁（『新全集』）",
-    value: "field_page_number",
-  },
-  {
-    title: "テクスト",
+    title: t("Text"),
     value: "field_text",
   },
-
+  {
+    title: t("Keyword"),
+    value: "field_place_form",
+  },
+  {
+    title: t("Context"),
+    value: "field_context",
+  },
+  {
+    title: `${t("Scene Description")}(${t("ja")})`,
+    value: "field_scene_description",
+  },
+  {
+    title: `${t("Scene Description")}(${t("en")})`,
+    value: "field_scene_description_eng",
+  },
+  {
+    title: `${t("commentary")}(${t("en")})`,
+    value: "field_commentary",
+  },
+  {
+    title: `${t("commentary")}(${t("en")})`,
+    value: "field_commentary_eng",
+  },
   {
     title: "URL",
     value: "field_link",
@@ -42,13 +59,16 @@ const attributes = computed(() => {
 <template>
   <div class="pa-4">
     <template v-for="field in fields">
-      <v-row dense>
+      <v-row v-if="attributes?.[field.value]">
         <v-col :md="12" cols="12">
           <b>{{ field.title }}：</b
           ><template v-if="field.value === 'field_link'">
             <a :href="attributes?.[field.value]?.uri" target="_blank">{{
               attributes?.[field.value]?.uri
             }}</a>
+          </template>
+          <template v-else-if="attributes?.[field.value].format">
+            <span v-html="attributes?.[field.value].processed"></span>
           </template>
           <template v-else>
             {{ attributes?.[field.value] }}

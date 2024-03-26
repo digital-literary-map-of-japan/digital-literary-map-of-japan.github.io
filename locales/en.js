@@ -221,4 +221,9 @@ export default {
     "Publication place": "Publication place",
     "Year": "Year",
     "Title (Furigana)": "Title (Furigana)",
+    "id_yokyoku": "Identifier (Number in 謡曲350番集)",
+    "line": "Yokyoku line in 謡曲350番集",
+    "Context": "Context",
+    "Scene Description": "Scene Description",
+    "commentary": "Commentary"
 }

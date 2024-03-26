@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { ResourceObject, JsonApiItems } from "~/types/jsonapi";
+import type { ResourceObject } from "~/types/jsonapi";
 
 interface PropType {
   item: ResourceObject | null;
-  translations: JsonApiItems;
+  translation: ResourceObject | null;
 }
 
 const props = withDefaults(defineProps<PropType>(), {
   item: null,
-  translations: () => ({} as JsonApiItems),
+  translation: null,
 });
 
 const { t } = useI18n();
@@ -84,40 +84,10 @@ const manifest = computed(() => {
       </v-row>
     </template>
 
-    <v-expansion-panels class="mt-10">
-      <v-expansion-panel elevation="0">
-        <v-expansion-panel-title class="bg-sub">{{
-          $t("translations")
-        }}</v-expansion-panel-title>
-        <v-expansion-panel-text class="pa-4">
-          <CommonBtnAdd
-            class="mb-4"
-            label="翻訳を追加"
-            type="poems_translations"
-          ></CommonBtnAdd>
-
-          <template v-for="item in translations.data">
-            <div>
-              <v-row dense>
-                <v-col :md="12" cols="12">
-                  <b>{{ $t("Text") }}：</b>{{ item.attributes?.field_text }}
-                </v-col>
-              </v-row>
-
-              <v-row dense>
-                <v-col :md="12" cols="12">
-                  <b>{{ $t("author_source") }}：</b
-                  >{{ item.attributes?.field_source }}
-                </v-col>
-              </v-row>
-
-              <CommonBlockEdit :id="item.attributes?.drupal_internal__nid">
-              </CommonBlockEdit>
-            </div>
-          </template>
-        </v-expansion-panel-text>
-      </v-expansion-panel>
-    </v-expansion-panels>
+    <PagesSpotsTranslation
+      :translation="props.translation"
+      type="poems_translations"
+    ></PagesSpotsTranslation>
 
     <div class="mt-10" v-if="manifest">
       <iframe

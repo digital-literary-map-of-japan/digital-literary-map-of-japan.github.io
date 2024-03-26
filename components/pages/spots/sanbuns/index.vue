@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { JsonApiItems, ResourceObject } from "~/types/jsonapi";
 
+const { isAdmin } = useSettings();
+
 interface PropType {
   raw: JsonApiItems;
   translations: JsonApiItems;
@@ -11,39 +13,44 @@ const props = withDefaults(defineProps<PropType>(), {
   translations: () => ({} as JsonApiItems),
 });
 
+const { t, locale } = useI18n();
+
 const headers = [
   {
-    title: "作品",
+    title: t("Resources"),
     value: "field_document",
     sortable: true,
   },
 
   {
-    title: "章段名・章段番号",
+    title: t("Chapter"),
     value: "field_chapter",
-    sortable: false,
+    sortable: true,
   },
   {
-    title: "活字本頁（『新全集』）",
+    title: t("Page number_"),
     value: "field_page_number",
-    sortable: false,
+    sortable: true,
   },
   {
-    title: "テクスト",
+    title: t("Text"),
     value: "field_text",
-    sortable: false,
+    sortable: true,
   },
   {
-    title: "キーワード",
+    title: t("Keyword"),
     value: "field_place_form",
     sortable: false,
   },
-  {
-    title: "アクション",
+];
+
+if (isAdmin.value) {
+  headers.push({
+    title: t("action"),
     value: "field_id",
     sortable: false,
-  },
-];
+  });
+}
 
 const desserts = computed(() => {
   return props.raw?.data.map((item: any) => {
@@ -51,7 +58,9 @@ const desserts = computed(() => {
 
     const documentName = props.raw?.included?.find(
       (i: ResourceObject) => i.id === documentId
-    )?.attributes?.title;
+    )?.attributes?.[
+      locale.value === "ja" ? "title" : "field_document_name_romaji"
+    ];
 
     return {
       data: item,
@@ -68,11 +77,19 @@ const desserts = computed(() => {
 const selectedPoem = ref<ResourceObject | null>(null);
 const documentName = ref<string>("");
 const dialog = ref(false);
+const translation = ref<ResourceObject | null>(null);
 
 const selectPoem = (item: ResourceObject, documentName_: string) => {
   selectedPoem.value = item;
   documentName.value = `${documentName_} ${item.attributes?.field_chapter} ${item.attributes?.field_page_number}`;
   dialog.value = true;
+
+  const itemId = item.id;
+
+  translation.value = props.translations.data.find(
+    (i: ResourceObject) =>
+      (i.relationships?.field_sanbun.data as ResourceObject).id === itemId
+  ) as ResourceObject;
 };
 </script>
 <template>
@@ -109,14 +126,14 @@ const selectPoem = (item: ResourceObject, documentName_: string) => {
         <v-card-text>
           <PagesSpotsSanbunsDialog
             :item="selectedPoem"
-            :translations="translations"
+            :translation="translation"
           ></PagesSpotsSanbunsDialog>
         </v-card-text>
 
         <v-card-actions>
           <v-btn
             block
-            text="Close Dialog"
+            :text="$t('close')"
             color="primary"
             variant="flat"
             @click="dialog = false"

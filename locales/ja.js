@@ -223,4 +223,9 @@ export default {
     "Publication place": "出版地",
     "Year": "刊・完成・編纂（年）",
     "Title (Furigana)": "題名（ふりがな）",
+    "id_yokyoku": "ID（謡曲350番集番号）",
+    "line": "謡曲350番集セリフ別番号",
+    "Context": "コンテクスト",
+    "Scene Description": "場面説明",
+    "commentary": "考察"
 }

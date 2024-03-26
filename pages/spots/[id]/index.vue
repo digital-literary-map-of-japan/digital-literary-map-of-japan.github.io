@@ -22,7 +22,7 @@ const getSpot = async () => {
 };
 
 const getTypedValues = async (spotUuid: string, type_: string) => {
-  const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/${type_}?filter[field_spot.id]=${spotUuid}&include=field_document&fields[node--documents]=title`;
+  const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/${type_}?filter[field_spot.id]=${spotUuid}&include=field_document&fields[node--documents]=title,field_document_name_romaji`;
 
   const { data }: { [data: string]: any } = await useFetch(url);
 
