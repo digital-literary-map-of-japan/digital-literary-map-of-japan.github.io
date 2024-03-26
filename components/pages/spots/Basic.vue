@@ -101,7 +101,16 @@ const markers = [
             {{ attributes?.[field.value]?.lon }}
           </template>
           <template v-else>
-            {{ attributes?.[field.value] }}
+            <template
+              v-if="
+                ['true', 'false'].includes(String(attributes?.[field.value]))
+              "
+            >
+              {{ $t(String(attributes?.[field.value])) }}
+            </template>
+            <template v-else>
+              {{ attributes?.[field.value] }}
+            </template>
           </template>
         </v-col>
       </v-row>

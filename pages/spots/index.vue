@@ -12,6 +12,8 @@ const getSpots = async () => {
       "field_geo",
       "field_spot_name_furigana",
       "field_spot_name_romaji",
+      "field_history_ja",
+      "field_history_en",
     ].join(","),
   };
 

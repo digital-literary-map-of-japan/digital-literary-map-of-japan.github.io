@@ -6,7 +6,7 @@ const { selectedSpotId, results, spotTypeCount } = useMap();
 
 const menu = ref(false);
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const spot = ref<ResourceObject | null>(null);
 
@@ -67,11 +67,22 @@ const fieldsCount = [
 ];
 
 const localePath = useLocalePath();
+
+onMounted(() => {
+  console.log(results.value);
+});
 </script>
 <template>
   <v-card
     class="position-absolute"
-    style="bottom: 20px; right: 20px; z-index: 1000; min-width: 300px"
+    style="
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      max-height: 50vh;
+      overflow-y: auto;
+      max-width: 25vh;
+    "
     v-if="menu"
   >
     <v-card-text>
@@ -116,9 +127,13 @@ const localePath = useLocalePath();
 
       <div>
         <strong>{{ $t("History") }}:</strong>
-        <p>
-          {{ attributes?.field_history }}
-        </p>
+        <p
+          v-html="
+            attributes?.[
+              locale === 'ja' ? 'field_history_ja' : 'field_history_en'
+            ].processed
+          "
+        ></p>
       </div>
     </v-card-text>
   </v-card>
