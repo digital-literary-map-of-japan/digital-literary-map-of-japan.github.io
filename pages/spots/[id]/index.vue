@@ -21,30 +21,80 @@ const getSpot = async () => {
   return data.value.data[0];
 };
 
+const convert = (data: JsonApiItems) => {
+  const mappings: { [key: string]: any } = {};
+
+  for (const item of data.data) {
+    const attributes = item.attributes;
+
+    const link = attributes?.field_link.uri;
+
+    const title = attributes?.title;
+
+    const manifest = attributes?.field_manifest?.uri;
+
+    const id = `${title}-${manifest}`;
+
+    if (!mappings[id]) {
+      mappings[id] = {
+        title,
+        link,
+        manifest,
+        pos: [],
+      };
+    }
+
+    const pos = attributes?.field_pos;
+    mappings[id].pos.push(pos);
+  }
+
+  const results: JsonApiItems = {
+    data: [],
+  };
+
+  for (const key of Object.keys(mappings)) {
+    results.data.push({
+      type: "images",
+      id: key,
+      attributes: mappings[key],
+    });
+  }
+
+  return results;
+};
+
 const getTypedValues = async (spotUuid: string, type_: string) => {
-  const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/${type_}?filter[field_spot.id]=${spotUuid}&include=field_document&fields[node--documents]=title,field_document_name_romaji`;
+  let url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/${type_}?filter[field_spot.id]=${spotUuid}`;
+
+  if (type_ !== "images") {
+    url += `&include=field_document&fields[node--documents]=title,field_document_name_romaji`;
+  }
 
   const { data }: { [data: string]: any } = await useFetch(url);
 
-  const values = data.value;
+  let values = data.value;
 
-  const valueIds: string[] = [];
+  let translations = null;
 
-  for (const value of values.data) {
-    const valueId = value.id;
-    valueIds.push(valueId);
+  if (type_ !== "yokyokus" && type_ !== "images") {
+    const valueIds: string[] = [];
+
+    for (const value of values.data) {
+      const valueId = value.id;
+      valueIds.push(valueId);
+    }
+
+    translations = await getTranslations(valueIds, type_);
   }
 
-  const translations = await getTranslations(valueIds, type_);
+  if (type_ === "images") {
+    values = convert(values);
+  }
 
   return [values, translations];
 };
 
 const getTranslations = async (valueIds: string[], type_: string) => {
-  if (type_ === "yokyokus") {
-    return null;
-  }
-
   const type_single = type_.substring(0, type_.length - 1);
   const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/${type_}_translations`;
 
@@ -68,7 +118,7 @@ const spot = await getSpot();
 
 const typedValues: { [key: string]: { [key: string]: JsonApiItems } } = {};
 
-const types = ["poems", "sanbuns", "yokyokus"];
+const types = ["poems", "sanbuns", "yokyokus", "images"];
 
 for (const type_ of types) {
   const [raw, translations] = await getTypedValues(spot.id, type_);
@@ -117,7 +167,7 @@ const route = useRoute();
 
 const tab = ref(route.query.layout || "basic");
 
-const items: string[] = ["basic", "history", "poems", "sanbuns", "yokyokus"];
+const items: string[] = ["basic", "history", ...types];
 
 const labels: { [key: string]: string } = {
   basic: t("Basic information"),
@@ -125,6 +175,7 @@ const labels: { [key: string]: string } = {
   poems: t("Poetry"),
   sanbuns: t("Tales, images etc."),
   yokyokus: t("Yōkyoku"),
+  images: t("images"),
 };
 
 watch(
@@ -180,6 +231,11 @@ watch(
         v-if="tab === 'yokyokus'"
         :raw="typedValues.yokyokus.raw"
       ></PagesSpotsYokyokus>
+
+      <PagesSpotsImages
+        v-if="tab === 'images'"
+        :raw="typedValues.images.raw"
+      ></PagesSpotsImages>
     </div>
 
     <v-row class="my-4">

@@ -227,5 +227,9 @@ export default {
     "line": "謡曲350番集セリフ別番号",
     "Context": "コンテクスト",
     "Scene Description": "場面説明",
-    "commentary": "考察"
+    "commentary": "考察",
+    "images": "絵図等",
+    "コマ": "コマ",
+    "Login": "ログイン",
+    "Logout": "ログアウト",
 }

@@ -225,5 +225,9 @@ export default {
     "line": "Yokyoku line in 謡曲350番集",
     "Context": "Context",
     "Scene Description": "Scene Description",
-    "commentary": "Commentary"
+    "commentary": "Commentary",
+    "images": "Images",
+    "コマ": "Image",
+    "Login": "Login",
+    "Logout": "Logout",
 }

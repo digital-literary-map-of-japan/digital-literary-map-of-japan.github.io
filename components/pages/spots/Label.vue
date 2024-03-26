@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { CommonBtnEdit } from "#build/components";
 import { mdiInformation } from "@mdi/js";
 
 const { legends } = useSettings();
@@ -27,6 +28,10 @@ withDefaults(defineProps<PropType>(), {
         </template>
 
         <v-card max-width="300">
+          <CommonBtnEdit
+            :id="legends[field.info].value.data.attributes.drupal_internal__nid"
+          />
+
           <v-card-text
             v-html="legends[field.info].value.data.attributes.body.processed"
           ></v-card-text>

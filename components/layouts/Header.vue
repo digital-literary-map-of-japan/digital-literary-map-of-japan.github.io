@@ -3,6 +3,8 @@ import { mdiBook, mdiMenu } from "@mdi/js";
 
 const localePath = useLocalePath();
 
+const { isAdmin } = useSettings();
+
 const drawer = ref(false);
 
 const menuList = [
@@ -94,6 +96,12 @@ const changeLocale = (locale: string) => {
             :active="$i18n.locale === 'en'"
             >English</v-list-item
           >
+
+          <v-divider class="my-2"></v-divider>
+
+          <v-list-item @click="isAdmin = !isAdmin">
+            {{ isAdmin ? $t("Logout") : $t("Login") }}
+          </v-list-item>
         </v-list>
       </v-navigation-drawer>
     </client-only>
