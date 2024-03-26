@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<PropType>(), {
 
 const { t } = useI18n();
 
-const fields = [
+const fields = ref([
   {
     title: t("line"),
     value: "field_line",
@@ -49,8 +49,10 @@ const fields = [
   {
     title: "URL",
     value: "field_link",
+    info: "URL",
+    menu: false,
   },
-];
+]);
 
 const attributes = computed(() => {
   return props.item?.attributes;
@@ -61,8 +63,8 @@ const attributes = computed(() => {
     <template v-for="field in fields">
       <v-row v-if="attributes?.[field.value]">
         <v-col :md="12" cols="12">
-          <b>{{ field.title }}：</b
-          ><template v-if="field.value === 'field_link'">
+          <PagesSpotsLabel :field="field"></PagesSpotsLabel>
+          <template v-if="field.value === 'field_link'">
             <a :href="attributes?.[field.value]?.uri" target="_blank">{{
               attributes?.[field.value]?.uri
             }}</a>

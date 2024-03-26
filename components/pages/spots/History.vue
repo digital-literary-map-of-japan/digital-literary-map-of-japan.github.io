@@ -3,30 +3,38 @@ interface PropType {
   attributes: any;
 }
 
-const props = withDefaults(defineProps<PropType>(), {
+withDefaults(defineProps<PropType>(), {
   attributes: () => ({}),
 });
 
 const { t } = useI18n();
 
-const fields: { [key: string]: string }[] = [
+const fields = ref<{ [key: string]: any }[]>([
   {
     title: `${t("Topography")} (${t("ja")})`,
     value: "field_topography_ja",
+    info: "地誌情報",
+    menu: false,
   },
   {
     title: `${t("Topography")} (${t("en")})`,
     value: "field_topography_en",
+    info: "地誌情報",
+    menu: false,
   },
   {
     title: `${t("History")} (${t("ja")})`,
     value: "field_history_ja",
+    info: "歴史",
+    menu: false,
   },
   {
     title: `${t("History")} (${t("en")})`,
     value: "field_history_en",
+    info: "歴史",
+    menu: false,
   },
-];
+]);
 </script>
 
 <template>
@@ -34,7 +42,7 @@ const fields: { [key: string]: string }[] = [
     <template v-for="field in fields">
       <v-row v-if="attributes?.[field.value]">
         <v-col :md="3" cols="12">
-          <b>{{ field.title }}：</b>
+          <PagesSpotsLabel :field="field"></PagesSpotsLabel>
         </v-col>
         <v-col :md="9" cols="12">
           <template v-if="field.value === 'field_link'">

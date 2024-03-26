@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<PropType>(), {
 
 const { t } = useI18n();
 
-const fields = [
+const fields = ref([
   {
     title: t("Name (Kanji)"),
     value: "title",
@@ -33,6 +33,8 @@ const fields = [
   {
     title: t("Lng / Lat"),
     value: "field_geo",
+    info: "緯度経度",
+    menu: false,
   },
   {
     title: t("Utamakura"),
@@ -45,20 +47,28 @@ const fields = [
   {
     title: t("Utamakura meaning"),
     value: "field_utamakura_meaning",
+    info: "歌枕としての意味",
+    menu: false,
   },
   {
     title: t("Utamakura features"),
     value: "field_utamakura_features",
+    info: "歌枕としての特徴",
+    menu: false,
   },
   {
     title: t("Utamakura associations"),
     value: "field_utamakura_associations",
+    info: "連想",
+    menu: false,
   },
+  /*
   {
     title: "URL",
     value: "field_link",
   },
-];
+  */
+]);
 
 const markers = [
   {
@@ -76,7 +86,7 @@ const markers = [
     <template v-for="field in fields">
       <v-row v-if="attributes?.[field.value]">
         <v-col :md="3" cols="12">
-          <b>{{ field.title }}：</b>
+          <PagesSpotsLabel :field="field"></PagesSpotsLabel>
         </v-col>
         <v-col :md="9" cols="12">
           <template v-if="field.value === 'field_link'">
