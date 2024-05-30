@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { ResourceObject } from "~/types/jsonapi";
 
+import { isDisplay } from "~/utils/common";
+
 interface PropType {
   item: ResourceObject | null;
   translation: ResourceObject | null;
@@ -55,7 +57,11 @@ const attributes = computed(() => {
 });
 
 const manifest = computed(() => {
-  const url = attributes.value?.field_link?.uri;
+  const links = attributes.value?.field_link;
+
+  if (links.length === 0) return "";
+
+  const url = links[0]?.uri;
 
   if (!url) return "";
 
@@ -71,13 +77,14 @@ const manifest = computed(() => {
 <template>
   <div class="pa-4">
     <template v-for="field in fields">
-      <v-row dense>
+      <v-row dense v-if="isDisplay(attributes?.[field.value])">
         <v-col :md="12" cols="12">
           <PagesSpotsLabel :field="field"></PagesSpotsLabel>
           <template v-if="field.value === 'field_link'">
-            <a :href="attributes?.[field.value]?.uri" target="_blank">{{
-              attributes?.[field.value]?.uri
-            }}</a>
+            <template v-for="(value, i) in attributes?.[field.value]">
+              <a :href="value.uri" target="_blank">{{ value.uri }}</a>
+              <span v-if="i !== attributes?.[field.value].length - 1">, </span>
+            </template>
           </template>
           <template v-else>
             {{ attributes?.[field.value] }}
@@ -91,7 +98,7 @@ const manifest = computed(() => {
       type="poems_translations"
     ></PagesSpotsTranslation>
 
-    <div class="mt-10" v-if="manifest">
+    <div class="mt-4" v-if="manifest">
       <iframe
         :src="manifest"
         width="100%"

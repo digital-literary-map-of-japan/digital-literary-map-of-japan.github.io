@@ -1,8 +1,16 @@
 <script setup lang="ts">
-import type { JsonApiItems } from "~/types/jsonapi";
+import type { JsonApiItems, ResourceObject } from "~/types/jsonapi";
 
 const { legends } = useSettings();
 
+const publicRuntimeConfig = useRuntimeConfig().public;
+
+legends.value = publicRuntimeConfig.legends;
+
+/*
+ */
+
+/*
 const getLegend = async (id: string) => {
   const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/${id}`;
 
@@ -10,6 +18,7 @@ const getLegend = async (id: string) => {
 
   return data.value;
 };
+
 
 if (Object.keys(legends.value).length === 0) {
   const legends_: { [key: string]: { [key2: string]: any } } = {
@@ -42,6 +51,7 @@ if (Object.keys(legends.value).length === 0) {
 
   legends.value = legends_;
 }
+*/
 
 const getSpot = async () => {
   const route = useRoute();
@@ -69,7 +79,15 @@ const convert = (data: JsonApiItems) => {
   for (const item of data.data) {
     const attributes = item.attributes;
 
-    const link = attributes?.field_link.uri;
+    const links = attributes?.field_link;
+
+    let link = "";
+
+    if (Array.isArray(links) && links.length > 0) {
+      link = links[0].uri;
+    } else {
+      link = links?.uri;
+    }
 
     const title = attributes?.title;
 
@@ -105,6 +123,7 @@ const convert = (data: JsonApiItems) => {
   return results;
 };
 
+/*
 const getTypedValues = async (spotUuid: string, type_: string) => {
   let url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/${type_}?filter[field_spot.id]=${spotUuid}`;
 
@@ -135,6 +154,49 @@ const getTypedValues = async (spotUuid: string, type_: string) => {
 
   return [values, translations];
 };
+*/
+
+const getDocument = async (paramsData: JsonApiItems) => {
+  const documents: string[] = [];
+  //
+
+  for (const item of paramsData.data) {
+    const relationships = item.relationships;
+
+    if (!relationships) {
+      continue;
+    }
+
+    if (!relationships.field_document) {
+      continue;
+    }
+
+    const documentId = (relationships.field_document.data as ResourceObject).id;
+
+    if (!documents.includes(documentId)) {
+      documents.push(documentId);
+    }
+  }
+
+  const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/documents`;
+
+  const params: { [key: string]: string } = {
+    "filter[name-filter][condition][path]": `id`,
+    "filter[name-filter][condition][operator]": "IN",
+  };
+
+  for (let i = 0; i < documents.length; i++) {
+    params[`filter[name-filter][condition][value][${i + 1}]`] = documents[i];
+  }
+
+  const { data }: { [data: string]: any } = await useFetch(url, {
+    query: params,
+  });
+
+  paramsData.included = data.value.data;
+
+  return paramsData;
+};
 
 const getTranslations = async (valueIds: string[], type_: string) => {
   const type_single = type_.substring(0, type_.length - 1);
@@ -158,17 +220,49 @@ const getTranslations = async (valueIds: string[], type_: string) => {
 
 const spot = await getSpot();
 
-const typedValues: { [key: string]: { [key: string]: JsonApiItems } } = {};
+const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/index/data?filter[field_id]=${spot.attributes.field_id}`;
+
+// &include=field_document&fields[node--documents]=title,field_document_name_romaji
+
+const { data }: { [data: string]: any } = await useFetch(url);
 
 const types = ["poems", "sanbuns", "yokyokus", "images"];
 
-for (const type_ of types) {
-  const [raw, translations] = await getTypedValues(spot.id, type_);
+const typedValues: { [key: string]: { [key: string]: JsonApiItems } } = {};
+const typedIds: { [key: string]: string[] } = {};
 
-  typedValues[type_] = {
-    raw,
-    translations,
+// 初期化
+for (const type of types) {
+  typedValues[type] = {
+    raw: {
+      data: [],
+      included: data.value.included,
+    },
+    translations: {
+      data: [],
+    },
   };
+
+  typedIds[type] = [];
+}
+
+for (const item_ of data.value.data) {
+  const type = item_.type.replace("node--", "");
+  typedValues[type].raw.data.push(item_);
+  typedIds[type].push(item_.id);
+}
+
+typedValues["sanbuns"].raw = await getDocument(typedValues["sanbuns"].raw);
+
+// 画像のみ変換
+typedValues["images"].raw = convert(typedValues["images"].raw);
+
+// 翻訳
+for (const type_ of ["poems", "sanbuns"]) {
+  const ids = typedIds[type_]; //  || [];
+  const values = await getTranslations(ids, type_);
+
+  typedValues[type_].translations = values;
 }
 
 const item = spot; // spot.data[0];
@@ -202,8 +296,6 @@ const bh = [
     disabled: false,
   },
 ];
-
-// const tab = ref("poems");
 
 const route = useRoute();
 

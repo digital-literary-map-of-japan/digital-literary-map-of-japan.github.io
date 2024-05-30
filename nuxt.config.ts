@@ -2,6 +2,8 @@ import { headConfig } from "./meta.config";
 import { getIds } from "./utils/routes";
 import axios from "axios";
 
+import legends from "./data.js";
+
 const baseURL = process.env.BASE_URL || "";
 const origin = process.env.ORIGIN || "";
 const appURL = origin + baseURL;
@@ -12,6 +14,7 @@ const publicRuntimeConfig = {
   origin,
   baseURL,
   appURL,
+  legends,
 };
 
 const getRoutes: any = async () => {

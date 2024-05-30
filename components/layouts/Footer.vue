@@ -6,7 +6,7 @@
         <!--  py-10 -->
         <small
           >Copyright ©2015-{{ new Date().getFullYear() }} Judit Árokay – Page by
-          Leo Born &amp; 21H00506</small
+          Satoru Nakamura &amp; 21H00506</small
         >
         <br />
 

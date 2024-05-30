@@ -94,6 +94,8 @@ const selectMarker = (marker: Marker) => {
     <p>サイズ: {{ size }}</p>
 
     <p>センター: {{ center }}</p>-->
+    <PagesMapInfo></PagesMapInfo>
+
     <LMap ref="map" :zoom="zoom" :center="center">
       <LTileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -143,8 +145,6 @@ const selectMarker = (marker: Marker) => {
       <PagesMapSearch></PagesMapSearch>
 
       <PagesMapDocuments></PagesMapDocuments>
-
-      <PagesMapInfo></PagesMapInfo>
     </LMap>
   </div>
 </template>

@@ -97,11 +97,13 @@ const changeLocale = (locale: string) => {
             >English</v-list-item
           >
 
-          <v-divider class="my-2"></v-divider>
+          <template v-if="false">
+            <v-divider class="my-2"></v-divider>
 
-          <v-list-item @click="isAdmin = !isAdmin">
-            {{ isAdmin ? $t("Logout") : $t("Login") }}
-          </v-list-item>
+            <v-list-item @click="isAdmin = !isAdmin">
+              {{ isAdmin ? $t("Logout") : $t("Login") }}
+            </v-list-item>
+          </template>
         </v-list>
       </v-navigation-drawer>
     </client-only>

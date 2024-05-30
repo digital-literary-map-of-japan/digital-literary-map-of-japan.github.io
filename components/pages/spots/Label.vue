@@ -22,18 +22,26 @@ withDefaults(defineProps<PropType>(), {
         location="end"
       >
         <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" icon variant="flat">
-            <v-icon color="success">{{ mdiInformation }}</v-icon>
+          <v-icon
+            style="vertical-align: bottom"
+            class="mx-1"
+            v-bind="props"
+            color="success"
+            >{{ mdiInformation }}</v-icon
+          >
+
+          <v-btn v-bind="props" variant="flat" size="small" v-if="false">
+            <!-- text -->
           </v-btn>
         </template>
 
         <v-card max-width="300">
           <CommonBtnEdit
-            :id="legends[field.info].value.data.attributes.drupal_internal__nid"
+            :id="legends[field.info].value.attributes.drupal_internal__nid"
           />
 
           <v-card-text
-            v-html="legends[field.info].value.data.attributes.body.processed"
+            v-html="legends[field.info].value.attributes.body.processed"
           ></v-card-text>
 
           <!--

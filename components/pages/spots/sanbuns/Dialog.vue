@@ -46,12 +46,13 @@ const attributes = computed(() => {
         <v-col :md="12" cols="12">
           <PagesSpotsLabel :field="field"></PagesSpotsLabel>
           <template v-if="field.value === 'field_link'">
-            <a :href="attributes?.[field.value]?.uri" target="_blank">{{
-              attributes?.[field.value]?.uri
-            }}</a>
+            <template v-for="(value, i) in attributes?.[field.value]">
+              <a :href="value.uri" target="_blank">{{ value.uri }}</a>
+              <span v-if="i !== attributes?.[field.value].length - 1">, </span>
+            </template>
           </template>
           <template v-else>
-            {{ attributes?.[field.value] }}
+            <span v-html="attributes?.[field.value]"></span>
           </template>
         </v-col>
       </v-row>

@@ -70,7 +70,7 @@ const fields = [
     value: "field_publication_year",
   },
   {
-    title: t("Publication location"),
+    title: t("Publication place"),
     value: "field_publication_location",
   },
   {

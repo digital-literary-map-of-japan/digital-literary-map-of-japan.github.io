@@ -22,7 +22,7 @@ const getSpots = async () => {
   const endpoint = `${url}jsonapi/node/spots`;
 
   const params: { [key: string]: string } = {
-    "page[limit]": "100",
+    "page[limit]": "500",
   };
 
   for (const key in fields) {
@@ -46,7 +46,7 @@ const getDocuments = async () => {
   const endpoint = `${url}jsonapi/node/documents`;
 
   const params: { [key: string]: string } = {
-    "page[limit]": "100",
+    "page[limit]": "500",
   };
 
   for (const key in fields) {
@@ -95,10 +95,9 @@ for (const type_ of types) {
 
     if (!_spotTypeCount[spot]) {
       _spotTypeCount[spot] = {};
-    }
-
-    if (!_spotTypeCount[spot][type_]) {
-      _spotTypeCount[spot][type_] = 0;
+      for (const type_ of types) {
+        _spotTypeCount[spot][type_] = 0;
+      }
     }
 
     _spotTypeCount[spot][type_] += 1;

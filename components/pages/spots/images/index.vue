@@ -6,7 +6,7 @@ interface PropType {
   raw: JsonApiItems;
 }
 
-const props = withDefaults(defineProps<PropType>(), {
+withDefaults(defineProps<PropType>(), {
   raw: () => ({} as JsonApiItems),
 });
 
@@ -17,7 +17,7 @@ const getUrl = (field: any, pos: number = -1) => {
 };
 </script>
 <template>
-  <v-card v-for="value in raw.data" class="mt-4" variant="outlined">
+  <v-card v-for="value in raw.data" variant="flat">
     <v-card-text v-if="value.attributes">
       <h3>
         <a :href="value.attributes.link" target="_blank"
@@ -51,5 +51,6 @@ const getUrl = (field: any, pos: number = -1) => {
         </p>
       </template>
     </v-card-text>
+    <v-divider class="my-2" />
   </v-card>
 </template>

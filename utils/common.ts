@@ -6,4 +6,12 @@ const isMobile = () => {
   return sm.value || xs.value;
 };
 
-export { isMobile };
+const isDisplay = (value: any) => {
+  if (Array.isArray(value)) {
+    return value.length > 0;
+  } else {
+    return value !== null && value !== undefined && value !== "";
+  }
+};
+
+export { isMobile, isDisplay };

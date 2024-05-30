@@ -58,7 +58,8 @@ const fields = ref<{ [key: string]: any }[]>([
           </template>
           <template v-else>
             <template v-if="attributes?.[field.value].processed">
-              <span v-html="attributes?.[field.value].processed"></span>
+              <!-- processed -->
+              <span v-html="attributes?.[field.value].value"></span>
             </template>
             <template v-else>
               {{ attributes?.[field.value] }}

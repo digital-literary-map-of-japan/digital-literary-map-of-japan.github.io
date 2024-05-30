@@ -67,18 +67,14 @@ const fieldsCount = [
 ];
 
 const localePath = useLocalePath();
-
-onMounted(() => {
-  console.log(results.value);
-});
 </script>
 <template>
   <v-card
     class="position-absolute"
     style="
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
+      bottom: 120px;
+      right: 1vw;
+      z-index: 9999;
       max-height: 50vh;
       overflow-y: auto;
       max-width: 25vh;
@@ -105,10 +101,10 @@ onMounted(() => {
             })
           "
         >
-          <v-icon class="mr-2">
+          <v-icon class="mr-2" v-if="false">
             {{ mdiOpenInNew }}
           </v-icon>
-          {{ $t("Show in database") }}
+          {{ $t("detail") }}
         </v-btn>
       </div>
 
@@ -131,7 +127,7 @@ onMounted(() => {
           v-html="
             attributes?.[
               locale === 'ja' ? 'field_history_ja' : 'field_history_en'
-            ].processed
+            ].value
           "
         ></p>
       </div>

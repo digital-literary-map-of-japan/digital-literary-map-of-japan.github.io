@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { ResourceObject, JsonApiItems } from "~/types/jsonapi";
 
+import { isDisplay } from "~/utils/common";
+
 interface PropType {
   item: ResourceObject | null;
   translations?: JsonApiItems | null;
@@ -61,7 +63,7 @@ const attributes = computed(() => {
 <template>
   <div class="pa-4">
     <template v-for="field in fields">
-      <v-row v-if="attributes?.[field.value]">
+      <v-row v-if="isDisplay(attributes?.[field.value])">
         <v-col :md="12" cols="12">
           <PagesSpotsLabel :field="field"></PagesSpotsLabel>
           <template v-if="field.value === 'field_link'">
@@ -70,51 +72,14 @@ const attributes = computed(() => {
             }}</a>
           </template>
           <template v-else-if="attributes?.[field.value].format">
-            <span v-html="attributes?.[field.value].processed"></span>
+            <!-- processed -->
+            <span v-html="attributes?.[field.value].value"></span>
           </template>
           <template v-else>
-            {{ attributes?.[field.value] }}
+            <span v-html="attributes?.[field.value]"></span>
           </template>
         </v-col>
       </v-row>
     </template>
-
-    <!--
-    <v-expansion-panels class="mt-10" v-if="false">
-      <v-expansion-panel elevation="0">
-        <v-expansion-panel-title class="bg-sub">翻訳</v-expansion-panel-title>
-        <v-expansion-panel-text class="pa-4">
-          <CommonBtnAdd
-            class="mb-4"
-            label="翻訳を追加"
-            type="poems_translations"
-          ></CommonBtnAdd>
-
-          <template v-for="translation in translations?.data">
-            <div>
-              <v-row dense>
-                <v-col :md="12" cols="12">
-                  <b>{{ "テクスト" }}：</b
-                  >{{ translation.attributes?.field_text }}
-                </v-col>
-              </v-row>
-
-              <v-row dense>
-                <v-col :md="12" cols="12">
-                  <b>{{ "著者・出典" }}：</b
-                  >{{ translation.attributes?.field_source }}
-                </v-col>
-              </v-row>
-
-              <CommonBlockEdit
-                :id="translation.attributes?.drupal_internal__nid"
-              >
-              </CommonBlockEdit>
-            </div>
-          </template>
-        </v-expansion-panel-text>
-      </v-expansion-panel>
-    </v-expansion-panels>
-    -->
   </div>
 </template>
