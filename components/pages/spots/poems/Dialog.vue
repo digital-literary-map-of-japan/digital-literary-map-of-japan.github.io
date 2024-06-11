@@ -73,6 +73,8 @@ const manifest = computed(() => {
     Number(index) - 1
   }`;
 });
+
+const nId = props.item?.attributes?.drupal_internal__nid;
 </script>
 <template>
   <div class="pa-4">
@@ -96,6 +98,7 @@ const manifest = computed(() => {
     <PagesSpotsTranslation
       :translation="props.translation"
       type="poems_translations"
+      :nId="nId"
     ></PagesSpotsTranslation>
 
     <div class="mt-4" v-if="manifest">

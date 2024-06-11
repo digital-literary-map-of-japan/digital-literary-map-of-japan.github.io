@@ -5,7 +5,7 @@ const { legends } = useSettings();
 
 const publicRuntimeConfig = useRuntimeConfig().public;
 
-legends.value = publicRuntimeConfig.legends;
+legends.value = publicRuntimeConfig.legends as any;
 
 /*
  */
@@ -157,7 +157,8 @@ const getTypedValues = async (spotUuid: string, type_: string) => {
 */
 
 const getDocument = async (paramsData: JsonApiItems) => {
-  const documents: string[] = [];
+  // const documents: string[] = [];
+  const documents: { [key: string]: number } = {};
   //
 
   for (const item of paramsData.data) {
@@ -173,8 +174,16 @@ const getDocument = async (paramsData: JsonApiItems) => {
 
     const documentId = (relationships.field_document.data as ResourceObject).id;
 
+    /*
     if (!documents.includes(documentId)) {
       documents.push(documentId);
+    }
+    */
+
+    if (!documents[documentId]) {
+      documents[documentId] = (
+        relationships.field_document.data as ResourceObject
+      ).attributes?.drupal_internal__nid;
     }
   }
 
@@ -185,8 +194,17 @@ const getDocument = async (paramsData: JsonApiItems) => {
     "filter[name-filter][condition][operator]": "IN",
   };
 
+  /*
   for (let i = 0; i < documents.length; i++) {
     params[`filter[name-filter][condition][value][${i + 1}]`] = documents[i];
+  }
+  */
+
+  let i = 0;
+
+  for (const key in documents) {
+    params[`filter[name-filter][condition][value][${i + 1}]`] = key;
+    i++;
   }
 
   const { data }: { [data: string]: any } = await useFetch(url, {
@@ -219,6 +237,8 @@ const getTranslations = async (valueIds: string[], type_: string) => {
 };
 
 const spot = await getSpot();
+
+const spotNId = spot.attributes.drupal_internal__nid;
 
 const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/index/data?filter[field_id]=${spot.attributes.field_id}`;
 
@@ -350,23 +370,27 @@ watch(
       ></PagesSpotsHistory>
 
       <PagesSpotsPoems
+        :spotNId="spotNId"
         :raw="typedValues.poems.raw"
         :translations="typedValues.poems.translations"
         v-if="tab === 'poems'"
       ></PagesSpotsPoems>
 
       <PagesSpotsSanbuns
+        :spotNId="spotNId"
         :raw="typedValues.sanbuns.raw"
         :translations="typedValues.sanbuns.translations"
         v-if="tab === 'sanbuns'"
       ></PagesSpotsSanbuns>
 
       <PagesSpotsYokyokus
+        :spotNId="spotNId"
         v-if="tab === 'yokyokus'"
         :raw="typedValues.yokyokus.raw"
       ></PagesSpotsYokyokus>
 
       <PagesSpotsImages
+        :spotNId="spotNId"
         v-if="tab === 'images'"
         :raw="typedValues.images.raw"
       ></PagesSpotsImages>

@@ -4,6 +4,8 @@ export const useSettings = () => {
 
   const isAdmin = useState("isAdmin", () => false);
 
+  const user = useState("user", () => "");
+
   const legends = useState<{ [key: string]: { [key2: string]: any } }>(
     "legends",
     () => ({})
@@ -14,5 +16,6 @@ export const useSettings = () => {
     theme,
     isAdmin,
     legends,
+    user,
   };
 };

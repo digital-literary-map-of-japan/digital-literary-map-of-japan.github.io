@@ -39,7 +39,7 @@ async function fetchData() {
 
     // Write data to a file named data.js
     try {
-        await fs.writeFile('data.js', `const fetchedData = ${JSON.stringify(data, null, 2)};\nexport default fetchedData;`);
+        await fs.writeFile('./assets/js/data.js', `const fetchedData = ${JSON.stringify(data, null, 2)};\nexport default fetchedData;`);
         console.log('Data has been saved to data.js');
     } catch (error) {
         console.error('Failed to save data to file:', error);

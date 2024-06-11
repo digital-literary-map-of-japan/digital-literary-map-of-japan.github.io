@@ -3,7 +3,7 @@ import { mdiBook, mdiMenu } from "@mdi/js";
 
 const localePath = useLocalePath();
 
-const { isAdmin } = useSettings();
+const { isAdmin, user } = useSettings();
 
 const drawer = ref(false);
 
@@ -37,6 +37,32 @@ const menuList = [
 const i18n = useI18n();
 const changeLocale = (locale: string) => {
   i18n.setLocale(locale);
+};
+
+/*
+const user = computed(() => {
+  return sessionStorage.getItem("user");
+});
+*/
+
+// const user = ref();
+
+// const user = sessionStorage.getItem("user");
+
+onMounted(() => {
+  // user.value = sessionStorage.getItem("user");
+  user.value = sessionStorage.getItem("user") || "";
+  if (user.value) {
+    // user.value = user;
+    isAdmin.value = true;
+  }
+});
+
+const logout = () => {
+  sessionStorage.setItem("user", "");
+  // user.value = "";
+  isAdmin.value = false;
+  user.value = "";
 };
 </script>
 
@@ -97,12 +123,25 @@ const changeLocale = (locale: string) => {
             >English</v-list-item
           >
 
-          <template v-if="false">
+          <template v-if="true">
             <v-divider class="my-2"></v-divider>
 
+            <template v-if="isAdmin">
+              <v-list-item>{{ user }}</v-list-item>
+              <v-list-item @click="logout">{{ $t("Logout") }}</v-list-item>
+            </template>
+
+            <template v-else>
+              <v-list-item :to="localePath({ name: 'login' })">{{
+                $t("Login")
+              }}</v-list-item>
+            </template>
+
+            <!--
             <v-list-item @click="isAdmin = !isAdmin">
-              {{ isAdmin ? $t("Logout") : $t("Login") }}
+              {{ !user ? $t("Logout") : $t("Login") }}
             </v-list-item>
+            -->
           </template>
         </v-list>
       </v-navigation-drawer>

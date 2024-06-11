@@ -1,0 +1,8 @@
+# Redirect everything to http://160.16.198.186/
+RewriteEngine On
+# RewriteCond %{REQUEST_URI} ^/$
+# RewriteRule ^ http://160.16.198.186/ [R=301,L]
+
+# Redirect specific path with spot ID to new URL
+RewriteCond %{THE_REQUEST} ^GET\ /#!\/app\/spots\/spot\/([a-f0-9]{24})\ HTTP
+RewriteRule ^(.*)$ /spots/%1? [R=301,L]

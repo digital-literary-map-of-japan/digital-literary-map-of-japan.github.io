@@ -4,11 +4,13 @@ import type { JsonApiItems, ResourceObject } from "~/types/jsonapi";
 const { isAdmin } = useSettings();
 
 interface PropType {
+  spotNId: number;
   raw: JsonApiItems;
   translations: JsonApiItems;
 }
 
 const props = withDefaults(defineProps<PropType>(), {
+  spotNId: 0,
   raw: () => ({} as JsonApiItems),
   translations: () => ({} as JsonApiItems),
 });
@@ -77,11 +79,16 @@ const selectPoem = (item: ResourceObject) => {
       (i.relationships?.field_poem.data as ResourceObject).id === poemId
   ) as ResourceObject;
 };
+
+const params = {
+  "edit[field_spot][widget][0][target_id]": String(props.spotNId),
+  "edit[field_id][widget][0][value]": crypto.randomUUID(),
+};
 </script>
 <template>
   <div>
     <div class="mb-4 text-right">
-      <CommonBtnAdd type="poems"></CommonBtnAdd>
+      <CommonBtnAdd type="poems" :params="params"></CommonBtnAdd>
     </div>
 
     <v-data-table

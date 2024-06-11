@@ -2,7 +2,7 @@ import { headConfig } from "./meta.config";
 import { getIds } from "./utils/routes";
 import axios from "axios";
 
-import legends from "./data.js";
+import legends from "./assets/js/data.js";
 
 const baseURL = process.env.BASE_URL || "";
 const origin = process.env.ORIGIN || "";
@@ -51,7 +51,6 @@ const getRoutes: any = async () => {
 
 export default defineNuxtConfig({
   runtimeConfig: {
-    // footer: process.env.footer,
     public: publicRuntimeConfig,
   },
   typescript: {
@@ -62,20 +61,25 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "nuxt-jsonld",
     "nuxt3-leaflet",
-    // "@kgierke/nuxt-basic-auth"
+    // "@sidebase/nuxt-auth",
   ],
   /*
-  // @ts-ignore
-  basicAuth: {
-    enabled: true,
-    users: [
-      {
-        username: "admin",
-        password: "admin",
+  auth: {
+    // origin: process.env.AUTH_ORIGIN || "http://localhost:3000",
+    // enableGlobalAppMiddleware: false,
+    baseURL: "https://hakken-cms.tana.ai",
+    provider: {
+      type: "local",
+      endpoints: {
+        signIn: {
+          // path: "/user/login?_format=json",
+          url: "https://hakken-cms.tana.ai/user/login?_format=json",
+          method: "post",
+        },
+        // @ts-ignore
+        getSession: false,
       },
-    ],
-    // Optional: Whitelist routes
-    // allowedRoutes: ["/api/.*"],
+    },
   },
   */
   i18n: {
@@ -89,12 +93,17 @@ export default defineNuxtConfig({
   },
   app: {
     baseURL,
-    // baseURL: app_baseURL, // process.env.baseURL, // /<reponame>
     head: {
       htmlAttrs: {
         lang: headConfig.lang,
       },
       title: headConfig.siteName,
+      script: [
+        {
+          src: "/js/redirect.js",
+          defer: true,
+        },
+      ],
       meta: [
         { charset: "utf-8" },
         { "http-equiv": "x-ua-compatible", content: "ie=edge" },
@@ -137,12 +146,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: [
-    "vuetify/lib/styles/main.sass",
-    // "mdi/css/materialdesignicons.min.css",
-    "@/assets/styles/main.css",
-  ],
-
+  css: ["vuetify/lib/styles/main.sass", "@/assets/styles/main.css"],
   build: {
     transpile: ["vuetify"],
   },
@@ -155,8 +159,6 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       concurrency: 1,
-      // interval: 5000,
-      // routes
     },
   },
   hooks: {
@@ -178,11 +180,7 @@ export default defineNuxtConfig({
         nitroConfig.prerender?.routes?.push(
           `/en/spots/${mount.attributes.field_id}`
         );
-
-        // return `/spots/${mount.attributes.field_id}`;
       });
     },
   },
-  /*
-   */
 });
