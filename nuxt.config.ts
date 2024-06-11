@@ -116,10 +116,12 @@ export default defineNuxtConfig({
         { name: "description", content: headConfig.description },
         { name: "keywords", content: headConfig.keywords },
         // ogp関連
+        /*
         {
           property: "og:site_name",
           content: headConfig.siteName,
         },
+        */
         { property: "og:type", content: "website" },
         { property: "og:url", content: appURL },
         { property: "og:title", content: headConfig.siteName },
@@ -138,11 +140,13 @@ export default defineNuxtConfig({
         { name: "twitter:card", content: "summary" },
       ],
       link: [
+        /*
         {
           rel: "icon",
           type: "image/x-icon",
           href: `${appURL}${headConfig.favicon}`,
         },
+        */
       ],
     },
   },
