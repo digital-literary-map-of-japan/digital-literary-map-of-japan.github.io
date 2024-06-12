@@ -25,6 +25,8 @@
   "dependencies": {
     "@vercel/edge": "^1.1.1",
     "axios": "^1.6.8",
+    "gtag": "^1.0.1",
+    "nuxt-gtag": "^2.0.6",
     "vue-gtag": "^2.0.1",
     "vue2-leaflet-fullscreen": "^1.0.1",
     "vuetify": "^3.5.11"

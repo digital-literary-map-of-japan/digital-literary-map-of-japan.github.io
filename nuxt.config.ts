@@ -61,6 +61,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "nuxt-jsonld",
     "nuxt3-leaflet",
+    "nuxt-gtag",
     // "@sidebase/nuxt-auth",
   ],
   /*
