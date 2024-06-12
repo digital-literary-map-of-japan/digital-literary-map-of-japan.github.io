@@ -59,4 +59,4 @@ jobs:
           passphrase: ${{ secrets.REMOTE_PASSPHRASE }}
           port: ${{ secrets.REMOTE_PORT }}
           script: |
-            unzip dist.zip && rsync -av --delete /home/nakamura/dist/ /var/www/html/ && rm -rf dist && rm dist.zip
+            rm -rf dist && unzip dist.zip && rsync -avv --log-file=./log.txt --delete /home/nakamura/dist/ /var/www/html/ && rm -rf dist && rm dist.zip

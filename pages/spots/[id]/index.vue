@@ -348,6 +348,28 @@ watch(
     );
   }
 );
+
+const seoTitle = `${title} - ${t(publicRuntimeConfig.siteName)}`;
+
+useHead({
+  title: seoTitle,
+  meta: [
+    {
+      // hid: "description",
+      // name: "description",
+      property: "og:title",
+      content: seoTitle,
+    },
+    {
+      property: "og:url",
+      content: route.fullPath,
+    },
+    {
+      property: "og:locale",
+      content: locale.value === "ja" ? "ja_JP" : "en_US",
+    },
+  ],
+});
 </script>
 <template>
   <LayoutsCommon :title="title" :items="bh" fluid>

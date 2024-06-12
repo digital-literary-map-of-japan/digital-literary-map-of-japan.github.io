@@ -23,6 +23,7 @@
     "vue-tsc": "^1.8.25"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^5.2.0",
     "@vercel/edge": "^1.1.1",
     "axios": "^1.6.8",
     "gtag": "^1.0.1",

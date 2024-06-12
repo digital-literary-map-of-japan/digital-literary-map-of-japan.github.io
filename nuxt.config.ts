@@ -62,27 +62,17 @@ export default defineNuxtConfig({
     "nuxt-jsonld",
     "nuxt3-leaflet",
     "nuxt-gtag",
+    "@nuxtjs/sitemap",
     // "@sidebase/nuxt-auth",
   ],
-  /*
-  auth: {
-    // origin: process.env.AUTH_ORIGIN || "http://localhost:3000",
-    // enableGlobalAppMiddleware: false,
-    baseURL: "https://hakken-cms.tana.ai",
-    provider: {
-      type: "local",
-      endpoints: {
-        signIn: {
-          // path: "/user/login?_format=json",
-          url: "https://hakken-cms.tana.ai/user/login?_format=json",
-          method: "post",
-        },
-        // @ts-ignore
-        getSession: false,
-      },
+  sitemap: {
+    // path: "/sitemap.xml",
+    // hostname: appURL,
+    exclude: ["/static/404.html", "/static/500.html"],
+    async routes() {
+      return await getRoutes();
     },
   },
-  */
   i18n: {
     locales: [
       { code: "ja", iso: "ja_JP", file: "ja.js" },
@@ -166,17 +156,23 @@ export default defineNuxtConfig({
       concurrency: 1,
     },
   },
+  site: {
+    url: appURL,
+  },
   hooks: {
-    async "nitro:config"(nitroConfig) {
+    async "nitro:config"(nitroConfig: any) {
       if (nitroConfig.dev) {
         return;
       }
+
       const res = await axios.get(
         "https://drupal.aws.ldas.jp/dlm/jsonapi/node/spots"
       );
+
       if (nitroConfig.prerender?.routes === undefined) {
         return;
       }
+
       res.data.data.map((mount: any) => {
         nitroConfig.prerender?.routes?.push(
           `/spots/${mount.attributes.field_id}`
@@ -188,4 +184,4 @@ export default defineNuxtConfig({
       });
     },
   },
-});
+} as any);
