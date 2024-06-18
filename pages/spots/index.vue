@@ -135,6 +135,15 @@ watch(
   },
   { immediate: true }
 );
+
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: process.env.BASE_URL + route.path,
+    },
+  ],
+});
 </script>
 <template>
   <template v-if="mode === 'map'">

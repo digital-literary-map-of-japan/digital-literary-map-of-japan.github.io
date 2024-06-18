@@ -158,6 +158,7 @@ export default defineNuxtConfig({
   },
   site: {
     url: appURL,
+    trailingSlash: true,
   },
   hooks: {
     async "nitro:config"(nitroConfig: any) {
@@ -182,6 +183,13 @@ export default defineNuxtConfig({
           `/en/spots/${mount.attributes.field_id}`
         );
       });
+    },
+  },
+  experimental: {
+    defaults: {
+      nuxtLink: {
+        trailingSlash: "append",
+      },
     },
   },
 } as any);

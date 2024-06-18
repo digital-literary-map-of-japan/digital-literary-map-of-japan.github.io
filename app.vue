@@ -1,14 +1,9 @@
 <script lang="ts" setup>
-/*
-const config = useRuntimeConfig()
- 
-useHead({
-  titleTemplate: (titleChunk) => {
-    const siteName = config.public.title
-    return siteName !== titleChunk ? `${titleChunk} - ${siteName}` : siteName
-  },
-})
-*/
+const route = useRoute();
+
+if (!route.path.endsWith("/")) {
+  await navigateTo(route.path + "/");
+}
 </script>
 <template>
   <NuxtLayout>
