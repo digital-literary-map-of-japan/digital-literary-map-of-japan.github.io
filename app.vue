@@ -1,9 +1,11 @@
 <script lang="ts" setup>
+/*
 const route = useRoute();
 
 if (!route.path.endsWith("/")) {
   await navigateTo(route.path + "/");
 }
+*/
 </script>
 <template>
   <NuxtLayout>
