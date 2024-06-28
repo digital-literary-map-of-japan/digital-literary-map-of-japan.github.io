@@ -5,7 +5,7 @@
     "dev": "nuxt dev --dotenv .env.local",
     "_dev": "nuxt dev --port 58685",
     "_generate": "nuxt generate",
-    "generate": "node node/init.js && nuxt generate --dotenv .env.production",
+    "generate": "nuxt generate --dotenv .env.production",
     "generate:vercel": "nuxt generate --dotenv .env.vercel",
     "build:vercel": "nuxt build --dotenv .env.vercel",
     "preview": "nuxt preview",
@@ -14,22 +14,23 @@
   "devDependencies": {
     "@mdi/font": "^7.4.47",
     "@mdi/js": "^7.4.47",
-    "@nuxtjs/i18n": "^8.2.0",
+    "@nuxtjs/i18n": "^8.3.1",
     "cross-env": "^7.0.3",
-    "nuxt": "^3.11.1",
+    "nuxt": "^3.12.2",
     "nuxt-jsonld": "^2.0.8",
-    "nuxt3-leaflet": "^1.0.12",
-    "sass": "^1.72.0",
-    "vue-tsc": "^1.8.25"
+    "nuxt3-leaflet": "^1.0.13",
+    "sass": "^1.77.6",
+    "typescript": "^5.5.2",
+    "vue-tsc": "^2.0.22"
   },
   "dependencies": {
-    "@nuxtjs/sitemap": "^5.2.0",
+    "@nuxtjs/sitemap": "^5.2.2",
     "@vercel/edge": "^1.1.1",
-    "axios": "^1.6.8",
+    "axios": "^1.7.2",
     "gtag": "^1.0.1",
     "nuxt-gtag": "^2.0.6",
     "vue-gtag": "^2.0.1",
     "vue2-leaflet-fullscreen": "^1.0.1",
-    "vuetify": "^3.5.11"
+    "vuetify": "^3.6.10"
   }
 }

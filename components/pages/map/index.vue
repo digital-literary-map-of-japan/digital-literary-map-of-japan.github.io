@@ -85,30 +85,23 @@ const selectMarker = (marker: Marker) => {
 </script>
 <template>
   <div :style="`height: ${height}; width: 100%`">
-    <!--
-
-      <p>選択されたスポットのIDs: {{ selectedSpotsByDocumentIds }}</p>
-
-    <p>選択されたスポットのID: {{ selectedSpotId }}</p>
-
-    <p>サイズ: {{ size }}</p>
-
-    <p>センター: {{ center }}</p>-->
     <PagesMapInfo></PagesMapInfo>
 
-    <LMap ref="map" :zoom="zoom" :center="center">
+    <LMap ref="map" :zoom="zoom" :center="center" :use-global-leaflet="false">
       <LTileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&amp;copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
         name="OpenStreetMap"
       />
 
-      <!-- :icon="redIcon" -->
       <template v-for="marker in markers">
         <LMarker
           @click="selectMarker(marker)"
           :lat-lng="[marker.lat, marker.lng]"
         >
+          <LTooltip>
+            {{ marker.title }}
+          </LTooltip>
           <LIcon
             :iconUrl="marker.icon"
             :iconSize="[25, 41]"
@@ -119,13 +112,11 @@ const selectMarker = (marker: Marker) => {
             :shadowSize="[41, 41]"
             :shadowAnchor="[12, 41]"
           ></LIcon>
-          >
         </LMarker>
       </template>
 
       <LControl position="topleft">
         <div class="leaflet-bar">
-          <!-- @click="updateLayout()" -->
           <nuxt-link
             :to="
               localePath({
