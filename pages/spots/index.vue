@@ -146,14 +146,13 @@ useHead({
 });
 </script>
 <template>
-  <template v-if="mode === 'map'">
-    <!-- :markers="markers"  -->
-    <PagesMap full></PagesMap>
-  </template>
-
-  <template v-else>
+  <template v-if="mode === 'table'">
     <LayoutsCommon :title="title" :items="bh" fluid>
       <PagesSpotsTable></PagesSpotsTable>
     </LayoutsCommon>
+  </template>
+
+  <template v-else>
+    <PagesMap full></PagesMap>
   </template>
 </template>

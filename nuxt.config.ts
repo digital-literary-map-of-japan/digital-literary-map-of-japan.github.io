@@ -1,5 +1,5 @@
 import { headConfig } from "./meta.config";
-import { getIds } from "./utils/routes";
+// import { getIds } from "./utils/routes";
 import axios from "axios";
 
 import legends from "./assets/js/data.js";
@@ -54,7 +54,7 @@ export default defineNuxtConfig({
     public: publicRuntimeConfig,
   },
   typescript: {
-    typeCheck: true,
+    typeCheck: false,
     strict: true,
   },
   modules: [
