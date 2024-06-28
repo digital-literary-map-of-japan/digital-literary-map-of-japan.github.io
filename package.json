@@ -5,7 +5,7 @@
     "dev": "nuxt dev --dotenv .env.local",
     "_dev": "nuxt dev --port 58685",
     "_generate": "nuxt generate",
-    "generate": "node node/init.js && nuxt generate --dotenv .env.production",
+    "generate": "nuxt generate --dotenv .env.production",
     "generate:vercel": "nuxt generate --dotenv .env.vercel",
     "build:vercel": "nuxt build --dotenv .env.vercel",
     "preview": "nuxt preview",
