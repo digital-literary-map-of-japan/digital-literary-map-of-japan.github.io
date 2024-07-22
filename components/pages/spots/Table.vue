@@ -68,9 +68,7 @@ const desserts = computed(() => {
       sanbuns: spotTypeCount.value[item.attributes.field_id]
         ? spotTypeCount.value[item.attributes.field_id].sanbuns
         : 0,
-      yokyokus: item.attributes.field_no_examples
-        ? -1
-        : spotTypeCount.value[item.attributes.field_id]
+      yokyokus: spotTypeCount.value[item.attributes.field_id]
         ? spotTypeCount.value[item.attributes.field_id].yokyokus
         : 0,
       changed: item.attributes.changed,

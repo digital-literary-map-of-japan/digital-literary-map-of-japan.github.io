@@ -7,52 +7,6 @@ const publicRuntimeConfig = useRuntimeConfig().public;
 
 legends.value = publicRuntimeConfig.legends as any;
 
-/*
- */
-
-/*
-const getLegend = async (id: string) => {
-  const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/${id}`;
-
-  const { data }: { [data: string]: any } = await useFetch(url);
-
-  return data.value;
-};
-
-
-if (Object.keys(legends.value).length === 0) {
-  const legends_: { [key: string]: { [key2: string]: any } } = {
-    緯度経度: {
-      id: "2bd8d311-6024-4dfc-98c2-f9fd0c4a1477",
-    },
-    歌枕としての意味: {
-      id: "03d91050-7593-49b9-b24d-2e1172555b4b",
-    },
-    歌枕としての特徴: {
-      id: "bb6ff42f-443a-4e7f-bc25-8b6b4a168462",
-    },
-    連想: {
-      id: "e68cd44b-ad42-4bb4-96ca-9df04ccd42a3",
-    },
-    地誌情報: {
-      id: "72528a60-1435-4539-9ad1-ed375aafac7a",
-    },
-    歴史: {
-      id: "6f9a7010-4306-4c7e-9702-c1f5d433d374",
-    },
-    URL: {
-      id: "c332309b-603d-4c40-af9f-947931dd5286",
-    },
-  };
-
-  for (const key in legends_) {
-    legends_[key].value = await getLegend(legends_[key].id);
-  }
-
-  legends.value = legends_;
-}
-*/
-
 const getSpot = async () => {
   const route = useRoute();
 
@@ -123,43 +77,8 @@ const convert = (data: JsonApiItems) => {
   return results;
 };
 
-/*
-const getTypedValues = async (spotUuid: string, type_: string) => {
-  let url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/${type_}?filter[field_spot.id]=${spotUuid}`;
-
-  if (type_ !== "images") {
-    url += `&include=field_document&fields[node--documents]=title,field_document_name_romaji`;
-  }
-
-  const { data }: { [data: string]: any } = await useFetch(url);
-
-  let values = data.value;
-
-  let translations = null;
-
-  if (type_ !== "yokyokus" && type_ !== "images") {
-    const valueIds: string[] = [];
-
-    for (const value of values.data) {
-      const valueId = value.id;
-      valueIds.push(valueId);
-    }
-
-    translations = await getTranslations(valueIds, type_);
-  }
-
-  if (type_ === "images") {
-    values = convert(values);
-  }
-
-  return [values, translations];
-};
-*/
-
 const getDocument = async (paramsData: JsonApiItems) => {
-  // const documents: string[] = [];
   const documents: { [key: string]: number } = {};
-  //
 
   for (const item of paramsData.data) {
     const relationships = item.relationships;
@@ -174,12 +93,6 @@ const getDocument = async (paramsData: JsonApiItems) => {
 
     const documentId = (relationships.field_document.data as ResourceObject).id;
 
-    /*
-    if (!documents.includes(documentId)) {
-      documents.push(documentId);
-    }
-    */
-
     if (!documents[documentId]) {
       documents[documentId] = (
         relationships.field_document.data as ResourceObject
@@ -193,12 +106,6 @@ const getDocument = async (paramsData: JsonApiItems) => {
     "filter[name-filter][condition][path]": `id`,
     "filter[name-filter][condition][operator]": "IN",
   };
-
-  /*
-  for (let i = 0; i < documents.length; i++) {
-    params[`filter[name-filter][condition][value][${i + 1}]`] = documents[i];
-  }
-  */
 
   let i = 0;
 
@@ -241,8 +148,6 @@ const spot = await getSpot();
 const spotNId = spot.attributes.drupal_internal__nid;
 
 const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/index/data?filter[field_id]=${spot.attributes.field_id}`;
-
-// &include=field_document&fields[node--documents]=title,field_document_name_romaji
 
 const { data }: { [data: string]: any } = await useFetch(url);
 
@@ -355,8 +260,6 @@ useHead({
   title: seoTitle,
   meta: [
     {
-      // hid: "description",
-      // name: "description",
       property: "og:title",
       content: seoTitle,
     },
@@ -370,13 +273,27 @@ useHead({
     },
   ],
 });
+
+const showCount = (item: string) => {
+  return attributes.field_no_examples && item === "yokyokus"
+    ? t("No examples")
+    : typedValues[item].raw.data.length;
+};
 </script>
 <template>
   <LayoutsCommon :title="title" :items="bh" fluid>
     <v-tabs v-model="tab" grow color="primary">
-      <v-tab v-for="item in items" :key="item" :value="item">
+      <v-tab
+        v-for="item in items"
+        :key="item"
+        :value="item"
+        :disabled="
+          typedValues[item] &&
+          [0, -1].includes(typedValues[item].raw.data.length)
+        "
+      >
         {{ labels[item] }}
-        {{ typedValues[item] ? `(${typedValues[item].raw.data.length})` : "" }}
+        {{ typedValues[item] ? `(${showCount(item)})` : "" }}
       </v-tab>
     </v-tabs>
 
