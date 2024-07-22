@@ -14,6 +14,7 @@ const getSpots = async () => {
       "field_spot_name_romaji",
       "field_history_ja",
       "field_history_en",
+      "field_no_examples",
     ].join(","),
   };
 

@@ -27,15 +27,17 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
+      - name: Install Axios and Run init.js
         run: npm i axios && node node/init.js
 
       - name: Install dependencies
         run: npm i
+
       - name: Static HTML export with Nuxt
         run: npm run generate
         env:
           NODE_OPTIONS: --max-old-space-size=16384
+
       - name: Zip the distribution folder
         run: zip -r dist.zip dist
 
