@@ -98,6 +98,7 @@ const selectMarker = (marker: Marker) => {
         <LMarker
           @click="selectMarker(marker)"
           :lat-lng="[marker.lat, marker.lng]"
+          :z-index-offset="selectedSpotId === marker.id ? 1000 : 0"
         >
           <LTooltip>
             {{ marker.title }}
