@@ -222,4 +222,5 @@ export default {
     "コマ": "コマ",
     "Login": "ログイン",
     "Logout": "ログアウト",
+    "No examples": "用例なし",
 }

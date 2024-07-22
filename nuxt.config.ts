@@ -53,10 +53,12 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: publicRuntimeConfig,
   },
+
   typescript: {
     typeCheck: false,
     strict: true,
   },
+
   modules: [
     "@nuxtjs/i18n",
     "nuxt-jsonld",
@@ -65,6 +67,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     // "@sidebase/nuxt-auth",
   ],
+
   sitemap: {
     // path: "/sitemap.xml",
     // hostname: appURL,
@@ -73,6 +76,7 @@ export default defineNuxtConfig({
       return await getRoutes();
     },
   },
+
   i18n: {
     locales: [
       { code: "ja", iso: "ja_JP", file: "ja.js" },
@@ -82,6 +86,7 @@ export default defineNuxtConfig({
     defaultLocale: headConfig.lang,
     lazy: true,
   },
+
   app: {
     baseURL,
     head: {
@@ -141,25 +146,31 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   css: ["vuetify/lib/styles/main.sass", "@/assets/styles/main.css"],
+
   build: {
     transpile: ["vuetify"],
   },
+
   vite: {
     define: {
       "process.env.DEBUG": false,
     },
   },
+
   nitro: {
     prerender: {
       crawlLinks: true,
       concurrency: 1,
     },
   },
+
   site: {
     url: appURL,
     trailingSlash: true,
   },
+
   hooks: {
     async "nitro:config"(nitroConfig: any) {
       if (nitroConfig.dev) {
@@ -185,6 +196,7 @@ export default defineNuxtConfig({
       });
     },
   },
+
   experimental: {
     defaults: {
       nuxtLink: {
@@ -192,4 +204,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: "2024-07-22",
 } as any);

@@ -68,7 +68,9 @@ const desserts = computed(() => {
       sanbuns: spotTypeCount.value[item.attributes.field_id]
         ? spotTypeCount.value[item.attributes.field_id].sanbuns
         : 0,
-      yokyokus: spotTypeCount.value[item.attributes.field_id]
+      yokyokus: item.attributes.field_no_examples
+        ? -1
+        : spotTypeCount.value[item.attributes.field_id]
         ? spotTypeCount.value[item.attributes.field_id].yokyokus
         : 0,
       changed: item.attributes.changed,
@@ -154,6 +156,15 @@ const customFilter: any = (
           "
           >{{ item.title }}</nuxt-link
         >
+      </template>
+
+      <template v-slot:item.yokyokus="{ item }: any">
+        <template v-if="item.yokyokus === -1">
+          <v-chip>
+            {{ $t("No examples") }}
+          </v-chip>
+        </template>
+        <template v-else>{{ item.yokyokus }}</template>
       </template>
 
       <template v-slot:item.field_id="{ item }: any">
