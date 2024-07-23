@@ -56,6 +56,7 @@ const attributes = computed(() => {
   return props.item?.attributes;
 });
 
+/*
 const manifest = computed(() => {
   const links = attributes.value?.field_link;
 
@@ -73,6 +74,7 @@ const manifest = computed(() => {
     Number(index) - 1
   }`;
 });
+*/
 
 const nId = props.item?.attributes?.drupal_internal__nid;
 </script>
@@ -101,6 +103,7 @@ const nId = props.item?.attributes?.drupal_internal__nid;
       :nId="nId"
     ></PagesSpotsTranslation>
 
+    <!--
     <div class="mt-4" v-if="manifest">
       <iframe
         :src="manifest"
@@ -111,5 +114,6 @@ const nId = props.item?.attributes?.drupal_internal__nid;
         allowfullscreen
       ></iframe>
     </div>
+    -->
   </div>
 </template>
