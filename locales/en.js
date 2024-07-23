@@ -153,7 +153,7 @@ export default {
     "Basic information": "Basic information",
     "Topography/History": "Topography/History",
     "Poetry": "Poetry",
-    "Tales, images etc.": "Tales, images etc.",
+    "Tales, images etc.": "Tales",
     "Yōkyoku": "Yōkyoku",
     "Back": "Back",
     "Menu": "Menu",

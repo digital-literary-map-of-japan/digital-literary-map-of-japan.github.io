@@ -103,6 +103,24 @@ const params = {
         }}</v-btn>
       </template>
 
+      <template v-slot:item.field_kotobagaki="{ item }: any">
+        <div style="min-width: 25vw">
+          {{ item.field_kotobagaki }}
+        </div>
+      </template>
+
+      <template v-slot:item.field_text="{ item }: any">
+        <div style="min-width: 35vw">
+          {{ item.field_text }}
+        </div>
+      </template>
+
+      <template v-slot:item.field_place_form="{ item }: any">
+        <div style="min-width: 25vw">
+          {{ item.field_place_form }}
+        </div>
+      </template>
+
       <template v-slot:item.field_id="{ item }: any">
         <CommonBlockEdit class="ma-1" :id="item.drupal_internal__nid" />
       </template>

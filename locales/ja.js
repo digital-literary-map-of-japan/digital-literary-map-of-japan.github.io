@@ -154,7 +154,7 @@ export default {
     "Basic information": "基本情報",
     "Topography/History": "地誌・歴史",
     "Poetry": "和歌・漢詩・俳諧",
-    "Tales, images etc.": "物語・説話・絵図等",
+    "Tales, images etc.": "物語・説話",
     "Yōkyoku": "謡曲",
     "Back": "戻る",
     "Menu": "メニュー",
