@@ -36,7 +36,7 @@ const getRoutes: any = async () => {
 
   const url = "https://drupal.aws.ldas.jp/dlm/";
 
-  const endpoint = `${url}jsonapi/node/spots`;
+  const endpoint = `${url}jsonapi/node/spots?page[limit]=200`;
 
   const { data }: { [data: string]: any } = await useFetch(endpoint);
 
