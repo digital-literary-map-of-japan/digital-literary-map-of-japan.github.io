@@ -1,5 +1,4 @@
 import { headConfig } from "./meta.config";
-// import { getIds } from "./utils/routes";
 import axios from "axios";
 
 import legends from "./assets/js/data.js";
@@ -17,28 +16,13 @@ const publicRuntimeConfig = {
   legends,
 };
 
+const SPOTS_URL =
+  "https://drupal.aws.ldas.jp/dlm/jsonapi/node/spots?page[limit]=200";
+
 const getRoutes: any = async () => {
   const routes: string[] = [];
 
-  /*
-
-  const ids = await getIds();
-
-  for (const id of ids) {
-    const path = `/item/${id}`;
-    routes.push(path);
-    routes.push(`/en/item/${id}`);
-    routes.push(`/basic/${id}`);
-    routes.push(`/en/basic/${id}`);
-  }
-
-  */
-
-  const url = "https://drupal.aws.ldas.jp/dlm/";
-
-  const endpoint = `${url}jsonapi/node/spots?page[limit]=200`;
-
-  const { data }: { [data: string]: any } = await useFetch(endpoint);
+  const { data }: { [data: string]: any } = await useFetch(SPOTS_URL);
 
   for (const item of data.value.data) {
     const id = item.attributes.field_id;
@@ -65,12 +49,9 @@ export default defineNuxtConfig({
     "nuxt3-leaflet",
     "nuxt-gtag",
     "@nuxtjs/sitemap",
-    // "@sidebase/nuxt-auth",
   ],
 
   sitemap: {
-    // path: "/sitemap.xml",
-    // hostname: appURL,
     exclude: ["/static/404.html", "/static/500.html"],
     async routes() {
       return await getRoutes();
@@ -111,13 +92,6 @@ export default defineNuxtConfig({
         // SEO関連
         { name: "description", content: headConfig.description },
         { name: "keywords", content: headConfig.keywords },
-        // ogp関連
-        /*
-        {
-          property: "og:site_name",
-          content: headConfig.siteName,
-        },
-        */
         { property: "og:type", content: "website" },
         { property: "og:url", content: appURL },
         { property: "og:title", content: headConfig.siteName },
@@ -134,15 +108,6 @@ export default defineNuxtConfig({
           content: "ja_JP",
         },
         { name: "twitter:card", content: "summary" },
-      ],
-      link: [
-        /*
-        {
-          rel: "icon",
-          type: "image/x-icon",
-          href: `${appURL}${headConfig.favicon}`,
-        },
-        */
       ],
     },
   },
@@ -177,9 +142,7 @@ export default defineNuxtConfig({
         return;
       }
 
-      const res = await axios.get(
-        "https://drupal.aws.ldas.jp/dlm/jsonapi/node/spots"
-      );
+      const res = await axios.get(SPOTS_URL);
 
       if (nitroConfig.prerender?.routes === undefined) {
         return;

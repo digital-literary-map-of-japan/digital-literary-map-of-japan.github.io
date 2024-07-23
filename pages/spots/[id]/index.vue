@@ -198,10 +198,7 @@ const did = attributes?.drupal_internal__nid;
 
 const { t, locale } = useI18n();
 
-const title =
-  locale.value === "en"
-    ? `Datasheet of "${attributes?.title} / ${attributes?.field_spot_name_romaji}"`
-    : `"${attributes?.title} / ${attributes?.field_spot_name_romaji}"の情報`;
+const title = `${attributes?.title} / ${attributes?.field_spot_name_romaji}`;
 
 const localePath = useLocalePath();
 
