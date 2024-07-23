@@ -53,6 +53,7 @@ const selectMarker = () => {
               :items="spots"
               variant="outlined"
               v-model="spot"
+              @keydown.enter.stop
             ></v-combobox>
 
             <v-btn

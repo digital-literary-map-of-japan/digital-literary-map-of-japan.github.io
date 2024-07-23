@@ -116,8 +116,15 @@ const localePath = useLocalePath();
 
       <template v-for="field in fieldsCount">
         <div class="mb-2">
-          <strong>{{ field.title }}:</strong>
-          {{ spotTypeCount[attributes?.field_id]?.[field.key] }}
+          <strong>{{ field.title }}:{{ " " }}</strong>
+          <template
+            v-if="spotTypeCount[attributes?.field_id]?.[field.key] === -1"
+          >
+            <v-chip>{{ $t("No examples") }}</v-chip>
+          </template>
+          <template v-else>
+            {{ spotTypeCount[attributes?.field_id]?.[field.key] }}
+          </template>
         </div>
       </template>
 

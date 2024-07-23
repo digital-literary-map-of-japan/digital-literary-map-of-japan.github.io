@@ -70,12 +70,6 @@ const _documentSpotMap: { [key: string]: string[] } = {};
 const _spotTypeCount: { [key: string]: { [key: string]: number } } = {};
 
 for (const type_ of types) {
-  /*
-  const fields: { [key: string]: string } = {
-    [`fields[node--${type_}]`]: ["field_poem", "field_document"].join(","),
-  };
-  */
-
   const url = "https://drupal.aws.ldas.jp/dlm/";
 
   const endpoint = `${url}api/${type_}`;
@@ -95,9 +89,20 @@ for (const type_ of types) {
     }
 
     if (!_spotTypeCount[spot]) {
+      // 初期化
+
+      const spotAttributes = results.value?.data.find(
+        (spot_: any) => spot_?.attributes?.field_id === spot
+      )?.attributes;
+
       _spotTypeCount[spot] = {};
       for (const type_ of types) {
         _spotTypeCount[spot][type_] = 0;
+      }
+
+      // 例がない場合は -1 にする
+      if (spotAttributes?.field_no_examples) {
+        _spotTypeCount[spot].yokyokus = -1;
       }
     }
 
