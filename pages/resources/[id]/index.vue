@@ -21,12 +21,9 @@ const attributes = item?.attributes;
 
 const did = attributes?.drupal_internal__nid;
 
-const { t, locale } = useI18n();
+const { t } = useI18n();
 
-const title =
-  locale.value === "en"
-    ? `Datasheet of "${attributes?.title} / ${attributes?.field_document_name_romaji}"`
-    : `"${attributes?.title} / ${attributes?.field_document_name_romaji}"の情報`;
+const title = `${attributes?.title} / ${attributes?.field_document_name_romaji}`;
 
 const fields = [
   {
