@@ -164,6 +164,7 @@ const update = (item: string) => {
           ></v-text-field>
         </v-col>
         <v-col class="text-right">
+          <PagesResourcesLegend />
           <CommonBtnAdd type="documents" label="作品を追加"></CommonBtnAdd>
         </v-col>
       </v-row>

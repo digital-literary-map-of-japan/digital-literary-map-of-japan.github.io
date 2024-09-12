@@ -223,4 +223,5 @@ export default {
     "Login": "ログイン",
     "Logout": "ログアウト",
     "No examples": "用例なし",
+    "legend": "凡例",
 }

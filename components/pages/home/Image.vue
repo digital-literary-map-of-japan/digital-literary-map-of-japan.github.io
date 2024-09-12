@@ -1,20 +1,11 @@
 <script setup lang="ts">
-const $config = useRuntimeConfig().public;
-const appConfig = useAppConfig();
-
-const imageUrl = "/img/KaiseiNifonYochiRoteiZenzu1846.jpg"; // $config.baseURL + appConfig.top_image_url;
+const imageUrl = "/img/KaiseiNifonYochiRoteiZenzu1846.jpg";
 
 const $t = useI18n().t;
 
 const backgroundImageStyle = computed(() => {
   return `background-image: url('${imageUrl}'); background-size: cover; background-position: center;`;
 });
-
-/*
-const translatedTitle = computed(() => {
-  return $t($config.siteName);
-});
-*/
 
 const localePath = useLocalePath();
 </script>
