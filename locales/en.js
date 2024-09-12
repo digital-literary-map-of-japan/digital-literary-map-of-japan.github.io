@@ -220,5 +220,6 @@ export default {
     "コマ": "Image",
     "Login": "Login",
     "Logout": "Logout",
-    "No examples": "No examples"
+    "No examples": "No examples",
+    "legend": "Legend",
 }
