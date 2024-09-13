@@ -198,6 +198,12 @@ const update = (item: string) => {
       :search="search"
       :custom-filter="customFilter"
     >
+      <template v-slot:item.field_author_name_kanji="{ item }: any">
+        <div class="dynamic-width">
+          <span v-html="item.field_author_name_kanji"></span>
+        </div>
+      </template>
+
       <template v-slot:item.title="{ item }: any">
         <nuxt-link
           :to="
