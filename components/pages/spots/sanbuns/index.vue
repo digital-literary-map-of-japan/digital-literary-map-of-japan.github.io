@@ -83,7 +83,9 @@ const translation = ref<ResourceObject | null>(null);
 
 const selectPoem = (item: ResourceObject, documentName_: string) => {
   selectedPoem.value = item;
-  documentName.value = `${documentName_} ${item.attributes?.field_chapter} ${item.attributes?.field_page_number}`;
+  documentName.value = `${documentName_} ${item.attributes?.field_chapter} ${
+    item.attributes?.field_page_number || ""
+  }`.trim();
   dialog.value = true;
 
   const itemId = item.id;
