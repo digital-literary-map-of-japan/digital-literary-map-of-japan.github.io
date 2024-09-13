@@ -104,19 +104,19 @@ const params = {
       </template>
 
       <template v-slot:item.field_kotobagaki="{ item }: any">
-        <div style="min-width: 25vw">
+        <div class="dynamic-width">
           {{ item.field_kotobagaki }}
         </div>
       </template>
 
       <template v-slot:item.field_text="{ item }: any">
-        <div style="min-width: 35vw">
+        <div class="dynamic-width">
           {{ item.field_text }}
         </div>
       </template>
 
       <template v-slot:item.field_place_form="{ item }: any">
-        <div style="min-width: 25vw">
+        <div class="dynamic-width">
           {{ item.field_place_form }}
         </div>
       </template>

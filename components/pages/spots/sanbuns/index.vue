@@ -112,7 +112,9 @@ const params = {
       :items="desserts"
     >
       <template v-slot:item.field_text="{ item }: any">
-        <span v-html="item.field_text"></span>
+        <div class="dynamic-width">
+          <span v-html="item.field_text"></span>
+        </div>
       </template>
 
       <template v-slot:item.field_document="{ item }: any">
