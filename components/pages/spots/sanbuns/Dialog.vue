@@ -19,7 +19,7 @@ const fields = ref([
     value: "field_chapter",
   },
   {
-    title: t("Page number_"),
+    title: t("Page number"),
     value: "field_page_number",
   },
   {

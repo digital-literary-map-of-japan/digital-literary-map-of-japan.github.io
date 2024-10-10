@@ -30,7 +30,7 @@ const headers = [
     sortable: true,
   },
   {
-    title: t("Page number_"),
+    title: t("Page number"),
     value: "field_page_number",
     sortable: true,
   },

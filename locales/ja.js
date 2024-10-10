@@ -193,7 +193,6 @@ export default {
     "Topography": "地誌情報",
     "Chapter": "章段名・章段番号",
     "Page number": "活字本頁",
-    "Page number_": "活字本頁（『新全集』）",
     "Translations": "Translations",
     "Author/Source": "Author/Source",
     "true": "はい",
