@@ -41,7 +41,7 @@ const fields = ref([
     value: "field_scene_description_eng",
   },
   {
-    title: `${t("commentary")}(${t("en")})`,
+    title: `${t("commentary")}(${t("ja")})`,
     value: "field_commentary",
   },
   {
