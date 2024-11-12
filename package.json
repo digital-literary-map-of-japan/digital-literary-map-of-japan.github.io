@@ -14,22 +14,21 @@
   "devDependencies": {
     "@mdi/font": "^7.4.47",
     "@mdi/js": "^7.4.47",
-    "@nuxtjs/i18n": "^8.5.3",
+    "@nuxtjs/i18n": "^9.0.0",
     "cross-env": "^7.0.3",
-    "nuxt": "^3.13.1",
+    "nuxt": "^3.14.159",
     "nuxt-jsonld": "^2.0.8",
     "nuxt3-leaflet": "^1.0.13",
-    "sass": "^1.78.0",
-    "typescript": "^5.6.2",
-    "vue-tsc": "^2.1.6"
+    "sass": "^1.80.6",
+    "typescript": "^5.6.3",
+    "vue-tsc": "^2.1.10"
   },
   "dependencies": {
-    "@nuxtjs/sitemap": "^6.0.1",
-    "@vercel/edge": "^1.1.2",
+    "@nuxtjs/sitemap": "^6.1.5",
     "axios": "^1.7.7",
     "gtag": "^1.0.1",
     "nuxt-gtag": "^3.0.1",
     "vue-gtag": "^2.0.1",
-    "vuetify": "^3.7.1"
+    "vuetify": "^3.7.4"
   }
 }
