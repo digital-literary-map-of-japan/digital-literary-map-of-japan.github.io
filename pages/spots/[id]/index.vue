@@ -123,6 +123,44 @@ const getDocument = async (paramsData: JsonApiItems) => {
   return paramsData;
 };
 
+const getData = async (url: string) => {
+  let offset = 0;
+  let limit = 50;
+
+  // JsonApiItems型のデータオブジェクトを初期化
+  const accumulatedData: JsonApiItems = {
+    data: [],
+    included: [],
+  };
+
+  while (true) {
+    const { data }: { data: any } = await useFetch(url, {
+      query: {
+        "page[offset]": offset,
+        "page[limit]": limit,
+      },
+    });
+
+    // データをaccumulatedDataに追加
+    accumulatedData.data = accumulatedData.data.concat(data.value.data);
+
+    if (data.value.included) {
+      accumulatedData.included = accumulatedData.included.concat(
+        data.value.included
+      );
+    }
+
+    // すべてのデータを取得した場合は終了
+    if (data.value.data.length < limit) {
+      break;
+    }
+
+    offset += limit;
+  }
+
+  return accumulatedData;
+};
+
 const getTranslations = async (valueIds: string[], type_: string) => {
   const type_single = type_.substring(0, type_.length - 1);
   const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/${type_}_translations`;
@@ -149,7 +187,9 @@ const spotNId = spot.attributes.drupal_internal__nid;
 
 const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/index/data?filter[field_id]=${spot.attributes.field_id}`;
 
-const { data }: { [data: string]: any } = await useFetch(url);
+// const { data }: { [data: string]: any } = await useFetch(url);
+
+const data = await getData(url);
 
 const types = ["poems", "sanbuns", "yokyokus", "images"];
 
@@ -161,7 +201,7 @@ for (const type of types) {
   typedValues[type] = {
     raw: {
       data: [],
-      included: data.value.included,
+      included: data.included,
     },
     translations: {
       data: [],
@@ -171,7 +211,7 @@ for (const type of types) {
   typedIds[type] = [];
 }
 
-for (const item_ of data.value.data) {
+for (const item_ of data.data) {
   const type = item_.type.replace("node--", "");
   typedValues[type].raw.data.push(item_);
   typedIds[type].push(item_.id);
