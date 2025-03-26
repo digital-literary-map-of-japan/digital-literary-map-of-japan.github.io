@@ -3,8 +3,6 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --dotenv .env.local",
-    "_dev": "nuxt dev --port 58685",
-    "_generate": "nuxt generate",
     "generate": "node node/init.js && nuxt generate --dotenv .env.production",
     "generate:vercel": "nuxt generate --dotenv .env.vercel",
     "build:vercel": "nuxt build --dotenv .env.vercel",
@@ -14,21 +12,21 @@
   "devDependencies": {
     "@mdi/font": "^7.4.47",
     "@mdi/js": "^7.4.47",
-    "@nuxtjs/i18n": "^9.0.0",
+    "@nuxtjs/i18n": "^9.4.0",
     "cross-env": "^7.0.3",
-    "nuxt": "^3.14.159",
-    "nuxt-jsonld": "^2.0.8",
+    "nuxt": "^3.16.1",
+    "nuxt-jsonld": "^2.1.0",
     "nuxt3-leaflet": "^1.0.13",
-    "sass": "^1.80.6",
-    "typescript": "^5.6.3",
-    "vue-tsc": "^2.1.10"
+    "sass": "^1.86.0",
+    "typescript": "^5.8.2",
+    "vue-tsc": "^2.2.8"
   },
   "dependencies": {
-    "@nuxtjs/sitemap": "^6.1.5",
-    "axios": "^1.7.7",
+    "@nuxtjs/sitemap": "^7.2.9",
+    "axios": "^1.8.4",
     "gtag": "^1.0.1",
-    "nuxt-gtag": "^3.0.1",
-    "vue-gtag": "^2.0.1",
-    "vuetify": "^3.7.4"
+    "nuxt-gtag": "^3.0.2",
+    "vue-gtag": "^2.1.2",
+    "vuetify": "^3.7.19"
   }
 }

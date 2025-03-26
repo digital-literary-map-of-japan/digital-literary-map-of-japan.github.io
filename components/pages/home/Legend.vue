@@ -7,9 +7,11 @@ const url = `https://drupal.aws.ldas.jp/dlm/${
   locale.value === "en" ? "en/" : ""
 }jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351`;
 
-const { data: contact } = await useFetch<JsonApiItem>(url);
+const { data: contactData } = await useFetch<JsonApiItem>(url);
 
-const id = contact.value?.data.attributes?.drupal_internal__nid;
+const id = contactData.value?.data.attributes?.drupal_internal__nid;
+
+const body = contactData.value?.data.attributes?.body.value
 </script>
 <template>
   <v-expansion-panels>
@@ -19,7 +21,7 @@ const id = contact.value?.data.attributes?.drupal_internal__nid;
       }}</v-expansion-panel-title>
       <v-expansion-panel-text class="pa-4">
         <CommonBlockEdit :id="id">
-          <span v-html="contact?.data.attributes?.body.value"></span>
+          <span v-html="body"></span>
         </CommonBlockEdit>
       </v-expansion-panel-text>
     </v-expansion-panel>

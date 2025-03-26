@@ -81,9 +81,10 @@ const logout = () => {
       </template>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" temporary location="right">
-      <v-list class="text-center">
-        <v-list-item>{{ $t("Menu") }}</v-list-item>
+    <client-only>
+      <v-navigation-drawer v-model="drawer" temporary location="right">
+        <v-list class="text-center">
+          <v-list-item>{{ $t("Menu") }}</v-list-item>
 
         <v-divider class="my-2"></v-divider>
 
@@ -121,5 +122,6 @@ const logout = () => {
         </template>
       </v-list>
     </v-navigation-drawer>
+  </client-only>
   </div>
 </template>

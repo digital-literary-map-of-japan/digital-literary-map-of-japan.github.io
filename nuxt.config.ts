@@ -63,9 +63,9 @@ export default defineNuxtConfig({
       { code: "ja", language: "ja_JP", file: "ja.js" },
       { code: "en", language: "en-US", file: "en.js" },
     ],
-    langDir: "locales/",
     defaultLocale: headConfig.lang,
-    lazy: true,
+    // trailingSlash: true,
+    detectBrowserLanguage: false,
   },
 
   app: {
@@ -75,12 +75,6 @@ export default defineNuxtConfig({
         lang: headConfig.lang,
       },
       title: headConfig.siteName,
-      script: [
-        {
-          src: "/js/redirect.js",
-          defer: true,
-        },
-      ],
       meta: [
         { charset: "utf-8" },
         { "http-equiv": "x-ua-compatible", content: "ie=edge" },
