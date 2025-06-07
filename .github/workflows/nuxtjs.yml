@@ -47,7 +47,6 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.REMOTE_KEY }}
-          passphrase: ${{ secrets.REMOTE_PASSPHRASE }}
           port: ${{ secrets.REMOTE_PORT }}
           source: "dist.zip"
           target: "/home/${{ secrets.REMOTE_USER }}/"
@@ -58,7 +57,6 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.REMOTE_KEY }}
-          passphrase: ${{ secrets.REMOTE_PASSPHRASE }}
           port: ${{ secrets.REMOTE_PORT }}
           script: |
-            rm -rf dist && unzip dist.zip && rsync -avv --log-file=./log.txt --delete /home/literarymaps/dist/ /home/literarymaps/www/dlm/ && rm -rf dist && rm dist.zip
+            rm -rf dist && unzip dist.zip && rsync -avv --log-file=./log.txt --delete /home/${{ secrets.REMOTE_USER }}/dist/ /home/${{ secrets.REMOTE_USER }}/www/dlm/ && rm -rf dist && rm dist.zip
