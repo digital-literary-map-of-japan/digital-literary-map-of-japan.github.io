@@ -23,7 +23,7 @@ const did = attributes?.drupal_internal__nid;
 
 const { t } = useI18n();
 
-const title = `${attributes?.title} / ${attributes?.field_document_name_romaji}`;
+const title = `${attributes?.title} / ${attributes?.field_document_name_romaji ?? ""}`;
 
 const fields = [
   {

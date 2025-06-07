@@ -51,6 +51,10 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
   ],
 
+  gtag: {
+    id: "G-587Z7D7T5S",
+  },
+
   sitemap: {
     exclude: ["/static/404.html", "/static/500.html"],
     async routes() {

@@ -24,6 +24,7 @@ const getSpots = async () => {
 
   const params: { [key: string]: string } = {
     "page[limit]": "500",
+    "sort": "drupal_internal__nid",
   };
 
   for (const key in fields) {

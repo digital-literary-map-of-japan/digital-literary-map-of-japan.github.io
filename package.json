@@ -12,21 +12,19 @@
   "devDependencies": {
     "@mdi/font": "^7.4.47",
     "@mdi/js": "^7.4.47",
-    "@nuxtjs/i18n": "^9.4.0",
+    "@nuxtjs/i18n": "^9.5.5",
     "cross-env": "^7.0.3",
-    "nuxt": "^3.16.1",
-    "nuxt-jsonld": "^2.1.0",
+    "nuxt": "^3.17.5",
+    "nuxt-jsonld": "^2.1.1",
     "nuxt3-leaflet": "^1.0.13",
-    "sass": "^1.86.0",
-    "typescript": "^5.8.2",
-    "vue-tsc": "^2.2.8"
+    "sass": "^1.89.1",
+    "typescript": "^5.8.3",
+    "vue-tsc": "^2.2.10"
   },
   "dependencies": {
-    "@nuxtjs/sitemap": "^7.2.9",
-    "axios": "^1.8.4",
-    "gtag": "^1.0.1",
-    "nuxt-gtag": "^3.0.2",
-    "vue-gtag": "^2.1.2",
-    "vuetify": "^3.7.19"
+    "@nuxtjs/sitemap": "^7.3.1",
+    "axios": "^1.9.0",
+    "nuxt-gtag": "^3.0.3",
+    "vuetify": "^3.8.8"
   }
 }

@@ -24,7 +24,8 @@ const url = "https://drupal.aws.ldas.jp/dlm/";
 const endpoint = `${url}jsonapi/node/documents`;
 
 const params: { [key: string]: string } = {
-  "page[limit]": "100",
+  "page[limit]": "500",
+  "sort": "drupal_internal__nid",
 };
 
 for (const key in fields) {
@@ -76,7 +77,7 @@ const desserts = computed(() => {
     .map((item: any) => {
       const genre = item.attributes.field_genre;
 
-      const fixedGenre = genre.split("（")[0];
+      const fixedGenre = genre?.split("（")[0] ?? "";
 
       if (
         selectedValues.value.length > 0 &&

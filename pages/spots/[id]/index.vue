@@ -211,7 +211,11 @@ for (const type of types) {
   typedIds[type] = [];
 }
 
-for (const item_ of data.data) {
+const sortedItems = data.data.sort((a: ResourceObject, b: ResourceObject) => {
+  return (a.attributes?.drupal_internal__nid ?? 0) - (b.attributes?.drupal_internal__nid ?? 0);
+});
+
+for (const item_ of sortedItems) {
   const type = item_.type.replace("node--", "");
   typedValues[type].raw.data.push(item_);
   typedIds[type].push(item_.id);
