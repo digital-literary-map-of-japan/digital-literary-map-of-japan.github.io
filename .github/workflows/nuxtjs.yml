@@ -2,7 +2,7 @@ name: Build and Deploy to Production
 
 on:
   push:
-    branches: ["_main"]
+    branches: ["main"]
   # Allows external webhook trigger
   repository_dispatch:
     types:
@@ -61,4 +61,4 @@ jobs:
           passphrase: ${{ secrets.REMOTE_PASSPHRASE }}
           port: ${{ secrets.REMOTE_PORT }}
           script: |
-            rm -rf dist && unzip dist.zip && rsync -avv --log-file=./log.txt --delete /home/nakamura/dist/ /var/www/html/ && rm -rf dist && rm dist.zip
+            rm -rf dist && unzip dist.zip && rsync -avv --log-file=./log.txt --delete /home/literarymaps/dist/ /home/literarymaps/www/dlm/ && rm -rf dist && rm dist.zip
