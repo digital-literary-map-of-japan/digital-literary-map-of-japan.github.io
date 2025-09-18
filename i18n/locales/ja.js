@@ -166,6 +166,7 @@ export default {
     "Document": "作品",
     "Volume": "巻・部立",
     "Author": "著者",
+    "Author (Furigana)": "著者（ふりがな）",
     "Author (Rōmaji)": "著者（ローマ字）",
     "Show transcription": "テクスト（ローマ字）を表示",
     "Text (Rōmaji)": "テクスト（ローマ字）",
