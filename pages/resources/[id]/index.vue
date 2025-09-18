@@ -40,8 +40,12 @@ const fields = [
     value: "field_author_name_kanji",
   },
   {
-    title: t("Author (Rōmaji)"),
+    title: t("Author (Furigana)"),  // ふりがな用に修正
     value: "field_author_name_furigana",
+  },
+  {
+    title: t("Author (Romaji)"),  // ローマ字用に追加
+    value: "field_author_name_romaji",  // 実際のローマ字フィールド名に合わせて調整
   },
   {
     title: t("Source text"),
