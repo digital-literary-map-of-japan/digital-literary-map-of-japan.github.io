@@ -27,9 +27,6 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Axios and Run init.js
-        run: npm i axios && node node/init.js
-
       - name: Install dependencies
         run: npm i
 
