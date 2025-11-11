@@ -1,0 +1,143 @@
+{
+  "data": [
+    {
+      "type": "node--images",
+      "id": "68ba836e-e31b-4418-96f8-9141e8173d25",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/68ba836e-e31b-4418-96f8-9141e8173d25?resourceVersion=id%3A4031"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 4011,
+        "drupal_internal__vid": 4031,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-26T01:42:31+00:00",
+        "status": true,
+        "title": "筑紫紀行（国文研）淡路島",
+        "created": "2024-03-26T01:42:31+00:00",
+        "changed": "2024-03-26T01:42:31+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_id": "81af72da-f781-4e47-863f-96042fb78afe",
+        "field_index": 74,
+        "field_link": [
+          {
+            "uri": "https://kokusho.nijl.ac.jp/biblio/200019332/20",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_manifest": {
+          "uri": "https://kokusho.nijl.ac.jp/biblio/200019332/manifest",
+          "title": null,
+          "options": []
+        },
+        "field_pos": 20
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "1e182348-bf40-4173-8b80-e46eb00ed3cd",
+            "meta": {
+              "drupal_internal__target_id": "images"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/68ba836e-e31b-4418-96f8-9141e8173d25/node_type?resourceVersion=id%3A4031"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/68ba836e-e31b-4418-96f8-9141e8173d25/relationships/node_type?resourceVersion=id%3A4031"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/68ba836e-e31b-4418-96f8-9141e8173d25/revision_uid?resourceVersion=id%3A4031"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/68ba836e-e31b-4418-96f8-9141e8173d25/relationships/revision_uid?resourceVersion=id%3A4031"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/68ba836e-e31b-4418-96f8-9141e8173d25/uid?resourceVersion=id%3A4031"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/68ba836e-e31b-4418-96f8-9141e8173d25/relationships/uid?resourceVersion=id%3A4031"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--images",
+              "id": "398c47d0-26e3-4fc8-822e-7a247a06bc0d",
+              "meta": {
+                "imported": "2024-03-26T01:42:31+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "a6a77ae4ee0298f3fd40eed579dcfec0",
+                "drupal_internal__target_id": 8
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/68ba836e-e31b-4418-96f8-9141e8173d25/feeds_item?resourceVersion=id%3A4031"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/68ba836e-e31b-4418-96f8-9141e8173d25/relationships/feeds_item?resourceVersion=id%3A4031"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "08c7d100-5363-47e9-8681-b5d1aaf0dedd",
+            "meta": {
+              "drupal_internal__target_id": 148
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/68ba836e-e31b-4418-96f8-9141e8173d25/field_spot?resourceVersion=id%3A4031"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/68ba836e-e31b-4418-96f8-9141e8173d25/relationships/field_spot?resourceVersion=id%3A4031"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "included": []
+}

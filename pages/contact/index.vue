@@ -1,13 +1,10 @@
 <script setup lang="ts">
 const { t, locale } = useI18n();
+const { fetchPage } = useLocalData();
 
-const url = `https://drupal.aws.ldas.jp/dlm/${
-  locale.value === "en" ? "en/" : ""
-}jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c`;
+const data = await fetchPage("0a3c695c-d8ba-45c7-9f11-0ec60eabd34c", locale.value);
 
-const { data }: { [data: string]: any } = await useFetch(url);
-
-const attributes = data.value?.data.attributes;
+const attributes = data?.data.attributes;
 
 const localePath = useLocalePath();
 

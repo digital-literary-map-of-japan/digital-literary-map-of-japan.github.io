@@ -1,0 +1,36 @@
+{
+  "jsonapi": {
+    "version": "1.0",
+    "meta": {
+      "links": {
+        "self": {
+          "href": "http://jsonapi.org/format/1.0/"
+        }
+      }
+    }
+  },
+  "data": {
+    "type": "node--page",
+    "id": "2bd8d311-6024-4dfc-98c2-f9fd0c4a1477",
+    "links": {
+      "self": {
+        "href": "https://drupal.aws.ldas.jp/dlm/en/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477?resourceVersion=id%3A3909"
+      }
+    },
+    "attributes": {
+      "drupal_internal__nid": 3883,
+      "title": "Geographic location",
+      "body": {
+        "value": "<p>Current maps (Google Maps) were used to identify the coordinates of the locations (sites, monuments, etc.). As for <em>utamakura</em> representing a wide area such as rivers and plains, characteristic landscapes (Mogami/Mogami river was located near the Shiraito waterfalls), famous historical sites, temples and shrines (Waka no ura was located near the Tamatsushima shrine) were used as criteria of definition. For more information on these characteristic landscapes, famous historical sites, temples and shrines <em>Nihon rekishi chimei taikei</em> (Heibonsha, 1979-2004) and <em>Nihon kokugo daijiten dainiban</em> (Shōgakukan, 2000-2002), Katagiri Yōichi's <em>Utamakura utakotoba jiten</em> (Kasama shoin, 1999), and Kubota Jun/Baba Akiko (ed.) <em>Utakotoba utamakura daijiten</em> (Kadokawa shoten, 1999) were used as reference.<br>In cases where it was difficult to link a name with any specific location as mentioned above, it was set near the center of a certain area or positioned at will near landmarks, post offices or government buildings.</p>",
+        "format": "basic_html",
+        "processed": "<p>Current maps (Google Maps) were used to identify the coordinates of the locations (sites, monuments, etc.). As for <em>utamakura</em> representing a wide area such as rivers and plains, characteristic landscapes (Mogami/Mogami river was located near the Shiraito waterfalls), famous historical sites, temples and shrines (Waka no ura was located near the Tamatsushima shrine) were used as criteria of definition. For more information on these characteristic landscapes, famous historical sites, temples and shrines <em>Nihon rekishi chimei taikei</em> (Heibonsha, 1979-2004) and <em>Nihon kokugo daijiten dainiban</em> (Shōgakukan, 2000-2002), Katagiri Yōichi's <em>Utamakura utakotoba jiten</em> (Kasama shoin, 1999), and Kubota Jun/Baba Akiko (ed.) <em>Utakotoba utamakura daijiten</em> (Kadokawa shoten, 1999) were used as reference.<br>In cases where it was difficult to link a name with any specific location as mentioned above, it was set near the center of a certain area or positioned at will near landmarks, post offices or government buildings.</p>",
+        "summary": ""
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://drupal.aws.ldas.jp/dlm/en/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477?fields%5Bnode--page%5D=body%2Ctitle%2Cdrupal_internal__nid"
+    }
+  }
+}

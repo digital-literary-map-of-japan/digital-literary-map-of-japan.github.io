@@ -1,0 +1,36 @@
+{
+  "jsonapi": {
+    "version": "1.0",
+    "meta": {
+      "links": {
+        "self": {
+          "href": "http://jsonapi.org/format/1.0/"
+        }
+      }
+    }
+  },
+  "data": {
+    "type": "node--page",
+    "id": "03d91050-7593-49b9-b24d-2e1172555b4b",
+    "links": {
+      "self": {
+        "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b?resourceVersion=id%3A3906"
+      }
+    },
+    "attributes": {
+      "drupal_internal__nid": 3886,
+      "title": "「歌枕としての意味」",
+      "body": {
+        "value": "<p>歌枕が具体的に示す内容。例えば「音羽」の場合、作品中では「音羽」という形のほか、「音羽山」「音羽河」「音羽滝」「音羽里」といったより具体的な形で出現することが多い。主として片桐洋一著『歌枕歌ことば辞典』を参照した。</p>",
+        "format": "basic_html",
+        "processed": "<p>歌枕が具体的に示す内容。例えば「音羽」の場合、作品中では「音羽」という形のほか、「音羽山」「音羽河」「音羽滝」「音羽里」といったより具体的な形で出現することが多い。主として片桐洋一著『歌枕歌ことば辞典』を参照した。</p>",
+        "summary": ""
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b?fields%5Bnode--page%5D=body%2Ctitle%2Cdrupal_internal__nid"
+    }
+  }
+}

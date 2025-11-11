@@ -1,21 +1,10 @@
 <script setup lang="ts">
-const url = "https://drupal.aws.ldas.jp/dlm/";
+const { fetchPageByFieldId } = useLocalData();
+const { locale } = useI18n();
 
-const endpoint = `${url}jsonapi/node/page`;
+const data = await fetchPageByFieldId("legend_yokyoku", locale.value);
 
-const params: { [key: string]: string } = {
-  "filter[field_id]": "legend_yokyoku",
-};
-
-const {
-  data,
-}: {
-  [data: string]: any;
-} = await useFetch(endpoint, {
-  query: params,
-});
-
-const item = data.value?.data[0];
+const item = data?.data;
 </script>
 <template>
   <v-dialog>

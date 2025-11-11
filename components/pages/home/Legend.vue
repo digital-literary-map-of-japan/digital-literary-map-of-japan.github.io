@@ -2,16 +2,13 @@
 import type { JsonApiItem } from "~/types/jsonapi";
 
 const { locale } = useI18n();
+const { fetchPage } = useLocalData();
 
-const url = `https://drupal.aws.ldas.jp/dlm/${
-  locale.value === "en" ? "en/" : ""
-}jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351`;
+const contactData = await fetchPage("c1f814ad-9822-4338-9cf1-aebc75da2351", locale.value);
 
-const { data: contactData } = await useFetch<JsonApiItem>(url);
+const id = contactData?.data.attributes?.drupal_internal__nid;
 
-const id = contactData.value?.data.attributes?.drupal_internal__nid;
-
-const body = contactData.value?.data.attributes?.body.value
+const body = contactData?.data.attributes?.body.value
 </script>
 <template>
   <v-expansion-panels>

@@ -1,0 +1,36 @@
+{
+  "jsonapi": {
+    "version": "1.0",
+    "meta": {
+      "links": {
+        "self": {
+          "href": "http://jsonapi.org/format/1.0/"
+        }
+      }
+    }
+  },
+  "data": {
+    "type": "node--page",
+    "id": "bb6ff42f-443a-4e7f-bc25-8b6b4a168462",
+    "links": {
+      "self": {
+        "href": "https://drupal.aws.ldas.jp/dlm/en/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462?resourceVersion=id%3A3905"
+      }
+    },
+    "attributes": {
+      "drupal_internal__nid": 3887,
+      "title": "Characteristics as utamakura",
+      "body": {
+        "value": "<p>The unique characteristics of the <em>utamakura</em>. Geographical information, famous landmarks, temples and shrines, or famous classics that are central when discussing the particular <em>utamakura</em> (e.g. in the case of \"Akashi\" The Tale of Genji) are given. If there is nothing of particular to note, it may be left blank. Mainly Katagiri Yōichi's <em>Utamakura utakotoba jiten</em> was consulted for reference.</p>",
+        "format": "basic_html",
+        "processed": "<p>The unique characteristics of the <em>utamakura</em>. Geographical information, famous landmarks, temples and shrines, or famous classics that are central when discussing the particular <em>utamakura</em> (e.g. in the case of \"Akashi\" The Tale of Genji) are given. If there is nothing of particular to note, it may be left blank. Mainly Katagiri Yōichi's <em>Utamakura utakotoba jiten</em> was consulted for reference.</p>",
+        "summary": ""
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://drupal.aws.ldas.jp/dlm/en/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462?fields%5Bnode--page%5D=body%2Ctitle%2Cdrupal_internal__nid"
+    }
+  }
+}

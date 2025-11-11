@@ -2,37 +2,12 @@
 import type { JsonApiItem } from "~/types/jsonapi";
 
 const { results } = useMap();
+const { fetchSpots, fetchPage } = useLocalData();
+const { locale } = useI18n();
 
 const getSpots = async () => {
-  const fields: { [key: string]: string } = {
-    "fields[node--spots]": [
-      "title",
-      "field_id",
-      "drupal_internal__nid",
-      "changed",
-      "field_geo",
-      "field_spot_name_furigana",
-      "field_spot_name_romaji",
-    ].join(","),
-  };
-
-  const url = "https://drupal.aws.ldas.jp/dlm/";
-
-  const endpoint = `${url}jsonapi/node/spots`;
-
-  const params: { [key: string]: string } = {
-    "page[limit]": "100",
-  };
-
-  for (const key in fields) {
-    params[key] = fields[key];
-  }
-
-  const { data }: { [data: string]: any } = await useFetch(endpoint, {
-    query: params,
-  });
-
-  results.value = data.value;
+  const data = await fetchSpots(locale.value);
+  results.value = data;
 };
 
 getSpots();
@@ -51,13 +26,7 @@ const markers = computed(() => {
   });
 });
 
-const { locale } = useI18n();
-
-const url = `https://drupal.aws.ldas.jp/dlm/${
-  locale.value === "en" ? "en/" : ""
-}jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c`;
-
-const { data: contact } = await useFetch<JsonApiItem>(url);
+const contact = await fetchPage("0a3c695c-d8ba-45c7-9f11-0ec60eabd34c", locale.value);
 </script>
 <template>
   <div>

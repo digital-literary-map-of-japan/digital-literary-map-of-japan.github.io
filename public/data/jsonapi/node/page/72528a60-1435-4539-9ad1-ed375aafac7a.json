@@ -1,0 +1,36 @@
+{
+  "jsonapi": {
+    "version": "1.0",
+    "meta": {
+      "links": {
+        "self": {
+          "href": "http://jsonapi.org/format/1.0/"
+        }
+      }
+    }
+  },
+  "data": {
+    "type": "node--page",
+    "id": "72528a60-1435-4539-9ad1-ed375aafac7a",
+    "links": {
+      "self": {
+        "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a?resourceVersion=id%3A3908"
+      }
+    },
+    "attributes": {
+      "drupal_internal__nid": 3884,
+      "title": "「地誌情報」",
+      "body": {
+        "value": "基本的な地理情報（行政区域データ、標高、面積など）とその地の特徴的な自然環境、隣接地域との位置関係、また、地名の語源や当該地域が日本の歴史上にどのように利用されてきたかに関して、特記すべき点を記した。主として、『日本歴史地名大系』、『日本国語大辞典 第二版』、『国史大辞典』（吉川弘文館、1979～1997年）、『日本大百科全書』（小学館、1994年）、を参考して作成した。",
+        "format": "basic_html",
+        "processed": "基本的な地理情報（行政区域データ、標高、面積など）とその地の特徴的な自然環境、隣接地域との位置関係、また、地名の語源や当該地域が日本の歴史上にどのように利用されてきたかに関して、特記すべき点を記した。主として、『日本歴史地名大系』、『日本国語大辞典 第二版』、『国史大辞典』（吉川弘文館、1979～1997年）、『日本大百科全書』（小学館、1994年）、を参考して作成した。",
+        "summary": ""
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a?fields%5Bnode--page%5D=body%2Ctitle%2Cdrupal_internal__nid"
+    }
+  }
+}

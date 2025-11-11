@@ -1,6 +1,7 @@
 import { headConfig } from "./meta.config";
-import axios from "axios";
 import fixVitePath from "./vite-plugins/fix-vite-path.js";
+import fs from "fs";
+import path from "path";
 
 import legends from "./assets/js/data.js";
 
@@ -17,15 +18,21 @@ const publicRuntimeConfig = {
   legends,
 };
 
-const SPOTS_URL =
-  "https://drupal.aws.ldas.jp/dlm/jsonapi/node/spots?page[limit]=200";
+// ローカルJSONからスポットデータを読み込む
+const loadLocalSpots = () => {
+  const spotsPath = path.resolve(__dirname, "./public/data/jsonapi/node/spots.json");
+  if (fs.existsSync(spotsPath)) {
+    return JSON.parse(fs.readFileSync(spotsPath, "utf-8"));
+  }
+  return { data: [] };
+};
 
 const getRoutes: any = async () => {
   const routes: string[] = [];
 
-  const { data }: { [data: string]: any } = await useFetch(SPOTS_URL);
+  const spotsData = loadLocalSpots();
 
-  for (const item of data.value.data) {
+  for (const item of spotsData.data) {
     const id = item.attributes.field_id;
     routes.push(`/spots/${id}`);
     routes.push(`/en/spots/${id}`);
@@ -130,7 +137,6 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      concurrency: 1,
     },
   },
 
@@ -145,13 +151,13 @@ export default defineNuxtConfig({
         return;
       }
 
-      const res = await axios.get(SPOTS_URL);
+      const spotsData = loadLocalSpots();
 
       if (nitroConfig.prerender?.routes === undefined) {
         return;
       }
 
-      res.data.data.map((mount: any) => {
+      spotsData.data.map((mount: any) => {
         nitroConfig.prerender?.routes?.push(
           `/spots/${mount.attributes.field_id}`
         );

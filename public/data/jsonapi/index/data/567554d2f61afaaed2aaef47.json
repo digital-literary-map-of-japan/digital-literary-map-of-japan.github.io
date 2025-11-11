@@ -1,0 +1,997 @@
+{
+  "data": [
+    {
+      "type": "node--poems",
+      "id": "0e17cade-cd35-4d14-b360-2620c3811fcc",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc?resourceVersion=id%3A1586"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 1577,
+        "drupal_internal__vid": 1586,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-22T02:33:38+00:00",
+        "status": true,
+        "title": "615051e2a8ed6b3fcf4cb3dc",
+        "created": "2024-03-22T02:33:38+00:00",
+        "changed": "2024-03-25T23:00:31+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_author": "読み人知らず",
+        "field_author_romaji": "yomibito shirazu",
+        "field_document_numbering": "後拾遺（1081）",
+        "field_id": "615051e2a8ed6b3fcf4cb3dc",
+        "field_kotobagaki": "実方朝臣女のもとにまうてきてかうしをならし侍けるに、女の心しらぬ人してあらくましけにとはせて侍ければかへり侍にけり、つとめて女の遣しける",
+        "field_kotobagaki_long": "実方朝臣女のもとにまうてきてかうしをならし侍けるに、女の心しらぬ人してあらくましけにとはせて侍ければかへり侍にけり、つとめて女の遣しける",
+        "field_link": [
+          {
+            "uri": "https://kotenseki.nijl.ac.jp/biblio/200007096/viewer/208",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_place_form": "あさくら",
+        "field_text": "明ぬよの / 心ちなからに / やみにしを / あさくらといひし / 声はきききや",
+        "field_text_romaji": "akenu yo no / kokochinagara ni / yaminishi o / Asakura to iishi / koe wa kikiki ya",
+        "field_text_romaji_long": "akenu yo no / kokochinagara ni / yaminishi o / Asakura to iishi / koe wa kikiki ya",
+        "field_translations": "[{'text': 'In the dark of night/ (one I felt would never end)/ You gave up and left;/ Did you hear the voice that cried,/ “Asakura! Who goes by?”', 'source': 'Cranston(2006): p.1024'}]",
+        "field_volume": "巻第十八・雑四"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "f60745ac-75bd-4bab-98c9-ea13557f9339",
+            "meta": {
+              "drupal_internal__target_id": "poems"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc/node_type?resourceVersion=id%3A1586"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc/relationships/node_type?resourceVersion=id%3A1586"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc/revision_uid?resourceVersion=id%3A1586"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc/relationships/revision_uid?resourceVersion=id%3A1586"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc/uid?resourceVersion=id%3A1586"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc/relationships/uid?resourceVersion=id%3A1586"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--poems",
+              "id": "2b3467b8-5a9b-46d6-aa7f-337d7cfe0977",
+              "meta": {
+                "imported": "2024-03-25T23:00:31+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "bf0a7799049dd1fe880cd9ce7b6e8ed7",
+                "drupal_internal__target_id": 3
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc/feeds_item?resourceVersion=id%3A1586"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc/relationships/feeds_item?resourceVersion=id%3A1586"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "e7897d03-f63a-4499-a405-656740ae2e3d",
+            "meta": {
+              "drupal_internal__target_id": 6
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc/field_document?resourceVersion=id%3A1586"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc/relationships/field_document?resourceVersion=id%3A1586"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "151f6f2e-754f-41c1-b43b-15a68b54c7b9",
+            "meta": {
+              "drupal_internal__target_id": 122
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc/field_spot?resourceVersion=id%3A1586"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/0e17cade-cd35-4d14-b360-2620c3811fcc/relationships/field_spot?resourceVersion=id%3A1586"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--poems",
+      "id": "a7ebc488-0b78-438d-a71b-5f2e2cd8fba9",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9?resourceVersion=id%3A1587"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 1578,
+        "drupal_internal__vid": 1587,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-22T02:33:38+00:00",
+        "status": true,
+        "title": "615051e2a8ed6b3fcf4cb3dd",
+        "created": "2024-03-22T02:33:38+00:00",
+        "changed": "2024-03-25T23:00:31+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_author": "天智天皇",
+        "field_author_romaji": "Tenji tennō",
+        "field_document_numbering": "新古今（1689）",
+        "field_id": "615051e2a8ed6b3fcf4cb3dd",
+        "field_kotobagaki": "題知らず",
+        "field_kotobagaki_long": "題知らず",
+        "field_link": [
+          {
+            "uri": "https://kotenseki.nijl.ac.jp/biblio/200007100/viewer/246",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_place_form": "あさくら",
+        "field_text": "あさくらや / きのまろとのに / 我をれは / なのりをしつつ / 行はたかこそ",
+        "field_text_romaji": "Asakura ya / kinomarodono ni / waga oreba / nanori o shitsutsu / yuku wa ta ga ko zo",
+        "field_text_romaji_long": "Asakura ya / kinomarodono ni / waga oreba / nanori o shitsutsu / yuku wa ta ga ko zo",
+        "field_translations": "[{'text': 'at Asakura/ when I am here in the hall/ built with rough-hewn logs/ whose son is it who goes by/ constantly calling his name', 'source': 'Rodd, Laurel Rasplica (2015): p.689'}]",
+        "field_volume": "巻第十七・雑中"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "f60745ac-75bd-4bab-98c9-ea13557f9339",
+            "meta": {
+              "drupal_internal__target_id": "poems"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9/node_type?resourceVersion=id%3A1587"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9/relationships/node_type?resourceVersion=id%3A1587"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9/revision_uid?resourceVersion=id%3A1587"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9/relationships/revision_uid?resourceVersion=id%3A1587"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9/uid?resourceVersion=id%3A1587"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9/relationships/uid?resourceVersion=id%3A1587"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--poems",
+              "id": "2b3467b8-5a9b-46d6-aa7f-337d7cfe0977",
+              "meta": {
+                "imported": "2024-03-25T23:00:31+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "556473ef4a14827676afe96b9b6208b1",
+                "drupal_internal__target_id": 3
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9/feeds_item?resourceVersion=id%3A1587"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9/relationships/feeds_item?resourceVersion=id%3A1587"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "ea69db34-d4ca-46a4-9d76-4511385242cc",
+            "meta": {
+              "drupal_internal__target_id": 10
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9/field_document?resourceVersion=id%3A1587"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9/relationships/field_document?resourceVersion=id%3A1587"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "151f6f2e-754f-41c1-b43b-15a68b54c7b9",
+            "meta": {
+              "drupal_internal__target_id": 122
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9/field_spot?resourceVersion=id%3A1587"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a7ebc488-0b78-438d-a71b-5f2e2cd8fba9/relationships/field_spot?resourceVersion=id%3A1587"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--yokyokus",
+      "id": "0c993bc5-2b8d-4b56-a6ab-270a8d792d56",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56?resourceVersion=id%3A4282"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 2532,
+        "drupal_internal__vid": 4282,
+        "langcode": "ja",
+        "revision_timestamp": "2024-09-02T12:39:06+00:00",
+        "status": true,
+        "title": "65cb43519192d80cc0677280",
+        "created": "2024-03-23T21:04:55+00:00",
+        "changed": "2024-09-02T12:39:06+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_commentary": {
+          "value": "<p><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\">シテの漁翁は、夕浪が引いて夜となり、また朝になると言って、朝に掛けて「朝倉」を導く。そして「朝倉や。木の丸殿にあらばこそ」と天智天皇の歌「朝倉やきのまろどのにわがをれば名のりをしつつ行くはたが子ぞ」（『新古今集』168番）を想起させる回答をする。「きのまろどの」は百済出兵のために九州朝倉に仮に作られた木づくりの質素な天皇の住まい。</span><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\">『新古今集』168番の和歌</span><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\">は、母・斉明天皇の喪に服している皇太子時代の天智天皇の歌で、朝倉にある木の丸御殿にいると、名前を名乗っていく子がいるが、あれは誰の子どもなのだ？という意味。質素な宮殿での警備のために通る人には必ず名乗らせていたという伝承がある（『十訓抄』）。この歌の「名のりをしつつ」の引用から、漁翁は「名のりをしても行かまし」と言う。つまり、「もしここが朝倉にある木の丸殿であるなら必ず名のりをするが、今は名のならずにおこう」と我が身を明かさず、はぐらかす。朝倉は「名を明かす」を導く地名で、もし今朝倉にいるなら我が名を名乗るが、漁翁がいる場所は朝倉ではないので名前は明かさないのである。</span></p>",
+          "format": "plain_text",
+          "processed": "<p>&lt;p&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot;&gt;シテの漁翁は、夕浪が引いて夜となり、また朝になると言って、朝に掛けて「朝倉」を導く。そして「朝倉や。木の丸殿にあらばこそ」と天智天皇の歌「朝倉やきのまろどのにわがをれば名のりをしつつ行くはたが子ぞ」（『新古今集』168番）を想起させる回答をする。「きのまろどの」は百済出兵のために九州朝倉に仮に作られた木づくりの質素な天皇の住まい。&lt;/span&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot;&gt;『新古今集』168番の和歌&lt;/span&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot;&gt;は、母・斉明天皇の喪に服している皇太子時代の天智天皇の歌で、朝倉にある木の丸御殿にいると、名前を名乗っていく子がいるが、あれは誰の子どもなのだ？という意味。質素な宮殿での警備のために通る人には必ず名乗らせていたという伝承がある（『十訓抄』）。この歌の「名のりをしつつ」の引用から、漁翁は「名のりをしても行かまし」と言う。つまり、「もしここが朝倉にある木の丸殿であるなら必ず名のりをするが、今は名のならずにおこう」と我が身を明かさず、はぐらかす。朝倉は「名を明かす」を導く地名で、もし今朝倉にいるなら我が名を名乗るが、漁翁がいる場所は朝倉ではないので名前は明かさないのである。&lt;/span&gt;&lt;/p&gt;</p>\n"
+        },
+        "field_commentary_eng": null,
+        "field_context": {
+          "value": "<p><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;\">地謡「不思議なるとよ海士人の。あまり委しき物語。其名を名のり給へや。</span></p>\r\n<p><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;\">シテ「我が名を何と夕浪の。引くや夜汐も</span><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve; color: #ff0000; text-decoration-skip-ink: none;\">朝倉</span><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;\">や。木の丸殿にあらばこそ名のりをしても行かまし。</span></p>",
+          "format": "plain_text",
+          "processed": "<p>&lt;p&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;&quot;&gt;地謡「不思議なるとよ海士人の。あまり委しき物語。其名を名のり給へや。&lt;/span&gt;&lt;/p&gt;<br />\n&lt;p&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;&quot;&gt;シテ「我が名を何と夕浪の。引くや夜汐も&lt;/span&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve; color: #ff0000; text-decoration-skip-ink: none;&quot;&gt;朝倉&lt;/span&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;&quot;&gt;や。木の丸殿にあらばこそ名のりをしても行かまし。&lt;/span&gt;&lt;/p&gt;</p>\n"
+        },
+        "field_document_numbering": "八島(045)",
+        "field_id": "65cb43519192d80cc0677280",
+        "field_line": "045ｰ0000052",
+        "field_link": [],
+        "field_no_examples": false,
+        "field_place_form": "あさくら",
+        "field_scene_description": {
+          "value": "<p><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve;\">漁翁（前ジテ、実は源義経）と旅僧（ワキ）の対話のうち、僧が漁翁が屋島の合戦についてあまりに詳しいの不審に思い名を聞くのに対して、漁翁が答える場面。</span></p>",
+          "format": "plain_text",
+          "processed": "<p>&lt;p&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve;&quot;&gt;漁翁（前ジテ、実は源義経）と旅僧（ワキ）の対話のうち、僧が漁翁が屋島の合戦についてあまりに詳しいの不審に思い名を聞くのに対して、漁翁が答える場面。&lt;/span&gt;&lt;/p&gt;</p>\n"
+        },
+        "field_scene_description_eng": {
+          "value": "<p>In the dialogue between the Fisherman (who is actually Minamoto no Yoshitsune, the shite) and the Traveling Monk (waki), the scene describes the moment when the Monk, growing suspicious of the Fisherman's extensive knowledge of the Battle of Yashima, asks him for his name.</p><p>Translation:&nbsp;</p><p>Waki: How mysterious! This fisherman's story includes such vivid detail. Would you please give me your name?<br>Shite: How can I give out my name. I am not a person who is giving his name in an ancient poem,'In Asakura, when I stayed in the Konomaru Palece,…' So, I will not give it.</p>",
+          "format": "basic_html",
+          "processed": "<p>In the dialogue between the Fisherman (who is actually Minamoto no Yoshitsune, the shite) and the Traveling Monk (waki), the scene describes the moment when the Monk, growing suspicious of the Fisherman's extensive knowledge of the Battle of Yashima, asks him for his name.</p><p>Translation:&nbsp;</p><p>Waki: How mysterious! This fisherman's story includes such vivid detail. Would you please give me your name?<br>Shite: How can I give out my name. I am not a person who is giving his name in an ancient poem,'In Asakura, when I stayed in the Konomaru Palece,…' So, I will not give it.</p>"
+        },
+        "field_text": "シテ「我が名を何と夕浪の。引くや夜汐も朝倉や。木の丸殿にあらばこそ名のりをしても行かまし。"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "16a46279-c96c-452f-8493-e5c18b3cc938",
+            "meta": {
+              "drupal_internal__target_id": "yokyokus"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56/node_type?resourceVersion=id%3A4282"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56/relationships/node_type?resourceVersion=id%3A4282"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "aed67def-7ba7-4c89-9451-e15b32746ea5",
+            "meta": {
+              "drupal_internal__target_id": 2
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56/revision_uid?resourceVersion=id%3A4282"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56/relationships/revision_uid?resourceVersion=id%3A4282"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56/uid?resourceVersion=id%3A4282"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56/relationships/uid?resourceVersion=id%3A4282"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--yokyukus",
+              "id": "8ba9cd40-bddb-4614-8559-4393a334d372",
+              "meta": {
+                "imported": "2024-05-30T06:29:36+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "5029a78e10ab36dbf298a17c35424a12",
+                "drupal_internal__target_id": 6
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56/feeds_item?resourceVersion=id%3A4282"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56/relationships/feeds_item?resourceVersion=id%3A4282"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "9a0bdc6c-cecf-4a2f-8228-db06c65a5928",
+            "meta": {
+              "drupal_internal__target_id": 43
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56/field_document?resourceVersion=id%3A4282"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56/relationships/field_document?resourceVersion=id%3A4282"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "151f6f2e-754f-41c1-b43b-15a68b54c7b9",
+            "meta": {
+              "drupal_internal__target_id": 122
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56/field_spot?resourceVersion=id%3A4282"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/0c993bc5-2b8d-4b56-a6ab-270a8d792d56/relationships/field_spot?resourceVersion=id%3A4282"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--yokyokus",
+      "id": "d2e5cd89-8f49-4eff-af6a-a391f5cc618b",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b?resourceVersion=id%3A4283"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 2533,
+        "drupal_internal__vid": 4283,
+        "langcode": "ja",
+        "revision_timestamp": "2024-09-02T12:43:25+00:00",
+        "status": true,
+        "title": "65cb457d9192d80cc0677281",
+        "created": "2024-03-23T21:04:55+00:00",
+        "changed": "2024-09-02T12:43:25+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_commentary": {
+          "value": "<p><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve;\">杉村弾正少弼（シテ）は、天智天皇が筑紫朝倉の里に籠っていたことに触れ、「朝倉の里では人は必ずその名を名のるべし」という綸言の和歌「朝倉やきのまろどのにわがをれば名のりをしつつ行くはたが子ぞ」（『新古今集』168番）を天智天皇が詠んだことにちなみ、和歌浦がある紀伊国粉川においても本名を名のろうと言う。「きのまろどの」は百済出兵のために九州朝倉に仮に作られた木づくりの質素な天皇の住まい。</span><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve;\">『新古今集』168番</span><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve;\">歌は、母・斉明天皇の喪に服している皇太子時代の天智天皇の歌で、朝倉にある木の丸御殿にいると、名前を名乗っていく子がいるが、あれは誰の子どもなのだ？という意味。朝倉は「名を明かす」語を導く地名となっており、本曲の舞台は朝倉ではないが、和歌で名を明かすように命じたことから、和歌の浦と名のついたこの場所なので、和歌の言葉に裏はない（「和歌の浦波」をかける）、つまり和歌の言葉は絶対であり、名乗らないでおくことはできないと言う。</span></p>",
+          "format": "plain_text",
+          "processed": "<p>&lt;p&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve;&quot;&gt;杉村弾正少弼（シテ）は、天智天皇が筑紫朝倉の里に籠っていたことに触れ、「朝倉の里では人は必ずその名を名のるべし」という綸言の和歌「朝倉やきのまろどのにわがをれば名のりをしつつ行くはたが子ぞ」（『新古今集』168番）を天智天皇が詠んだことにちなみ、和歌浦がある紀伊国粉川においても本名を名のろうと言う。「きのまろどの」は百済出兵のために九州朝倉に仮に作られた木づくりの質素な天皇の住まい。&lt;/span&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve;&quot;&gt;『新古今集』168番&lt;/span&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve;&quot;&gt;歌は、母・斉明天皇の喪に服している皇太子時代の天智天皇の歌で、朝倉にある木の丸御殿にいると、名前を名乗っていく子がいるが、あれは誰の子どもなのだ？という意味。朝倉は「名を明かす」語を導く地名となっており、本曲の舞台は朝倉ではないが、和歌で名を明かすように命じたことから、和歌の浦と名のついたこの場所なので、和歌の言葉に裏はない（「和歌の浦波」をかける）、つまり和歌の言葉は絶対であり、名乗らないでおくことはできないと言う。&lt;/span&gt;&lt;/p&gt;</p>\n"
+        },
+        "field_commentary_eng": null,
+        "field_context": {
+          "value": "<p><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;\">クセ「茆茨根を切らず。さいてん削らずして。黒木に作る宮柱。立つ木の枝もおのづから。すなほになれば君が代に。住む事やすき例とて。そのまま住ませ給ひしかば。それより名づけつつ。木の丸殿と号すなり。世につつむべき事あり。ただ人の如く天皇や。豊の明の影凄く。忍びて住ませ給ひしに。参る人は必ず。その名を名宣り帰るべしと。綸言の趣。</span><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve; color: #00b0f0; text-decoration-skip-ink: none;\">和歌の浦</span><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;\">波</span><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve; color: #ff0000; text-decoration-skip-ink: none;\">朝倉</span><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;\">や。 </span></p>\r\n<p><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;\">シテ「木の丸殿に我が居れば。 </span></p>\r\n<p><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;\">地「名宣をしつつ行くは誰が子ぞ。かやうに詠じ給ひしかば。その後参る人は。言問はず名宣りけり。げにやかしこき世語の。遠き喩も恐あり。我等もいざや名宣りつつ。名宣の為と木綿附の。とりあへぬ御酒盛。いざ諷ひ奏で遊ばん。</span></p>",
+          "format": "plain_text",
+          "processed": "<p>&lt;p&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;&quot;&gt;クセ「茆茨根を切らず。さいてん削らずして。黒木に作る宮柱。立つ木の枝もおのづから。すなほになれば君が代に。住む事やすき例とて。そのまま住ませ給ひしかば。それより名づけつつ。木の丸殿と号すなり。世につつむべき事あり。ただ人の如く天皇や。豊の明の影凄く。忍びて住ませ給ひしに。参る人は必ず。その名を名宣り帰るべしと。綸言の趣。&lt;/span&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve; color: #00b0f0; text-decoration-skip-ink: none;&quot;&gt;和歌の浦&lt;/span&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;&quot;&gt;波&lt;/span&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve; color: #ff0000; text-decoration-skip-ink: none;&quot;&gt;朝倉&lt;/span&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;&quot;&gt;や。 &lt;/span&gt;&lt;/p&gt;<br />\n&lt;p&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;&quot;&gt;シテ「木の丸殿に我が居れば。 &lt;/span&gt;&lt;/p&gt;<br />\n&lt;p&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve; text-decoration-skip-ink: none;&quot;&gt;地「名宣をしつつ行くは誰が子ぞ。かやうに詠じ給ひしかば。その後参る人は。言問はず名宣りけり。げにやかしこき世語の。遠き喩も恐あり。我等もいざや名宣りつつ。名宣の為と木綿附の。とりあへぬ御酒盛。いざ諷ひ奏で遊ばん。&lt;/span&gt;&lt;/p&gt;</p>\n"
+        },
+        "field_document_numbering": "粉川寺(c034)",
+        "field_id": "65cb457d9192d80cc0677281",
+        "field_line": "c034ｰ0000065",
+        "field_link": [],
+        "field_no_examples": false,
+        "field_place_form": "あさくら",
+        "field_scene_description": {
+          "value": "<p><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve;\">杉村弾正少弼(シテ)は、紀州粉川寺にて、人を泊めてはいけない日に宿を所望し断られる。しかし、稚児梅夜叉(子方)の機転で、仮名字（偽名）を名乗って宿を得る。後日、梅夜叉に会うために再び寺を訪れたところ、寺の住職（ワキ）に、本当の名前を尋ねられたので、仮名字に関する曲舞を舞った後に答えようと言い、曲舞〔くせまい〕を謡う。曲舞のなかで、天智天皇が筑紫朝倉の里に籠っていたことに触れ、朝倉の里では、人は必ずその名を名のることになっていたというから、ここ粉河寺でも、自分も本名を名乗ろうと言う。</span></p>",
+          "format": "plain_text",
+          "processed": "<p>&lt;p&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve;&quot;&gt;杉村弾正少弼(シテ)は、紀州粉川寺にて、人を泊めてはいけない日に宿を所望し断られる。しかし、稚児梅夜叉(子方)の機転で、仮名字（偽名）を名乗って宿を得る。後日、梅夜叉に会うために再び寺を訪れたところ、寺の住職（ワキ）に、本当の名前を尋ねられたので、仮名字に関する曲舞を舞った後に答えようと言い、曲舞〔くせまい〕を謡う。曲舞のなかで、天智天皇が筑紫朝倉の里に籠っていたことに触れ、朝倉の里では、人は必ずその名を名のることになっていたというから、ここ粉河寺でも、自分も本名を名乗ろうと言う。&lt;/span&gt;&lt;/p&gt;</p>\n"
+        },
+        "field_scene_description_eng": {
+          "value": "<p>Kuse: Just as in the Chinese story about not trimming the thatch or shaving the rafters, the palace in Asakura was built simply with pillars of unshaved black wood. The palace was so modest that even the branches of trees were left as they were. This simplicity was a symbol of the ease and straightforwardness of our ruler’s governance, so the Emperor chose to reside there as it was. This is why the palace was named ‘Kino Marudono’ (the Round Palace of Wood). The Emperor lived humbly, almost as if he were a commoner, and quietly performed the court ritual known as the ‘Festival of the Brightness of Toyo’ in secret. Therefore, it was decreed that anyone passing through this palace must state their name for security reasons. This was expressed in a poem: 'In Asakura, when I am in the Round Palace of Wood, who is the child that passes through without stating their name?' Thus, it is said that after this decree, anyone passing through the Round Palace of Wood would do so without fail, stating their name. It is indeed a wise tale, and while it feels somewhat presumptuous to use it as an allegory here, I too will follow suit and reveal my name. To do so, let us first enjoy a feast, sing songs, and play instruments.</p>",
+          "format": "basic_html",
+          "processed": "<p>Kuse: Just as in the Chinese story about not trimming the thatch or shaving the rafters, the palace in Asakura was built simply with pillars of unshaved black wood. The palace was so modest that even the branches of trees were left as they were. This simplicity was a symbol of the ease and straightforwardness of our ruler’s governance, so the Emperor chose to reside there as it was. This is why the palace was named ‘Kino Marudono’ (the Round Palace of Wood). The Emperor lived humbly, almost as if he were a commoner, and quietly performed the court ritual known as the ‘Festival of the Brightness of Toyo’ in secret. Therefore, it was decreed that anyone passing through this palace must state their name for security reasons. This was expressed in a poem: 'In Asakura, when I am in the Round Palace of Wood, who is the child that passes through without stating their name?' Thus, it is said that after this decree, anyone passing through the Round Palace of Wood would do so without fail, stating their name. It is indeed a wise tale, and while it feels somewhat presumptuous to use it as an allegory here, I too will follow suit and reveal my name. To do so, let us first enjoy a feast, sing songs, and play instruments.</p>"
+        },
+        "field_text": "クセ「茆茨根を切らず。さいてん削らずして。黒木に作る宮柱。立つ木の枝もおのづから。すなほになれば君が代に。住む事やすき例とて。そのまま住ませ給ひしかば。それより名づけつつ。木の丸殿と号すなり。世につつむべき事あり。ただ人の如く天皇や。豊の明の影凄く。忍びて住ませ給ひしに。参る人は必ず。その名を名宣り帰るべしと。綸言の趣。和歌の浦波朝倉や。"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "16a46279-c96c-452f-8493-e5c18b3cc938",
+            "meta": {
+              "drupal_internal__target_id": "yokyokus"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b/node_type?resourceVersion=id%3A4283"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b/relationships/node_type?resourceVersion=id%3A4283"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "aed67def-7ba7-4c89-9451-e15b32746ea5",
+            "meta": {
+              "drupal_internal__target_id": 2
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b/revision_uid?resourceVersion=id%3A4283"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b/relationships/revision_uid?resourceVersion=id%3A4283"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b/uid?resourceVersion=id%3A4283"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b/relationships/uid?resourceVersion=id%3A4283"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--yokyukus",
+              "id": "8ba9cd40-bddb-4614-8559-4393a334d372",
+              "meta": {
+                "imported": "2024-05-30T06:29:36+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "960fdaf64e15fa91eda10650f8517965",
+                "drupal_internal__target_id": 6
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b/feeds_item?resourceVersion=id%3A4283"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b/relationships/feeds_item?resourceVersion=id%3A4283"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "21db8064-2ec0-40bd-8c1b-d1d2dfcb1795",
+            "meta": {
+              "drupal_internal__target_id": 44
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b/field_document?resourceVersion=id%3A4283"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b/relationships/field_document?resourceVersion=id%3A4283"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "151f6f2e-754f-41c1-b43b-15a68b54c7b9",
+            "meta": {
+              "drupal_internal__target_id": 122
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b/field_spot?resourceVersion=id%3A4283"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/d2e5cd89-8f49-4eff-af6a-a391f5cc618b/relationships/field_spot?resourceVersion=id%3A4283"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--yokyokus",
+      "id": "24d47b48-f08d-4ccf-b620-5fc8ccbbc09d",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d?resourceVersion=id%3A4284"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 2534,
+        "drupal_internal__vid": 4284,
+        "langcode": "ja",
+        "revision_timestamp": "2024-09-02T12:44:19+00:00",
+        "status": true,
+        "title": "65cb457d9192d80cc0677282",
+        "created": "2024-03-23T21:04:55+00:00",
+        "changed": "2024-09-02T12:44:19+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_commentary": {
+          "value": "<p><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve;\">杉村弾正少弼は、自分の本名を名のるために、「名乗る」にちなんだ天智天皇の歌「朝倉やきのまろどのにわがをれば名のりをしつつ行くはたが子ぞ」（『新古今集』168番）を引用して謡う。そのために、天智天皇が筑紫朝倉の里に籠っていたことに触れる。</span><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve;\">『新古今集』168番にいう</span><span style=\"font-family: Arial; font-size: 15px; white-space-collapse: preserve;\">「きのまろどの」は百済出兵のために九州朝倉に仮に作られた木づくりの質素な天皇の住まいで、母・斉明天皇の喪に服している皇太子時代の天智天皇が、朝倉にある木の丸御殿にいると、名前を名乗っていく子がいるが、あれは誰の子どもなのだ？と詠んだ和歌。</span></p>",
+          "format": "plain_text",
+          "processed": "<p>&lt;p&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve;&quot;&gt;杉村弾正少弼は、自分の本名を名のるために、「名乗る」にちなんだ天智天皇の歌「朝倉やきのまろどのにわがをれば名のりをしつつ行くはたが子ぞ」（『新古今集』168番）を引用して謡う。そのために、天智天皇が筑紫朝倉の里に籠っていたことに触れる。&lt;/span&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve;&quot;&gt;『新古今集』168番にいう&lt;/span&gt;&lt;span style=&quot;font-family: Arial; font-size: 15px; white-space-collapse: preserve;&quot;&gt;「きのまろどの」は百済出兵のために九州朝倉に仮に作られた木づくりの質素な天皇の住まいで、母・斉明天皇の喪に服している皇太子時代の天智天皇が、朝倉にある木の丸御殿にいると、名前を名乗っていく子がいるが、あれは誰の子どもなのだ？と詠んだ和歌。&lt;/span&gt;&lt;/p&gt;</p>\n"
+        },
+        "field_commentary_eng": null,
+        "field_context": {
+          "value": "<p><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">ワキ詞「重ねて御登山祝着申し候。以前は仮名字にて御出の由承り候。此度は誠の御名字を御名乗り候へ。 </span></p>\r\n<p><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">シテ「仮名字につきて面白き曲舞の候ふ程に諷ひ。その時名宣り候ふべし。 </span></p>\r\n<p><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">サシ「</span><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#00b0f0;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">吉野山</span><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">の花見の行幸には。妹背の中を離れ。 </span></p>\r\n<p><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">地「</span><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#00b0f0;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">須磨明石</span><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">の月に休らふとても。三年の日数を徒らに過し。その後</span><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#00b0f0;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">筑紫筑前</span><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">に下り。</span><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#ff0000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">朝倉</span><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">の里と云ふ処に。暫く御座をなし給ふ。</span></p>",
+          "format": "plain_text",
+          "processed": "<p>&lt;p&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;ワキ詞「重ねて御登山祝着申し候。以前は仮名字にて御出の由承り候。此度は誠の御名字を御名乗り候へ。 &lt;/span&gt;&lt;/p&gt;<br />\n&lt;p&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;シテ「仮名字につきて面白き曲舞の候ふ程に諷ひ。その時名宣り候ふべし。 &lt;/span&gt;&lt;/p&gt;<br />\n&lt;p&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;サシ「&lt;/span&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#00b0f0;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;吉野山&lt;/span&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;の花見の行幸には。妹背の中を離れ。 &lt;/span&gt;&lt;/p&gt;<br />\n&lt;p&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;地「&lt;/span&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#00b0f0;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;須磨明石&lt;/span&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;の月に休らふとても。三年の日数を徒らに過し。その後&lt;/span&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#00b0f0;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;筑紫筑前&lt;/span&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;に下り。&lt;/span&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#ff0000;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;朝倉&lt;/span&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;の里と云ふ処に。暫く御座をなし給ふ。&lt;/span&gt;&lt;/p&gt;</p>\n"
+        },
+        "field_document_numbering": "粉川寺(c034)",
+        "field_id": "65cb457d9192d80cc0677282",
+        "field_line": "c034ｰ0000065",
+        "field_link": [],
+        "field_no_examples": false,
+        "field_place_form": "あさくら",
+        "field_scene_description": {
+          "value": "<p><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#5b9bd5;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">杉村弾正(シテ)は、紀州粉川寺にて、人を泊めてはいけない日に宿を所望し断られる。しかし、稚児梅夜叉(子方)の機転で、仮名字（偽名）を名乗って宿を得る。後日、梅夜叉に会うために再び寺を訪れたところ、寺の住職（ワキ）に、本当の名前を尋ねられたので、仮名字に関する曲舞を舞った後に答えようと言い、曲舞〔くせまい〕を謡う場面。</span><span style=\"color: #1f1f1f; font-family: 'Google Sans', Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;\" data-sheets-formula-bar-text-style=\"font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial';font-style:normal;text-decoration-skip-ink:none;\">曲舞の内で、天智天皇が筑紫朝倉の里に籠っていたことに触れている。</span></p>",
+          "format": "plain_text",
+          "processed": "<p>&lt;p&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#5b9bd5;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;杉村弾正(シテ)は、紀州粉川寺にて、人を泊めてはいけない日に宿を所望し断られる。しかし、稚児梅夜叉(子方)の機転で、仮名字（偽名）を名乗って宿を得る。後日、梅夜叉に会うために再び寺を訪れたところ、寺の住職（ワキ）に、本当の名前を尋ねられたので、仮名字に関する曲舞を舞った後に答えようと言い、曲舞〔くせまい〕を謡う場面。&lt;/span&gt;&lt;span style=&quot;color: #1f1f1f; font-family: &#039;Google Sans&#039;, Roboto, sans-serif; font-size: 12px; white-space-collapse: preserve;&quot; data-sheets-formula-bar-text-style=&quot;font-size:15px;color:#000000;font-weight:normal;text-decoration:none;font-family:&#039;Arial&#039;;font-style:normal;text-decoration-skip-ink:none;&quot;&gt;曲舞の内で、天智天皇が筑紫朝倉の里に籠っていたことに触れている。&lt;/span&gt;&lt;/p&gt;</p>\n"
+        },
+        "field_scene_description_eng": {
+          "value": "<p>Waki: Thank you once again for ascending this mountain. I heard that when you visited previously, you stayed under a temporary name. This time, could you please reveal your true name?<br>Shite: Speaking of temporary names, there is an interesting piece. Let me perform it first, and then I will reveal my true name.<br>Sashi: When His Majesty the Emperor went to Yoshino Mountain for cherry blossom viewing, a husband and wife were separated.<br>Chorus: As they gazed at the moon from Suma and Akashi, three years passed. They then came to Kyūshu, to Chikushi in Chikuzen. There, they stayed for a while in a place called Asakura.</p>",
+          "format": "basic_html",
+          "processed": "<p>Waki: Thank you once again for ascending this mountain. I heard that when you visited previously, you stayed under a temporary name. This time, could you please reveal your true name?<br>Shite: Speaking of temporary names, there is an interesting piece. Let me perform it first, and then I will reveal my true name.<br>Sashi: When His Majesty the Emperor went to Yoshino Mountain for cherry blossom viewing, a husband and wife were separated.<br>Chorus: As they gazed at the moon from Suma and Akashi, three years passed. They then came to Kyūshu, to Chikushi in Chikuzen. There, they stayed for a while in a place called Asakura.</p>"
+        },
+        "field_text": "地「須磨明石の月に休らふとても。三年の日数を徒らに過し。その後筑紫筑前に下り。朝倉の里と云ふ処に。暫く御座をなし給ふ。"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "16a46279-c96c-452f-8493-e5c18b3cc938",
+            "meta": {
+              "drupal_internal__target_id": "yokyokus"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d/node_type?resourceVersion=id%3A4284"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d/relationships/node_type?resourceVersion=id%3A4284"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "aed67def-7ba7-4c89-9451-e15b32746ea5",
+            "meta": {
+              "drupal_internal__target_id": 2
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d/revision_uid?resourceVersion=id%3A4284"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d/relationships/revision_uid?resourceVersion=id%3A4284"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d/uid?resourceVersion=id%3A4284"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d/relationships/uid?resourceVersion=id%3A4284"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--yokyukus",
+              "id": "8ba9cd40-bddb-4614-8559-4393a334d372",
+              "meta": {
+                "imported": "2024-05-30T06:29:36+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "903bf43345fccad0883710affecc10df",
+                "drupal_internal__target_id": 6
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d/feeds_item?resourceVersion=id%3A4284"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d/relationships/feeds_item?resourceVersion=id%3A4284"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "21db8064-2ec0-40bd-8c1b-d1d2dfcb1795",
+            "meta": {
+              "drupal_internal__target_id": 44
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d/field_document?resourceVersion=id%3A4284"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d/relationships/field_document?resourceVersion=id%3A4284"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "151f6f2e-754f-41c1-b43b-15a68b54c7b9",
+            "meta": {
+              "drupal_internal__target_id": 122
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d/field_spot?resourceVersion=id%3A4284"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/yokyokus/24d47b48-f08d-4ccf-b620-5fc8ccbbc09d/relationships/field_spot?resourceVersion=id%3A4284"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--poems",
+      "id": "d343dbbc-52de-4e69-9837-2610e7872fc5",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5?resourceVersion=id%3A5764"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 5492,
+        "drupal_internal__vid": 5764,
+        "langcode": "ja",
+        "revision_timestamp": "2025-06-27T21:28:24+00:00",
+        "status": true,
+        "title": "47-9-1",
+        "created": "2025-06-27T21:28:24+00:00",
+        "changed": "2025-09-19T08:34:59+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_author": "源通具",
+        "field_author_romaji": "Minamoto no Michitomo",
+        "field_document_numbering": "新勅撰（553）",
+        "field_id": "47-9-1",
+        "field_kotobagaki": "神楽を読侍ける",
+        "field_kotobagaki_long": "神楽を読侍ける",
+        "field_link": [
+          {
+            "uri": "https://kokusho.nijl.ac.jp/biblio/200007101/78?ln=ja",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_place_form": "あさくら",
+        "field_text": "あり明の / 空またふかく / をく霜に / 月影さゆる / あさくらのこゑ",
+        "field_text_romaji": null,
+        "field_text_romaji_long": null,
+        "field_translations": null,
+        "field_volume": "巻第九・神祇歌"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "f60745ac-75bd-4bab-98c9-ea13557f9339",
+            "meta": {
+              "drupal_internal__target_id": "poems"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5/node_type?resourceVersion=id%3A5764"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5/relationships/node_type?resourceVersion=id%3A5764"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5/revision_uid?resourceVersion=id%3A5764"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5/relationships/revision_uid?resourceVersion=id%3A5764"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5/uid?resourceVersion=id%3A5764"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5/relationships/uid?resourceVersion=id%3A5764"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--poems_ko",
+              "id": "3db298d0-1915-4f41-84be-a37226d85e71",
+              "meta": {
+                "imported": "2025-06-27T22:15:10+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "5f3646a554b5afed265b3f8f55d377f1",
+                "drupal_internal__target_id": 21
+              }
+            },
+            {
+              "type": "feeds_feed--hot_fix",
+              "id": "a4a790d2-1827-4e18-a734-55ffab8e5ab5",
+              "meta": {
+                "imported": "2025-09-19T08:34:59+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "05b008a1d290fccc5424e7a550ddfb73",
+                "drupal_internal__target_id": 27
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5/feeds_item?resourceVersion=id%3A5764"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5/relationships/feeds_item?resourceVersion=id%3A5764"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "fee735ce-91f5-4af7-b7c6-210af10bd488",
+            "meta": {
+              "drupal_internal__target_id": 5751
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5/field_document?resourceVersion=id%3A5764"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5/relationships/field_document?resourceVersion=id%3A5764"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "151f6f2e-754f-41c1-b43b-15a68b54c7b9",
+            "meta": {
+              "drupal_internal__target_id": 122
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5/field_spot?resourceVersion=id%3A5764"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/d343dbbc-52de-4e69-9837-2610e7872fc5/relationships/field_spot?resourceVersion=id%3A5764"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "included": []
+}

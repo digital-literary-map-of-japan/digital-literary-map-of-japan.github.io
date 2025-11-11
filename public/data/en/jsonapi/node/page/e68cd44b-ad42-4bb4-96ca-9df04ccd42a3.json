@@ -1,0 +1,36 @@
+{
+  "jsonapi": {
+    "version": "1.0",
+    "meta": {
+      "links": {
+        "self": {
+          "href": "http://jsonapi.org/format/1.0/"
+        }
+      }
+    }
+  },
+  "data": {
+    "type": "node--page",
+    "id": "e68cd44b-ad42-4bb4-96ca-9df04ccd42a3",
+    "links": {
+      "self": {
+        "href": "https://drupal.aws.ldas.jp/dlm/en/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3?resourceVersion=id%3A3904"
+      }
+    },
+    "attributes": {
+      "drupal_internal__nid": 3888,
+      "title": "Associations",
+      "body": {
+        "value": "<p>Information not about the place itself, but about the images the <em>utamakura</em> evokes and connected terms like <em>kakekotoba</em> etc. are presented. In a first step, terms associated with any <em>utamakura</em> were identified using <em>Haikai ruisenshū sakuin</em> (Han'an Noma Kōshin-sensei kakō kinenkai, 1973–1975). In a second step, these were then narrowed down to around 10 words, using Katagiri Yōichi's <em>Utamakura utakotoba jiten</em>.</p>",
+        "format": "basic_html",
+        "processed": "<p>Information not about the place itself, but about the images the <em>utamakura</em> evokes and connected terms like <em>kakekotoba</em> etc. are presented. In a first step, terms associated with any <em>utamakura</em> were identified using <em>Haikai ruisenshū sakuin</em> (Han'an Noma Kōshin-sensei kakō kinenkai, 1973–1975). In a second step, these were then narrowed down to around 10 words, using Katagiri Yōichi's <em>Utamakura utakotoba jiten</em>.</p>",
+        "summary": ""
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://drupal.aws.ldas.jp/dlm/en/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3?fields%5Bnode--page%5D=body%2Ctitle%2Cdrupal_internal__nid"
+    }
+  }
+}

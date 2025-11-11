@@ -1,0 +1,36 @@
+{
+  "jsonapi": {
+    "version": "1.0",
+    "meta": {
+      "links": {
+        "self": {
+          "href": "http://jsonapi.org/format/1.0/"
+        }
+      }
+    }
+  },
+  "data": {
+    "type": "node--page",
+    "id": "bb6ff42f-443a-4e7f-bc25-8b6b4a168462",
+    "links": {
+      "self": {
+        "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462?resourceVersion=id%3A3905"
+      }
+    },
+    "attributes": {
+      "drupal_internal__nid": 3887,
+      "title": "「歌枕としての特徴」",
+      "body": {
+        "value": "<p>その歌枕が持つ独自の特徴。地理情報や著名な風物・寺社仏閣、あるいはその歌枕を語る際外すことの出来ない著名な古典（「明石」の『源氏物語』など）書く。特に特筆すべきものがない場合は空欄でも可。主として片桐洋一著『歌枕歌ことば辞典』を参照した。</p>",
+        "format": "basic_html",
+        "processed": "<p>その歌枕が持つ独自の特徴。地理情報や著名な風物・寺社仏閣、あるいはその歌枕を語る際外すことの出来ない著名な古典（「明石」の『源氏物語』など）書く。特に特筆すべきものがない場合は空欄でも可。主として片桐洋一著『歌枕歌ことば辞典』を参照した。</p>",
+        "summary": ""
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462?fields%5Bnode--page%5D=body%2Ctitle%2Cdrupal_internal__nid"
+    }
+  }
+}

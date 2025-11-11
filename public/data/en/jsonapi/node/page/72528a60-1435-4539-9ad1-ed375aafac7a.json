@@ -1,0 +1,36 @@
+{
+  "jsonapi": {
+    "version": "1.0",
+    "meta": {
+      "links": {
+        "self": {
+          "href": "http://jsonapi.org/format/1.0/"
+        }
+      }
+    }
+  },
+  "data": {
+    "type": "node--page",
+    "id": "72528a60-1435-4539-9ad1-ed375aafac7a",
+    "links": {
+      "self": {
+        "href": "https://drupal.aws.ldas.jp/dlm/en/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a?resourceVersion=id%3A3908"
+      }
+    },
+    "attributes": {
+      "drupal_internal__nid": 3884,
+      "title": "Geographic information",
+      "body": {
+        "value": "<p>Basic geographic information (administrative data, elevation, size of land, etc.) and other points worth mentioning such as the characteristics of the natural environment of the place, its location in relation to neighboring areas, the etymology of its name and how the area has been used throughout the history of Japan are described in detail. The information was provided mainly in reference to <em>Nihon rekishi chimei taikei</em>, <em>Nihon kokugo daijiten dainiban</em>, <em>Kokushi daijiten</em> (Yoshikawakō bunkan, 1979-1997) and <em>Nihon daihyakka zensho</em> (Shōgakukan, 1994).</p>",
+        "format": "basic_html",
+        "processed": "<p>Basic geographic information (administrative data, elevation, size of land, etc.) and other points worth mentioning such as the characteristics of the natural environment of the place, its location in relation to neighboring areas, the etymology of its name and how the area has been used throughout the history of Japan are described in detail. The information was provided mainly in reference to <em>Nihon rekishi chimei taikei</em>, <em>Nihon kokugo daijiten dainiban</em>, <em>Kokushi daijiten</em> (Yoshikawakō bunkan, 1979-1997) and <em>Nihon daihyakka zensho</em> (Shōgakukan, 1994).</p>",
+        "summary": ""
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://drupal.aws.ldas.jp/dlm/en/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a?fields%5Bnode--page%5D=body%2Ctitle%2Cdrupal_internal__nid"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "jsonapi": {
+    "version": "1.0",
+    "meta": {
+      "links": {
+        "self": {
+          "href": "http://jsonapi.org/format/1.0/"
+        }
+      }
+    }
+  },
+  "data": {
+    "type": "node--page",
+    "id": "0a3c695c-d8ba-45c7-9f11-0ec60eabd34c",
+    "links": {
+      "self": {
+        "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c?resourceVersion=id%3A2975"
+      }
+    },
+    "attributes": {
+      "drupal_internal__nid": 77,
+      "title": "お問い合わせ・連絡先",
+      "body": {
+        "value": "<h4>ユディット・アロカイ</h4><p>ハイデルベルグ大学<br>日本学研究所</p><p>Voßstraße 2<br>4120号館、２階<br>69115 ハイデルベルグ<br>ドイツ<br>&nbsp;</p><p>+49-6221-54-15351<br>judit.arokay [at] zo.uni-heidelberg.de<br><a href=\"https://www.zo.uni-heidelberg.de/japanologie/institut/mitarbeiter/arokay.html\">https://www.zo.uni-heidelberg.de/japanologie/institut/mitarbeiter/arokay.html</a></p><p>&nbsp;</p>",
+        "format": "basic_html",
+        "processed": "<h4>ユディット・アロカイ</h4><p>ハイデルベルグ大学<br>日本学研究所</p><p>Voßstraße 2<br>4120号館、２階<br>69115 ハイデルベルグ<br>ドイツ<br>&nbsp;</p><p>+49-6221-54-15351<br>judit.arokay [at] zo.uni-heidelberg.de<br><a href=\"https://www.zo.uni-heidelberg.de/japanologie/institut/mitarbeiter/arokay.html\">https://www.zo.uni-heidelberg.de/japanologie/institut/mitarbeiter/arokay.html</a></p><p>&nbsp;</p>",
+        "summary": ""
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c?fields%5Bnode--page%5D=body%2Ctitle%2Cdrupal_internal__nid"
+    }
+  }
+}

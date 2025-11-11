@@ -1,0 +1,1596 @@
+{
+  "data": [
+    {
+      "type": "node--poems",
+      "id": "3cc0d633-3822-4662-855a-3f630813bd49",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49?resourceVersion=id%3A1754"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 1745,
+        "drupal_internal__vid": 1754,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-22T02:33:53+00:00",
+        "status": true,
+        "title": "633719189192d80cc0677117",
+        "created": "2024-03-22T02:33:53+00:00",
+        "changed": "2024-03-25T23:01:04+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_author": "作者名なし",
+        "field_author_romaji": "sakushamei nashi",
+        "field_document_numbering": "586",
+        "field_id": "633719189192d80cc0677117",
+        "field_kotobagaki": "詞書なし",
+        "field_kotobagaki_long": "詞書なし",
+        "field_link": [
+          {
+            "uri": "http://base1.nijl.ac.jp/iview/Frame.jsp?DB_ID=G0003917KTM&C_CODE=A02-028-001-053-004&IMG_NO=87",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_place_form": null,
+        "field_text": "しなかとり / いなのふし原 / とひわたる / しきのはね音 / おもしろき哉",
+        "field_text_romaji": "shinagadori / Ina no fushihara / tobiwataru / shigi no haneoto / omoshiroki kana",
+        "field_text_romaji_long": "shinagadori / Ina no fushihara / tobiwataru / shigi no haneoto / omoshiroki kana",
+        "field_translations": "[]",
+        "field_volume": "巻第十・神楽歌"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "f60745ac-75bd-4bab-98c9-ea13557f9339",
+            "meta": {
+              "drupal_internal__target_id": "poems"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49/node_type?resourceVersion=id%3A1754"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49/relationships/node_type?resourceVersion=id%3A1754"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49/revision_uid?resourceVersion=id%3A1754"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49/relationships/revision_uid?resourceVersion=id%3A1754"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49/uid?resourceVersion=id%3A1754"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49/relationships/uid?resourceVersion=id%3A1754"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--poems",
+              "id": "2b3467b8-5a9b-46d6-aa7f-337d7cfe0977",
+              "meta": {
+                "imported": "2024-03-25T23:01:04+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "20e6e51783c59beab24365c6fa82fe53",
+                "drupal_internal__target_id": 3
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49/feeds_item?resourceVersion=id%3A1754"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49/relationships/feeds_item?resourceVersion=id%3A1754"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "0cc0159c-0774-44cf-aba8-48372c044daf",
+            "meta": {
+              "drupal_internal__target_id": 5
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49/field_document?resourceVersion=id%3A1754"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49/relationships/field_document?resourceVersion=id%3A1754"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "be5b78c5-7875-40b6-8698-319ea23d95be",
+            "meta": {
+              "drupal_internal__target_id": 118
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49/field_spot?resourceVersion=id%3A1754"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3cc0d633-3822-4662-855a-3f630813bd49/relationships/field_spot?resourceVersion=id%3A1754"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--poems",
+      "id": "3d6a0857-347c-481b-a046-dc5a4b29ead6",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6?resourceVersion=id%3A1755"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 1746,
+        "drupal_internal__vid": 1755,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-22T02:33:53+00:00",
+        "status": true,
+        "title": "63371e589192d80cc0677118",
+        "created": "2024-03-22T02:33:53+00:00",
+        "changed": "2024-03-25T23:01:06+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_author": "読人しらす",
+        "field_author_romaji": "yomibito shirazu",
+        "field_document_numbering": "910",
+        "field_id": "63371e589192d80cc0677118",
+        "field_kotobagaki": "題知らず",
+        "field_kotobagaki_long": "題知らず",
+        "field_link": [
+          {
+            "uri": "http://base1.nijl.ac.jp/iview/Frame.jsp?DB_ID=G0003917KTM&C_CODE=A02-028-001-053-012&IMG_NO=138",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_place_form": null,
+        "field_text": "しなかとり / ゐな野をゆけは / ありま山 / 夕霧たちぬ / 宿はなくして",
+        "field_text_romaji": "shinagadori / Inano o yukeba / Arimayama / yūgiri tachinu / yado wa nakushite",
+        "field_text_romaji_long": "shinagadori / Inano o yukeba / Arimayama / yūgiri tachinu / yado wa nakushite",
+        "field_translations": "[{'text': 'traveling across/ Ina plain  \\twhere the grebes flock  ̶   / on Mount Arima/ the evening mists are rising/ but I have no place to rest', 'source': 'Rodd, Laurel Rasplica (2015): p.374'}]",
+        "field_volume": "巻第十・羈旅歌"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "f60745ac-75bd-4bab-98c9-ea13557f9339",
+            "meta": {
+              "drupal_internal__target_id": "poems"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6/node_type?resourceVersion=id%3A1755"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6/relationships/node_type?resourceVersion=id%3A1755"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6/revision_uid?resourceVersion=id%3A1755"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6/relationships/revision_uid?resourceVersion=id%3A1755"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6/uid?resourceVersion=id%3A1755"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6/relationships/uid?resourceVersion=id%3A1755"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--poems",
+              "id": "2b3467b8-5a9b-46d6-aa7f-337d7cfe0977",
+              "meta": {
+                "imported": "2024-03-25T23:01:06+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "6a56df21b2fca4237caf9aba3c1f2845",
+                "drupal_internal__target_id": 3
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6/feeds_item?resourceVersion=id%3A1755"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6/relationships/feeds_item?resourceVersion=id%3A1755"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "ea69db34-d4ca-46a4-9d76-4511385242cc",
+            "meta": {
+              "drupal_internal__target_id": 10
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6/field_document?resourceVersion=id%3A1755"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6/relationships/field_document?resourceVersion=id%3A1755"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "be5b78c5-7875-40b6-8698-319ea23d95be",
+            "meta": {
+              "drupal_internal__target_id": 118
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6/field_spot?resourceVersion=id%3A1755"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3d6a0857-347c-481b-a046-dc5a4b29ead6/relationships/field_spot?resourceVersion=id%3A1755"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--poems",
+      "id": "6bb5ad37-3633-4b8c-8c86-88152bddbee9",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9?resourceVersion=id%3A1756"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 1747,
+        "drupal_internal__vid": 1756,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-22T02:33:53+00:00",
+        "status": true,
+        "title": "63371e589192d80cc0677119",
+        "created": "2024-03-22T02:33:53+00:00",
+        "changed": "2024-03-25T23:01:06+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_author": "藤原隆信朝臣",
+        "field_author_romaji": "Fujiwara no Takanobu",
+        "field_document_numbering": "313",
+        "field_id": "63371e589192d80cc0677119",
+        "field_kotobagaki": "夜泊鹿と云心を読る",
+        "field_kotobagaki_long": "夜泊鹿と云心を読る",
+        "field_link": [
+          {
+            "uri": "http://base1.nijl.ac.jp/iview/Frame.jsp?DB_ID=G0003917KTM&C_CODE=A02-028-001-053-010&IMG_NO=53",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_place_form": null,
+        "field_text": "うきねする / いなのみなとに / 聞ゆなり / 鹿の音おろす / 峰の松かせ",
+        "field_text_romaji": "ukine suru / Ina no minato ni / kikoyu nari / shika no ne orosu / mine no matsukaze",
+        "field_text_romaji_long": "ukine suru / Ina no minato ni / kikoyu nari / shika no ne orosu / mine no matsukaze",
+        "field_translations": "[]",
+        "field_volume": "巻第五・秋歌下"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "f60745ac-75bd-4bab-98c9-ea13557f9339",
+            "meta": {
+              "drupal_internal__target_id": "poems"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9/node_type?resourceVersion=id%3A1756"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9/relationships/node_type?resourceVersion=id%3A1756"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9/revision_uid?resourceVersion=id%3A1756"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9/relationships/revision_uid?resourceVersion=id%3A1756"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9/uid?resourceVersion=id%3A1756"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9/relationships/uid?resourceVersion=id%3A1756"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--poems",
+              "id": "2b3467b8-5a9b-46d6-aa7f-337d7cfe0977",
+              "meta": {
+                "imported": "2024-03-25T23:01:06+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "0bcf09f99716ed489972917b8bbbb152",
+                "drupal_internal__target_id": 3
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9/feeds_item?resourceVersion=id%3A1756"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9/relationships/feeds_item?resourceVersion=id%3A1756"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "87006eae-b651-49e6-99ae-601b57fce39c",
+            "meta": {
+              "drupal_internal__target_id": 9
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9/field_document?resourceVersion=id%3A1756"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9/relationships/field_document?resourceVersion=id%3A1756"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "be5b78c5-7875-40b6-8698-319ea23d95be",
+            "meta": {
+              "drupal_internal__target_id": 118
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9/field_spot?resourceVersion=id%3A1756"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6bb5ad37-3633-4b8c-8c86-88152bddbee9/relationships/field_spot?resourceVersion=id%3A1756"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--poems",
+      "id": "20b0bda8-857f-4a2f-8c8d-80303b81438d",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d?resourceVersion=id%3A1757"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 1748,
+        "drupal_internal__vid": 1757,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-22T02:33:53+00:00",
+        "status": true,
+        "title": "63371e589192d80cc067711a",
+        "created": "2024-03-22T02:33:53+00:00",
+        "changed": "2024-03-25T23:01:06+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_author": "藤原仲実朝臣",
+        "field_author_romaji": "Fujiwara no Nakazane",
+        "field_document_numbering": "273",
+        "field_id": "63371e589192d80cc067711a",
+        "field_kotobagaki": "百首歌中に氷をよめる",
+        "field_kotobagaki_long": "百首歌中に氷をよめる",
+        "field_link": [
+          {
+            "uri": "http://base1.nijl.ac.jp/iview/Frame.jsp?DB_ID=G0003917KTM&C_CODE=A02-028-001-053-008&IMG_NO=46",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_place_form": null,
+        "field_text": "しなかとり / ゐなのふしはら / 風さえて / こやの池水 / 氷しにけり",
+        "field_text_romaji": "shinagadori / Ina no fushihara / kaze saete / Koya no ikemizu / kōri shinikeri",
+        "field_text_romaji_long": "shinagadori / Ina no fushihara / kaze saete / Koya no ikemizu / kōri shinikeri",
+        "field_translations": "[]",
+        "field_volume": "巻第四・冬部"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "f60745ac-75bd-4bab-98c9-ea13557f9339",
+            "meta": {
+              "drupal_internal__target_id": "poems"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d/node_type?resourceVersion=id%3A1757"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d/relationships/node_type?resourceVersion=id%3A1757"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d/revision_uid?resourceVersion=id%3A1757"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d/relationships/revision_uid?resourceVersion=id%3A1757"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d/uid?resourceVersion=id%3A1757"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d/relationships/uid?resourceVersion=id%3A1757"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--poems",
+              "id": "2b3467b8-5a9b-46d6-aa7f-337d7cfe0977",
+              "meta": {
+                "imported": "2024-03-25T23:01:06+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "0e2c35381fc9f9c368fbeedb462e93fd",
+                "drupal_internal__target_id": 3
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d/feeds_item?resourceVersion=id%3A1757"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d/relationships/feeds_item?resourceVersion=id%3A1757"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "cc40c2bc-1342-45d0-9d92-ac0b46c06a2c",
+            "meta": {
+              "drupal_internal__target_id": 7
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d/field_document?resourceVersion=id%3A1757"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d/relationships/field_document?resourceVersion=id%3A1757"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "be5b78c5-7875-40b6-8698-319ea23d95be",
+            "meta": {
+              "drupal_internal__target_id": 118
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d/field_spot?resourceVersion=id%3A1757"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/20b0bda8-857f-4a2f-8c8d-80303b81438d/relationships/field_spot?resourceVersion=id%3A1757"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--poems",
+      "id": "11da3719-18ab-4f27-9e12-f444debec099",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099?resourceVersion=id%3A1758"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 1749,
+        "drupal_internal__vid": 1758,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-22T02:33:53+00:00",
+        "status": true,
+        "title": "63371e589192d80cc067711b",
+        "created": "2024-03-22T02:33:53+00:00",
+        "changed": "2024-03-25T23:01:06+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_author": "藤原国房",
+        "field_author_romaji": "Fujiwara no Kunifusa",
+        "field_document_numbering": "408",
+        "field_id": "63371e589192d80cc067711b",
+        "field_kotobagaki": "題知らず",
+        "field_kotobagaki_long": "題知らず",
+        "field_link": [
+          {
+            "uri": "http://base1.nijl.ac.jp/iview/Frame.jsp?DB_ID=G0003917KTM&C_CODE=A02-028-001-053-006&IMG_NO=76",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_place_form": null,
+        "field_text": "いかはかり / ふる雪なれは / しなかとり / ゐなのしは山 / 道まとふらん",
+        "field_text_romaji": "ikabakari / furu yuki nareba / shinagadori / Ina no shibayama / michi madouran",
+        "field_text_romaji_long": "ikabakari / furu yuki nareba / shinagadori / Ina no shibayama / michi madouran",
+        "field_translations": "[]",
+        "field_volume": "巻第六・冬"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "f60745ac-75bd-4bab-98c9-ea13557f9339",
+            "meta": {
+              "drupal_internal__target_id": "poems"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099/node_type?resourceVersion=id%3A1758"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099/relationships/node_type?resourceVersion=id%3A1758"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099/revision_uid?resourceVersion=id%3A1758"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099/relationships/revision_uid?resourceVersion=id%3A1758"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099/uid?resourceVersion=id%3A1758"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099/relationships/uid?resourceVersion=id%3A1758"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--poems",
+              "id": "2b3467b8-5a9b-46d6-aa7f-337d7cfe0977",
+              "meta": {
+                "imported": "2024-03-25T23:01:06+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "41d89efcbe2de8befb9070be8c0a6083",
+                "drupal_internal__target_id": 3
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099/feeds_item?resourceVersion=id%3A1758"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099/relationships/feeds_item?resourceVersion=id%3A1758"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "e7897d03-f63a-4499-a405-656740ae2e3d",
+            "meta": {
+              "drupal_internal__target_id": 6
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099/field_document?resourceVersion=id%3A1758"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099/relationships/field_document?resourceVersion=id%3A1758"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "be5b78c5-7875-40b6-8698-319ea23d95be",
+            "meta": {
+              "drupal_internal__target_id": 118
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099/field_spot?resourceVersion=id%3A1758"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/11da3719-18ab-4f27-9e12-f444debec099/relationships/field_spot?resourceVersion=id%3A1758"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--poems",
+      "id": "a32b86b5-e306-4c10-81c3-3194db7679b3",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3?resourceVersion=id%3A1759"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 1750,
+        "drupal_internal__vid": 1759,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-22T02:33:53+00:00",
+        "status": true,
+        "title": "63371e589192d80cc067711c",
+        "created": "2024-03-22T02:33:53+00:00",
+        "changed": "2024-03-25T23:01:06+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_author": "大弐三位",
+        "field_author_romaji": "Daini no sanmi",
+        "field_document_numbering": "709",
+        "field_id": "63371e589192d80cc067711c",
+        "field_kotobagaki": "かれ＋＋なるおとこのおほつかなくなといひたりけるによめる",
+        "field_kotobagaki_long": "かれ＋＋なるおとこのおほつかなくなといひたりけるによめる",
+        "field_link": [
+          {
+            "uri": "http://base1.nijl.ac.jp/iview/Frame.jsp?DB_ID=G0003917KTM&C_CODE=A02-028-001-053-007&IMG_NO=21",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_place_form": null,
+        "field_text": "ありま山 / ゐなの篠原 / 風吹は / いてそよ人を / わすれやはす〔る〕",
+        "field_text_romaji": "Arimayama / Ina no sasahara / kaze fukeba / ide soyo hito o / wasure ya wa suru",
+        "field_text_romaji_long": "Arimayama / Ina no sasahara / kaze fukeba / ide soyo hito o / wasure ya wa suru",
+        "field_translations": "[{'text': 'Near Arima Hill/ the wind through Ina’s bamboos/ blows constantly  ̶   / and just as constant am I/  in my resolve not to forget.', 'source': 'Carter (1991): p.224'}]",
+        "field_volume": "巻第十二・恋二"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "f60745ac-75bd-4bab-98c9-ea13557f9339",
+            "meta": {
+              "drupal_internal__target_id": "poems"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3/node_type?resourceVersion=id%3A1759"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3/relationships/node_type?resourceVersion=id%3A1759"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3/revision_uid?resourceVersion=id%3A1759"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3/relationships/revision_uid?resourceVersion=id%3A1759"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3/uid?resourceVersion=id%3A1759"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3/relationships/uid?resourceVersion=id%3A1759"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--poems",
+              "id": "2b3467b8-5a9b-46d6-aa7f-337d7cfe0977",
+              "meta": {
+                "imported": "2024-03-25T23:01:06+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "a527baf83b6585ac9bb901f2983abbd1",
+                "drupal_internal__target_id": 3
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3/feeds_item?resourceVersion=id%3A1759"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3/relationships/feeds_item?resourceVersion=id%3A1759"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "e7897d03-f63a-4499-a405-656740ae2e3d",
+            "meta": {
+              "drupal_internal__target_id": 6
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3/field_document?resourceVersion=id%3A1759"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3/relationships/field_document?resourceVersion=id%3A1759"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "be5b78c5-7875-40b6-8698-319ea23d95be",
+            "meta": {
+              "drupal_internal__target_id": 118
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3/field_spot?resourceVersion=id%3A1759"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a32b86b5-e306-4c10-81c3-3194db7679b3/relationships/field_spot?resourceVersion=id%3A1759"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--poems",
+      "id": "3b193306-2200-48d1-978a-5aae1493e985",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985?resourceVersion=id%3A1760"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 1751,
+        "drupal_internal__vid": 1760,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-22T02:33:53+00:00",
+        "status": true,
+        "title": "63371e589192d80cc067711d",
+        "created": "2024-03-22T02:33:53+00:00",
+        "changed": "2024-03-25T23:01:06+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_author": "僧都長算",
+        "field_author_romaji": "Chōsan",
+        "field_document_numbering": "420",
+        "field_id": "63371e589192d80cc067711d",
+        "field_kotobagaki": "入道前太政大臣のす行のともにて、冬のよこほりをよみ侍ける",
+        "field_kotobagaki_long": "入道前太政大臣のす行のともにて、冬のよこほりをよみ侍ける",
+        "field_link": [
+          {
+            "uri": "http://base1.nijl.ac.jp/iview/Frame.jsp?DB_ID=G0003917KTM&C_CODE=A02-028-001-053-006&IMG_NO=78",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_place_form": null,
+        "field_text": "鴎こそ / よかれにけらし / いなのなる / こやのいけ水 / うは氷りせり",
+        "field_text_romaji": "kamome koso / yogarenikerashi / Inano naru / Koya no ikemizu / uwagōri seri",
+        "field_text_romaji_long": "kamome koso / yogarenikerashi / Inano naru / Koya no ikemizu / uwagōri seri",
+        "field_translations": "[]",
+        "field_volume": "巻第六・冬"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "f60745ac-75bd-4bab-98c9-ea13557f9339",
+            "meta": {
+              "drupal_internal__target_id": "poems"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985/node_type?resourceVersion=id%3A1760"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985/relationships/node_type?resourceVersion=id%3A1760"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985/revision_uid?resourceVersion=id%3A1760"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985/relationships/revision_uid?resourceVersion=id%3A1760"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985/uid?resourceVersion=id%3A1760"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985/relationships/uid?resourceVersion=id%3A1760"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--poems",
+              "id": "2b3467b8-5a9b-46d6-aa7f-337d7cfe0977",
+              "meta": {
+                "imported": "2024-03-25T23:01:06+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "33375c649aa80c77f1ddc30860770a33",
+                "drupal_internal__target_id": 3
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985/feeds_item?resourceVersion=id%3A1760"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985/relationships/feeds_item?resourceVersion=id%3A1760"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "e7897d03-f63a-4499-a405-656740ae2e3d",
+            "meta": {
+              "drupal_internal__target_id": 6
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985/field_document?resourceVersion=id%3A1760"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985/relationships/field_document?resourceVersion=id%3A1760"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "be5b78c5-7875-40b6-8698-319ea23d95be",
+            "meta": {
+              "drupal_internal__target_id": 118
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985/field_spot?resourceVersion=id%3A1760"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/3b193306-2200-48d1-978a-5aae1493e985/relationships/field_spot?resourceVersion=id%3A1760"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--images",
+      "id": "80ed7269-404a-463d-a854-73d3683703c2",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/80ed7269-404a-463d-a854-73d3683703c2?resourceVersion=id%3A3981"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 3961,
+        "drupal_internal__vid": 3981,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-26T01:42:27+00:00",
+        "status": true,
+        "title": "摂津名所図会（国文研）猪名笹原",
+        "created": "2024-03-26T01:42:27+00:00",
+        "changed": "2024-03-26T01:42:27+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_id": "f5f9d14d-72e7-4253-9783-f891da00abd7",
+        "field_index": 43,
+        "field_link": [
+          {
+            "uri": "https://kokusho.nijl.ac.jp/biblio/200016745/455",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_manifest": {
+          "uri": "https://kokusho.nijl.ac.jp/biblio/200016745/manifest",
+          "title": null,
+          "options": []
+        },
+        "field_pos": 455
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "1e182348-bf40-4173-8b80-e46eb00ed3cd",
+            "meta": {
+              "drupal_internal__target_id": "images"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/80ed7269-404a-463d-a854-73d3683703c2/node_type?resourceVersion=id%3A3981"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/80ed7269-404a-463d-a854-73d3683703c2/relationships/node_type?resourceVersion=id%3A3981"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/80ed7269-404a-463d-a854-73d3683703c2/revision_uid?resourceVersion=id%3A3981"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/80ed7269-404a-463d-a854-73d3683703c2/relationships/revision_uid?resourceVersion=id%3A3981"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/80ed7269-404a-463d-a854-73d3683703c2/uid?resourceVersion=id%3A3981"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/80ed7269-404a-463d-a854-73d3683703c2/relationships/uid?resourceVersion=id%3A3981"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--images",
+              "id": "398c47d0-26e3-4fc8-822e-7a247a06bc0d",
+              "meta": {
+                "imported": "2024-03-26T01:42:27+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "411e2af87ceda2b624beb7fa7970b66b",
+                "drupal_internal__target_id": 8
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/80ed7269-404a-463d-a854-73d3683703c2/feeds_item?resourceVersion=id%3A3981"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/80ed7269-404a-463d-a854-73d3683703c2/relationships/feeds_item?resourceVersion=id%3A3981"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "be5b78c5-7875-40b6-8698-319ea23d95be",
+            "meta": {
+              "drupal_internal__target_id": 118
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/80ed7269-404a-463d-a854-73d3683703c2/field_spot?resourceVersion=id%3A3981"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/80ed7269-404a-463d-a854-73d3683703c2/relationships/field_spot?resourceVersion=id%3A3981"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--poems",
+      "id": "6e73a6c8-28b1-4a3d-9073-8850de72f9b9",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9?resourceVersion=id%3A5755"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 5483,
+        "drupal_internal__vid": 5755,
+        "langcode": "ja",
+        "revision_timestamp": "2025-06-27T21:28:20+00:00",
+        "status": true,
+        "title": "43-11-1",
+        "created": "2025-06-27T21:28:20+00:00",
+        "changed": "2025-09-19T08:34:57+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_author": "藤原実氏",
+        "field_author_romaji": "Fujiwara no Saneuji",
+        "field_document_numbering": "続古今（405）",
+        "field_id": "43-11-1",
+        "field_kotobagaki": "弘長元年百首歌に、月",
+        "field_kotobagaki_long": "弘長元年百首歌に、月",
+        "field_link": [
+          {
+            "uri": "https://kokusho.nijl.ac.jp/biblio/200007103/63?ln=ja",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_place_form": "ゐなのみなと",
+        "field_text": "さしのほる / ゐなの湊の / 夕塩に / 光みちたる / 秋の夜の月",
+        "field_text_romaji": null,
+        "field_text_romaji_long": null,
+        "field_translations": null,
+        "field_volume": "巻第四・秋歌上"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "f60745ac-75bd-4bab-98c9-ea13557f9339",
+            "meta": {
+              "drupal_internal__target_id": "poems"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9/node_type?resourceVersion=id%3A5755"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9/relationships/node_type?resourceVersion=id%3A5755"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9/revision_uid?resourceVersion=id%3A5755"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9/relationships/revision_uid?resourceVersion=id%3A5755"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9/uid?resourceVersion=id%3A5755"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9/relationships/uid?resourceVersion=id%3A5755"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--poems_ko",
+              "id": "3db298d0-1915-4f41-84be-a37226d85e71",
+              "meta": {
+                "imported": "2025-06-27T22:15:09+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "5fba770334161f1296f34214fcb4d5d1",
+                "drupal_internal__target_id": 21
+              }
+            },
+            {
+              "type": "feeds_feed--hot_fix",
+              "id": "a4a790d2-1827-4e18-a734-55ffab8e5ab5",
+              "meta": {
+                "imported": "2025-09-19T08:34:57+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "d1251c4d99f6a183424113800afb2828",
+                "drupal_internal__target_id": 27
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9/feeds_item?resourceVersion=id%3A5755"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9/relationships/feeds_item?resourceVersion=id%3A5755"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "5149553d-6952-4b62-9f75-bccb7c9bb289",
+            "meta": {
+              "drupal_internal__target_id": 5753
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9/field_document?resourceVersion=id%3A5755"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9/relationships/field_document?resourceVersion=id%3A5755"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "be5b78c5-7875-40b6-8698-319ea23d95be",
+            "meta": {
+              "drupal_internal__target_id": 118
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9/field_spot?resourceVersion=id%3A5755"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6e73a6c8-28b1-4a3d-9073-8850de72f9b9/relationships/field_spot?resourceVersion=id%3A5755"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--poems",
+      "id": "12c7199c-1c8f-4dc8-a1c8-c060a68e46b2",
+      "links": {
+        "self": {
+          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2?resourceVersion=id%3A5756"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 5484,
+        "drupal_internal__vid": 5756,
+        "langcode": "ja",
+        "revision_timestamp": "2025-06-27T21:28:21+00:00",
+        "status": true,
+        "title": "43-11-2",
+        "created": "2025-06-27T21:28:21+00:00",
+        "changed": "2025-09-19T08:34:57+00:00",
+        "promote": true,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_author": "藤原隆祐",
+        "field_author_romaji": "Fujiwara no Takasuke",
+        "field_document_numbering": "続古今（888）",
+        "field_id": "43-11-2",
+        "field_kotobagaki": "宝治二年百首歌に、野月",
+        "field_kotobagaki_long": "宝治二年百首歌に、野月",
+        "field_link": [
+          {
+            "uri": "https://kokusho.nijl.ac.jp/biblio/200007103/133?ln=ja",
+            "title": null,
+            "options": []
+          }
+        ],
+        "field_place_form": "ゐなののはら",
+        "field_text": "かるもかく / ゐな野のはらの / かり枕 / さてもねられぬ / 月をみるかな",
+        "field_text_romaji": null,
+        "field_text_romaji_long": null,
+        "field_translations": null,
+        "field_volume": "巻第十・羇旅歌"
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "f60745ac-75bd-4bab-98c9-ea13557f9339",
+            "meta": {
+              "drupal_internal__target_id": "poems"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2/node_type?resourceVersion=id%3A5756"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2/relationships/node_type?resourceVersion=id%3A5756"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2/revision_uid?resourceVersion=id%3A5756"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2/relationships/revision_uid?resourceVersion=id%3A5756"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "e4e995dc-296a-4ed2-82c8-d86c448496ad",
+            "meta": {
+              "drupal_internal__target_id": 0
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2/uid?resourceVersion=id%3A5756"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2/relationships/uid?resourceVersion=id%3A5756"
+            }
+          }
+        },
+        "feeds_item": {
+          "data": [
+            {
+              "type": "feeds_feed--poems_ko",
+              "id": "3db298d0-1915-4f41-84be-a37226d85e71",
+              "meta": {
+                "imported": "2025-06-27T22:15:09+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "a8cb1f4e798618e198db70cb07522ac5",
+                "drupal_internal__target_id": 21
+              }
+            },
+            {
+              "type": "feeds_feed--hot_fix",
+              "id": "a4a790d2-1827-4e18-a734-55ffab8e5ab5",
+              "meta": {
+                "imported": "2025-09-19T08:34:57+00:00",
+                "url": null,
+                "guid": null,
+                "hash": "7002c1fc6eb823f8a49310f0cae7feca",
+                "drupal_internal__target_id": 27
+              }
+            }
+          ],
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2/feeds_item?resourceVersion=id%3A5756"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2/relationships/feeds_item?resourceVersion=id%3A5756"
+            }
+          }
+        },
+        "field_document": {
+          "data": {
+            "type": "node--documents",
+            "id": "5149553d-6952-4b62-9f75-bccb7c9bb289",
+            "meta": {
+              "drupal_internal__target_id": 5753
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2/field_document?resourceVersion=id%3A5756"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2/relationships/field_document?resourceVersion=id%3A5756"
+            }
+          }
+        },
+        "field_spot": {
+          "data": {
+            "type": "node--spots",
+            "id": "be5b78c5-7875-40b6-8698-319ea23d95be",
+            "meta": {
+              "drupal_internal__target_id": 118
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2/field_spot?resourceVersion=id%3A5756"
+            },
+            "self": {
+              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/12c7199c-1c8f-4dc8-a1c8-c060a68e46b2/relationships/field_spot?resourceVersion=id%3A5756"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "included": []
+}

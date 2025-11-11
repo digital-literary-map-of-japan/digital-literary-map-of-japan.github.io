@@ -3,38 +3,10 @@ import type { CommonBtnAdd, CommonBtnEdit } from "#build/components";
 import { mdiMagnify, mdiCheck } from "@mdi/js";
 
 const { isAdmin } = useSettings();
+const { fetchDocuments } = useLocalData();
+const { locale } = useI18n();
 
-const fields: { [key: string]: string } = {
-  "fields[node--documents]": [
-    "title",
-    "field_document_name_romaji",
-    "field_document_name_furigana",
-    "field_author_name_kanji",
-    "field_id",
-    "drupal_internal__nid",
-    "field_genre",
-    "field_author_name_romaji",
-    "field_author_name_furigana",
-    "changed",
-  ].join(","),
-};
-
-const url = "https://drupal.aws.ldas.jp/dlm/";
-
-const endpoint = `${url}jsonapi/node/documents`;
-
-const params: { [key: string]: string } = {
-  "page[limit]": "500",
-  "sort": "drupal_internal__nid",
-};
-
-for (const key in fields) {
-  params[key] = fields[key];
-}
-
-const { data }: { [data: string]: any } = await useFetch(endpoint, {
-  query: params,
-});
+const data = await fetchDocuments(undefined, locale.value);
 
 const { t } = useI18n();
 

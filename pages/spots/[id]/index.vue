@@ -2,6 +2,7 @@
 import type { JsonApiItems, ResourceObject } from "~/types/jsonapi";
 
 const { legends } = useSettings();
+const { fetchSpot, fetchSpotDetails, fetchDocumentsByIds, fetchTranslationsByIds } = useLocalData();
 
 const publicRuntimeConfig = useRuntimeConfig().public;
 
@@ -9,22 +10,9 @@ legends.value = publicRuntimeConfig.legends as any;
 
 const getSpot = async () => {
   const route = useRoute();
-
   const id = route.params.id as string;
 
-  const url = "https://drupal.aws.ldas.jp/dlm/";
-
-  const endpoint = `${url}jsonapi/node/spots`;
-
-  const params: { [key: string]: string } = {
-    "filter[field_id]": id,
-  };
-
-  const { data }: { [data: string]: any } = await useFetch(endpoint, {
-    query: params,
-  });
-
-  return data.value.data[0];
+  return await fetchSpot(id);
 };
 
 const convert = (data: JsonApiItems) => {
@@ -100,96 +88,27 @@ const getDocument = async (paramsData: JsonApiItems) => {
     }
   }
 
-  const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/documents`;
+  const documentIds = Object.keys(documents);
+  const documentsData = await fetchDocumentsByIds(documentIds);
 
-  const params: { [key: string]: string } = {
-    "filter[name-filter][condition][path]": `id`,
-    "filter[name-filter][condition][operator]": "IN",
-  };
-
-  let i = 0;
-
-  for (const key in documents) {
-    params[`filter[name-filter][condition][value][${i + 1}]`] = key;
-    i++;
-  }
-
-  const { data }: { [data: string]: any } = await useFetch(url, {
-    query: params,
-  });
-
-  paramsData.included = data.value.data;
+  paramsData.included = documentsData.data;
 
   return paramsData;
 };
 
-const getData = async (url: string) => {
-  let offset = 0;
-  let limit = 50;
-
-  // JsonApiItems型のデータオブジェクトを初期化
-  const accumulatedData: JsonApiItems = {
-    data: [],
-    included: [],
-  };
-
-  while (true) {
-    const { data }: { data: any } = await useFetch(url, {
-      query: {
-        "page[offset]": offset,
-        "page[limit]": limit,
-      },
-    });
-
-    // データをaccumulatedDataに追加
-    accumulatedData.data = accumulatedData.data.concat(data.value.data);
-
-    if (data.value.included) {
-      accumulatedData.included = accumulatedData.included.concat(
-        data.value.included
-      );
-    }
-
-    // すべてのデータを取得した場合は終了
-    if (data.value.data.length < limit) {
-      break;
-    }
-
-    offset += limit;
-  }
-
-  return accumulatedData;
+const getData = async (fieldId: string) => {
+  return await fetchSpotDetails(fieldId);
 };
 
 const getTranslations = async (valueIds: string[], type_: string) => {
-  const type_single = type_.substring(0, type_.length - 1);
-  const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/node/${type_}_translations`;
-
-  const params: { [key: string]: string } = {
-    "filter[name-filter][condition][path]": `field_${type_single}.id`,
-    "filter[name-filter][condition][operator]": "IN",
-  };
-
-  for (let i = 0; i < valueIds.length; i++) {
-    params[`filter[name-filter][condition][value][${i + 1}]`] = valueIds[i];
-  }
-
-  const { data }: { [data: string]: any } = await useFetch(url, {
-    query: params,
-  });
-
-  return data.value;
+  return await fetchTranslationsByIds(valueIds, type_);
 };
 
 const spot = await getSpot();
 
 const spotNId = spot.attributes.drupal_internal__nid;
 
-const url = `https://drupal.aws.ldas.jp/dlm/jsonapi/index/data?filter[field_id]=${spot.attributes.field_id}`;
-
-// const { data }: { [data: string]: any } = await useFetch(url);
-
-const data = await getData(url);
+const data = await getData(spot.attributes.field_id);
 
 const types = ["poems", "sanbuns", "yokyokus", "images"];
 
@@ -323,20 +242,22 @@ const showCount = (item: string) => {
 </script>
 <template>
   <LayoutsCommon :title="title" :items="bh" fluid>
-    <v-tabs v-model="tab" grow color="primary">
-      <v-tab
-        v-for="item in items"
-        :key="item"
-        :value="item"
-        :disabled="
-          typedValues[item] &&
-          [0, -1].includes(typedValues[item].raw.data.length)
-        "
-      >
-        {{ labels[item] }}
-        {{ typedValues[item] ? `(${showCount(item)})` : "" }}
-      </v-tab>
-    </v-tabs>
+    <ClientOnly>
+      <v-tabs v-model="tab" grow color="primary">
+        <v-tab
+          v-for="item in items"
+          :key="item"
+          :value="item"
+          :disabled="
+            typedValues[item] &&
+            [0, -1].includes(typedValues[item].raw.data.length)
+          "
+        >
+          {{ labels[item] }}
+          {{ typedValues[item] ? `(${showCount(item)})` : "" }}
+        </v-tab>
+      </v-tabs>
+    </ClientOnly>
 
     <div class="pa-4">
       <PagesSpotsBasic

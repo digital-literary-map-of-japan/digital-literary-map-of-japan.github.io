@@ -1,15 +1,11 @@
 <script setup lang="ts">
 const route = useRoute();
+const { fetchDocuments } = useLocalData();
+const { locale } = useI18n();
+
 const id = route.params.id as string;
-const url = "https://drupal.aws.ldas.jp/dlm/";
-const endpoint = `${url}jsonapi/node/documents`;
-const params: { [key: string]: string } = {
-  "filter[field_id]": id,
-};
-const { data }: { [data: string]: any } = await useFetch(endpoint, {
-  query: params,
-});
-const item = data.value?.data[0];
+const data = await fetchDocuments(id, locale.value);
+const item = data?.data[0];
 const attributes = item?.attributes;
 const did = attributes?.drupal_internal__nid;
 const { t } = useI18n();

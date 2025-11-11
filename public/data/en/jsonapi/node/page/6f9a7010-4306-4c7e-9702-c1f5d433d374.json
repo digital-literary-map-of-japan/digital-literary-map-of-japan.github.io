@@ -1,0 +1,36 @@
+{
+  "jsonapi": {
+    "version": "1.0",
+    "meta": {
+      "links": {
+        "self": {
+          "href": "http://jsonapi.org/format/1.0/"
+        }
+      }
+    }
+  },
+  "data": {
+    "type": "node--page",
+    "id": "6f9a7010-4306-4c7e-9702-c1f5d433d374",
+    "links": {
+      "self": {
+        "href": "https://drupal.aws.ldas.jp/dlm/en/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374?resourceVersion=id%3A3907"
+      }
+    },
+    "attributes": {
+      "drupal_internal__nid": 3885,
+      "title": "History",
+      "body": {
+        "value": "<p>The earliest reference to places and areas used as utamakura. Representative waka poems are included here that contributed to their construal as utamakura. If one area is closely associated with a poetic, literary work, a legend or narrative, or if there is a historical figure of special relevance for the area, an explanation has been added accordingly. It is noted when the name of a place refers to more than one location, or if it is impossible to locate it. Main references used were Nihon rekishi chimei taikei, Kadokawa kokugo daijiten (Kadokawa shoten, 1982–1999) and Katagiri Yōichi's Utamakura utakotoba jiten. The cited examples have been confirmed in Shinpen Nihon koten bungaku zenshū (Shogakukan, 1994-2002) and Shin Nihon koten bungaku taikei (Iwanami shoten, 1989-2005).</p>",
+        "format": "basic_html",
+        "processed": "<p>The earliest reference to places and areas used as utamakura. Representative waka poems are included here that contributed to their construal as utamakura. If one area is closely associated with a poetic, literary work, a legend or narrative, or if there is a historical figure of special relevance for the area, an explanation has been added accordingly. It is noted when the name of a place refers to more than one location, or if it is impossible to locate it. Main references used were Nihon rekishi chimei taikei, Kadokawa kokugo daijiten (Kadokawa shoten, 1982–1999) and Katagiri Yōichi's Utamakura utakotoba jiten. The cited examples have been confirmed in Shinpen Nihon koten bungaku zenshū (Shogakukan, 1994-2002) and Shin Nihon koten bungaku taikei (Iwanami shoten, 1989-2005).</p>",
+        "summary": ""
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://drupal.aws.ldas.jp/dlm/en/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374?fields%5Bnode--page%5D=body%2Ctitle%2Cdrupal_internal__nid"
+    }
+  }
+}

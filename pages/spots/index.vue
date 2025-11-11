@@ -1,65 +1,15 @@
 <script setup lang="ts">
-const { results, documents, documentSpotMap, spotTypeCount, mode } = useMap();
+const { results, documents, documentSpotMap, spotTypeCount, mode} = useMap();
+const { fetchSpots, fetchDocuments, fetchApiData } = useLocalData();
 
 const getSpots = async () => {
-  const fields: { [key: string]: string } = {
-    "fields[node--spots]": [
-      "title",
-      "field_id",
-      "field_spots_name_furigana",
-      "drupal_internal__nid",
-      "changed",
-      "field_geo",
-      "field_spot_name_furigana",
-      "field_spot_name_romaji",
-      "field_history_ja",
-      "field_history_en",
-      "field_no_examples",
-    ].join(","),
-  };
-
-  const url = "https://drupal.aws.ldas.jp/dlm/";
-
-  const endpoint = `${url}jsonapi/node/spots`;
-
-  const params: { [key: string]: string } = {
-    "page[limit]": "500",
-    "sort": "drupal_internal__nid",
-  };
-
-  for (const key in fields) {
-    params[key] = fields[key];
-  }
-
-  const { data }: { [data: string]: any } = await useFetch(endpoint, {
-    query: params,
-  });
-
-  results.value = data.value;
+  const data = await fetchSpots();
+  results.value = data;
 };
 
 const getDocuments = async () => {
-  const fields: { [key: string]: string } = {
-    "fields[node--documents]": ["title", "field_id"].join(","),
-  };
-
-  const url = "https://drupal.aws.ldas.jp/dlm/";
-
-  const endpoint = `${url}jsonapi/node/documents`;
-
-  const params: { [key: string]: string } = {
-    "page[limit]": "500",
-  };
-
-  for (const key in fields) {
-    params[key] = fields[key];
-  }
-
-  const { data }: { [data: string]: any } = await useFetch(endpoint, {
-    query: params,
-  });
-
-  documents.value = data.value;
+  const data = await fetchDocuments();
+  documents.value = data;
 };
 
 getSpots();
@@ -71,15 +21,11 @@ const _documentSpotMap: { [key: string]: string[] } = {};
 const _spotTypeCount: { [key: string]: { [key: string]: number } } = {};
 
 for (const type_ of types) {
-  const url = "https://drupal.aws.ldas.jp/dlm/";
+  const data = await fetchApiData(type_);
 
-  const endpoint = `${url}api/${type_}`;
+  if (!data) continue;
 
-  const { data }: { [data: string]: any } = await useFetch(endpoint);
-
-  if (!data?.value) continue;
-
-  for (const item of data?.value) {
+  for (const item of data) {
     const spot = item.spot_id;
     const document = item.document_id;
     if (!_documentSpotMap[document]) {
