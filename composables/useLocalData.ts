@@ -3,9 +3,6 @@
  * CMSとのAPI通信の代わりにローカルのJSONファイルからデータを取得する
  */
 
-import fs from 'fs';
-import path from 'path';
-
 export const useLocalData = () => {
   /**
    * ローカルJSONデータを読み込む汎用関数
@@ -14,6 +11,10 @@ export const useLocalData = () => {
     try {
       // サーバーサイド（プリレンダリング、SSR）の場合
       if (import.meta.server) {
+        // 動的importでサーバー専用モジュールを読み込む
+        const fs = await import('fs');
+        const path = await import('path');
+
         const fullPath = path.resolve(process.cwd(), 'public/data', filePath);
         if (fs.existsSync(fullPath)) {
           const data = fs.readFileSync(fullPath, 'utf-8');

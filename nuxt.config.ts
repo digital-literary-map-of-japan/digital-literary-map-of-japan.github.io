@@ -5,9 +5,9 @@ import path from "path";
 
 import legends from "./assets/js/data.js";
 
-const baseURL = process.env.BASE_URL || "";
+const baseURL = process.env.BASE_URL || "/";
 const origin = process.env.ORIGIN || "";
-const appURL = origin + baseURL;
+const appURL = origin + (baseURL === "/" ? "" : baseURL);
 
 const publicRuntimeConfig = {
   token: "",
