@@ -70,30 +70,27 @@ const localePath = useLocalePath();
 </script>
 <template>
   <v-card
-    class="position-absolute"
-    style="
-      bottom: 120px;
-      right: 1vw;
-      z-index: 9999;
-      max-height: 50vh;
-      overflow-y: auto;
-      max-width: 25vh;
-    "
+    class="position-absolute spot-info-card"
     v-if="menu"
   >
-    <v-card-text>
-      <div class="text-right">
-        <v-btn variant="flat" icon @click="menu = false">
-          <v-icon>{{ mdiCloseCircle }}</v-icon>
-        </v-btn>
-      </div>
+    <v-card-text class="spot-info-content">
+      <v-btn
+        variant="flat"
+        icon
+        size="small"
+        @click="menu = false"
+        class="close-btn"
+      >
+        <v-icon>{{ mdiCloseCircle }}</v-icon>
+      </v-btn>
 
-      <div class="text-center mb-4">
-        <h3 class="mb-4">{{ attributes?.title }}</h3>
+      <div class="text-center mb-3">
+        <h3 class="mb-2 spot-title">{{ attributes?.title }}</h3>
 
         <v-btn
           color="primary"
           variant="flat"
+          size="small"
           :to="
             localePath({
               name: 'spots-id',
@@ -109,18 +106,18 @@ const localePath = useLocalePath();
       </div>
 
       <template v-for="field in fields">
-        <div class="mb-2">
+        <div class="mb-1 info-field">
           <strong>{{ field.title }}:</strong> {{ attributes?.[field.key] }}
         </div>
       </template>
 
       <template v-for="field in fieldsCount">
-        <div class="mb-2">
+        <div class="mb-1 info-field">
           <strong>{{ field.title }}:{{ " " }}</strong>
           <template
             v-if="spotTypeCount[attributes?.field_id]?.[field.key] === -1"
           >
-            <v-chip>{{ $t("No examples") }}</v-chip>
+            <v-chip size="x-small">{{ $t("No examples") }}</v-chip>
           </template>
           <template v-else>
             {{ spotTypeCount[attributes?.field_id]?.[field.key] }}
@@ -128,9 +125,10 @@ const localePath = useLocalePath();
         </div>
       </template>
 
-      <div>
+      <div class="mt-3">
         <strong>{{ $t("History") }}:</strong>
         <p
+          class="history-text"
           v-html="
             attributes?.[
               locale === 'ja' ? 'field_history_ja' : 'field_history_en'
@@ -141,3 +139,114 @@ const localePath = useLocalePath();
     </v-card-text>
   </v-card>
 </template>
+
+<style scoped>
+.spot-info-card {
+  bottom: 120px;
+  right: 1vw;
+  z-index: 9999;
+  max-height: 60vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+}
+
+.spot-info-content {
+  position: relative;
+  padding-top: 12px !important;
+}
+
+.spot-title {
+  line-height: 1.3;
+  word-break: break-word;
+  font-weight: 600;
+}
+
+.info-field {
+  line-height: 1.5;
+}
+
+.history-text {
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.history-text p {
+  margin-bottom: 8px;
+}
+
+/* モバイル（小画面） */
+@media (max-width: 599px) {
+  .spot-info-card {
+    max-width: 85vw;
+    width: 85vw;
+    right: 2vw;
+  }
+
+  .spot-info-content {
+    font-size: 15px;
+  }
+
+  .spot-info-content h3 {
+    font-size: 20px;
+  }
+
+  .spot-info-content strong {
+    font-size: 15px;
+  }
+}
+
+/* タブレット（中画面） */
+@media (min-width: 600px) and (max-width: 959px) {
+  .spot-info-card {
+    max-width: 400px;
+    width: 400px;
+  }
+
+  .spot-info-content {
+    font-size: 14px;
+  }
+
+  .spot-info-content h3 {
+    font-size: 20px;
+  }
+}
+
+/* デスクトップ（大画面） */
+@media (min-width: 960px) {
+  .spot-info-card {
+    max-width: 450px;
+    width: 450px;
+  }
+
+  .spot-info-content {
+    font-size: 14px;
+  }
+
+  .spot-info-content h3 {
+    font-size: 22px;
+  }
+}
+
+/* 超大画面 */
+@media (min-width: 1264px) {
+  .spot-info-card {
+    max-width: 500px;
+    width: 500px;
+  }
+
+  .spot-info-content {
+    font-size: 15px;
+  }
+
+  .spot-info-content h3 {
+    font-size: 24px;
+  }
+}
+</style>

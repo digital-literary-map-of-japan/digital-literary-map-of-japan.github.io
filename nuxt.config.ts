@@ -1,5 +1,6 @@
 import { headConfig } from "./meta.config";
 import axios from "axios";
+import fixVitePath from "./vite-plugins/fix-vite-path.js";
 
 import legends from "./assets/js/data.js";
 
@@ -46,7 +47,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/i18n",
     "nuxt-jsonld",
-    "nuxt3-leaflet",
+    "@nuxtjs/leaflet",
     "nuxt-gtag",
     "@nuxtjs/sitemap",
   ],
@@ -70,6 +71,9 @@ export default defineNuxtConfig({
     defaultLocale: headConfig.lang,
     // trailingSlash: true,
     detectBrowserLanguage: false,
+    bundle: {
+      optimizeTranslationDirective: false, // 警告を解消
+    },
   },
 
   app: {
@@ -120,6 +124,7 @@ export default defineNuxtConfig({
     define: {
       "process.env.DEBUG": false,
     },
+    plugins: [fixVitePath()],
   },
 
   nitro: {
@@ -131,7 +136,7 @@ export default defineNuxtConfig({
 
   site: {
     url: appURL,
-    trailingSlash: true,
+    // trailingSlash設定を削除（Viteエラー対策）
   },
 
   hooks: {
@@ -159,11 +164,7 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    defaults: {
-      nuxtLink: {
-        trailingSlash: "append",
-      },
-    },
+    // trailingSlash設定を削除（Viteエラー対策）
   },
 
   compatibilityDate: "2024-07-22",
