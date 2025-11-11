@@ -225,7 +225,7 @@ useHead({
     },
     {
       property: "og:url",
-      content: route.fullPath,
+      content: `${publicRuntimeConfig.appURL}${route.fullPath}`,
     },
     {
       property: "og:locale",

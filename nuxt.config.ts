@@ -101,22 +101,23 @@ export default defineNuxtConfig({
         // SEO関連
         { name: "description", content: headConfig.description },
         { name: "keywords", content: headConfig.keywords },
+        // Open Graph
         { property: "og:type", content: "website" },
+        { property: "og:site_name", content: headConfig.siteName },
         { property: "og:url", content: appURL },
         { property: "og:title", content: headConfig.siteName },
-        {
-          property: "og:description",
-          content: headConfig.description,
-        },
-        {
-          property: "og:image",
-          content: `${appURL}${headConfig.image}`,
-        },
-        {
-          property: "og:locale",
-          content: "ja_JP",
-        },
-        { name: "twitter:card", content: "summary" },
+        { property: "og:description", content: headConfig.description },
+        { property: "og:image", content: `${appURL}${headConfig.image}` },
+        { property: "og:image:width", content: headConfig.imageWidth },
+        { property: "og:image:height", content: headConfig.imageHeight },
+        { property: "og:image:alt", content: headConfig.imageAlt },
+        { property: "og:locale", content: "ja_JP" },
+        // Twitter Card
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:site", content: headConfig.twitterSite },
+        { name: "twitter:title", content: headConfig.siteName },
+        { name: "twitter:description", content: headConfig.description },
+        { name: "twitter:image", content: `${appURL}${headConfig.image}` },
       ],
     },
   },
