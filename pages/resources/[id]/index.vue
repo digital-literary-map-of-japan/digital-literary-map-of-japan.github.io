@@ -1,30 +1,19 @@
 <script setup lang="ts">
 const route = useRoute();
-
 const id = route.params.id as string;
-
 const url = "https://drupal.aws.ldas.jp/dlm/";
-
 const endpoint = `${url}jsonapi/node/documents`;
-
 const params: { [key: string]: string } = {
   "filter[field_id]": id,
 };
-
 const { data }: { [data: string]: any } = await useFetch(endpoint, {
   query: params,
 });
-
 const item = data.value?.data[0];
-
 const attributes = item?.attributes;
-
 const did = attributes?.drupal_internal__nid;
-
 const { t } = useI18n();
-
 const title = `${attributes?.title} / ${attributes?.field_document_name_romaji ?? ""}`;
-
 const fields = [
   {
     title: t("Title"),
@@ -51,8 +40,12 @@ const fields = [
     value: "field_author_name_kanji",
   },
   {
-    title: t("Author (Rōmaji)"),
+    title: t("Author (Furigana)"),  // ふりがな用に修正
     value: "field_author_name_furigana",
+  },
+  {
+    title: t("Author (Rōmaji)"),  // ローマ字用に追加
+    value: "field_author_name_romaji",  // 実際のローマ字フィールド名に合わせて調整
   },
   {
     title: t("Source text"),
@@ -75,9 +68,7 @@ const fields = [
     value: "field_link",
   },
 ];
-
 const localePath = useLocalePath();
-
 const bh = [
   {
     title: t("top"),
@@ -104,9 +95,12 @@ const bh = [
         </v-col>
         <v-col :md="9" cols="12">
           <template v-if="field.value === 'field_link'">
-            <a :href="attributes?.[field.value].uri" target="_blank">{{
-              attributes?.[field.value].uri
-            }}</a>
+            <!-- field_linkが配列なので、各要素をループして表示 -->
+            <div v-for="(link, index) in attributes[field.value]" :key="index">
+              <a v-if="link.uri" :href="link.uri" target="_blank">
+                {{ link.title || link.uri }}
+              </a>
+            </div>
           </template>
           <template v-else>
             {{ attributes?.[field.value] }}
@@ -114,7 +108,6 @@ const bh = [
         </v-col>
       </v-row>
     </template>
-
     <v-row class="my-4">
       <v-col>
         <CommonBtnBack type="resources"></CommonBtnBack>

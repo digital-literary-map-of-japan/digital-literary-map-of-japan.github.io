@@ -165,6 +165,7 @@ export default {
     "Document": "Document",
     "Volume": "Volume",
     "Author": "Author",
+    "Author (Furigana)": "Author（Furigana）",
     "Author (Rōmaji)": "Author (Rōmaji)",
     "Show transcription": "Show transcription",
     "Text (Rōmaji)": "Text (Rōmaji)",
