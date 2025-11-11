@@ -4,11 +4,28 @@ import { mdiMagnify, mdiCheck } from "@mdi/js";
 
 const { isAdmin } = useSettings();
 const { fetchDocuments } = useLocalData();
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 
-const data = await fetchDocuments(undefined, locale.value);
+const data = ref<any>(null);
 
-const { t } = useI18n();
+// データを取得
+const loadData = async () => {
+  try {
+    const currentLocale = locale.value || 'ja';
+    const result = await fetchDocuments(undefined, currentLocale);
+    if (result) {
+      data.value = result;
+    } else {
+      console.error('Failed to fetch documents: result is null');
+      data.value = { data: [] };
+    }
+  } catch (error) {
+    console.error('Error fetching documents:', error);
+    data.value = { data: [] };
+  }
+};
+
+await loadData();
 
 const title = t("Resources");
 
@@ -45,7 +62,9 @@ if (isAdmin.value) {
 }
 
 const desserts = computed(() => {
-  return data.value?.data
+  if (!data.value?.data) return [];
+
+  return data.value.data
     .map((item: any) => {
       const genre = item.attributes.field_genre;
 
