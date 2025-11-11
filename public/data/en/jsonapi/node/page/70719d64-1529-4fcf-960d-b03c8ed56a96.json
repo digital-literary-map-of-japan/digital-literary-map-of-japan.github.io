@@ -1,0 +1,36 @@
+{
+  "jsonapi": {
+    "version": "1.0",
+    "meta": {
+      "links": {
+        "self": {
+          "href": "http://jsonapi.org/format/1.0/"
+        }
+      }
+    }
+  },
+  "data": {
+    "type": "node--page",
+    "id": "70719d64-1529-4fcf-960d-b03c8ed56a96",
+    "links": {
+      "self": {
+        "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96?resourceVersion=id%3A2973"
+      }
+    },
+    "attributes": {
+      "drupal_internal__nid": 75,
+      "title": "歌枕・名所アノテーションツール",
+      "body": {
+        "value": "<p>日本文学において長い伝統を持つ歌枕・名所はジャンルの境を越える空間的な秩序を形成しています。<br>歌枕・名所は関連文献を呼び起こしながら、古来のテクストやイメージを連想させます。<br>このプログラムは日本文学における歌枕・名所を地図上に表示し、その背景にある歴史的、文化的、ポエティックな意味を提供しています。<br><br>本ウェブサイトは大阪大学の以下の研究成果をもとに作成されています:<br><br><strong>デジタル文学地図の構築と日本文化研究・教育への貢献</strong><br>2020年度文学研究科国際共同研究力向上推進プログラム<br><br>過去に、国文学研究資料館の<a href=\"https://www.nijl.ac.jp/pages/cijproject\">国文学研究資料館 歴史的典籍NW事業</a>、平成29年度NIHU若手研究者海外派遣プログラムのもとに作成されました。</p>",
+        "format": "basic_html",
+        "processed": "<p>日本文学において長い伝統を持つ歌枕・名所はジャンルの境を越える空間的な秩序を形成しています。<br>歌枕・名所は関連文献を呼び起こしながら、古来のテクストやイメージを連想させます。<br>このプログラムは日本文学における歌枕・名所を地図上に表示し、その背景にある歴史的、文化的、ポエティックな意味を提供しています。<br><br>本ウェブサイトは大阪大学の以下の研究成果をもとに作成されています:<br><br><strong>デジタル文学地図の構築と日本文化研究・教育への貢献</strong><br>2020年度文学研究科国際共同研究力向上推進プログラム<br><br>過去に、国文学研究資料館の<a href=\"https://www.nijl.ac.jp/pages/cijproject\">国文学研究資料館 歴史的典籍NW事業</a>、平成29年度NIHU若手研究者海外派遣プログラムのもとに作成されました。</p>",
+        "summary": ""
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96?fields%5Bnode--page%5D=body%2Ctitle%2Cdrupal_internal__nid"
+    }
+  }
+}
