@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<PropType>(), {
   id: "",
 });
 
-const url = `https://drupal.aws.ldas.jp/dlm/node/${props.id}/edit`;
+const url = `https://literarymaps.sakura.ne.jp/cms/node/${props.id}/edit`;
 </script>
 <template>
   <v-btn

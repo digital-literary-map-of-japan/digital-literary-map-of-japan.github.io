@@ -5,16 +5,25 @@
       "id": "70719d64-1529-4fcf-960d-b03c8ed56a96",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96?resourceVersion=id%3A2973"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96?resourceVersion=id%3A2973"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
         "drupal_internal__nid": 75,
+        "title": "歌枕・名所アノテーションツール",
+        "body": {
+          "value": "<p>日本文学において長い伝統を持つ歌枕・名所はジャンルの境を越える空間的な秩序を形成しています。<br>歌枕・名所は関連文献を呼び起こしながら、古来のテクストやイメージを連想させます。<br>このプログラムは日本文学における歌枕・名所を地図上に表示し、その背景にある歴史的、文化的、ポエティックな意味を提供しています。<br><br>本ウェブサイトは大阪大学の以下の研究成果をもとに作成されています:<br><br><strong>デジタル文学地図の構築と日本文化研究・教育への貢献</strong><br>2020年度文学研究科国際共同研究力向上推進プログラム<br><br>過去に、国文学研究資料館の<a href=\"https://www.nijl.ac.jp/pages/cijproject\">国文学研究資料館 歴史的典籍NW事業</a>、平成29年度NIHU若手研究者海外派遣プログラムのもとに作成されました。</p>",
+          "format": "basic_html",
+          "processed": "<p>日本文学において長い伝統を持つ歌枕・名所はジャンルの境を越える空間的な秩序を形成しています。<br>歌枕・名所は関連文献を呼び起こしながら、古来のテクストやイメージを連想させます。<br>このプログラムは日本文学における歌枕・名所を地図上に表示し、その背景にある歴史的、文化的、ポエティックな意味を提供しています。<br><br>本ウェブサイトは大阪大学の以下の研究成果をもとに作成されています:<br><br><strong>デジタル文学地図の構築と日本文化研究・教育への貢献</strong><br>2020年度文学研究科国際共同研究力向上推進プログラム<br><br>過去に、国文学研究資料館の<a href=\"https://www.nijl.ac.jp/pages/cijproject\">国文学研究資料館 歴史的典籍NW事業</a>、平成29年度NIHU若手研究者海外派遣プログラムのもとに作成されました。</p>",
+          "summary": ""
+        },
         "drupal_internal__vid": 2973,
         "langcode": "ja",
         "revision_timestamp": "2024-03-25T08:41:16+00:00",
         "status": true,
-        "title": "歌枕・名所アノテーションツール",
         "created": "2024-03-21T13:28:49+00:00",
         "changed": "2024-03-21T13:29:15+00:00",
         "promote": false,
@@ -28,12 +37,6 @@
         },
         "content_translation_source": "und",
         "content_translation_outdated": false,
-        "body": {
-          "value": "<p>日本文学において長い伝統を持つ歌枕・名所はジャンルの境を越える空間的な秩序を形成しています。<br>歌枕・名所は関連文献を呼び起こしながら、古来のテクストやイメージを連想させます。<br>このプログラムは日本文学における歌枕・名所を地図上に表示し、その背景にある歴史的、文化的、ポエティックな意味を提供しています。<br><br>本ウェブサイトは大阪大学の以下の研究成果をもとに作成されています:<br><br><strong>デジタル文学地図の構築と日本文化研究・教育への貢献</strong><br>2020年度文学研究科国際共同研究力向上推進プログラム<br><br>過去に、国文学研究資料館の<a href=\"https://www.nijl.ac.jp/pages/cijproject\">国文学研究資料館 歴史的典籍NW事業</a>、平成29年度NIHU若手研究者海外派遣プログラムのもとに作成されました。</p>",
-          "format": "basic_html",
-          "processed": "<p>日本文学において長い伝統を持つ歌枕・名所はジャンルの境を越える空間的な秩序を形成しています。<br>歌枕・名所は関連文献を呼び起こしながら、古来のテクストやイメージを連想させます。<br>このプログラムは日本文学における歌枕・名所を地図上に表示し、その背景にある歴史的、文化的、ポエティックな意味を提供しています。<br><br>本ウェブサイトは大阪大学の以下の研究成果をもとに作成されています:<br><br><strong>デジタル文学地図の構築と日本文化研究・教育への貢献</strong><br>2020年度文学研究科国際共同研究力向上推進プログラム<br><br>過去に、国文学研究資料館の<a href=\"https://www.nijl.ac.jp/pages/cijproject\">国文学研究資料館 歴史的典籍NW事業</a>、平成29年度NIHU若手研究者海外派遣プログラムのもとに作成されました。</p>",
-          "summary": ""
-        },
         "field_id": null
       },
       "relationships": {
@@ -47,10 +50,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96/node_type?resourceVersion=id%3A2973"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96/node_type?resourceVersion=id%3A2973"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96/relationships/node_type?resourceVersion=id%3A2973"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96/relationships/node_type?resourceVersion=id%3A2973"
             }
           }
         },
@@ -64,10 +67,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96/revision_uid?resourceVersion=id%3A2973"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96/revision_uid?resourceVersion=id%3A2973"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96/relationships/revision_uid?resourceVersion=id%3A2973"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96/relationships/revision_uid?resourceVersion=id%3A2973"
             }
           }
         },
@@ -81,10 +84,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96/uid?resourceVersion=id%3A2973"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96/uid?resourceVersion=id%3A2973"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96/relationships/uid?resourceVersion=id%3A2973"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/70719d64-1529-4fcf-960d-b03c8ed56a96/relationships/uid?resourceVersion=id%3A2973"
             }
           }
         }
@@ -95,7 +98,10 @@
       "id": "c1f814ad-9822-4338-9cf1-aebc75da2351",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351?resourceVersion=id%3A2974"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351?resourceVersion=id%3A2974"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -137,10 +143,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351/node_type?resourceVersion=id%3A2974"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351/node_type?resourceVersion=id%3A2974"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351/relationships/node_type?resourceVersion=id%3A2974"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351/relationships/node_type?resourceVersion=id%3A2974"
             }
           }
         },
@@ -154,10 +160,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351/revision_uid?resourceVersion=id%3A2974"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351/revision_uid?resourceVersion=id%3A2974"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351/relationships/revision_uid?resourceVersion=id%3A2974"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351/relationships/revision_uid?resourceVersion=id%3A2974"
             }
           }
         },
@@ -171,10 +177,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351/uid?resourceVersion=id%3A2974"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351/uid?resourceVersion=id%3A2974"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351/relationships/uid?resourceVersion=id%3A2974"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c1f814ad-9822-4338-9cf1-aebc75da2351/relationships/uid?resourceVersion=id%3A2974"
             }
           }
         }
@@ -185,7 +191,10 @@
       "id": "0a3c695c-d8ba-45c7-9f11-0ec60eabd34c",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c?resourceVersion=id%3A2975"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c?resourceVersion=id%3A2975"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -227,10 +236,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c/node_type?resourceVersion=id%3A2975"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c/node_type?resourceVersion=id%3A2975"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c/relationships/node_type?resourceVersion=id%3A2975"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c/relationships/node_type?resourceVersion=id%3A2975"
             }
           }
         },
@@ -244,10 +253,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c/revision_uid?resourceVersion=id%3A2975"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c/revision_uid?resourceVersion=id%3A2975"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c/relationships/revision_uid?resourceVersion=id%3A2975"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c/relationships/revision_uid?resourceVersion=id%3A2975"
             }
           }
         },
@@ -261,550 +270,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c/uid?resourceVersion=id%3A2975"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c/uid?resourceVersion=id%3A2975"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c/relationships/uid?resourceVersion=id%3A2975"
-            }
-          }
-        }
-      }
-    },
-    {
-      "type": "node--page",
-      "id": "c332309b-603d-4c40-af9f-947931dd5286",
-      "links": {
-        "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286?resourceVersion=id%3A3903"
-        }
-      },
-      "attributes": {
-        "drupal_internal__nid": 3889,
-        "drupal_internal__vid": 3903,
-        "langcode": "ja",
-        "revision_timestamp": "2024-03-26T00:34:54+00:00",
-        "status": true,
-        "title": "「画像」",
-        "created": "2024-03-26T00:34:26+00:00",
-        "changed": "2024-03-26T00:34:35+00:00",
-        "promote": false,
-        "sticky": false,
-        "default_langcode": true,
-        "revision_translation_affected": null,
-        "path": {
-          "alias": null,
-          "pid": null,
-          "langcode": "ja"
-        },
-        "content_translation_source": "und",
-        "content_translation_outdated": false,
-        "body": {
-          "value": "<p>歌枕として用いられる当該地域のイメージ、もしくはその地域に位置する代表的な山水・寺院・風物などの実景を描いた画像を載せた。主として、近世期に出版された名所図会類（『都名所図会』〈安永九年（1780）〉、『大和名所図会』〈寛政三年（1791）〉、『摂津名所図会』〈寛政八年（1796）～寛政十年（1798）〉など）や地誌類（『洛陽名所集』〈万治元年(1658)、『東国名勝志』〈宝暦十二年（1762）〉など）・浮世絵版画（歌川広重・葛飾北斎の名所絵）から引用した。著作権やCCライセンスに注意し、直接該当ページに飛べるようWebリンクを貼った。古典籍については、国立国会図書館デジタルコレクションはページごとのリンクができないため、基本的には、国文学研究資料館『新日本古典籍総合データベース』を利用した。絵画・絵巻などについては適宜博物館（東京国立博物館など）のデータベースも利用した。</p>",
-          "format": "basic_html",
-          "processed": "<p>歌枕として用いられる当該地域のイメージ、もしくはその地域に位置する代表的な山水・寺院・風物などの実景を描いた画像を載せた。主として、近世期に出版された名所図会類（『都名所図会』〈安永九年（1780）〉、『大和名所図会』〈寛政三年（1791）〉、『摂津名所図会』〈寛政八年（1796）～寛政十年（1798）〉など）や地誌類（『洛陽名所集』〈万治元年(1658)、『東国名勝志』〈宝暦十二年（1762）〉など）・浮世絵版画（歌川広重・葛飾北斎の名所絵）から引用した。著作権やCCライセンスに注意し、直接該当ページに飛べるようWebリンクを貼った。古典籍については、国立国会図書館デジタルコレクションはページごとのリンクができないため、基本的には、国文学研究資料館『新日本古典籍総合データベース』を利用した。絵画・絵巻などについては適宜博物館（東京国立博物館など）のデータベースも利用した。</p>",
-          "summary": ""
-        },
-        "field_id": null
-      },
-      "relationships": {
-        "node_type": {
-          "data": {
-            "type": "node_type--node_type",
-            "id": "2f55809d-7d0b-4b73-b67d-8aef91feb2fe",
-            "meta": {
-              "drupal_internal__target_id": "page"
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286/node_type?resourceVersion=id%3A3903"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286/relationships/node_type?resourceVersion=id%3A3903"
-            }
-          }
-        },
-        "revision_uid": {
-          "data": {
-            "type": "user--user",
-            "id": "2ede1658-c015-4664-b67f-582205544473",
-            "meta": {
-              "drupal_internal__target_id": 1
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286/revision_uid?resourceVersion=id%3A3903"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286/relationships/revision_uid?resourceVersion=id%3A3903"
-            }
-          }
-        },
-        "uid": {
-          "data": {
-            "type": "user--user",
-            "id": "2ede1658-c015-4664-b67f-582205544473",
-            "meta": {
-              "drupal_internal__target_id": 1
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286/uid?resourceVersion=id%3A3903"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286/relationships/uid?resourceVersion=id%3A3903"
-            }
-          }
-        }
-      }
-    },
-    {
-      "type": "node--page",
-      "id": "e68cd44b-ad42-4bb4-96ca-9df04ccd42a3",
-      "links": {
-        "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3?resourceVersion=id%3A3904"
-        }
-      },
-      "attributes": {
-        "drupal_internal__nid": 3888,
-        "drupal_internal__vid": 3904,
-        "langcode": "ja",
-        "revision_timestamp": "2024-03-26T00:35:08+00:00",
-        "status": true,
-        "title": "「連想」",
-        "created": "2024-03-26T00:34:09+00:00",
-        "changed": "2024-03-26T00:34:16+00:00",
-        "promote": false,
-        "sticky": false,
-        "default_langcode": true,
-        "revision_translation_affected": null,
-        "path": {
-          "alias": null,
-          "pid": null,
-          "langcode": "ja"
-        },
-        "content_translation_source": "und",
-        "content_translation_outdated": false,
-        "body": {
-          "value": "<p>歌枕そのものではなくその歌枕が呼び起こすイメージや掛詞などを書く。まず『俳諧類舩集索引』（般庵野間光辰先生華甲記念会、1973～1975年）を使ってそれぞれの歌枕の付合語を調べ、片桐洋一著『歌枕歌ことば辞典』を参考にしながら10語前後に絞った。</p>",
-          "format": "basic_html",
-          "processed": "<p>歌枕そのものではなくその歌枕が呼び起こすイメージや掛詞などを書く。まず『俳諧類舩集索引』（般庵野間光辰先生華甲記念会、1973～1975年）を使ってそれぞれの歌枕の付合語を調べ、片桐洋一著『歌枕歌ことば辞典』を参考にしながら10語前後に絞った。</p>",
-          "summary": ""
-        },
-        "field_id": null
-      },
-      "relationships": {
-        "node_type": {
-          "data": {
-            "type": "node_type--node_type",
-            "id": "2f55809d-7d0b-4b73-b67d-8aef91feb2fe",
-            "meta": {
-              "drupal_internal__target_id": "page"
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3/node_type?resourceVersion=id%3A3904"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3/relationships/node_type?resourceVersion=id%3A3904"
-            }
-          }
-        },
-        "revision_uid": {
-          "data": {
-            "type": "user--user",
-            "id": "2ede1658-c015-4664-b67f-582205544473",
-            "meta": {
-              "drupal_internal__target_id": 1
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3/revision_uid?resourceVersion=id%3A3904"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3/relationships/revision_uid?resourceVersion=id%3A3904"
-            }
-          }
-        },
-        "uid": {
-          "data": {
-            "type": "user--user",
-            "id": "2ede1658-c015-4664-b67f-582205544473",
-            "meta": {
-              "drupal_internal__target_id": 1
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3/uid?resourceVersion=id%3A3904"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3/relationships/uid?resourceVersion=id%3A3904"
-            }
-          }
-        }
-      }
-    },
-    {
-      "type": "node--page",
-      "id": "bb6ff42f-443a-4e7f-bc25-8b6b4a168462",
-      "links": {
-        "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462?resourceVersion=id%3A3905"
-        }
-      },
-      "attributes": {
-        "drupal_internal__nid": 3887,
-        "drupal_internal__vid": 3905,
-        "langcode": "ja",
-        "revision_timestamp": "2024-03-26T00:35:22+00:00",
-        "status": true,
-        "title": "「歌枕としての特徴」",
-        "created": "2024-03-26T00:33:52+00:00",
-        "changed": "2024-03-26T00:34:00+00:00",
-        "promote": false,
-        "sticky": false,
-        "default_langcode": true,
-        "revision_translation_affected": null,
-        "path": {
-          "alias": null,
-          "pid": null,
-          "langcode": "ja"
-        },
-        "content_translation_source": "und",
-        "content_translation_outdated": false,
-        "body": {
-          "value": "<p>その歌枕が持つ独自の特徴。地理情報や著名な風物・寺社仏閣、あるいはその歌枕を語る際外すことの出来ない著名な古典（「明石」の『源氏物語』など）書く。特に特筆すべきものがない場合は空欄でも可。主として片桐洋一著『歌枕歌ことば辞典』を参照した。</p>",
-          "format": "basic_html",
-          "processed": "<p>その歌枕が持つ独自の特徴。地理情報や著名な風物・寺社仏閣、あるいはその歌枕を語る際外すことの出来ない著名な古典（「明石」の『源氏物語』など）書く。特に特筆すべきものがない場合は空欄でも可。主として片桐洋一著『歌枕歌ことば辞典』を参照した。</p>",
-          "summary": ""
-        },
-        "field_id": null
-      },
-      "relationships": {
-        "node_type": {
-          "data": {
-            "type": "node_type--node_type",
-            "id": "2f55809d-7d0b-4b73-b67d-8aef91feb2fe",
-            "meta": {
-              "drupal_internal__target_id": "page"
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462/node_type?resourceVersion=id%3A3905"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462/relationships/node_type?resourceVersion=id%3A3905"
-            }
-          }
-        },
-        "revision_uid": {
-          "data": {
-            "type": "user--user",
-            "id": "2ede1658-c015-4664-b67f-582205544473",
-            "meta": {
-              "drupal_internal__target_id": 1
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462/revision_uid?resourceVersion=id%3A3905"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462/relationships/revision_uid?resourceVersion=id%3A3905"
-            }
-          }
-        },
-        "uid": {
-          "data": {
-            "type": "user--user",
-            "id": "2ede1658-c015-4664-b67f-582205544473",
-            "meta": {
-              "drupal_internal__target_id": 1
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462/uid?resourceVersion=id%3A3905"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462/relationships/uid?resourceVersion=id%3A3905"
-            }
-          }
-        }
-      }
-    },
-    {
-      "type": "node--page",
-      "id": "03d91050-7593-49b9-b24d-2e1172555b4b",
-      "links": {
-        "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b?resourceVersion=id%3A3906"
-        }
-      },
-      "attributes": {
-        "drupal_internal__nid": 3886,
-        "drupal_internal__vid": 3906,
-        "langcode": "ja",
-        "revision_timestamp": "2024-03-26T00:35:40+00:00",
-        "status": true,
-        "title": "「歌枕としての意味」",
-        "created": "2024-03-26T00:33:35+00:00",
-        "changed": "2024-03-26T00:33:42+00:00",
-        "promote": false,
-        "sticky": false,
-        "default_langcode": true,
-        "revision_translation_affected": null,
-        "path": {
-          "alias": null,
-          "pid": null,
-          "langcode": "ja"
-        },
-        "content_translation_source": "und",
-        "content_translation_outdated": false,
-        "body": {
-          "value": "<p>歌枕が具体的に示す内容。例えば「音羽」の場合、作品中では「音羽」という形のほか、「音羽山」「音羽河」「音羽滝」「音羽里」といったより具体的な形で出現することが多い。主として片桐洋一著『歌枕歌ことば辞典』を参照した。</p>",
-          "format": "basic_html",
-          "processed": "<p>歌枕が具体的に示す内容。例えば「音羽」の場合、作品中では「音羽」という形のほか、「音羽山」「音羽河」「音羽滝」「音羽里」といったより具体的な形で出現することが多い。主として片桐洋一著『歌枕歌ことば辞典』を参照した。</p>",
-          "summary": ""
-        },
-        "field_id": null
-      },
-      "relationships": {
-        "node_type": {
-          "data": {
-            "type": "node_type--node_type",
-            "id": "2f55809d-7d0b-4b73-b67d-8aef91feb2fe",
-            "meta": {
-              "drupal_internal__target_id": "page"
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b/node_type?resourceVersion=id%3A3906"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b/relationships/node_type?resourceVersion=id%3A3906"
-            }
-          }
-        },
-        "revision_uid": {
-          "data": {
-            "type": "user--user",
-            "id": "2ede1658-c015-4664-b67f-582205544473",
-            "meta": {
-              "drupal_internal__target_id": 1
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b/revision_uid?resourceVersion=id%3A3906"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b/relationships/revision_uid?resourceVersion=id%3A3906"
-            }
-          }
-        },
-        "uid": {
-          "data": {
-            "type": "user--user",
-            "id": "2ede1658-c015-4664-b67f-582205544473",
-            "meta": {
-              "drupal_internal__target_id": 1
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b/uid?resourceVersion=id%3A3906"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b/relationships/uid?resourceVersion=id%3A3906"
-            }
-          }
-        }
-      }
-    },
-    {
-      "type": "node--page",
-      "id": "6f9a7010-4306-4c7e-9702-c1f5d433d374",
-      "links": {
-        "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374?resourceVersion=id%3A3907"
-        }
-      },
-      "attributes": {
-        "drupal_internal__nid": 3885,
-        "drupal_internal__vid": 3907,
-        "langcode": "ja",
-        "revision_timestamp": "2024-03-26T00:35:58+00:00",
-        "status": true,
-        "title": "「歴史」",
-        "created": "2024-03-26T00:33:14+00:00",
-        "changed": "2024-03-26T00:33:23+00:00",
-        "promote": false,
-        "sticky": false,
-        "default_langcode": true,
-        "revision_translation_affected": null,
-        "path": {
-          "alias": null,
-          "pid": null,
-          "langcode": "ja"
-        },
-        "content_translation_source": "und",
-        "content_translation_outdated": false,
-        "body": {
-          "value": "<p>当該地域が歌枕として用いられるようになった時期と経緯を記し、歌枕の定着の一助となった代表的な和歌を載せた。なお、当該地域が文学作品や伝説・説話との密接な関係があり、またはゆかりの歴史人物が存在する場合は、その関連性について説明を加えた。それとともに、一つの地名が二か所以上の地域を指す場合や地域が特定できない場合は、その旨を記している。<br>主として、『日本歴史地名大系』、『角川古語大辞典』（角川書店、1982～1999年）、片桐洋一著『歌枕歌ことば辞典』を参考し、『新編日本古典文学全集』（小学館、1994～2002年）、『新日本古典文学大系』（岩波書店、1989～2005年）から用例を確認した。</p>",
-          "format": "basic_html",
-          "processed": "<p>当該地域が歌枕として用いられるようになった時期と経緯を記し、歌枕の定着の一助となった代表的な和歌を載せた。なお、当該地域が文学作品や伝説・説話との密接な関係があり、またはゆかりの歴史人物が存在する場合は、その関連性について説明を加えた。それとともに、一つの地名が二か所以上の地域を指す場合や地域が特定できない場合は、その旨を記している。<br>主として、『日本歴史地名大系』、『角川古語大辞典』（角川書店、1982～1999年）、片桐洋一著『歌枕歌ことば辞典』を参考し、『新編日本古典文学全集』（小学館、1994～2002年）、『新日本古典文学大系』（岩波書店、1989～2005年）から用例を確認した。</p>",
-          "summary": ""
-        },
-        "field_id": null
-      },
-      "relationships": {
-        "node_type": {
-          "data": {
-            "type": "node_type--node_type",
-            "id": "2f55809d-7d0b-4b73-b67d-8aef91feb2fe",
-            "meta": {
-              "drupal_internal__target_id": "page"
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374/node_type?resourceVersion=id%3A3907"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374/relationships/node_type?resourceVersion=id%3A3907"
-            }
-          }
-        },
-        "revision_uid": {
-          "data": {
-            "type": "user--user",
-            "id": "2ede1658-c015-4664-b67f-582205544473",
-            "meta": {
-              "drupal_internal__target_id": 1
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374/revision_uid?resourceVersion=id%3A3907"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374/relationships/revision_uid?resourceVersion=id%3A3907"
-            }
-          }
-        },
-        "uid": {
-          "data": {
-            "type": "user--user",
-            "id": "2ede1658-c015-4664-b67f-582205544473",
-            "meta": {
-              "drupal_internal__target_id": 1
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374/uid?resourceVersion=id%3A3907"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374/relationships/uid?resourceVersion=id%3A3907"
-            }
-          }
-        }
-      }
-    },
-    {
-      "type": "node--page",
-      "id": "72528a60-1435-4539-9ad1-ed375aafac7a",
-      "links": {
-        "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a?resourceVersion=id%3A3908"
-        }
-      },
-      "attributes": {
-        "drupal_internal__nid": 3884,
-        "drupal_internal__vid": 3908,
-        "langcode": "ja",
-        "revision_timestamp": "2024-03-26T00:36:14+00:00",
-        "status": true,
-        "title": "「地誌情報」",
-        "created": "2024-03-26T00:32:56+00:00",
-        "changed": "2024-03-26T00:33:05+00:00",
-        "promote": false,
-        "sticky": false,
-        "default_langcode": true,
-        "revision_translation_affected": null,
-        "path": {
-          "alias": null,
-          "pid": null,
-          "langcode": "ja"
-        },
-        "content_translation_source": "und",
-        "content_translation_outdated": false,
-        "body": {
-          "value": "基本的な地理情報（行政区域データ、標高、面積など）とその地の特徴的な自然環境、隣接地域との位置関係、また、地名の語源や当該地域が日本の歴史上にどのように利用されてきたかに関して、特記すべき点を記した。主として、『日本歴史地名大系』、『日本国語大辞典 第二版』、『国史大辞典』（吉川弘文館、1979～1997年）、『日本大百科全書』（小学館、1994年）、を参考して作成した。",
-          "format": "basic_html",
-          "processed": "基本的な地理情報（行政区域データ、標高、面積など）とその地の特徴的な自然環境、隣接地域との位置関係、また、地名の語源や当該地域が日本の歴史上にどのように利用されてきたかに関して、特記すべき点を記した。主として、『日本歴史地名大系』、『日本国語大辞典 第二版』、『国史大辞典』（吉川弘文館、1979～1997年）、『日本大百科全書』（小学館、1994年）、を参考して作成した。",
-          "summary": ""
-        },
-        "field_id": null
-      },
-      "relationships": {
-        "node_type": {
-          "data": {
-            "type": "node_type--node_type",
-            "id": "2f55809d-7d0b-4b73-b67d-8aef91feb2fe",
-            "meta": {
-              "drupal_internal__target_id": "page"
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a/node_type?resourceVersion=id%3A3908"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a/relationships/node_type?resourceVersion=id%3A3908"
-            }
-          }
-        },
-        "revision_uid": {
-          "data": {
-            "type": "user--user",
-            "id": "2ede1658-c015-4664-b67f-582205544473",
-            "meta": {
-              "drupal_internal__target_id": 1
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a/revision_uid?resourceVersion=id%3A3908"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a/relationships/revision_uid?resourceVersion=id%3A3908"
-            }
-          }
-        },
-        "uid": {
-          "data": {
-            "type": "user--user",
-            "id": "2ede1658-c015-4664-b67f-582205544473",
-            "meta": {
-              "drupal_internal__target_id": 1
-            }
-          },
-          "links": {
-            "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a/uid?resourceVersion=id%3A3908"
-            },
-            "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a/relationships/uid?resourceVersion=id%3A3908"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/0a3c695c-d8ba-45c7-9f11-0ec60eabd34c/relationships/uid?resourceVersion=id%3A2975"
             }
           }
         }
@@ -815,16 +284,25 @@
       "id": "2bd8d311-6024-4dfc-98c2-f9fd0c4a1477",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477?resourceVersion=id%3A3909"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477?resourceVersion=id%3A3909"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
         "drupal_internal__nid": 3883,
+        "title": "「緯度経度」",
+        "body": {
+          "value": "現在の地図（Googleマップ）で場所（跡地・記念碑など）が特定できるものはそのまま利用した。川や平原など広い範囲を示す歌枕については特徴的な風物（最上＝最上川は「白糸の滝」付近に合わせた）や著名な史跡・寺社等（和歌浦は玉津島神社に合わせた）を基準とした。特徴的な風物・史跡・寺社などについては、『日本歴史地名大系』（平凡社、1979～2004年）や『日本国語大辞典　第二版』（小学館、2000～2002年）、片桐洋一著『歌枕歌ことば辞典』（笠間書院、1999年）、久保田淳・馬場あき子編『歌ことば歌枕大辞典』（角川書店、1999年）を参考とした。\r\nまた以上のような基準を定めるのが難しい場合、対象範囲の中心付近や任意のランドマークや駅・役所などに定めたものもある。",
+          "format": "basic_html",
+          "processed": "現在の地図（Googleマップ）で場所（跡地・記念碑など）が特定できるものはそのまま利用した。川や平原など広い範囲を示す歌枕については特徴的な風物（最上＝最上川は「白糸の滝」付近に合わせた）や著名な史跡・寺社等（和歌浦は玉津島神社に合わせた）を基準とした。特徴的な風物・史跡・寺社などについては、『日本歴史地名大系』（平凡社、1979～2004年）や『日本国語大辞典　第二版』（小学館、2000～2002年）、片桐洋一著『歌枕歌ことば辞典』（笠間書院、1999年）、久保田淳・馬場あき子編『歌ことば歌枕大辞典』（角川書店、1999年）を参考とした。\nまた以上のような基準を定めるのが難しい場合、対象範囲の中心付近や任意のランドマークや駅・役所などに定めたものもある。",
+          "summary": ""
+        },
         "drupal_internal__vid": 3909,
         "langcode": "ja",
         "revision_timestamp": "2024-03-26T00:36:30+00:00",
         "status": true,
-        "title": "「緯度経度」",
         "created": "2024-03-26T00:32:18+00:00",
         "changed": "2024-03-26T00:32:32+00:00",
         "promote": false,
@@ -838,12 +316,6 @@
         },
         "content_translation_source": "und",
         "content_translation_outdated": false,
-        "body": {
-          "value": "現在の地図（Googleマップ）で場所（跡地・記念碑など）が特定できるものはそのまま利用した。川や平原など広い範囲を示す歌枕については特徴的な風物（最上＝最上川は「白糸の滝」付近に合わせた）や著名な史跡・寺社等（和歌浦は玉津島神社に合わせた）を基準とした。特徴的な風物・史跡・寺社などについては、『日本歴史地名大系』（平凡社、1979～2004年）や『日本国語大辞典　第二版』（小学館、2000～2002年）、片桐洋一著『歌枕歌ことば辞典』（笠間書院、1999年）、久保田淳・馬場あき子編『歌ことば歌枕大辞典』（角川書店、1999年）を参考とした。\r\nまた以上のような基準を定めるのが難しい場合、対象範囲の中心付近や任意のランドマークや駅・役所などに定めたものもある。",
-          "format": "basic_html",
-          "processed": "現在の地図（Googleマップ）で場所（跡地・記念碑など）が特定できるものはそのまま利用した。川や平原など広い範囲を示す歌枕については特徴的な風物（最上＝最上川は「白糸の滝」付近に合わせた）や著名な史跡・寺社等（和歌浦は玉津島神社に合わせた）を基準とした。特徴的な風物・史跡・寺社などについては、『日本歴史地名大系』（平凡社、1979～2004年）や『日本国語大辞典　第二版』（小学館、2000～2002年）、片桐洋一著『歌枕歌ことば辞典』（笠間書院、1999年）、久保田淳・馬場あき子編『歌ことば歌枕大辞典』（角川書店、1999年）を参考とした。\nまた以上のような基準を定めるのが難しい場合、対象範囲の中心付近や任意のランドマークや駅・役所などに定めたものもある。",
-          "summary": ""
-        },
         "field_id": null
       },
       "relationships": {
@@ -857,10 +329,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477/node_type?resourceVersion=id%3A3909"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477/node_type?resourceVersion=id%3A3909"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477/relationships/node_type?resourceVersion=id%3A3909"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477/relationships/node_type?resourceVersion=id%3A3909"
             }
           }
         },
@@ -874,10 +346,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477/revision_uid?resourceVersion=id%3A3909"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477/revision_uid?resourceVersion=id%3A3909"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477/relationships/revision_uid?resourceVersion=id%3A3909"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477/relationships/revision_uid?resourceVersion=id%3A3909"
             }
           }
         },
@@ -891,10 +363,568 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477/uid?resourceVersion=id%3A3909"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477/uid?resourceVersion=id%3A3909"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477/relationships/uid?resourceVersion=id%3A3909"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/2bd8d311-6024-4dfc-98c2-f9fd0c4a1477/relationships/uid?resourceVersion=id%3A3909"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--page",
+      "id": "72528a60-1435-4539-9ad1-ed375aafac7a",
+      "links": {
+        "self": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a?resourceVersion=id%3A3908"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a?resourceVersion=rel%3Aworking-copy"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 3884,
+        "title": "「地誌情報」",
+        "body": {
+          "value": "基本的な地理情報（行政区域データ、標高、面積など）とその地の特徴的な自然環境、隣接地域との位置関係、また、地名の語源や当該地域が日本の歴史上にどのように利用されてきたかに関して、特記すべき点を記した。主として、『日本歴史地名大系』、『日本国語大辞典 第二版』、『国史大辞典』（吉川弘文館、1979～1997年）、『日本大百科全書』（小学館、1994年）、を参考して作成した。",
+          "format": "basic_html",
+          "processed": "基本的な地理情報（行政区域データ、標高、面積など）とその地の特徴的な自然環境、隣接地域との位置関係、また、地名の語源や当該地域が日本の歴史上にどのように利用されてきたかに関して、特記すべき点を記した。主として、『日本歴史地名大系』、『日本国語大辞典 第二版』、『国史大辞典』（吉川弘文館、1979～1997年）、『日本大百科全書』（小学館、1994年）、を参考して作成した。",
+          "summary": ""
+        },
+        "drupal_internal__vid": 3908,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-26T00:36:14+00:00",
+        "status": true,
+        "created": "2024-03-26T00:32:56+00:00",
+        "changed": "2024-03-26T00:33:05+00:00",
+        "promote": false,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": null,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_id": null
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "2f55809d-7d0b-4b73-b67d-8aef91feb2fe",
+            "meta": {
+              "drupal_internal__target_id": "page"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a/node_type?resourceVersion=id%3A3908"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a/relationships/node_type?resourceVersion=id%3A3908"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "2ede1658-c015-4664-b67f-582205544473",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a/revision_uid?resourceVersion=id%3A3908"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a/relationships/revision_uid?resourceVersion=id%3A3908"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "2ede1658-c015-4664-b67f-582205544473",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a/uid?resourceVersion=id%3A3908"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/72528a60-1435-4539-9ad1-ed375aafac7a/relationships/uid?resourceVersion=id%3A3908"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--page",
+      "id": "6f9a7010-4306-4c7e-9702-c1f5d433d374",
+      "links": {
+        "self": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374?resourceVersion=id%3A3907"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374?resourceVersion=rel%3Aworking-copy"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 3885,
+        "title": "「歴史」",
+        "body": {
+          "value": "<p>当該地域が歌枕として用いられるようになった時期と経緯を記し、歌枕の定着の一助となった代表的な和歌を載せた。なお、当該地域が文学作品や伝説・説話との密接な関係があり、またはゆかりの歴史人物が存在する場合は、その関連性について説明を加えた。それとともに、一つの地名が二か所以上の地域を指す場合や地域が特定できない場合は、その旨を記している。<br>主として、『日本歴史地名大系』、『角川古語大辞典』（角川書店、1982～1999年）、片桐洋一著『歌枕歌ことば辞典』を参考し、『新編日本古典文学全集』（小学館、1994～2002年）、『新日本古典文学大系』（岩波書店、1989～2005年）から用例を確認した。</p>",
+          "format": "basic_html",
+          "processed": "<p>当該地域が歌枕として用いられるようになった時期と経緯を記し、歌枕の定着の一助となった代表的な和歌を載せた。なお、当該地域が文学作品や伝説・説話との密接な関係があり、またはゆかりの歴史人物が存在する場合は、その関連性について説明を加えた。それとともに、一つの地名が二か所以上の地域を指す場合や地域が特定できない場合は、その旨を記している。<br>主として、『日本歴史地名大系』、『角川古語大辞典』（角川書店、1982～1999年）、片桐洋一著『歌枕歌ことば辞典』を参考し、『新編日本古典文学全集』（小学館、1994～2002年）、『新日本古典文学大系』（岩波書店、1989～2005年）から用例を確認した。</p>",
+          "summary": ""
+        },
+        "drupal_internal__vid": 3907,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-26T00:35:58+00:00",
+        "status": true,
+        "created": "2024-03-26T00:33:14+00:00",
+        "changed": "2024-03-26T00:33:23+00:00",
+        "promote": false,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": null,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_id": null
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "2f55809d-7d0b-4b73-b67d-8aef91feb2fe",
+            "meta": {
+              "drupal_internal__target_id": "page"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374/node_type?resourceVersion=id%3A3907"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374/relationships/node_type?resourceVersion=id%3A3907"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "2ede1658-c015-4664-b67f-582205544473",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374/revision_uid?resourceVersion=id%3A3907"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374/relationships/revision_uid?resourceVersion=id%3A3907"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "2ede1658-c015-4664-b67f-582205544473",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374/uid?resourceVersion=id%3A3907"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/6f9a7010-4306-4c7e-9702-c1f5d433d374/relationships/uid?resourceVersion=id%3A3907"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--page",
+      "id": "03d91050-7593-49b9-b24d-2e1172555b4b",
+      "links": {
+        "self": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b?resourceVersion=id%3A3906"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b?resourceVersion=rel%3Aworking-copy"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 3886,
+        "title": "「歌枕としての意味」",
+        "body": {
+          "value": "<p>歌枕が具体的に示す内容。例えば「音羽」の場合、作品中では「音羽」という形のほか、「音羽山」「音羽河」「音羽滝」「音羽里」といったより具体的な形で出現することが多い。主として片桐洋一著『歌枕歌ことば辞典』を参照した。</p>",
+          "format": "basic_html",
+          "processed": "<p>歌枕が具体的に示す内容。例えば「音羽」の場合、作品中では「音羽」という形のほか、「音羽山」「音羽河」「音羽滝」「音羽里」といったより具体的な形で出現することが多い。主として片桐洋一著『歌枕歌ことば辞典』を参照した。</p>",
+          "summary": ""
+        },
+        "drupal_internal__vid": 3906,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-26T00:35:40+00:00",
+        "status": true,
+        "created": "2024-03-26T00:33:35+00:00",
+        "changed": "2024-03-26T00:33:42+00:00",
+        "promote": false,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": null,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_id": null
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "2f55809d-7d0b-4b73-b67d-8aef91feb2fe",
+            "meta": {
+              "drupal_internal__target_id": "page"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b/node_type?resourceVersion=id%3A3906"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b/relationships/node_type?resourceVersion=id%3A3906"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "2ede1658-c015-4664-b67f-582205544473",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b/revision_uid?resourceVersion=id%3A3906"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b/relationships/revision_uid?resourceVersion=id%3A3906"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "2ede1658-c015-4664-b67f-582205544473",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b/uid?resourceVersion=id%3A3906"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b/relationships/uid?resourceVersion=id%3A3906"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--page",
+      "id": "bb6ff42f-443a-4e7f-bc25-8b6b4a168462",
+      "links": {
+        "self": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462?resourceVersion=id%3A3905"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462?resourceVersion=rel%3Aworking-copy"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 3887,
+        "title": "「歌枕としての特徴」",
+        "body": {
+          "value": "<p>その歌枕が持つ独自の特徴。地理情報や著名な風物・寺社仏閣、あるいはその歌枕を語る際外すことの出来ない著名な古典（「明石」の『源氏物語』など）書く。特に特筆すべきものがない場合は空欄でも可。主として片桐洋一著『歌枕歌ことば辞典』を参照した。</p>",
+          "format": "basic_html",
+          "processed": "<p>その歌枕が持つ独自の特徴。地理情報や著名な風物・寺社仏閣、あるいはその歌枕を語る際外すことの出来ない著名な古典（「明石」の『源氏物語』など）書く。特に特筆すべきものがない場合は空欄でも可。主として片桐洋一著『歌枕歌ことば辞典』を参照した。</p>",
+          "summary": ""
+        },
+        "drupal_internal__vid": 3905,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-26T00:35:22+00:00",
+        "status": true,
+        "created": "2024-03-26T00:33:52+00:00",
+        "changed": "2024-03-26T00:34:00+00:00",
+        "promote": false,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": null,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_id": null
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "2f55809d-7d0b-4b73-b67d-8aef91feb2fe",
+            "meta": {
+              "drupal_internal__target_id": "page"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462/node_type?resourceVersion=id%3A3905"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462/relationships/node_type?resourceVersion=id%3A3905"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "2ede1658-c015-4664-b67f-582205544473",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462/revision_uid?resourceVersion=id%3A3905"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462/relationships/revision_uid?resourceVersion=id%3A3905"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "2ede1658-c015-4664-b67f-582205544473",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462/uid?resourceVersion=id%3A3905"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/bb6ff42f-443a-4e7f-bc25-8b6b4a168462/relationships/uid?resourceVersion=id%3A3905"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--page",
+      "id": "e68cd44b-ad42-4bb4-96ca-9df04ccd42a3",
+      "links": {
+        "self": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3?resourceVersion=id%3A3904"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3?resourceVersion=rel%3Aworking-copy"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 3888,
+        "title": "「連想」",
+        "body": {
+          "value": "<p>歌枕そのものではなくその歌枕が呼び起こすイメージや掛詞などを書く。まず『俳諧類舩集索引』（般庵野間光辰先生華甲記念会、1973～1975年）を使ってそれぞれの歌枕の付合語を調べ、片桐洋一著『歌枕歌ことば辞典』を参考にしながら10語前後に絞った。</p>",
+          "format": "basic_html",
+          "processed": "<p>歌枕そのものではなくその歌枕が呼び起こすイメージや掛詞などを書く。まず『俳諧類舩集索引』（般庵野間光辰先生華甲記念会、1973～1975年）を使ってそれぞれの歌枕の付合語を調べ、片桐洋一著『歌枕歌ことば辞典』を参考にしながら10語前後に絞った。</p>",
+          "summary": ""
+        },
+        "drupal_internal__vid": 3904,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-26T00:35:08+00:00",
+        "status": true,
+        "created": "2024-03-26T00:34:09+00:00",
+        "changed": "2024-03-26T00:34:16+00:00",
+        "promote": false,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": null,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_id": null
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "2f55809d-7d0b-4b73-b67d-8aef91feb2fe",
+            "meta": {
+              "drupal_internal__target_id": "page"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3/node_type?resourceVersion=id%3A3904"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3/relationships/node_type?resourceVersion=id%3A3904"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "2ede1658-c015-4664-b67f-582205544473",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3/revision_uid?resourceVersion=id%3A3904"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3/relationships/revision_uid?resourceVersion=id%3A3904"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "2ede1658-c015-4664-b67f-582205544473",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3/uid?resourceVersion=id%3A3904"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/e68cd44b-ad42-4bb4-96ca-9df04ccd42a3/relationships/uid?resourceVersion=id%3A3904"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "node--page",
+      "id": "c332309b-603d-4c40-af9f-947931dd5286",
+      "links": {
+        "self": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286?resourceVersion=id%3A3903"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286?resourceVersion=rel%3Aworking-copy"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 3889,
+        "title": "「画像」",
+        "body": {
+          "value": "<p>歌枕として用いられる当該地域のイメージ、もしくはその地域に位置する代表的な山水・寺院・風物などの実景を描いた画像を載せた。主として、近世期に出版された名所図会類（『都名所図会』〈安永九年（1780）〉、『大和名所図会』〈寛政三年（1791）〉、『摂津名所図会』〈寛政八年（1796）～寛政十年（1798）〉など）や地誌類（『洛陽名所集』〈万治元年(1658)、『東国名勝志』〈宝暦十二年（1762）〉など）・浮世絵版画（歌川広重・葛飾北斎の名所絵）から引用した。著作権やCCライセンスに注意し、直接該当ページに飛べるようWebリンクを貼った。古典籍については、国立国会図書館デジタルコレクションはページごとのリンクができないため、基本的には、国文学研究資料館『新日本古典籍総合データベース』を利用した。絵画・絵巻などについては適宜博物館（東京国立博物館など）のデータベースも利用した。</p>",
+          "format": "basic_html",
+          "processed": "<p>歌枕として用いられる当該地域のイメージ、もしくはその地域に位置する代表的な山水・寺院・風物などの実景を描いた画像を載せた。主として、近世期に出版された名所図会類（『都名所図会』〈安永九年（1780）〉、『大和名所図会』〈寛政三年（1791）〉、『摂津名所図会』〈寛政八年（1796）～寛政十年（1798）〉など）や地誌類（『洛陽名所集』〈万治元年(1658)、『東国名勝志』〈宝暦十二年（1762）〉など）・浮世絵版画（歌川広重・葛飾北斎の名所絵）から引用した。著作権やCCライセンスに注意し、直接該当ページに飛べるようWebリンクを貼った。古典籍については、国立国会図書館デジタルコレクションはページごとのリンクができないため、基本的には、国文学研究資料館『新日本古典籍総合データベース』を利用した。絵画・絵巻などについては適宜博物館（東京国立博物館など）のデータベースも利用した。</p>",
+          "summary": ""
+        },
+        "drupal_internal__vid": 3903,
+        "langcode": "ja",
+        "revision_timestamp": "2024-03-26T00:34:54+00:00",
+        "status": true,
+        "created": "2024-03-26T00:34:26+00:00",
+        "changed": "2024-03-26T00:34:35+00:00",
+        "promote": false,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": null,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "ja"
+        },
+        "content_translation_source": "und",
+        "content_translation_outdated": false,
+        "field_id": null
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "2f55809d-7d0b-4b73-b67d-8aef91feb2fe",
+            "meta": {
+              "drupal_internal__target_id": "page"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286/node_type?resourceVersion=id%3A3903"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286/relationships/node_type?resourceVersion=id%3A3903"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "2ede1658-c015-4664-b67f-582205544473",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286/revision_uid?resourceVersion=id%3A3903"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286/relationships/revision_uid?resourceVersion=id%3A3903"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "2ede1658-c015-4664-b67f-582205544473",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286/uid?resourceVersion=id%3A3903"
+            },
+            "self": {
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/c332309b-603d-4c40-af9f-947931dd5286/relationships/uid?resourceVersion=id%3A3903"
             }
           }
         }
@@ -905,7 +935,10 @@
       "id": "7801d32a-2292-42aa-bc6f-2a7fc743b8b7",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7?resourceVersion=id%3A4125"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7?resourceVersion=id%3A4125"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -947,10 +980,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7/node_type?resourceVersion=id%3A4125"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7/node_type?resourceVersion=id%3A4125"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7/relationships/node_type?resourceVersion=id%3A4125"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7/relationships/node_type?resourceVersion=id%3A4125"
             }
           }
         },
@@ -964,10 +997,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7/revision_uid?resourceVersion=id%3A4125"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7/revision_uid?resourceVersion=id%3A4125"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7/relationships/revision_uid?resourceVersion=id%3A4125"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7/relationships/revision_uid?resourceVersion=id%3A4125"
             }
           }
         },
@@ -981,10 +1014,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7/uid?resourceVersion=id%3A4125"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7/uid?resourceVersion=id%3A4125"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7/relationships/uid?resourceVersion=id%3A4125"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/7801d32a-2292-42aa-bc6f-2a7fc743b8b7/relationships/uid?resourceVersion=id%3A4125"
             }
           }
         }
@@ -995,7 +1028,10 @@
       "id": "3a307e4b-a288-4659-81fa-9762038d61ff",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff?resourceVersion=id%3A4543"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff?resourceVersion=id%3A4543"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -1037,10 +1073,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff/node_type?resourceVersion=id%3A4543"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff/node_type?resourceVersion=id%3A4543"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff/relationships/node_type?resourceVersion=id%3A4543"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff/relationships/node_type?resourceVersion=id%3A4543"
             }
           }
         },
@@ -1054,10 +1090,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff/revision_uid?resourceVersion=id%3A4543"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff/revision_uid?resourceVersion=id%3A4543"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff/relationships/revision_uid?resourceVersion=id%3A4543"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff/relationships/revision_uid?resourceVersion=id%3A4543"
             }
           }
         },
@@ -1071,10 +1107,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff/uid?resourceVersion=id%3A4543"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff/uid?resourceVersion=id%3A4543"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff/relationships/uid?resourceVersion=id%3A4543"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/page/3a307e4b-a288-4659-81fa-9762038d61ff/relationships/uid?resourceVersion=id%3A4543"
             }
           }
         }

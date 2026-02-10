@@ -3,14 +3,21 @@ import { mdiMagnify, mdiMap } from "@mdi/js";
 const { isAdmin } = useSettings();
 const { results, spotTypeCount } = useMap();
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const localePath = useLocalePath();
 
 const search = ref("");
 
+const sortBy = computed(() => {
+  if (locale.value === "ja") {
+    return [{ key: "field_spot_name_furigana", order: "asc" }];
+  }
+  return [{ key: "field_spot_name_romaji", order: "asc" }];
+});
+
 const headers = [
-  { title: t("Name (Kanji)"), value: "title", sortable: true },
+  { title: t("Name (Kanji)"), value: "field_spot_name_furigana", sortable: true },
   {
     title: t("Name (Rōmaji)"),
     value: "field_spot_name_romaji",
@@ -61,6 +68,7 @@ const desserts = computed(() => {
       drupal_internal__nid: item.attributes.drupal_internal__nid,
       title: item.attributes.title,
       field_id: item.attributes.field_id,
+      field_spot_name_furigana: item.attributes.field_spot_name_furigana,
       field_spot_name_romaji: item.attributes.field_spot_name_romaji,
       poems: spotTypeCount.value[item.attributes.field_id]
         ? spotTypeCount.value[item.attributes.field_id].poems
@@ -143,8 +151,9 @@ const customFilter: any = (
       :items="desserts"
       :search="search"
       :custom-filter="customFilter"
+      :sort-by="sortBy"
     >
-      <template v-slot:item.title="{ item }: any">
+      <template v-slot:item.field_spot_name_furigana="{ item }: any">
         <nuxt-link
           :to="
             localePath({

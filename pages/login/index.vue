@@ -15,7 +15,7 @@ onMounted(() => {
 
 const handleLogin = async () => {
   try {
-    const url = "https://drupal.aws.ldas.jp/dlm/user/Login?_format=json";
+    const url = "https://literarymaps.sakura.ne.jp/cms/user/Login?_format=json";
 
     const data = {
       name: username.value,

@@ -30,7 +30,7 @@ const fields = ref([
   },
   {
     title: t("Text (Rōmaji)"),
-    value: "field_text_romaji",
+    value: "field_text_romaji_long",
   },
   {
     title: t("Keyword"),

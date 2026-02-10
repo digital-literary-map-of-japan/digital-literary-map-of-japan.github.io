@@ -13,12 +13,15 @@ watch(
     if (!results.value) {
       return;
     }
-    spots.value = results.value.data.map((item: any) => {
-      return {
-        title: `${item.attributes.title} ${item.attributes.field_spot_name_furigana} ${item.attributes.field_spot_name_romaji}`,
-        value: item.attributes.field_id,
-      };
-    });
+    spots.value = results.value.data
+      .map((item: any) => {
+        return {
+          title: `${item.attributes.title} ${item.attributes.field_spot_name_furigana} ${item.attributes.field_spot_name_romaji}`,
+          value: item.attributes.field_id,
+          furigana: item.attributes.field_spot_name_furigana || "",
+        };
+      })
+      .sort((a: any, b: any) => a.furigana.localeCompare(b.furigana, "ja"));
   },
   { immediate: true }
 );

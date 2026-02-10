@@ -29,7 +29,7 @@ const createURLWithParams = (
 
 const url = computed(() =>
   createURLWithParams(
-    `https://drupal.aws.ldas.jp/dlm/node/add/${props.type}`,
+    `https://literarymaps.sakura.ne.jp/cms/node/add/${props.type}`,
     props.params
   )
 );

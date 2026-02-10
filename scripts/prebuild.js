@@ -3,7 +3,7 @@ const path = require('path');
 const axios = require('axios');
 
 // 基本設定
-const BASE_URL = "https://drupal.aws.ldas.jp/dlm/";
+const BASE_URL = "https://literarymaps.sakura.ne.jp/cms/";
 const OUTPUT_DIR = path.resolve(__dirname, '../public/data');
 
 // ダウンロードするコンテンツタイプ
@@ -175,29 +175,53 @@ async function main() {
         }
     }
 
-    // スポットの詳細データを取得（index/data）
-    console.log(`\n\n📍 Downloading spot details (index/data)...`);
+    // スポットの詳細データをローカルデータから生成（Search API不要）
+    console.log(`\n\n📍 Generating spot details (index/data) from downloaded content...`);
 
-    // まずスポット一覧を取得
-    const spotsData = await fetchAllData('jsonapi/node/spots', {}, BASE_URL);
+    // ダウンロード済みのコンテンツデータを読み込む
+    const INDEX_CONTENT_TYPES = ["poems", "sanbuns", "yokyokus", "images"];
+    const allContentData = {};
+    for (const type of INDEX_CONTENT_TYPES) {
+        const filePath = path.join(OUTPUT_DIR, 'jsonapi', 'node', `${type}.json`);
+        if (fs.existsSync(filePath)) {
+            allContentData[type] = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+        }
+    }
 
-    if (spotsData && spotsData.data) {
+    // スポット一覧を読み込む
+    const spotsFilePath = path.join(OUTPUT_DIR, 'jsonapi', 'node', 'spots.json');
+    if (fs.existsSync(spotsFilePath)) {
+        const spotsData = JSON.parse(fs.readFileSync(spotsFilePath, 'utf-8'));
         console.log(`  Found ${spotsData.data.length} spots`);
 
+        // spot UUID -> field_id のマッピングを作成
+        const spotUuidToFieldId = {};
         for (const spot of spotsData.data) {
-            const spotId = spot.attributes.field_id;
-            console.log(`\n  🗺️  Downloading details for spot: ${spotId}`);
+            spotUuidToFieldId[spot.id] = spot.attributes.field_id;
+        }
 
-            const endpoint = `jsonapi/index/data`;
-            const params = { 'filter[field_id]': spotId };
+        // 各スポットに関連するコンテンツを集約
+        for (const spot of spotsData.data) {
+            const fieldId = spot.attributes.field_id;
+            const spotUuid = spot.id;
+            const spotDetails = { data: [], included: [] };
 
-            const spotDetails = await fetchAllData(endpoint, params, BASE_URL);
+            for (const type of INDEX_CONTENT_TYPES) {
+                const contentData = allContentData[type];
+                if (!contentData || !contentData.data) continue;
 
-            if (spotDetails) {
-                const spotDir = path.join(OUTPUT_DIR, 'jsonapi', 'index', 'data');
-                const spotFile = path.join(spotDir, `${spotId}.json`);
-                saveData(spotDetails, spotFile);
+                for (const item of contentData.data) {
+                    const spotRef = item.relationships?.field_spot?.data;
+                    if (spotRef && spotRef.id === spotUuid) {
+                        spotDetails.data.push(item);
+                    }
+                }
             }
+
+            const spotDir = path.join(OUTPUT_DIR, 'jsonapi', 'index', 'data');
+            const spotFile = path.join(spotDir, `${fieldId}.json`);
+            saveData(spotDetails, spotFile);
+            console.log(`  ${fieldId}: ${spotDetails.data.length} items`);
         }
     }
 

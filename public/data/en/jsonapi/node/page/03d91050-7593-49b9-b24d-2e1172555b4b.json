@@ -1,10 +1,10 @@
 {
   "jsonapi": {
-    "version": "1.0",
+    "version": "1.1",
     "meta": {
       "links": {
         "self": {
-          "href": "http://jsonapi.org/format/1.0/"
+          "href": "http://jsonapi.org/format/1.1/"
         }
       }
     }
@@ -14,7 +14,10 @@
     "id": "03d91050-7593-49b9-b24d-2e1172555b4b",
     "links": {
       "self": {
-        "href": "https://drupal.aws.ldas.jp/dlm/en/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b?resourceVersion=id%3A3906"
+        "href": "https://literarymaps.sakura.ne.jp/cms/en/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b?resourceVersion=id%3A3906"
+      },
+      "working-copy": {
+        "href": "https://literarymaps.sakura.ne.jp/cms/en/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b?resourceVersion=rel%3Aworking-copy"
       }
     },
     "attributes": {
@@ -30,7 +33,7 @@
   },
   "links": {
     "self": {
-      "href": "https://drupal.aws.ldas.jp/dlm/en/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b?fields%5Bnode--page%5D=body%2Ctitle%2Cdrupal_internal__nid"
+      "href": "https://literarymaps.sakura.ne.jp/cms/en/jsonapi/node/page/03d91050-7593-49b9-b24d-2e1172555b4b?fields%5Bnode--page%5D=body%2Ctitle%2Cdrupal_internal__nid"
     }
   }
 }

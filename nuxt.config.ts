@@ -42,6 +42,9 @@ const getRoutes: any = async () => {
 };
 
 export default defineNuxtConfig({
+  devServer: {
+    port: 3105,
+  },
   runtimeConfig: {
     public: publicRuntimeConfig,
   },

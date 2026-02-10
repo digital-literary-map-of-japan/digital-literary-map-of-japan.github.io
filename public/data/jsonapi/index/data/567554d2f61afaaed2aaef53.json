@@ -5,7 +5,10 @@
       "id": "e8b96659-2da7-4c77-95db-eebbe656f223",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223?resourceVersion=id%3A1609"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223?resourceVersion=id%3A1609"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -59,10 +62,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/node_type?resourceVersion=id%3A1609"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/node_type?resourceVersion=id%3A1609"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/relationships/node_type?resourceVersion=id%3A1609"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/relationships/node_type?resourceVersion=id%3A1609"
             }
           }
         },
@@ -76,10 +79,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/revision_uid?resourceVersion=id%3A1609"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/revision_uid?resourceVersion=id%3A1609"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/relationships/revision_uid?resourceVersion=id%3A1609"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/relationships/revision_uid?resourceVersion=id%3A1609"
             }
           }
         },
@@ -93,10 +96,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/uid?resourceVersion=id%3A1609"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/uid?resourceVersion=id%3A1609"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/relationships/uid?resourceVersion=id%3A1609"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/relationships/uid?resourceVersion=id%3A1609"
             }
           }
         },
@@ -116,10 +119,10 @@
           ],
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/feeds_item?resourceVersion=id%3A1609"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/feeds_item?resourceVersion=id%3A1609"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/relationships/feeds_item?resourceVersion=id%3A1609"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/relationships/feeds_item?resourceVersion=id%3A1609"
             }
           }
         },
@@ -133,10 +136,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/field_document?resourceVersion=id%3A1609"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/field_document?resourceVersion=id%3A1609"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/relationships/field_document?resourceVersion=id%3A1609"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/relationships/field_document?resourceVersion=id%3A1609"
             }
           }
         },
@@ -150,10 +153,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/field_spot?resourceVersion=id%3A1609"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/field_spot?resourceVersion=id%3A1609"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/relationships/field_spot?resourceVersion=id%3A1609"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/e8b96659-2da7-4c77-95db-eebbe656f223/relationships/field_spot?resourceVersion=id%3A1609"
             }
           }
         }
@@ -164,7 +167,10 @@
       "id": "a9cdfe2b-499c-4b7b-b3d0-5f4090699d69",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69?resourceVersion=id%3A1610"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69?resourceVersion=id%3A1610"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -218,10 +224,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/node_type?resourceVersion=id%3A1610"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/node_type?resourceVersion=id%3A1610"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/relationships/node_type?resourceVersion=id%3A1610"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/relationships/node_type?resourceVersion=id%3A1610"
             }
           }
         },
@@ -235,10 +241,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/revision_uid?resourceVersion=id%3A1610"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/revision_uid?resourceVersion=id%3A1610"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/relationships/revision_uid?resourceVersion=id%3A1610"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/relationships/revision_uid?resourceVersion=id%3A1610"
             }
           }
         },
@@ -252,10 +258,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/uid?resourceVersion=id%3A1610"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/uid?resourceVersion=id%3A1610"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/relationships/uid?resourceVersion=id%3A1610"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/relationships/uid?resourceVersion=id%3A1610"
             }
           }
         },
@@ -275,10 +281,10 @@
           ],
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/feeds_item?resourceVersion=id%3A1610"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/feeds_item?resourceVersion=id%3A1610"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/relationships/feeds_item?resourceVersion=id%3A1610"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/relationships/feeds_item?resourceVersion=id%3A1610"
             }
           }
         },
@@ -292,10 +298,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/field_document?resourceVersion=id%3A1610"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/field_document?resourceVersion=id%3A1610"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/relationships/field_document?resourceVersion=id%3A1610"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/relationships/field_document?resourceVersion=id%3A1610"
             }
           }
         },
@@ -309,10 +315,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/field_spot?resourceVersion=id%3A1610"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/field_spot?resourceVersion=id%3A1610"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/relationships/field_spot?resourceVersion=id%3A1610"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/a9cdfe2b-499c-4b7b-b3d0-5f4090699d69/relationships/field_spot?resourceVersion=id%3A1610"
             }
           }
         }
@@ -323,7 +329,10 @@
       "id": "142a660c-44f4-4e5e-8677-bdb44ae5e0a0",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0?resourceVersion=id%3A1611"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0?resourceVersion=id%3A1611"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -377,10 +386,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/node_type?resourceVersion=id%3A1611"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/node_type?resourceVersion=id%3A1611"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/relationships/node_type?resourceVersion=id%3A1611"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/relationships/node_type?resourceVersion=id%3A1611"
             }
           }
         },
@@ -394,10 +403,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/revision_uid?resourceVersion=id%3A1611"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/revision_uid?resourceVersion=id%3A1611"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/relationships/revision_uid?resourceVersion=id%3A1611"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/relationships/revision_uid?resourceVersion=id%3A1611"
             }
           }
         },
@@ -411,10 +420,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/uid?resourceVersion=id%3A1611"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/uid?resourceVersion=id%3A1611"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/relationships/uid?resourceVersion=id%3A1611"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/relationships/uid?resourceVersion=id%3A1611"
             }
           }
         },
@@ -434,10 +443,10 @@
           ],
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/feeds_item?resourceVersion=id%3A1611"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/feeds_item?resourceVersion=id%3A1611"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/relationships/feeds_item?resourceVersion=id%3A1611"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/relationships/feeds_item?resourceVersion=id%3A1611"
             }
           }
         },
@@ -451,10 +460,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/field_document?resourceVersion=id%3A1611"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/field_document?resourceVersion=id%3A1611"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/relationships/field_document?resourceVersion=id%3A1611"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/relationships/field_document?resourceVersion=id%3A1611"
             }
           }
         },
@@ -468,10 +477,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/field_spot?resourceVersion=id%3A1611"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/field_spot?resourceVersion=id%3A1611"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/relationships/field_spot?resourceVersion=id%3A1611"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/142a660c-44f4-4e5e-8677-bdb44ae5e0a0/relationships/field_spot?resourceVersion=id%3A1611"
             }
           }
         }
@@ -482,7 +491,10 @@
       "id": "418e37cd-02fd-4f8b-b9ca-2fd6167a55c3",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3?resourceVersion=id%3A1612"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3?resourceVersion=id%3A1612"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -536,10 +548,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/node_type?resourceVersion=id%3A1612"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/node_type?resourceVersion=id%3A1612"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/relationships/node_type?resourceVersion=id%3A1612"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/relationships/node_type?resourceVersion=id%3A1612"
             }
           }
         },
@@ -553,10 +565,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/revision_uid?resourceVersion=id%3A1612"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/revision_uid?resourceVersion=id%3A1612"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/relationships/revision_uid?resourceVersion=id%3A1612"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/relationships/revision_uid?resourceVersion=id%3A1612"
             }
           }
         },
@@ -570,10 +582,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/uid?resourceVersion=id%3A1612"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/uid?resourceVersion=id%3A1612"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/relationships/uid?resourceVersion=id%3A1612"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/relationships/uid?resourceVersion=id%3A1612"
             }
           }
         },
@@ -593,10 +605,10 @@
           ],
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/feeds_item?resourceVersion=id%3A1612"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/feeds_item?resourceVersion=id%3A1612"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/relationships/feeds_item?resourceVersion=id%3A1612"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/relationships/feeds_item?resourceVersion=id%3A1612"
             }
           }
         },
@@ -610,10 +622,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/field_document?resourceVersion=id%3A1612"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/field_document?resourceVersion=id%3A1612"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/relationships/field_document?resourceVersion=id%3A1612"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/relationships/field_document?resourceVersion=id%3A1612"
             }
           }
         },
@@ -627,10 +639,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/field_spot?resourceVersion=id%3A1612"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/field_spot?resourceVersion=id%3A1612"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/relationships/field_spot?resourceVersion=id%3A1612"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/418e37cd-02fd-4f8b-b9ca-2fd6167a55c3/relationships/field_spot?resourceVersion=id%3A1612"
             }
           }
         }
@@ -641,7 +653,10 @@
       "id": "eecb88fd-8c35-4a88-96fa-59724fe654bc",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc?resourceVersion=id%3A1613"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc?resourceVersion=id%3A1613"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -695,10 +710,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/node_type?resourceVersion=id%3A1613"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/node_type?resourceVersion=id%3A1613"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/relationships/node_type?resourceVersion=id%3A1613"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/relationships/node_type?resourceVersion=id%3A1613"
             }
           }
         },
@@ -712,10 +727,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/revision_uid?resourceVersion=id%3A1613"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/revision_uid?resourceVersion=id%3A1613"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/relationships/revision_uid?resourceVersion=id%3A1613"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/relationships/revision_uid?resourceVersion=id%3A1613"
             }
           }
         },
@@ -729,10 +744,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/uid?resourceVersion=id%3A1613"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/uid?resourceVersion=id%3A1613"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/relationships/uid?resourceVersion=id%3A1613"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/relationships/uid?resourceVersion=id%3A1613"
             }
           }
         },
@@ -752,10 +767,10 @@
           ],
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/feeds_item?resourceVersion=id%3A1613"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/feeds_item?resourceVersion=id%3A1613"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/relationships/feeds_item?resourceVersion=id%3A1613"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/relationships/feeds_item?resourceVersion=id%3A1613"
             }
           }
         },
@@ -769,10 +784,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/field_document?resourceVersion=id%3A1613"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/field_document?resourceVersion=id%3A1613"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/relationships/field_document?resourceVersion=id%3A1613"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/relationships/field_document?resourceVersion=id%3A1613"
             }
           }
         },
@@ -786,10 +801,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/field_spot?resourceVersion=id%3A1613"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/field_spot?resourceVersion=id%3A1613"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/relationships/field_spot?resourceVersion=id%3A1613"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/eecb88fd-8c35-4a88-96fa-59724fe654bc/relationships/field_spot?resourceVersion=id%3A1613"
             }
           }
         }
@@ -800,7 +815,10 @@
       "id": "8bba49d9-3a3b-4976-a075-9d2499c1dbf2",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2?resourceVersion=id%3A1614"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2?resourceVersion=id%3A1614"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -854,10 +872,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/node_type?resourceVersion=id%3A1614"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/node_type?resourceVersion=id%3A1614"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/relationships/node_type?resourceVersion=id%3A1614"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/relationships/node_type?resourceVersion=id%3A1614"
             }
           }
         },
@@ -871,10 +889,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/revision_uid?resourceVersion=id%3A1614"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/revision_uid?resourceVersion=id%3A1614"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/relationships/revision_uid?resourceVersion=id%3A1614"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/relationships/revision_uid?resourceVersion=id%3A1614"
             }
           }
         },
@@ -888,10 +906,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/uid?resourceVersion=id%3A1614"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/uid?resourceVersion=id%3A1614"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/relationships/uid?resourceVersion=id%3A1614"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/relationships/uid?resourceVersion=id%3A1614"
             }
           }
         },
@@ -911,10 +929,10 @@
           ],
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/feeds_item?resourceVersion=id%3A1614"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/feeds_item?resourceVersion=id%3A1614"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/relationships/feeds_item?resourceVersion=id%3A1614"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/relationships/feeds_item?resourceVersion=id%3A1614"
             }
           }
         },
@@ -928,10 +946,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/field_document?resourceVersion=id%3A1614"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/field_document?resourceVersion=id%3A1614"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/relationships/field_document?resourceVersion=id%3A1614"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/relationships/field_document?resourceVersion=id%3A1614"
             }
           }
         },
@@ -945,10 +963,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/field_spot?resourceVersion=id%3A1614"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/field_spot?resourceVersion=id%3A1614"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/relationships/field_spot?resourceVersion=id%3A1614"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/8bba49d9-3a3b-4976-a075-9d2499c1dbf2/relationships/field_spot?resourceVersion=id%3A1614"
             }
           }
         }
@@ -959,7 +977,10 @@
       "id": "6a0b8f57-e76c-4b79-8478-a17912a2d326",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326?resourceVersion=id%3A1615"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326?resourceVersion=id%3A1615"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -1013,10 +1034,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/node_type?resourceVersion=id%3A1615"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/node_type?resourceVersion=id%3A1615"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/relationships/node_type?resourceVersion=id%3A1615"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/relationships/node_type?resourceVersion=id%3A1615"
             }
           }
         },
@@ -1030,10 +1051,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/revision_uid?resourceVersion=id%3A1615"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/revision_uid?resourceVersion=id%3A1615"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/relationships/revision_uid?resourceVersion=id%3A1615"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/relationships/revision_uid?resourceVersion=id%3A1615"
             }
           }
         },
@@ -1047,10 +1068,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/uid?resourceVersion=id%3A1615"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/uid?resourceVersion=id%3A1615"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/relationships/uid?resourceVersion=id%3A1615"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/relationships/uid?resourceVersion=id%3A1615"
             }
           }
         },
@@ -1070,10 +1091,10 @@
           ],
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/feeds_item?resourceVersion=id%3A1615"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/feeds_item?resourceVersion=id%3A1615"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/relationships/feeds_item?resourceVersion=id%3A1615"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/relationships/feeds_item?resourceVersion=id%3A1615"
             }
           }
         },
@@ -1087,10 +1108,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/field_document?resourceVersion=id%3A1615"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/field_document?resourceVersion=id%3A1615"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/relationships/field_document?resourceVersion=id%3A1615"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/relationships/field_document?resourceVersion=id%3A1615"
             }
           }
         },
@@ -1104,10 +1125,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/field_spot?resourceVersion=id%3A1615"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/field_spot?resourceVersion=id%3A1615"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/relationships/field_spot?resourceVersion=id%3A1615"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/poems/6a0b8f57-e76c-4b79-8478-a17912a2d326/relationships/field_spot?resourceVersion=id%3A1615"
             }
           }
         }
@@ -1118,7 +1139,10 @@
       "id": "ce8af0f4-d0be-4bac-a8e6-3153f885b0ab",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab?resourceVersion=id%3A3107"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab?resourceVersion=id%3A3107"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -1166,10 +1190,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/node_type?resourceVersion=id%3A3107"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/node_type?resourceVersion=id%3A3107"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/relationships/node_type?resourceVersion=id%3A3107"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/relationships/node_type?resourceVersion=id%3A3107"
             }
           }
         },
@@ -1183,10 +1207,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/revision_uid?resourceVersion=id%3A3107"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/revision_uid?resourceVersion=id%3A3107"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/relationships/revision_uid?resourceVersion=id%3A3107"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/relationships/revision_uid?resourceVersion=id%3A3107"
             }
           }
         },
@@ -1200,10 +1224,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/uid?resourceVersion=id%3A3107"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/uid?resourceVersion=id%3A3107"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/relationships/uid?resourceVersion=id%3A3107"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/relationships/uid?resourceVersion=id%3A3107"
             }
           }
         },
@@ -1223,10 +1247,10 @@
           ],
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/feeds_item?resourceVersion=id%3A3107"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/feeds_item?resourceVersion=id%3A3107"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/relationships/feeds_item?resourceVersion=id%3A3107"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/relationships/feeds_item?resourceVersion=id%3A3107"
             }
           }
         },
@@ -1240,10 +1264,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/field_document?resourceVersion=id%3A3107"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/field_document?resourceVersion=id%3A3107"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/relationships/field_document?resourceVersion=id%3A3107"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/relationships/field_document?resourceVersion=id%3A3107"
             }
           }
         },
@@ -1257,10 +1281,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/field_spot?resourceVersion=id%3A3107"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/field_spot?resourceVersion=id%3A3107"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/relationships/field_spot?resourceVersion=id%3A3107"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/sanbuns/ce8af0f4-d0be-4bac-a8e6-3153f885b0ab/relationships/field_spot?resourceVersion=id%3A3107"
             }
           }
         }
@@ -1271,7 +1295,10 @@
       "id": "fafa84f2-abb0-4754-855a-c391425ed5fa",
       "links": {
         "self": {
-          "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa?resourceVersion=id%3A3996"
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa?resourceVersion=id%3A3996"
+        },
+        "working-copy": {
+          "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa?resourceVersion=rel%3Aworking-copy"
         }
       },
       "attributes": {
@@ -1317,10 +1344,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/node_type?resourceVersion=id%3A3996"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/node_type?resourceVersion=id%3A3996"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/relationships/node_type?resourceVersion=id%3A3996"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/relationships/node_type?resourceVersion=id%3A3996"
             }
           }
         },
@@ -1334,10 +1361,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/revision_uid?resourceVersion=id%3A3996"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/revision_uid?resourceVersion=id%3A3996"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/relationships/revision_uid?resourceVersion=id%3A3996"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/relationships/revision_uid?resourceVersion=id%3A3996"
             }
           }
         },
@@ -1351,10 +1378,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/uid?resourceVersion=id%3A3996"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/uid?resourceVersion=id%3A3996"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/relationships/uid?resourceVersion=id%3A3996"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/relationships/uid?resourceVersion=id%3A3996"
             }
           }
         },
@@ -1374,10 +1401,10 @@
           ],
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/feeds_item?resourceVersion=id%3A3996"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/feeds_item?resourceVersion=id%3A3996"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/relationships/feeds_item?resourceVersion=id%3A3996"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/relationships/feeds_item?resourceVersion=id%3A3996"
             }
           }
         },
@@ -1391,10 +1418,10 @@
           },
           "links": {
             "related": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/field_spot?resourceVersion=id%3A3996"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/field_spot?resourceVersion=id%3A3996"
             },
             "self": {
-              "href": "https://drupal.aws.ldas.jp/dlm/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/relationships/field_spot?resourceVersion=id%3A3996"
+              "href": "https://literarymaps.sakura.ne.jp/cms/jsonapi/node/images/fafa84f2-abb0-4754-855a-c391425ed5fa/relationships/field_spot?resourceVersion=id%3A3996"
             }
           }
         }

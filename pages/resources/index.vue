@@ -61,6 +61,46 @@ if (isAdmin.value) {
   });
 }
 
+const genreOrderMap: Record<string, number> = {
+  "勅撰和歌集": 0,
+  "物語": 1,
+  "謡曲": 2,
+};
+
+// 二十一代集の歴史的順序
+const nijuichidaishuOrder: Record<string, number> = {
+  "古今和歌集": 1,
+  "後撰和歌集": 2,
+  "拾遺和歌集": 3,
+  "後拾遺和歌集": 4,
+  "金葉和歌集": 5,
+  "詞花和歌集": 6,
+  "千載和歌集": 7,
+  "新古今和歌集": 8,
+  "新勅撰和歌集": 9,
+  "続後撰和歌集": 10,
+  "続古今和歌集": 11,
+  "続拾遺和歌集": 12,
+  "新後撰和歌集": 13,
+  "玉葉和歌集": 14,
+  "続千載和歌集": 15,
+  "続後拾遺和歌集": 16,
+  "風雅和歌集": 17,
+  "新千載和歌集": 18,
+  "新拾遺和歌集": 19,
+  "新後拾遺和歌集": 20,
+  "新続古今和歌集": 21,
+};
+
+const sortBy = computed(() => {
+  const titleKey = locale.value === "ja" ? "field_document_name_furigana" : "field_document_name_romaji";
+  return [
+    { key: "genreOrder", order: "asc" },
+    { key: "titleOrder", order: "asc" },
+    { key: titleKey, order: "asc" },
+  ];
+});
+
 const desserts = computed(() => {
   if (!data.value?.data) return [];
 
@@ -89,6 +129,8 @@ const desserts = computed(() => {
         field_author_name_furigana: item.attributes.field_author_name_furigana,
         field_document_name_furigana:
           item.attributes.field_document_name_furigana,
+        genreOrder: genreOrderMap[fixedGenre] ?? 99,
+        titleOrder: nijuichidaishuOrder[item.attributes.title] ?? 99,
       };
     })
     .filter((item: any) => item != null);
@@ -189,6 +231,7 @@ const update = (item: string) => {
       :items="desserts"
       :search="search"
       :custom-filter="customFilter"
+      :sort-by="sortBy"
     >
       <template v-slot:item.field_author_name_kanji="{ item }: any">
         <div class="dynamic-width">
