@@ -61,6 +61,8 @@ const attributes = computed(() => {
     <PagesSpotsTranslation
       :translation="props.translation"
       type="sanbuns_translations"
+      label=""
+      :nId="0"
     ></PagesSpotsTranslation>
   </div>
 </template>

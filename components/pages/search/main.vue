@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { AggregationConfig } from "@/types/search";
-import type { JsonApiItems } from "@/types/jsonapi";
-import type { SelectItem as Item } from "@/types/search";
+import type { AggregationConfig } from "~/types/search";
+import type { JsonApiItems } from "~/types/jsonapi";
+import type { SelectItem as Item } from "~/types/search";
 
 export interface PropType {
   configId: string;

@@ -24,7 +24,7 @@ const targetValues = computed(() => {
 });
 
 const getCurrentQuery = () => {
-  const queryString = route.fullPath.split("?")[1];
+  const queryString = route.fullPath.split("?")[1] || "";
   const queryObject = UrlParamsConverter.urlParamsToObject(queryString);
   return queryObject;
 };
@@ -38,7 +38,7 @@ let getTargetValues = () => {
   const filter: FilterInput = queryObject.filter as FilterInput;
   if (typeof filter === "object") {
     for (const filterId in filter) {
-      const values = filter[filterId].split(",");
+      const values = filter[filterId]?.split(",") ?? [];
 
       if (filterId === `${props.id}.in`) {
         targetValues.in = values;
@@ -105,7 +105,7 @@ const refine = (key: string, operator: "in" | "nin" = "in") => {
   // 削除
   for (const filterId in filter) {
     if (filterId === `${props.id}.in`) {
-      const values = filter[filterId].split(",");
+      const values = filter[filterId]?.split(",") ?? [];
       const newValues = values.filter((v: string) => {
         return v !== key;
       });

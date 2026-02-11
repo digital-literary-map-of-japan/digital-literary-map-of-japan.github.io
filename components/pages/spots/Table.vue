@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { mdiMagnify, mdiMap } from "@mdi/js";
 const { isAdmin } = useSettings();
-const { results, spotTypeCount } = useMap();
+const { results, spotTypeCount, checkedSpotIds } = useMap();
 
 const { t, locale } = useI18n();
 
@@ -11,9 +11,9 @@ const search = ref("");
 
 const sortBy = computed(() => {
   if (locale.value === "ja") {
-    return [{ key: "field_spot_name_furigana", order: "asc" }];
+    return [{ key: "field_spot_name_furigana", order: "asc" as const }];
   }
-  return [{ key: "field_spot_name_romaji", order: "asc" }];
+  return [{ key: "field_spot_name_romaji", order: "asc" as const }];
 });
 
 const headers = [
@@ -70,15 +70,9 @@ const desserts = computed(() => {
       field_id: item.attributes.field_id,
       field_spot_name_furigana: item.attributes.field_spot_name_furigana,
       field_spot_name_romaji: item.attributes.field_spot_name_romaji,
-      poems: spotTypeCount.value[item.attributes.field_id]
-        ? spotTypeCount.value[item.attributes.field_id].poems
-        : 0,
-      sanbuns: spotTypeCount.value[item.attributes.field_id]
-        ? spotTypeCount.value[item.attributes.field_id].sanbuns
-        : 0,
-      yokyokus: spotTypeCount.value[item.attributes.field_id]
-        ? spotTypeCount.value[item.attributes.field_id].yokyokus
-        : 0,
+      poems: spotTypeCount.value[item.attributes.field_id]?.poems ?? 0,
+      sanbuns: spotTypeCount.value[item.attributes.field_id]?.sanbuns ?? 0,
+      yokyokus: spotTypeCount.value[item.attributes.field_id]?.yokyokus ?? 0,
       changed: item.attributes.changed,
       lonlat: item.attributes.field_geo
         ? item.attributes.field_geo.lon + " /" + item.attributes.field_geo.lat
@@ -88,25 +82,21 @@ const desserts = computed(() => {
 });
 
 const customFilter: any = (
-  value: string,
+  _value: any,
   query: string,
   item: { raw: any }
 ) => {
-  return (
-    value != null &&
-    query != null &&
-    typeof value === "string" &&
-    [
-      value.toString(),
-      item.raw.field_document_name_furigana,
-      item.raw.field_author_name_furigana,
-    ]
-      .join(",")
-      .toLowerCase()
-      .split(" ")
-      .join("")
-      .indexOf(query.toLowerCase().split(" ").join("")) !== -1
-  );
+  if (!query) return true;
+  const target = [
+    item.raw.title,
+    item.raw.field_spot_name_furigana,
+    item.raw.field_spot_name_romaji,
+  ]
+    .filter(Boolean)
+    .join(",")
+    .toLowerCase()
+    .replace(/\s+/g, "");
+  return target.includes(query.toLowerCase().replace(/\s+/g, ""));
 };
 </script>
 <template>
@@ -119,7 +109,7 @@ const customFilter: any = (
       :to="
         localePath({
           name: 'spots',
-          query: { layout: 'map' },
+          query: { layout: 'map', ...(checkedSpotIds.length > 0 ? { checked: checkedSpotIds.join(',') } : {}) },
         })
       "
     >
@@ -145,6 +135,7 @@ const customFilter: any = (
     </v-row>
 
     <v-data-table
+      v-model="checkedSpotIds"
       density="compact"
       :items-per-page="-1"
       :headers="headers"
@@ -152,6 +143,8 @@ const customFilter: any = (
       :search="search"
       :custom-filter="customFilter"
       :sort-by="sortBy"
+      item-value="field_id"
+      show-select
     >
       <template v-slot:item.field_spot_name_furigana="{ item }: any">
         <nuxt-link

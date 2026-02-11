@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SelectItem as Item } from "@/types/search";
+import type { SelectItem as Item } from "~/types/search";
 
 interface PropType {
   items?: Item[];

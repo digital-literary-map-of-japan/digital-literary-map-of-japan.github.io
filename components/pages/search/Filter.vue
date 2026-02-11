@@ -5,7 +5,7 @@ import UrlParamsConverter from "~/utils/filter";
 import type { AggregationConfig,FilterInput } from "~/types/search";
 
 export interface PropType {
-  aggregationConfig: AggregationConfig[];
+  aggregationConfig?: AggregationConfig[];
 }
 
 const props = withDefaults(defineProps<PropType>(), {
@@ -18,7 +18,7 @@ const localePath = useLocalePath();
 
 const items = computed(() => {
   const queryObject = UrlParamsConverter.urlParamsToObject(
-    route.fullPath.split("?")[1]
+    route.fullPath.split("?")[1] || ""
   );
 
   // const filter = queryObject.f;
@@ -40,7 +40,7 @@ const items = computed(() => {
           }
         });
 
-        const value = filter[key];
+        const value = filter[key] ?? "";
 
         if (key.endsWith(".in") || key.endsWith(".nin")) {
           const vs = value.split(",");
@@ -92,12 +92,12 @@ const init = () => {
 };
 
 const faceted = (targetValue: string, key: string) => {
-  const queryString = route.fullPath.split("?")[1];
+  const queryString = route.fullPath.split("?")[1] || "";
   const queryObject = UrlParamsConverter.urlParamsToObject(queryString);
 
   const filter = queryObject.filter as FilterInput;
 
-  const values = filter[key].split(",");
+  const values = (filter[key] ?? "").split(",");
 
   if (values.includes(targetValue)) {
     values.splice(values.indexOf(targetValue), 1);

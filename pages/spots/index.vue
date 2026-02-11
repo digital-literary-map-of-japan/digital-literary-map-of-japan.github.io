@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { results, documents, documentSpotMap, spotTypeCount, mode} = useMap();
+const { results, documents, documentSpotMap, spotTypeCount, mode, checkedSpotIds } = useMap();
 const { fetchSpots, fetchDocuments, fetchApiData } = useLocalData();
 
 const getSpots = async () => {
@@ -53,12 +53,19 @@ for (const type_ of types) {
       }
     }
 
-    _spotTypeCount[spot][type_] += 1;
+    const spotCount = _spotTypeCount[spot];
+    if (spotCount && spotCount[type_] !== undefined) {
+      spotCount[type_]! += 1;
+    }
   }
 }
 
 documentSpotMap.value = _documentSpotMap;
 spotTypeCount.value = _spotTypeCount;
+
+definePageMeta({
+  layout: "no-footer",
+});
 
 const { t } = useI18n();
 const title = t("spots");
@@ -78,6 +85,7 @@ const bh = [
 ];
 
 const route = useRoute();
+const router = useRouter();
 
 watch(
   () => route.query,
@@ -85,15 +93,35 @@ watch(
     if (val.layout) {
       mode.value = val.layout as string;
     }
+    if (val.checked) {
+      const ids = (val.checked as string).split(",").filter(Boolean);
+      checkedSpotIds.value = ids;
+    }
   },
   { immediate: true }
 );
+
+watch(
+  checkedSpotIds,
+  (val) => {
+    const query = { ...route.query };
+    if (val.length > 0) {
+      query.checked = val.join(",");
+    } else {
+      delete query.checked;
+    }
+    router.replace({ query });
+  },
+  { deep: true }
+);
+
+const publicRuntimeConfig = useRuntimeConfig().public;
 
 useHead({
   link: [
     {
       rel: "canonical",
-      href: process.env.BASE_URL + route.path,
+      href: (publicRuntimeConfig.appURL || "") + route.path,
     },
   ],
 });

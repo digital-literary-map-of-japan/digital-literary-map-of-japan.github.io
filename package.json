@@ -5,9 +5,6 @@
     "build": "nuxt build",
     "dev": "nuxt dev --dotenv .env.local",
     "generate": "nuxt generate --dotenv .env.production",
-    "generate:vercel": "nuxt generate --dotenv .env.vercel",
-    "build:vercel": "nuxt build --dotenv .env.vercel",
-    "generate:full": "npm run prebuild && nuxt generate --dotenv .env.production",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
@@ -16,6 +13,8 @@
     "@mdi/js": "^7.4.47",
     "@nuxtjs/i18n": "^10.2.0",
     "@nuxtjs/leaflet": "^1.3.2",
+    "@types/node": "^25.2.2",
+    "baseline-browser-mapping": "^2.9.19",
     "cross-env": "^10.1.0",
     "nuxt": "^4.2.1",
     "nuxt-jsonld": "^2.1.1",

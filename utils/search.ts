@@ -119,7 +119,7 @@ let getTargetValues = (route: { fullPath: string }, id: string) => {
     in: [] as string[],
     nin: [] as string[],
   };
-  const queryString = route.fullPath.split("?")[1];
+  const queryString = route.fullPath.split("?")[1] || "";
   const queryObject = UrlParamsConverter.urlParamsToObject(queryString);
   const filter: FilterInput = queryObject.filter as FilterInput;
 

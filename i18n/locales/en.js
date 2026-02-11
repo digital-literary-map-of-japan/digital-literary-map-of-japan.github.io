@@ -223,4 +223,11 @@ export default {
     "Logout": "Logout",
     "No examples": "No examples",
     "legend": "Legend",
+    "Checked spots": "Checked spots",
+    "Clear all": "Clear all",
+    "Check": "Check",
+    "Uncheck": "Uncheck",
+    "Edit mode": "Edit mode",
+    "Memo": "Memo",
+    "Admin": "Admin",
 }

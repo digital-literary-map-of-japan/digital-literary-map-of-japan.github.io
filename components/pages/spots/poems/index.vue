@@ -76,7 +76,7 @@ const selectPoem = (item: ResourceObject) => {
 
   translation.value = props.translations.data.find(
     (i: ResourceObject) =>
-      (i.relationships?.field_poem.data as ResourceObject).id === poemId
+      (i.relationships?.field_poem?.data as ResourceObject)?.id === poemId
   ) as ResourceObject;
 };
 

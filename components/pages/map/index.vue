@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { mdiViewList } from "@mdi/js";
-const { selectedSpotId, selectedSpotsByDocumentIds } = useMap();
+const { selectedSpotId, selectedSpotsByDocumentIds, checkedSpotIds } = useMap();
 
 const { results } = useMap();
 
@@ -35,6 +35,8 @@ const markers = computed(() => {
       icon:
         selectedSpotId.value === item.attributes.field_id
           ? "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png"
+          : checkedSpotIds.value.includes(item.attributes.field_id)
+          ? "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png"
           : selectedSpotsByDocumentIds.value.includes(item.attributes.field_id)
           ? "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png"
           : "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png",
@@ -66,17 +68,39 @@ const center: any = computed(() => {
   return [lat, lng];
 });
 
-const height = ref<string>("40vh"); // props.full ? "80vh" : "40vh";
+const height = ref<string>("40vh");
+
+const updateHeight = () => {
+  if (props.full) {
+    height.value = `${window.innerHeight - 64}px`;
+  }
+};
 
 onMounted(() => {
-  const windowHeight = window.innerHeight;
+  updateHeight();
+  window.addEventListener("resize", updateHeight);
+});
 
-  if (props.full) {
-    height.value = `${windowHeight - 64}px`;
-  }
+onUnmounted(() => {
+  window.removeEventListener("resize", updateHeight);
 });
 
 const localePath = useLocalePath();
+
+const map = ref<any>(null);
+
+const panToSpot = (spotId: string) => {
+  const marker = markers.value.find((m) => m.id === spotId);
+  if (marker && map.value?.leafletObject) {
+    map.value.leafletObject.setView([marker.lat, marker.lng], map.value.leafletObject.getZoom(), { animate: true });
+  }
+};
+
+watch(selectedSpotId, (id) => {
+  if (id) {
+    panToSpot(id);
+  }
+});
 
 const selectMarker = (marker: Marker) => {
   const id = marker.id || "";
@@ -124,6 +148,7 @@ const selectMarker = (marker: Marker) => {
                 name: 'spots',
                 query: {
                   layout: 'table',
+                  ...(checkedSpotIds.length > 0 ? { checked: checkedSpotIds.join(',') } : {}),
                 },
               })
             "
@@ -137,6 +162,8 @@ const selectMarker = (marker: Marker) => {
       <PagesMapSearch></PagesMapSearch>
 
       <PagesMapDocuments></PagesMapDocuments>
+
+      <PagesMapCheckedSpots></PagesMapCheckedSpots>
     </LMap>
   </div>
 </template>

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { CommonBtnAdd, CommonBtnEdit } from "#build/components";
 import { mdiMagnify, mdiCheck } from "@mdi/js";
 
 const { isAdmin } = useSettings();
@@ -95,9 +94,9 @@ const nijuichidaishuOrder: Record<string, number> = {
 const sortBy = computed(() => {
   const titleKey = locale.value === "ja" ? "field_document_name_furigana" : "field_document_name_romaji";
   return [
-    { key: "genreOrder", order: "asc" },
-    { key: "titleOrder", order: "asc" },
-    { key: titleKey, order: "asc" },
+    { key: "genreOrder", order: "asc" as const },
+    { key: "titleOrder", order: "asc" as const },
+    { key: titleKey, order: "asc" as const },
   ];
 });
 

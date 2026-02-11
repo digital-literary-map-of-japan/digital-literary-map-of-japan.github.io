@@ -52,12 +52,13 @@ const selectMarker = () => {
 
         <v-card min-width="300">
           <v-card-text>
-            <v-combobox
+            <v-autocomplete
               :items="spots"
               variant="outlined"
               v-model="spot"
+              return-object
               @keydown.enter.stop
-            ></v-combobox>
+            ></v-autocomplete>
 
             <v-btn
               :disabled="!spot?.value"

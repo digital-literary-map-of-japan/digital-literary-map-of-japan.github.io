@@ -16,23 +16,25 @@ class UrlParamsConverter {
     if (!pairs.length) return result;
 
     pairs.forEach((pair) => {
-      let [key, value] = pair.split("=");
-      key = decodeURIComponent(key);
+      let [key, value] = pair.split("=") as [string, string];
+      key = decodeURIComponent(key || "");
 
-      value = UrlParamsConverter.decodeQuery(value);
+      value = UrlParamsConverter.decodeQuery(value || "");
 
       const path = key.split(/\]\[|\[|\]/).filter((part) => part);
 
       let currentStep: NestedObject = result;
 
       for (let i = 0; i < path.length; i++) {
+        const segment = path[i];
+        if (segment === undefined) continue;
         if (i === path.length - 1) {
-          currentStep[path[i]] = value;
+          currentStep[segment] = value;
         } else {
-          if (!currentStep[path[i]]) {
-            currentStep[path[i]] = {};
+          if (!currentStep[segment]) {
+            currentStep[segment] = {};
           }
-          currentStep = currentStep[path[i]] as NestedObject;
+          currentStep = currentStep[segment] as NestedObject;
         }
       }
     });
@@ -54,8 +56,10 @@ class UrlParamsConverter {
     const pairs = paramStr.split("&");
 
     pairs.forEach((pair) => {
-      let [key, value] = pair.split("=");
-      result[key] = value;
+      const [key, value] = pair.split("=");
+      if (key !== undefined && value !== undefined) {
+        result[key] = value;
+      }
     });
 
     return result;

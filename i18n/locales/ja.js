@@ -224,4 +224,11 @@ export default {
     "Logout": "ログアウト",
     "No examples": "用例なし",
     "legend": "凡例",
+    "Checked spots": "チェック済み地点",
+    "Clear all": "すべて解除",
+    "Check": "チェック",
+    "Uncheck": "チェック解除",
+    "Edit mode": "編集モード",
+    "Memo": "メモ",
+    "Admin": "管理者",
 }

@@ -62,12 +62,11 @@ const fields = ref([
     info: "連想",
     menu: false,
   },
-  /*
   {
-    title: "URL",
-    value: "field_link",
+    title: t("Memo"),
+    value: "field_memo",
+    html: true,
   },
-  */
 ]);
 
 const markers = [
@@ -84,7 +83,7 @@ const markers = [
 
   <div class="mt-4">
     <template v-for="field in fields">
-      <v-row v-if="attributes?.[field.value]">
+      <v-row v-if="field.html ? attributes?.[field.value]?.processed : attributes?.[field.value]">
         <v-col :md="3" cols="12">
           <PagesSpotsLabel :field="field"></PagesSpotsLabel>
         </v-col>
@@ -99,6 +98,9 @@ const markers = [
             {{ attributes?.[field.value]?.lat }}&nbsp;
             <b>{{ $t("Longitude") }}：</b>
             {{ attributes?.[field.value]?.lon }}
+          </template>
+          <template v-else-if="field.html && attributes?.[field.value]?.processed">
+            <span v-html="attributes[field.value].processed"></span>
           </template>
           <template v-else>
             <template

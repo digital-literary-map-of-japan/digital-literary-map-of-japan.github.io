@@ -1,8 +1,22 @@
 <script setup lang="ts">
-import { mdiCloseCircle, mdiOpenInNew } from "@mdi/js";
+import { mdiCloseCircle, mdiOpenInNew, mdiCheckboxMarkedOutline, mdiCheckboxBlankOutline } from "@mdi/js";
 import type { ResourceObject } from "~/types/jsonapi";
 
-const { selectedSpotId, results, spotTypeCount } = useMap();
+const { selectedSpotId, results, spotTypeCount, checkedSpotIds } = useMap();
+
+const isChecked = computed(() => {
+  return checkedSpotIds.value.includes(selectedSpotId.value);
+});
+
+const toggleCheck = () => {
+  const id = selectedSpotId.value;
+  if (!id) return;
+  if (isChecked.value) {
+    checkedSpotIds.value = checkedSpotIds.value.filter((v) => v !== id);
+  } else {
+    checkedSpotIds.value = [...checkedSpotIds.value, id];
+  }
+};
 
 const menu = ref(false);
 
@@ -102,6 +116,19 @@ const localePath = useLocalePath();
             {{ mdiOpenInNew }}
           </v-icon>
           {{ $t("detail") }}
+        </v-btn>
+
+        <v-btn
+          :color="isChecked ? 'orange' : 'grey'"
+          variant="flat"
+          size="small"
+          class="ml-2"
+          @click="toggleCheck"
+        >
+          <v-icon class="mr-1">
+            {{ isChecked ? mdiCheckboxMarkedOutline : mdiCheckboxBlankOutline }}
+          </v-icon>
+          {{ isChecked ? $t("Uncheck") : $t("Check") }}
         </v-btn>
       </div>
 

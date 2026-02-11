@@ -19,7 +19,7 @@ const props = withDefaults(defineProps<PropType>(), {
 
 const query = {};
 
-const param = props.to.params;
+const param = props.to?.params;
 
 const getItemParam = (id: string) => {
   const param_ = { ...param };
@@ -30,8 +30,8 @@ const getItemParam = (id: string) => {
 const convert = (values: string[]) => {
     if(!values) return "";
     if(values.length === 0) return "";
-    const value = values[0].split(", ")
-    return value.map((value) => value.split("/").pop()).join(", ");
+    const value = (values[0] ?? "").split(", ")
+    return value.map((value) => value.split("/").pop() ?? "").join(", ");
 }
 </script>
 <template>

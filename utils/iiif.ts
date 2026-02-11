@@ -5,7 +5,7 @@ const getManifestUrlFromId = (id: string) => {
 };
 
 const hasMedia = (item: ResourceObject) => {
-  const data = item.relationships?.field_iiif_images.data;
+  const data = item.relationships?.field_iiif_images?.data;
   if (Array.isArray(data) && data.length > 0) {
     return true;
   }

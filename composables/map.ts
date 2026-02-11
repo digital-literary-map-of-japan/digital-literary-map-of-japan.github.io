@@ -3,6 +3,8 @@ import type { JsonApiItems } from "~/types/jsonapi";
 export const useMap = () => {
   const selectedSpotId = useState<string>("selectedSpotId", () => "");
 
+  const checkedSpotIds = useState<string[]>("checkedSpotIds", () => []);
+
   const results = useState<JsonApiItems | null>("results", () => null);
 
   const documents = useState<JsonApiItems | null>("documents", () => null);
@@ -43,6 +45,7 @@ export const useMap = () => {
 
   return {
     selectedSpotId,
+    checkedSpotIds,
     results,
     documents,
     selectedDocumentIds,

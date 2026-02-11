@@ -47,7 +47,7 @@ const getFacet = (id: string) => {
         :id="conf.id"
         v-if="opened[i]"
         class="mb-5"
-        :value="getFacet(conf.id)"
+        :value="getFacet(conf.id) as any"
         @close="opened[i] = false"
       ></PagesSearchFacet>
     </template>

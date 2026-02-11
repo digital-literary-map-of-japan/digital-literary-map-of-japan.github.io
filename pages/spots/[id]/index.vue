@@ -106,13 +106,13 @@ const getTranslations = async (valueIds: string[], type_: string) => {
 
 const spot = await getSpot();
 
-const spotNId = spot.attributes.drupal_internal__nid;
+const spotNId = spot?.attributes?.drupal_internal__nid ?? 0;
 
-const data = await getData(spot.attributes.field_id);
+const data = await getData(spot?.attributes?.field_id ?? "");
 
 const types = ["poems", "sanbuns", "yokyokus", "images"];
 
-const typedValues: { [key: string]: { [key: string]: JsonApiItems } } = {};
+const typedValues: { [key: string]: { raw: JsonApiItems; translations: JsonApiItems } } = {};
 const typedIds: { [key: string]: string[] } = {};
 
 // 初期化
@@ -130,27 +130,41 @@ for (const type of types) {
   typedIds[type] = [];
 }
 
-const sortedItems = data.data.sort((a: ResourceObject, b: ResourceObject) => {
+const sortedItems = data?.data?.sort((a: ResourceObject, b: ResourceObject) => {
   return (a.attributes?.drupal_internal__nid ?? 0) - (b.attributes?.drupal_internal__nid ?? 0);
-});
+}) ?? [];
 
 for (const item_ of sortedItems) {
   const type = item_.type.replace("node--", "");
-  typedValues[type].raw.data.push(item_);
-  typedIds[type].push(item_.id);
+  const tv = typedValues[type];
+  if (tv) {
+    tv.raw.data.push(item_);
+  }
+  const ti = typedIds[type];
+  if (ti) {
+    ti.push(item_.id);
+  }
 }
 
-typedValues["sanbuns"].raw = await getDocument(typedValues["sanbuns"].raw);
+const sanbunsTv = typedValues["sanbuns"];
+if (sanbunsTv) {
+  sanbunsTv.raw = await getDocument(sanbunsTv.raw);
+}
 
 // 画像のみ変換
-typedValues["images"].raw = convert(typedValues["images"].raw);
+const imagesTv = typedValues["images"];
+if (imagesTv) {
+  imagesTv.raw = convert(imagesTv.raw);
+}
 
 // 翻訳
 for (const type_ of ["poems", "sanbuns"]) {
-  const ids = typedIds[type_]; //  || [];
+  const ids = typedIds[type_] || [];
   const values = await getTranslations(ids, type_);
 
-  typedValues[type_].translations = values;
+  if (typedValues[type_]) {
+    typedValues[type_].translations = values as JsonApiItems;
+  }
 }
 
 const item = spot; // spot.data[0];
@@ -235,9 +249,9 @@ useHead({
 });
 
 const showCount = (item: string) => {
-  return attributes.field_no_examples && item === "yokyokus"
+  return attributes?.field_no_examples && item === "yokyokus"
     ? t("No examples")
-    : typedValues[item].raw.data.length;
+    : typedValues[item]?.raw?.data?.length ?? 0;
 };
 </script>
 <template>
@@ -250,7 +264,7 @@ const showCount = (item: string) => {
           :value="item"
           :disabled="
             typedValues[item] &&
-            [0, -1].includes(typedValues[item].raw.data.length)
+            [0, -1].includes(typedValues[item]?.raw?.data?.length ?? 0)
           "
         >
           {{ labels[item] }}
@@ -272,28 +286,28 @@ const showCount = (item: string) => {
 
       <PagesSpotsPoems
         :spotNId="spotNId"
-        :raw="typedValues.poems.raw"
-        :translations="typedValues.poems.translations"
+        :raw="typedValues.poems?.raw!"
+        :translations="typedValues.poems?.translations!"
         v-if="tab === 'poems'"
       ></PagesSpotsPoems>
 
       <PagesSpotsSanbuns
         :spotNId="spotNId"
-        :raw="typedValues.sanbuns.raw"
-        :translations="typedValues.sanbuns.translations"
+        :raw="typedValues.sanbuns?.raw!"
+        :translations="typedValues.sanbuns?.translations!"
         v-if="tab === 'sanbuns'"
       ></PagesSpotsSanbuns>
 
       <PagesSpotsYokyokus
         :spotNId="spotNId"
         v-if="tab === 'yokyokus'"
-        :raw="typedValues.yokyokus.raw"
+        :raw="typedValues.yokyokus?.raw!"
       ></PagesSpotsYokyokus>
 
       <PagesSpotsImages
         :spotNId="spotNId"
         v-if="tab === 'images'"
-        :raw="typedValues.images.raw"
+        :raw="typedValues.images?.raw!"
       ></PagesSpotsImages>
     </div>
 

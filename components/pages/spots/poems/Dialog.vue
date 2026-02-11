@@ -100,7 +100,8 @@ const nId = props.item?.attributes?.drupal_internal__nid;
     <PagesSpotsTranslation
       :translation="props.translation"
       type="poems_translations"
-      :nId="nId"
+      label=""
+      :nId="nId ?? 0"
     ></PagesSpotsTranslation>
 
     <!--
