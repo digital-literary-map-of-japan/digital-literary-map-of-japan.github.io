@@ -228,6 +228,6 @@ export default {
     "Check": "Check",
     "Uncheck": "Uncheck",
     "Edit mode": "Edit mode",
-    "Memo": "Memo",
+    "Memo": "Notes",
     "Admin": "Admin",
 }

@@ -229,6 +229,6 @@ export default {
     "Check": "チェック",
     "Uncheck": "チェック解除",
     "Edit mode": "編集モード",
-    "Memo": "メモ",
+    "Memo": "備考",
     "Admin": "管理者",
 }
