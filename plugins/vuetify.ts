@@ -1,35 +1,16 @@
 import { createVuetify } from "vuetify";
 import type { ThemeDefinition } from "vuetify";
-// @ts-ignore
-import colors from "vuetify/lib/util/colors";
 
 import { aliases, mdi } from "vuetify/iconsets/mdi-svg";
 
-const primary = colors.blue.base;
-const error = colors.red.base;
-// const teal = "#D50000" // "#80CBC4" // "#4DB6AC" // colors.teal.base;
-const main = "#80CBC4";
-
-const config: any = {
-  primary,
-  error,
-  main,
-};
-
-const light_color = Object.assign({}, config);
-light_color.sub = "#EEEEEE";
-
-const dark_color = Object.assign({}, config);
-dark_color.sub = "#424242";
-
 const customLightTheme: ThemeDefinition = {
   dark: false,
-  colors: light_color,
-};
-
-const customDarkTheme: ThemeDefinition = {
-  dark: true,
-  colors: dark_color,
+  colors: {
+    primary: "#2196F3",
+    error: "#F44336",
+    main: "#80CBC4",
+    sub: "#EEEEEE",
+  },
 };
 
 export default defineNuxtPlugin((nuxtApp) => {

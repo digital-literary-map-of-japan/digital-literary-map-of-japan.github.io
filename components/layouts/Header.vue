@@ -32,6 +32,12 @@ const menuList = [
       name: "contact",
     },
   },
+  {
+    text: "dataset",
+    to: {
+      name: "dataset",
+    },
+  },
 ];
 
 const i18n = useI18n();

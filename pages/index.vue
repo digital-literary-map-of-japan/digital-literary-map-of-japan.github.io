@@ -34,6 +34,18 @@ setPageMeta({
   description: t('An annotation tool for Japanese literary places'),
 });
 setOrganizationJsonLd();
+
+// Preload hero background image for LCP improvement
+useHead({
+  link: [
+    {
+      rel: 'preload',
+      as: 'image',
+      href: '/img/KaiseiNifonYochiRoteiZenzu1846.webp',
+      type: 'image/webp',
+    },
+  ],
+});
 </script>
 <template>
   <div>
@@ -69,7 +81,7 @@ setOrganizationJsonLd();
       <v-container class="py-10">
         <h2>{{ $t("Literary Map (Overview)") }}</h2>
         <br />
-        <CommonMap :markers="markers"></CommonMap>
+        <LazyCommonMap :markers="markers"></LazyCommonMap>
       </v-container>
     </div>
 

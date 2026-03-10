@@ -14,7 +14,7 @@ const localePath = useLocalePath();
     <div :style="backgroundImageStyle" class="text-center">
       <div class="overlay py-10">
         <v-container>
-          <img width="280" height="280" src="/img/logo.webp" alt="Digital Literary Map of Japan" />
+          <img width="280px" height="280px" src="/img/logo.webp" alt="Digital Literary Map of Japan" fetchpriority="high" />
           <h1 style="font-variant: small-caps; color: #990500">
             {{ $t("Digital Literary Map of Japan") }}
           </h1>
@@ -52,8 +52,7 @@ const localePath = useLocalePath();
       <a href="https://www.osaka-u.ac.jp/">
         <img
           class="ma-4"
-          width="120"
-          height="30"
+          height="30px"
           src="/assets/logo_handai_B.webp"
           alt="大阪大学"
           loading="lazy"
@@ -62,8 +61,7 @@ const localePath = useLocalePath();
       <a href="https://www.nijl.ac.jp/">
         <img
           class="ma-4"
-          width="120"
-          height="30"
+          height="30px"
           src="/assets/logo_nijl.webp"
           alt="国文学研究資料館"
           loading="lazy"
@@ -73,8 +71,6 @@ const localePath = useLocalePath();
         <img
           style="max-width: 80%; max-height: 30px"
           class="ma-4"
-          width="120"
-          height="30"
           src="/assets/logo_uhd.webp"
           alt="Universität Heidelberg"
           loading="lazy"
