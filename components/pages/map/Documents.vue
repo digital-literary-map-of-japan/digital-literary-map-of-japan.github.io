@@ -35,7 +35,7 @@ const desserts = computed(() => {
         location="top"
       >
         <template v-slot:activator="{ props }">
-          <a v-bind="props" style="cursor: pointer">
+          <a v-bind="props" style="cursor: pointer" aria-label="Layers">
             <v-icon small>{{ mdiLayers }}</v-icon>
           </a>
         </template>
@@ -43,7 +43,7 @@ const desserts = computed(() => {
         <v-card min-width="300">
           <v-card-text>
             <div class="text-right">
-              <v-btn variant="flat" icon @click="menu = false">
+              <v-btn variant="flat" icon @click="menu = false" aria-label="Close">
                 <v-icon>{{ mdiCloseCircle }}</v-icon>
               </v-btn>
             </div>

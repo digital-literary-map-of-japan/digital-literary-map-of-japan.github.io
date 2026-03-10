@@ -94,6 +94,7 @@ const localePath = useLocalePath();
         size="small"
         @click="menu = false"
         class="close-btn"
+        aria-label="Close"
       >
         <v-icon>{{ mdiCloseCircle }}</v-icon>
       </v-btn>

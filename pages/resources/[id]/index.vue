@@ -65,6 +65,8 @@ const fields = [
   },
 ];
 const localePath = useLocalePath();
+const { setPageMeta, setBreadcrumbJsonLd } = useSeo();
+
 const bh = [
   {
     title: t("top"),
@@ -81,6 +83,12 @@ const bh = [
     disabled: false,
   },
 ];
+
+setPageMeta({
+  title,
+  description: `${attributes?.title || ''} - ${attributes?.field_author_name_kanji || ''} - ${attributes?.field_genre || ''}`,
+});
+setBreadcrumbJsonLd(bh);
 </script>
 <template>
   <LayoutsCommon :title="title" :items="bh">

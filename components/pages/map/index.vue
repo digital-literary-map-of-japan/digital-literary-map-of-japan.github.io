@@ -153,6 +153,7 @@ const selectMarker = (marker: Marker) => {
               })
             "
             style="cursor: pointer"
+            aria-label="List view"
           >
             <v-icon small>{{ mdiViewList }}</v-icon>
           </nuxt-link>

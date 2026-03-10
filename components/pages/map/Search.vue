@@ -45,7 +45,7 @@ const selectMarker = () => {
         location="end"
       >
         <template v-slot:activator="{ props }">
-          <a v-bind="props" style="cursor: pointer">
+          <a v-bind="props" style="cursor: pointer" aria-label="Search">
             <v-icon small>{{ mdiMagnify }}</v-icon>
           </a>
         </template>

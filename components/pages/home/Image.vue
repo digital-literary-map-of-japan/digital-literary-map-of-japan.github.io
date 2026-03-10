@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const imageUrl = "/img/KaiseiNifonYochiRoteiZenzu1846.jpg";
+const imageUrl = "/img/KaiseiNifonYochiRoteiZenzu1846.webp";
 
 const $t = useI18n().t;
 
@@ -14,7 +14,7 @@ const localePath = useLocalePath();
     <div :style="backgroundImageStyle" class="text-center">
       <div class="overlay py-10">
         <v-container>
-          <img width="280px" height="280px" contain src="/img/logo.png" />
+          <img width="280" height="280" src="/img/logo.webp" alt="Digital Literary Map of Japan" />
           <h1 style="font-variant: small-caps; color: #990500">
             {{ $t("Digital Literary Map of Japan") }}
           </h1>
@@ -38,8 +38,11 @@ const localePath = useLocalePath();
           $t("Title image")
         }}:『改正日本輿地路程全図』（長久保赤水：江戸後期）<img
           draggable="false"
-          src="https://literarymaps.nijl.ac.jp/assets/public_domain_mark_white.svg.png"
-          width="14px"
+          src="/assets/public_domain_mark_white.webp"
+          width="14"
+          height="14"
+          alt="Public Domain Mark"
+          loading="lazy"
         />
         {{ $t("Public domain") }}
       </small>
@@ -49,22 +52,32 @@ const localePath = useLocalePath();
       <a href="https://www.osaka-u.ac.jp/">
         <img
           class="ma-4"
-          height="30px"
-          src="https://literarymaps.nijl.ac.jp/assets/logo_handai_B.png"
+          width="120"
+          height="30"
+          src="/assets/logo_handai_B.webp"
+          alt="大阪大学"
+          loading="lazy"
         />
       </a>
       <a href="https://www.nijl.ac.jp/">
         <img
           class="ma-4"
-          height="30px"
-          src="https://literarymaps.nijl.ac.jp/assets/logo_nijl.jpg"
+          width="120"
+          height="30"
+          src="/assets/logo_nijl.webp"
+          alt="国文学研究資料館"
+          loading="lazy"
         />
       </a>
       <a href="https://www.zo.uni-heidelberg.de/">
         <img
           style="max-width: 80%; max-height: 30px"
           class="ma-4"
-          src="https://literarymaps.nijl.ac.jp/assets/logo_uhd.jpeg"
+          width="120"
+          height="30"
+          src="/assets/logo_uhd.webp"
+          alt="Universität Heidelberg"
+          loading="lazy"
         />
       </a>
     </div>

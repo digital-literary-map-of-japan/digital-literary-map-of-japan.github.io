@@ -228,25 +228,19 @@ watch(
   }
 );
 
-const seoTitle = `${title} - ${t(publicRuntimeConfig.siteName)}`;
+const { setPageMeta, setBreadcrumbJsonLd } = useSeo();
 
-useHead({
-  title: seoTitle,
-  meta: [
-    {
-      property: "og:title",
-      content: seoTitle,
-    },
-    {
-      property: "og:url",
-      content: `${publicRuntimeConfig.appURL}${route.fullPath}`,
-    },
-    {
-      property: "og:locale",
-      content: locale.value === "ja" ? "ja_JP" : "en_US",
-    },
-  ],
+const spotDescription = [
+  attributes?.field_kuni ? `${t('Kuni (Province)')}: ${attributes.field_kuni}` : '',
+  attributes?.field_prefecture ? `${t('Prefecture')}: ${attributes.field_prefecture}` : '',
+  attributes?.field_utamakura_meaning ? attributes.field_utamakura_meaning.substring(0, 100) : '',
+].filter(Boolean).join(' | ');
+
+setPageMeta({
+  title,
+  description: spotDescription || `${title} - ${t('An annotation tool for Japanese literary places')}`,
 });
+setBreadcrumbJsonLd(bh);
 
 const showCount = (item: string) => {
   return attributes?.field_no_examples && item === "yokyokus"

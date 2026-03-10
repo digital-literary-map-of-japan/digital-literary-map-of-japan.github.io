@@ -136,6 +136,7 @@ const desserts = computed(() => {
 });
 
 const localePath = useLocalePath();
+const { setPageMeta, setBreadcrumbJsonLd } = useSeo();
 
 const bh = [
   {
@@ -148,6 +149,12 @@ const bh = [
     disabled: false,
   },
 ];
+
+setPageMeta({
+  title: t('Resources'),
+  description: t('Digital Literary Map of Japan') + ' - ' + t('Resources'),
+});
+setBreadcrumbJsonLd(bh);
 
 const customFilter: any = (
   value: string,

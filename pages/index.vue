@@ -3,7 +3,8 @@ import type { JsonApiItem } from "~/types/jsonapi";
 
 const { results } = useMap();
 const { fetchSpots, fetchPage } = useLocalData();
-const { locale } = useI18n();
+const { locale, t } = useI18n();
+const { setPageMeta, setOrganizationJsonLd } = useSeo();
 
 const getSpots = async () => {
   const data = await fetchSpots(locale.value);
@@ -27,6 +28,12 @@ const markers = computed(() => {
 });
 
 const contact = await fetchPage("0a3c695c-d8ba-45c7-9f11-0ec60eabd34c", locale.value);
+
+setPageMeta({
+  title: t('Digital Literary Map of Japan'),
+  description: t('An annotation tool for Japanese literary places'),
+});
+setOrganizationJsonLd();
 </script>
 <template>
   <div>

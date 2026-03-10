@@ -231,4 +231,5 @@ export default {
     "Edit mode": "編集モード",
     "Memo": "備考",
     "Admin": "管理者",
+    "jsps_kakenhi": "JSPS 科研費 JP21H00506",
 }

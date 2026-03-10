@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const localePath = useLocalePath();
 const { t } = useI18n();
+const { setPageMeta, setBreadcrumbJsonLd } = useSeo();
+
 const bh = [
   {
     title: t("top"),
@@ -12,6 +14,12 @@ const bh = [
     disabled: false,
   },
 ];
+
+setPageMeta({
+  title: t('news'),
+  description: t('Digital Literary Map of Japan') + ' - ' + t('news'),
+});
+setBreadcrumbJsonLd(bh);
 </script>
 <template>
   <LayoutsCommon :title="$t('news')" :items="bh">

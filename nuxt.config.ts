@@ -1,5 +1,6 @@
 import { headConfig } from "./meta.config";
 import fixVitePath from "./vite-plugins/fix-vite-path.js";
+import vuetify from "vite-plugin-vuetify";
 import fs from "fs";
 import path from "path";
 
@@ -84,6 +85,7 @@ export default defineNuxtConfig({
     bundle: {
       optimizeTranslationDirective: false, // 警告を解消
     },
+    baseUrl: appURL,
   },
 
   app: {
@@ -135,13 +137,14 @@ export default defineNuxtConfig({
     define: {
       "process.env.DEBUG": false,
     },
-    plugins: [fixVitePath()],
+    plugins: [fixVitePath(), vuetify({ autoImport: true })],
   },
 
   nitro: {
     prerender: {
       crawlLinks: true,
     },
+    compressPublicAssets: true,
   },
 
   site: {

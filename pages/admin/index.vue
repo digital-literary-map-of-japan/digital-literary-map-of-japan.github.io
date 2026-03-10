@@ -4,6 +4,7 @@ import { mdiPencil } from "@mdi/js";
 const { t } = useI18n();
 const localePath = useLocalePath();
 const { isAdmin, initEditMode, toggleEditMode } = useSettings();
+const { setPageMeta, setBreadcrumbJsonLd } = useSeo();
 
 onMounted(() => {
   initEditMode();
@@ -20,6 +21,12 @@ const bh = [
     disabled: false,
   },
 ];
+
+setPageMeta({
+  title: t('Admin'),
+  noindex: true,
+});
+setBreadcrumbJsonLd(bh);
 </script>
 <template>
   <LayoutsCommon :title="$t('Admin')" :items="bh">

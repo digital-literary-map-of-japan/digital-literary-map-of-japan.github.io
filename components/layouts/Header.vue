@@ -62,11 +62,12 @@ onMounted(() => {
           target="_blank"
           icon
           color="success"
+          aria-label="User guide"
         >
           <v-icon>{{ mdiBook }}</v-icon>
         </v-btn>
 
-        <v-btn icon @click.stop="drawer = !drawer">
+        <v-btn icon @click.stop="drawer = !drawer" aria-label="Menu">
           <v-icon>{{ mdiMenu }}</v-icon>
         </v-btn>
       </template>

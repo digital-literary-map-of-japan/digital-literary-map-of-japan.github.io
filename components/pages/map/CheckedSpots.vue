@@ -70,6 +70,7 @@ const selectSpot = (id: string) => {
               size="x-small"
               density="compact"
               @click="removeSpot(spot.id)"
+              aria-label="Remove"
             >
               <v-icon size="small">{{ mdiClose }}</v-icon>
             </v-btn>

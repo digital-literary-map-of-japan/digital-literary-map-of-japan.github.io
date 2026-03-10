@@ -115,16 +115,13 @@ watch(
   { deep: true }
 );
 
-const publicRuntimeConfig = useRuntimeConfig().public;
+const { setPageMeta, setBreadcrumbJsonLd } = useSeo();
 
-useHead({
-  link: [
-    {
-      rel: "canonical",
-      href: (publicRuntimeConfig.appURL || "") + route.path,
-    },
-  ],
+setPageMeta({
+  title: t('spots'),
+  description: t('Digital Literary Map of Japan') + ' - ' + t('spots'),
 });
+setBreadcrumbJsonLd(bh);
 </script>
 <template>
   <template v-if="mode === 'table'">

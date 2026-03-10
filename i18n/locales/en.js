@@ -230,4 +230,5 @@ export default {
     "Edit mode": "Edit mode",
     "Memo": "Notes",
     "Admin": "Admin",
+    "jsps_kakenhi": "JSPS KAKENHI Grant Number JP21H00506",
 }

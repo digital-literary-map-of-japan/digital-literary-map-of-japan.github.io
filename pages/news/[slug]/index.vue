@@ -11,6 +11,7 @@ const did = item.drupal_internal__nid;
 
 const localePath = useLocalePath();
 const { t } = useI18n();
+const { setPageMeta, setBreadcrumbJsonLd } = useSeo();
 
 const bh = [
   {
@@ -33,6 +34,13 @@ const isoDateString = item.created;
 const date = new Date(isoDateString);
 // ユーザーのローカルタイムゾーンに合わせて日時を表示
 const localDateString = date.toLocaleString().split(" ")[0];
+
+const bodyText = item.body?.value?.replace(/<[^>]*>/g, '')?.substring(0, 160) || '';
+setPageMeta({
+  title: item.title,
+  description: bodyText,
+});
+setBreadcrumbJsonLd(bh);
 </script>
 <template>
   <LayoutsCommon :title="`${localDateString} ${item.title}`" :items="bh">
