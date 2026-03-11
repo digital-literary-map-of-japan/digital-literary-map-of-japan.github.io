@@ -65,6 +65,7 @@ export default defineNuxtConfig({
 
   gtag: {
     id: "G-587Z7D7T5S",
+    loadingStrategy: "async",
   },
 
   sitemap: {
@@ -127,7 +128,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ["vuetify/lib/styles/main.sass", "@/assets/styles/main.css"],
+  css: ["@/assets/styles/main.css"],
 
   build: {
     transpile: ["vuetify"],
@@ -137,7 +138,7 @@ export default defineNuxtConfig({
     define: {
       "process.env.DEBUG": false,
     },
-    plugins: [fixVitePath(), vuetify({ autoImport: true })],
+    plugins: [fixVitePath(), vuetify({ autoImport: true, styles: 'sass' })],
   },
 
   nitro: {
@@ -145,6 +146,7 @@ export default defineNuxtConfig({
       crawlLinks: true,
     },
     compressPublicAssets: true,
+    minify: true,
   },
 
   site: {

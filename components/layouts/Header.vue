@@ -81,35 +81,44 @@ onMounted(() => {
 
     <client-only>
       <v-navigation-drawer v-model="drawer" temporary location="right">
-        <v-list class="text-center">
+        <nav class="text-center" aria-label="Navigation menu">
+        <v-list>
           <v-list-item>{{ $t("Menu") }}</v-list-item>
+        </v-list>
 
         <v-divider class="my-2"></v-divider>
 
-        <v-list-item
-          v-for="child in menuList"
-          :to="child.to ? localePath(child.to) : ''"
-          exact
-          link
-        >
-          {{ $t(child.text) }}
-        </v-list-item>
+        <v-list role="menu">
+          <v-list-item
+            v-for="child in menuList"
+            :to="child.to ? localePath(child.to) : ''"
+            exact
+            link
+            role="menuitem"
+          >
+            {{ $t(child.text) }}
+          </v-list-item>
+        </v-list>
 
         <v-divider class="my-2"></v-divider>
 
-        <v-list-item @click="changeLocale('ja')" :active="$i18n.locale === 'ja'"
-          >日本語</v-list-item
-        >
-        <v-list-item @click="changeLocale('en')" :active="$i18n.locale === 'en'"
-          >English</v-list-item
-        >
+        <v-list role="menu">
+          <v-list-item @click="changeLocale('ja')" :active="$i18n.locale === 'ja'" role="menuitem"
+            >日本語</v-list-item
+          >
+          <v-list-item @click="changeLocale('en')" :active="$i18n.locale === 'en'" role="menuitem"
+            >English</v-list-item
+          >
+        </v-list>
 
         <v-divider class="my-2"></v-divider>
 
-        <v-list-item :to="localePath({ name: 'admin' })">
-          {{ $t("Admin") }}
-        </v-list-item>
-      </v-list>
+        <v-list role="menu">
+          <v-list-item :to="localePath({ name: 'admin' })" role="menuitem">
+            {{ $t("Admin") }}
+          </v-list-item>
+        </v-list>
+      </nav>
     </v-navigation-drawer>
   </client-only>
   </div>

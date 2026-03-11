@@ -8,7 +8,11 @@ const props = withDefaults(defineProps<PropType>(), {
   attributes: () => ({}),
 });
 
-const value = props.attributes.body.value;
+// Fix heading order: replace h4/h5/h6 with h3 for proper sequential order
+const value = computed(() => {
+  const raw = props.attributes.body?.value || '';
+  return raw.replace(/<(\/?)h[4-6]([\s>])/gi, '<$1h3$2');
+});
 
 //
 const id = props.attributes.drupal_internal__nid;

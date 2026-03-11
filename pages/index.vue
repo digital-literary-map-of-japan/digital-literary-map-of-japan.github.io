@@ -43,6 +43,7 @@ useHead({
       as: 'image',
       href: '/img/KaiseiNifonYochiRoteiZenzu1846.webp',
       type: 'image/webp',
+      fetchpriority: 'high',
     },
   ],
 });

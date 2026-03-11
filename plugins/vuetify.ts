@@ -6,7 +6,7 @@ import { aliases, mdi } from "vuetify/iconsets/mdi-svg";
 const customLightTheme: ThemeDefinition = {
   dark: false,
   colors: {
-    primary: "#2196F3",
+    primary: "#1565C0",
     error: "#F44336",
     main: "#80CBC4",
     sub: "#EEEEEE",

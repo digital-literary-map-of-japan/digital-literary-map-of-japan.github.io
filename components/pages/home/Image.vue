@@ -52,7 +52,8 @@ const localePath = useLocalePath();
       <a href="https://www.osaka-u.ac.jp/">
         <img
           class="ma-4"
-          height="30px"
+          width="116"
+          height="30"
           src="/assets/logo_handai_B.webp"
           alt="大阪大学"
           loading="lazy"
@@ -61,7 +62,8 @@ const localePath = useLocalePath();
       <a href="https://www.nijl.ac.jp/">
         <img
           class="ma-4"
-          height="30px"
+          width="154"
+          height="30"
           src="/assets/logo_nijl.webp"
           alt="国文学研究資料館"
           loading="lazy"
@@ -69,8 +71,10 @@ const localePath = useLocalePath();
       </a>
       <a href="https://www.zo.uni-heidelberg.de/">
         <img
-          style="max-width: 80%; max-height: 30px"
           class="ma-4"
+          width="448"
+          height="32"
+          style="max-width: 80%; height: auto"
           src="/assets/logo_uhd.webp"
           alt="Universität Heidelberg"
           loading="lazy"

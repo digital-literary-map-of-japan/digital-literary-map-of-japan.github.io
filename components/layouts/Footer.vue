@@ -3,7 +3,7 @@ const { t } = useI18n()
 </script>
 <template>
   <footer>
-    <v-sheet color="#2b3e50" dark class="text-center">
+    <v-sheet color="#2b3e50" dark class="text-center text-white">
       <v-container>
         <!--  py-10 -->
         <small>{{ t('jsps_kakenhi') }}</small>
@@ -16,7 +16,7 @@ const { t } = useI18n()
 
         <small
           >Logos and favicon made with
-          <a href="https://www.designevo.com/">DesignEvo</a></small
+          <a href="https://www.designevo.com/" style="color: #90CAF9">DesignEvo</a></small
         >
       </v-container>
     </v-sheet>
