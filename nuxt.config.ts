@@ -128,7 +128,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ["@/assets/styles/main.css"],
+  css: ["vuetify/lib/styles/main.sass", "@/assets/styles/main.css"],
 
   build: {
     transpile: ["vuetify"],
@@ -138,7 +138,7 @@ export default defineNuxtConfig({
     define: {
       "process.env.DEBUG": false,
     },
-    plugins: [fixVitePath(), vuetify({ autoImport: true, styles: 'sass' })],
+    plugins: [fixVitePath(), vuetify({ autoImport: true })],
   },
 
   nitro: {
