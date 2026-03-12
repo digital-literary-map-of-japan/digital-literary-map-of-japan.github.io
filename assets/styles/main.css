@@ -2,6 +2,16 @@
   text-transform: none !important;
 }
 
+/*
+ * Vuetify の v-main はハイドレーション時にJS経由で --v-layout-top を設定するため、
+ * SSG初期表示時にレイアウトシフトが発生する。
+ * ハイドレーション完了前は .pre-hydration クラスで v-app-bar の高さ(64px)を確保し、
+ * ハイドレーション後はVuetifyのレイアウトシステムに制御を委譲する。
+ */
+.pre-hydration .v-main {
+  --v-layout-top: 64px !important;
+}
+
 a {
   text-decoration: none !important;
   color: #1565C0;
