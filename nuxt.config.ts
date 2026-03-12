@@ -69,6 +69,7 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
+    strictNuxtContentAds: true,
     exclude: ["/static/404.html", "/static/500.html"],
     async routes() {
       return await getRoutes();
@@ -81,7 +82,7 @@ export default defineNuxtConfig({
       { code: "en", language: "en-US", file: "en.js" },
     ],
     defaultLocale: headConfig.lang,
-    // trailingSlash: true,
+    trailingSlash: true,
     detectBrowserLanguage: false,
     bundle: {
       optimizeTranslationDirective: false, // 警告を解消

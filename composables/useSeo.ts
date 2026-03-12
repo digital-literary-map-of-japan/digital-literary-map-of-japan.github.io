@@ -11,7 +11,13 @@ export const useSeo = () => {
   const appURL = publicRuntimeConfig.appURL as string || '';
   const siteName = publicRuntimeConfig.siteName as string || '';
 
-  const currentUrl = computed(() => `${appURL}${route.path}`);
+  const currentUrl = computed(() => {
+    let path = route.path;
+    if (!path.endsWith('/')) {
+      path += '/';
+    }
+    return `${appURL}${path}`;
+  });
   const ogLocale = computed(() => locale.value === 'ja' ? 'ja_JP' : 'en_US');
   const altLocale = computed(() => locale.value === 'ja' ? 'en_US' : 'ja_JP');
 
@@ -57,12 +63,18 @@ export const useSeo = () => {
   };
 
   const setBreadcrumbJsonLd = (items: BreadcrumbItem[]) => {
-    const listItems = items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.title,
-      ...(item.to ? { item: `${appURL}${item.to}` } : {}),
-    }));
+    const listItems = items.map((item, index) => {
+      let itemUrl = item.to ? `${appURL}${item.to}` : undefined;
+      if (itemUrl && !itemUrl.endsWith('/')) {
+        itemUrl += '/';
+      }
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.title,
+        ...(itemUrl ? { item: itemUrl } : {}),
+      };
+    });
 
     useHead({
       script: [
