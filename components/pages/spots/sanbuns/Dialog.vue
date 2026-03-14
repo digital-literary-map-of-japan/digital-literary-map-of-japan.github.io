@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ResourceObject } from "~/types/jsonapi";
+import { fieldValue } from "~/utils/common";
 
 interface PropType {
   item: ResourceObject | null;
@@ -52,7 +53,7 @@ const attributes = computed(() => {
             </template>
           </template>
           <template v-else>
-            <span v-html="attributes?.[field.value]"></span>
+            <span v-html="fieldValue(attributes?.[field.value])"></span>
           </template>
         </v-col>
       </v-row>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ResourceObject, JsonApiItems } from "~/types/jsonapi";
 
-import { isDisplay } from "~/utils/common";
+import { isDisplay, fieldValue } from "~/utils/common";
 
 interface PropType {
   item: ResourceObject | null;
@@ -71,12 +71,8 @@ const attributes = computed(() => {
               attributes?.[field.value]?.uri
             }}</a>
           </template>
-          <template v-else-if="attributes?.[field.value].format">
-            <!-- processed -->
-            <span v-html="attributes?.[field.value].value"></span>
-          </template>
           <template v-else>
-            <span v-html="attributes?.[field.value]"></span>
+            <span v-html="fieldValue(attributes?.[field.value])"></span>
           </template>
         </v-col>
       </v-row>

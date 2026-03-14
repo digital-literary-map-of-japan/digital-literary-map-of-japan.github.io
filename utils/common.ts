@@ -14,4 +14,17 @@ const isDisplay = (value: any) => {
   }
 };
 
-export { isMobile, isDisplay };
+/**
+ * Drupalフィールド値を文字列として取得する。
+ * 長文フィールドは {value, format, processed} オブジェクトで返されるため、
+ * オブジェクトの場合は .value を返す。
+ */
+const fieldValue = (val: any): string | null => {
+  if (val === null || val === undefined) return null;
+  if (typeof val === "object" && !Array.isArray(val) && "value" in val) {
+    return val.value ?? null;
+  }
+  return val;
+};
+
+export { isMobile, isDisplay, fieldValue };
