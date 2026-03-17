@@ -243,4 +243,8 @@ export default {
     "dataset_language": "言語",
     "dataset_license": "ライセンス",
     "dataset_publisher": "提供者",
+    "Page not found": "ページが見つかりません",
+    "An error occurred": "エラーが発生しました",
+    "The page you are looking for does not exist.": "お探しのページは存在しません。",
+    "An unexpected error occurred.": "予期しないエラーが発生しました。",
 }

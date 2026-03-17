@@ -35,8 +35,9 @@ const getRoutes: any = async () => {
 
   for (const item of spotsData.data) {
     const id = item.attributes.field_id;
-    routes.push(`/spots/${id}`);
-    routes.push(`/en/spots/${id}`);
+    if (!id) continue;
+    routes.push(`/spots/${id}/`);
+    routes.push(`/en/spots/${id}/`);
   }
 
   return routes;
@@ -69,8 +70,7 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    strictNuxtContentAds: true,
-    exclude: ["/static/404.html", "/static/500.html"],
+    exclude: ["/static/404.html", "/static/500.html", "/admin", "/admin/**", "/en/admin", "/en/admin/**"],
     async routes() {
       return await getRoutes();
     },
@@ -119,6 +119,7 @@ export default defineNuxtConfig({
         { property: "og:image:height", content: headConfig.imageHeight },
         { property: "og:image:alt", content: headConfig.imageAlt },
         { property: "og:locale", content: "ja_JP" },
+        { property: "og:locale:alternate", content: "en_US" },
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:site", content: headConfig.twitterSite },
@@ -168,15 +169,17 @@ export default defineNuxtConfig({
         return;
       }
 
-      spotsData.data.map((mount: any) => {
-        nitroConfig.prerender?.routes?.push(
-          `/spots/${mount.attributes.field_id}`
-        );
+      spotsData.data
+        .filter((mount: any) => mount.attributes.field_id)
+        .map((mount: any) => {
+          nitroConfig.prerender?.routes?.push(
+            `/spots/${mount.attributes.field_id}/`
+          );
 
-        nitroConfig.prerender?.routes?.push(
-          `/en/spots/${mount.attributes.field_id}`
-        );
-      });
+          nitroConfig.prerender?.routes?.push(
+            `/en/spots/${mount.attributes.field_id}/`
+          );
+        });
     },
   },
 

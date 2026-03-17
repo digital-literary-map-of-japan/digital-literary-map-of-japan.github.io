@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# 旧URL /resources/documents/{id} → /resources/{id}/ へ301リダイレクト
+RewriteRule ^resources/documents/(.+)$ /resources/$1/ [R=301,L]
+
+# /login → トップページへリダイレクト
+RewriteRule ^login/?$ / [R=301,L]

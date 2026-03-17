@@ -117,10 +117,68 @@ export const useSeo = () => {
     });
   };
 
+  const setPlaceJsonLd = (options: {
+    name: string;
+    alternateName?: string;
+    description?: string;
+    latitude?: number;
+    longitude?: number;
+    addressRegion?: string;
+    addressLocality?: string;
+    url?: string;
+    keywords?: string[];
+  }) => {
+    const jsonLd: Record<string, any> = {
+      '@context': 'https://schema.org',
+      '@type': 'Place',
+      name: options.name,
+      url: options.url || currentUrl.value,
+    };
+
+    if (options.alternateName) {
+      jsonLd.alternateName = options.alternateName;
+    }
+
+    if (options.description) {
+      jsonLd.description = options.description;
+    }
+
+    if (options.latitude && options.longitude) {
+      jsonLd.geo = {
+        '@type': 'GeoCoordinates',
+        latitude: options.latitude,
+        longitude: options.longitude,
+      };
+    }
+
+    if (options.addressRegion || options.addressLocality) {
+      jsonLd.address = {
+        '@type': 'PostalAddress',
+        ...(options.addressRegion ? { addressRegion: options.addressRegion } : {}),
+        ...(options.addressLocality ? { addressLocality: options.addressLocality } : {}),
+        addressCountry: 'JP',
+      };
+    }
+
+    if (options.keywords && options.keywords.length > 0) {
+      jsonLd.keywords = options.keywords.join(', ');
+    }
+
+    useHead({
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(jsonLd),
+        },
+      ],
+    });
+  };
+
   return {
     setPageMeta,
     setBreadcrumbJsonLd,
     setOrganizationJsonLd,
+    setPlaceJsonLd,
     appURL,
     siteName,
     currentUrl,

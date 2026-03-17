@@ -72,7 +72,7 @@ useHead({
         name: "Digital Literary Map of Japan Dataset",
         alternateName: "日本のデジタル文学地図 データセット",
         description: `日本の文学名所（歌枕・名所）に関する構造化データ。${jsonLdDescription}のデータを含む。`,
-        url: `${appURL}/dataset`,
+        url: `${appURL}/dataset/`,
         license: "https://creativecommons.org/licenses/by/4.0/",
         creator: {
           "@type": "Organization",

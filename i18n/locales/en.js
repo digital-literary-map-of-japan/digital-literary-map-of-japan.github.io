@@ -242,4 +242,8 @@ export default {
     "dataset_language": "Language",
     "dataset_license": "License",
     "dataset_publisher": "Publisher",
+    "Page not found": "Page not found",
+    "An error occurred": "An error occurred",
+    "The page you are looking for does not exist.": "The page you are looking for does not exist.",
+    "An unexpected error occurred.": "An unexpected error occurred.",
 }

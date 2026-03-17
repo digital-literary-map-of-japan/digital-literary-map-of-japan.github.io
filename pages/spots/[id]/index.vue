@@ -228,7 +228,7 @@ watch(
   }
 );
 
-const { setPageMeta, setBreadcrumbJsonLd } = useSeo();
+const { setPageMeta, setBreadcrumbJsonLd, setPlaceJsonLd } = useSeo();
 
 const spotDescription = [
   attributes?.field_kuni ? `${t('Kuni (Province)')}: ${attributes.field_kuni}` : '',
@@ -241,6 +241,25 @@ setPageMeta({
   description: spotDescription || `${title} - ${t('An annotation tool for Japanese literary places')}`,
 });
 setBreadcrumbJsonLd(bh);
+
+// schema.org Place 構造化データ
+const placeKeywords: string[] = [];
+if (attributes?.field_utamakura) placeKeywords.push(t('Utamakura'));
+if (attributes?.field_meisho) placeKeywords.push(t('Meisho'));
+if (attributes?.field_utamakura_associations) {
+  placeKeywords.push(...attributes.field_utamakura_associations.split(',').map((s: string) => s.trim()).filter(Boolean));
+}
+
+setPlaceJsonLd({
+  name: attributes?.title || '',
+  alternateName: attributes?.field_spot_name_romaji || '',
+  description: spotDescription || `${title} - ${t('An annotation tool for Japanese literary places')}`,
+  latitude: attributes?.field_geo?.lat,
+  longitude: attributes?.field_geo?.lon,
+  addressRegion: attributes?.field_prefecture || '',
+  addressLocality: attributes?.field_kuni || '',
+  keywords: placeKeywords,
+});
 
 const showCount = (item: string) => {
   return attributes?.field_no_examples && item === "yokyokus"
