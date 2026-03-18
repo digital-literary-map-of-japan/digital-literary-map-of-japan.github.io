@@ -15,12 +15,10 @@ withDefaults(defineProps<PropType>(), {
 </script>
 <template>
   <div>
-    <ClientOnly>
-      <LayoutsBreadCrumbs
-        v-if="items.length > 0"
-        :items="items"
-      ></LayoutsBreadCrumbs>
-    </ClientOnly>
+    <LayoutsBreadCrumbs
+      v-if="items.length > 0"
+      :items="items"
+    ></LayoutsBreadCrumbs>
     <v-container class="mt-5 mb-10" :fluid="fluid === true">
       <div class="mb-5 text-center">
         <h1 style="color: #990500">{{ title }}</h1>

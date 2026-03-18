@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { mdiChevronRight } from "@mdi/js";
 import type { BhItem } from "~/types";
-import { isMobile } from "~/utils/common";
-
-const isMobile_ = computed(() => isMobile());
 
 interface PropType {
   items?: BhItem[];
@@ -15,7 +12,7 @@ withDefaults(defineProps<PropType>(), {
 </script>
 
 <template>
-  <v-sheet class="bg-sub" v-if="!isMobile_">
+  <v-sheet class="bg-sub d-none d-md-block">
     <v-container fluid class="py-2">
       <v-breadcrumbs class="py-0 mx-0 px-0" :items="items">
         <template v-slot:divider>
