@@ -145,6 +145,7 @@ export default {
     "Literary Map (Overview)": "Literary Map (Overview)",
     "Coordination and contact": "Coordination and contact",
     "Map view": "Map view",
+    "Table view": "Table view",
     "List view": "List view",
     "Place": "Place",
     "Search": "Search",

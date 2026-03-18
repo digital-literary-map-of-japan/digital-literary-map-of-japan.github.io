@@ -146,6 +146,7 @@ export default {
     "Literary Map (Overview)": "文学地図",
     "Coordination and contact": "お問い合わせ・連絡先",
     "Map view": "地図表示",
+    "Table view": "一覧表示",
     "List view": "一覧表示",
     "Place": "地名",
     "Search": "検索",

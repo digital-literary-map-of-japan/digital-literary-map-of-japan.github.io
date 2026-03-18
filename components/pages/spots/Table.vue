@@ -109,7 +109,7 @@ const customFilter: any = (
       :to="
         localePath({
           name: 'spots',
-          query: { layout: 'map', ...(checkedSpotIds.length > 0 ? { checked: checkedSpotIds.join(',') } : {}) },
+          query: checkedSpotIds.length > 0 ? { checked: checkedSpotIds.join(',') } : {},
         })
       "
     >

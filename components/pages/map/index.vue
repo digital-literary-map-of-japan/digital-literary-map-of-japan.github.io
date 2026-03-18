@@ -145,11 +145,8 @@ const selectMarker = (marker: Marker) => {
           <nuxt-link
             :to="
               localePath({
-                name: 'spots',
-                query: {
-                  layout: 'table',
-                  ...(checkedSpotIds.length > 0 ? { checked: checkedSpotIds.join(',') } : {}),
-                },
+                name: 'spots-table',
+                query: checkedSpotIds.length > 0 ? { checked: checkedSpotIds.join(',') } : {},
               })
             "
             style="cursor: pointer"

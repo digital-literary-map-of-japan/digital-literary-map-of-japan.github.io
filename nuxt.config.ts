@@ -169,6 +169,9 @@ export default defineNuxtConfig({
         return;
       }
 
+      nitroConfig.prerender.routes.push("/spots/table/");
+      nitroConfig.prerender.routes.push("/en/spots/table/");
+
       spotsData.data
         .filter((mount: any) => mount.attributes.field_id)
         .map((mount: any) => {
