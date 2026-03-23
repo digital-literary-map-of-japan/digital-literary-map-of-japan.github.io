@@ -29,15 +29,18 @@ const loadLocalSpots = () => {
 };
 
 const getRoutes: any = async () => {
-  const routes: string[] = [];
+  const routes: any[] = [];
 
   const spotsData = loadLocalSpots();
 
   for (const item of spotsData.data) {
     const id = item.attributes.field_id;
     if (!id) continue;
-    routes.push(`/spots/${id}/`);
-    routes.push(`/en/spots/${id}/`);
+    // ベースロケール(ja)のルートのみ返す。/en/版はsitemapモジュールのi18n連携で自動生成される
+    routes.push({
+      loc: `/spots/${id}/`,
+      lastmod: new Date().toISOString(),
+    });
   }
 
   return routes;
@@ -71,6 +74,11 @@ export default defineNuxtConfig({
 
   sitemap: {
     exclude: ["/static/404.html", "/static/500.html", "/admin", "/admin/**", "/en/admin", "/en/admin/**"],
+    defaults: {
+      lastmod: new Date().toISOString(),
+      changefreq: "weekly",
+      priority: 0.8,
+    },
     async routes() {
       return await getRoutes();
     },

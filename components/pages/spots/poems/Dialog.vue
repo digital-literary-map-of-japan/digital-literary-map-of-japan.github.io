@@ -70,7 +70,7 @@ const manifest = computed(() => {
   const id = spl?.[4];
   const index = spl?.[6];
 
-  return `https://universalviewer.io/uv.html?manifest=https://kokusho.nijl.ac.jp/biblio/${id}/manifest#?cv=${
+  return `/uv/?manifest=https://kokusho.nijl.ac.jp/biblio/${id}/manifest#?cv=${
     Number(index) - 1
   }`;
 });

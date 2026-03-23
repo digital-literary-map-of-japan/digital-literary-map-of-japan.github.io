@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" type="text/css" href="uv.css" />
+    <script type="text/javascript" src="umd/UV.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
+      #uv {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="uv" class="uv"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var urlAdapter = new UV.IIIFURLAdapter();
+
+        var iiifManifestId =
+          urlAdapter.get("iiif-content") ||
+          urlAdapter.get("manifest") ||
+          urlAdapter.get("iiifManifestId");
+
+        var canvasIndex = urlAdapter.get("cv") || 0;
+
+        var data = urlAdapter.getInitialData({
+          iiifManifestId: iiifManifestId,
+          canvasIndex: Number(canvasIndex),
+        });
+
+        var uv = UV.init("uv", data);
+        urlAdapter.bindTo(uv);
+
+        uv.on("configure", function ({ config, cb }) {
+          cb(
+            fetch("uv-iiif-config.json").then(function (response) {
+              return response.json();
+            })
+          );
+        });
+
+        var $UV = document.getElementById("uv");
+
+        function resize() {
+          var w = window.innerWidth;
+          var h = window.innerHeight;
+          $UV.style.width = w + "px";
+          $UV.style.height = h + "px";
+          if (uv && uv.resize) {
+            uv.resize();
+          }
+        }
+
+        addEventListener("resize", resize);
+        resize();
+      });
+    </script>
+  </body>
+</html>

@@ -21,6 +21,24 @@ export const useSeo = () => {
   const ogLocale = computed(() => locale.value === 'ja' ? 'ja_JP' : 'en_US');
   const altLocale = computed(() => locale.value === 'ja' ? 'en_US' : 'ja_JP');
 
+  // hreflang用のURL生成
+  const getAlternateUrls = computed(() => {
+    let path = route.path;
+    if (!path.endsWith('/')) {
+      path += '/';
+    }
+
+    // 現在のパスからベースパス（ja版）を取得
+    const jaPath = path.startsWith('/en/') ? path.replace(/^\/en\//, '/') : path;
+    const enPath = jaPath === '/' ? '/en/' : `/en${jaPath}`;
+
+    return {
+      ja: `${appURL}${jaPath}`,
+      en: `${appURL}${enPath}`,
+      xDefault: `${appURL}${jaPath}`, // デフォルトはja
+    };
+  });
+
   const setPageMeta = (options: {
     title: string;
     description?: string;
@@ -53,11 +71,16 @@ export const useSeo = () => {
       meta.push({ name: 'robots', content: 'noindex, nofollow' });
     }
 
+    const alternateUrls = getAlternateUrls.value;
+
     useHead({
       title: fullTitle,
       meta,
       link: [
         { rel: 'canonical', href: currentUrl.value },
+        { rel: 'alternate', hreflang: 'ja', href: alternateUrls.ja },
+        { rel: 'alternate', hreflang: 'en', href: alternateUrls.en },
+        { rel: 'alternate', hreflang: 'x-default', href: alternateUrls.xDefault },
       ],
     });
   };

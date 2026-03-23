@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /en/admin/
+Disallow: /uv/
+Disallow: /downloads/
 
 Sitemap: https://literarymaps.nijl.ac.jp/sitemap_index.xml

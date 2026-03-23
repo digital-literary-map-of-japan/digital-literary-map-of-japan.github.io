@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<PropType>(), {
 });
 
 const getUrl = (field: any, pos: number = -1) => {
-  return `https://universalviewer.io/uv.html?manifest=${field.manifest}#?cv=${
+  return `/uv/uv.html#?manifest=${field.manifest}&cv=${
     Number(pos === -1 ? field.pos[0] : pos) - 1
   }`;
 };
