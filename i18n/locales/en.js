@@ -243,6 +243,7 @@ export default {
     "dataset_language": "Language",
     "dataset_license": "License",
     "dataset_publisher": "Publisher",
+    "dataset_last_updated": "Last Updated",
     "Page not found": "Page not found",
     "An error occurred": "An error occurred",
     "The page you are looking for does not exist.": "The page you are looking for does not exist.",

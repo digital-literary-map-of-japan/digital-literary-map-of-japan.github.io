@@ -244,6 +244,7 @@ export default {
     "dataset_language": "言語",
     "dataset_license": "ライセンス",
     "dataset_publisher": "提供者",
+    "dataset_last_updated": "最終更新日",
     "Page not found": "ページが見つかりません",
     "An error occurred": "エラーが発生しました",
     "The page you are looking for does not exist.": "お探しのページは存在しません。",

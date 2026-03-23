@@ -72,6 +72,7 @@ useHead({
         name: "Digital Literary Map of Japan Dataset",
         alternateName: "日本のデジタル文学地図 データセット",
         description: `日本の文学名所（歌枕・名所）に関する構造化データ。${jsonLdDescription}のデータを含む。`,
+        dateModified: datasetMeta.generatedAt,
         url: `${appURL}/dataset/`,
         license: "https://creativecommons.org/licenses/by/4.0/",
         creator: {
@@ -145,6 +146,10 @@ const metadataItems = computed(() => [
     label: t("dataset_publisher"),
     value: "Digital Literary Map of Japan",
     link: appURL,
+  },
+  {
+    label: t("dataset_last_updated"),
+    value: datasetMeta.generatedAt,
   },
 ]);
 
