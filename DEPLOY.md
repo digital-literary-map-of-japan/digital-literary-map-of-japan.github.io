@@ -1,50 +1,79 @@
 # デプロイ手順
 
-本番環境（さくらレンタルサーバー）へのデプロイ手順です。
+## GitHub Pages（メイン公開先）
 
-## 前提条件
+このリポジトリは GitHub Actions で **GitHub Pages** に自動公開されます。
+
+- 公開 URL: <https://digital-literary-map-of-japan.github.io/>
+- ワークフロー: `.github/workflows/pages-deploy.yml`
+- トリガー: `main` ブランチへの push（手動実行は `workflow_dispatch` から）
+
+### ビルド時の環境変数（ワークフロー内で設定）
+
+| 変数 | 値 |
+|---|---|
+| `ORIGIN` | `https://digital-literary-map-of-japan.github.io` |
+| `BASE_URL` | `/` |
+
+このリポジトリは Organization Pages (`<org>.github.io`) なのでルート配下で公開されます。
+
+### Pages の有効化（初回のみ）
+
+GitHub リポジトリ Settings → Pages → **Source: GitHub Actions** に設定してください。
+
+---
+
+## さくらレンタルサーバー（バックアップ／別系統）
+
+NIJL 本番サイト `https://literarymaps.nijl.ac.jp/` 向けのデプロイ手順です。
+
+### 前提条件
 
 - Node.js がインストールされていること
-- `sshpass` がインストールされていること（`brew install sshpass` 等）
-- `.env.local` にさくらサーバーの接続情報が設定されていること
+- `sshpass` がインストールされていること（`brew install sshpass`）
+- 1Password CLI (`op`) がインストール・認証されていること（`brew install 1password-cli`）
+- 1Password の `Personal` vault に、さくらサーバーの接続情報 item があること
+  （フィールド: `host` / `user` / `password` / `www_path`）
 
-### `.env.local` に必要な環境変数
+### `.env.local` の中身
 
-```
-SAKURA_HOST=<ホスト名>
-SAKURA_USER=<ユーザー名>
-SAKURA_PASSWORD=<パスワード>
-SAKURA_WWW_PATH=<アップロード先パス>
-```
-
-## 手順
-
-### 1. 依存パッケージのインストール
+機密値はファイルに平文で書かず、`op://` 参照を置きます（実値の解決は `op run` が行う）。
 
 ```bash
+SAKURA_HOST=op://Personal/<item-name>/host
+SAKURA_USER=op://Personal/<item-name>/user
+SAKURA_PASSWORD=op://Personal/<item-name>/password
+SAKURA_WWW_PATH=op://Personal/<item-name>/www_path
+```
+
+### 手順
+
+```bash
+# 1. 依存パッケージ
 npm install
-```
 
-### 2. 静的ファイルの生成
-
-```bash
+# 2. 静的ファイル生成（.env.production を使用）
 npm run generate
+
+# 3. アップロード（op run が op:// を実値に展開して環境変数として注入）
+npm run deploy:sakura
 ```
 
-`.env.production` の設定を使用して、`.output/public/` に静的ファイルが生成されます。
+`--delete` オプションでサーバー上の不要ファイルも同期削除されます。
 
-### 3. サーバーへのアップロード
+---
 
-```bash
-source .env.local
-sshpass -p "$SAKURA_PASSWORD" rsync -avz --delete .output/public/ $SAKURA_USER@$SAKURA_HOST:$SAKURA_WWW_PATH/
-```
+## 機密情報の取り扱い
 
-`--delete` オプションにより、サーバー上の不要なファイルも削除され、ローカルのビルド結果と完全に同期されます。
+- このリポジトリに機密情報（パスワード / API キー / 秘密鍵）を **絶対にコミットしない**。
+- `.env.local` は `.gitignore` 済み。値は `op://` 参照で、平文は 1Password にのみ存在させる。
+- `.env.example` を参照テンプレートとして残し、実値は書かない。
+- 万一コミットしてしまった場合は、即座に該当シークレットを **失効・ローテーション** すること（履歴からの削除では取り戻せない前提）。
 
 ## 環境設定ファイル
 
 | ファイル | 用途 |
 |---------|------|
-| `.env.production` | ビルド時の環境変数（`ORIGIN`, `BASE_URL` 等） |
-| `.env.local` | サーバー接続情報（git管理対象外） |
+| `.env.production` | `npm run generate` 時の環境変数（さくら向け `ORIGIN` 等） |
+| `.env.local` | ローカル開発／さくらデプロイ用（`op://` 参照のみ、git 管理対象外） |
+| `.env.example` | 必要な env vars のテンプレート |

@@ -6,7 +6,8 @@
     "dev": "nuxt dev --dotenv .env.local",
     "generate": "nuxt generate --dotenv .env.production",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy:sakura": "op run --env-file=./.env.local -- sh -c 'sshpass -p \"$SAKURA_PASSWORD\" rsync -avz --delete .output/public/ \"$SAKURA_USER@$SAKURA_HOST:$SAKURA_WWW_PATH/\"'"
   },
   "devDependencies": {
     "@mdi/js": "^7.4.47",
