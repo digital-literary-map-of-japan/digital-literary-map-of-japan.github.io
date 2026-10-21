@@ -7,6 +7,7 @@
 - 公開 URL: <https://digital-literary-map-of-japan.github.io/>
 - ワークフロー: `.github/workflows/pages-deploy.yml`
 - トリガー: `main` ブランチへの push（手動実行は `workflow_dispatch` から）
+- データマスタ: `public/downloads/dlm-dataset.xlsx`（`npm run prebuild` で Excel から `public/data/` 等を生成）
 
 ### ビルド時の環境変数（ワークフロー内で設定）
 
@@ -52,10 +53,13 @@ SAKURA_WWW_PATH=op://Personal/<item-name>/www_path
 # 1. 依存パッケージ
 npm install
 
-# 2. 静的ファイル生成（.env.production を使用）
+# 2. Excel マスタ（public/downloads/dlm-dataset.xlsx）からローカルデータ生成
+npm run prebuild
+
+# 3. 静的ファイル生成（.env.production を使用）
 npm run generate
 
-# 3. アップロード（op run が op:// を実値に展開して環境変数として注入）
+# 4. アップロード（op run が op:// を実値に展開して環境変数として注入）
 npm run deploy:sakura
 ```
 
