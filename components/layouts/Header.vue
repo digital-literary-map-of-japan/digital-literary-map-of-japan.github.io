@@ -3,8 +3,6 @@ import { mdiBook, mdiMenu } from "@mdi/js";
 
 const localePath = useLocalePath();
 
-const { initEditMode } = useSettings();
-
 const drawer = ref(false);
 
 const menuList = [
@@ -44,10 +42,6 @@ const i18n = useI18n();
 const changeLocale = (locale: "ja" | "en") => {
   i18n.setLocale(locale);
 };
-
-onMounted(() => {
-  initEditMode();
-});
 </script>
 
 <template>
@@ -109,14 +103,6 @@ onMounted(() => {
           <v-list-item @click="changeLocale('en')" :active="$i18n.locale === 'en'" role="menuitem"
             >English</v-list-item
           >
-        </v-list>
-
-        <v-divider class="my-2"></v-divider>
-
-        <v-list role="menu">
-          <v-list-item :to="localePath({ name: 'admin' })" role="menuitem">
-            {{ $t("Admin") }}
-          </v-list-item>
         </v-list>
       </nav>
     </v-navigation-drawer>

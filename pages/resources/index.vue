@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { mdiMagnify, mdiCheck } from "@mdi/js";
 
-const { isAdmin } = useSettings();
 const { fetchDocuments } = useLocalData();
 const { t, locale } = useI18n();
 
@@ -45,20 +44,6 @@ const headers = [
   },
   { title: t("Genre"), value: "field_genre", sortable: true },
 ];
-
-if (isAdmin.value) {
-  headers.push({
-    title: t("updated"),
-    value: "changed",
-    sortable: true,
-  });
-
-  headers.push({
-    title: t("action"),
-    value: "field_id",
-    sortable: false,
-  });
-}
 
 const genreOrderMap: Record<string, number> = {
   "勅撰和歌集": 0,
@@ -205,7 +190,6 @@ const update = (item: string) => {
         </v-col>
         <v-col class="text-right">
           <PagesResourcesLegend />
-          <CommonBtnAdd type="documents" label="作品を追加"></CommonBtnAdd>
         </v-col>
       </v-row>
 
@@ -255,10 +239,6 @@ const update = (item: string) => {
           "
           >{{ item.title }}</nuxt-link
         >
-      </template>
-
-      <template v-slot:item.field_id="{ item }: any">
-        <CommonBtnEdit :id="item.drupal_internal__nid" />
       </template>
     </v-data-table>
   </LayoutsCommon>

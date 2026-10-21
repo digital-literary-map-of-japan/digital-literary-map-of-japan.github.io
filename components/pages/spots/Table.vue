@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { mdiMagnify, mdiMap } from "@mdi/js";
-const { isAdmin } = useSettings();
 const { results, spotTypeCount, checkedSpotIds } = useMap();
 
 const { t, locale } = useI18n();
@@ -45,20 +44,6 @@ const headers = [
   // { title: t("updated"), value: "changed", sortable: true },
   // { title: t("action"), value: "field_id" },
 ];
-
-if (isAdmin.value) {
-  headers.push({
-    title: t("updated"),
-    value: "changed",
-    sortable: true,
-  });
-
-  headers.push({
-    title: t("action"),
-    value: "field_id",
-    sortable: false,
-  });
-}
 
 // props.items
 const desserts = computed(() => {
@@ -128,10 +113,6 @@ const customFilter: any = (
           density="compact"
         ></v-text-field>
       </v-col>
-
-      <v-col cols="12" md="6" class="text-right">
-        <CommonBtnAdd type="spots"></CommonBtnAdd>
-      </v-col>
     </v-row>
 
     <v-data-table
@@ -165,10 +146,6 @@ const customFilter: any = (
           </v-chip>
         </template>
         <template v-else>{{ item.yokyokus }}</template>
-      </template>
-
-      <template v-slot:item.field_id="{ item }: any">
-        <CommonBtnEdit :id="item.drupal_internal__nid" />
       </template>
     </v-data-table>
   </div>

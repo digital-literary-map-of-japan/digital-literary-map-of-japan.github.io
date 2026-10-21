@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import type { JsonApiItems, ResourceObject } from "~/types/jsonapi";
 
-const { isAdmin } = useSettings();
-
 interface PropType {
   spotNId: number;
   raw: JsonApiItems;
@@ -46,14 +44,6 @@ const headers = [
   },
 ];
 
-if (isAdmin.value) {
-  headers.push({
-    title: t("action"),
-    value: "field_id",
-    sortable: false,
-  });
-}
-
 const desserts = computed(() => {
   return props.raw?.data.map((item: any) => {
     const documentId = item.relationships.field_document.data.id;
@@ -95,18 +85,9 @@ const selectPoem = (item: ResourceObject, documentName_: string) => {
       (i.relationships?.field_sanbun?.data as ResourceObject)?.id === itemId
   ) as ResourceObject;
 };
-
-const params = {
-  "edit[field_spot][widget][0][target_id]": String(props.spotNId),
-  "edit[field_id][widget][0][value]": crypto.randomUUID(),
-};
 </script>
 <template>
   <div>
-    <div class="mb-4 text-right">
-      <CommonBtnAdd type="sanbuns" :params="params"></CommonBtnAdd>
-    </div>
-
     <v-data-table
       density="compact"
       :items-per-page="-1"
@@ -126,10 +107,6 @@ const params = {
           @click="selectPoem(item.data, item.field_document)"
           >{{ item.field_document }}</v-btn
         >
-      </template>
-
-      <template v-slot:item.field_id="{ item }: any">
-        <CommonBlockEdit class="ma-1" :id="item.drupal_internal__nid" />
       </template>
     </v-data-table>
 

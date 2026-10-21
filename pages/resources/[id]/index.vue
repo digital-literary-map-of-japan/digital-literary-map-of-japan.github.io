@@ -116,9 +116,6 @@ setBreadcrumbJsonLd(bh);
       <v-col>
         <CommonBtnBack type="resources"></CommonBtnBack>
       </v-col>
-      <v-col class="text-right">
-        <CommonBtnEdit :id="did"></CommonBtnEdit>
-      </v-col>
     </v-row>
   </LayoutsCommon>
 </template>

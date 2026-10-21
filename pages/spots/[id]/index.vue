@@ -328,9 +328,6 @@ const showCount = (item: string) => {
       <v-col>
         <CommonBtnBack type="spots" />
       </v-col>
-      <v-col>
-        <CommonBlockEdit :id="did" />
-      </v-col>
     </v-row>
   </LayoutsCommon>
 </template>

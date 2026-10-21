@@ -17,9 +17,7 @@ const body = contactData?.data.attributes?.body.value
         $t("Explanatory notes")
       }}</v-expansion-panel-title>
       <v-expansion-panel-text class="pa-4">
-        <CommonBlockEdit :id="id">
-          <span v-html="body"></span>
-        </CommonBlockEdit>
+        <span v-html="body"></span>
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
