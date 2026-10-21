@@ -16,12 +16,38 @@ function loadJson(filePath) {
 
 function stripHtml(html) {
   if (!html) return '';
-  return html.replace(/<[^>]*>/g, '').trim();
+  return String(html)
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<xml>[\s\S]*?<\/xml>/gi, '')
+    .replace(/<style>[\s\S]*?<\/style>/gi, '')
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<\/p>\s*<p[^>]*>/gi, '\n')
+    .replace(/<[^>]*>/g, '')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&lt;/gi, '<')
+    .replace(/&gt;/gi, '>')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#039;/gi, "'")
+    .replace(/\r\n/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
 }
 
 function styleHeader(ws) {
   ws.getRow(1).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF2B3E50' } };
   ws.getRow(1).font = { bold: true, color: { argb: 'FFFFFFFF' } };
+}
+
+function buildUuidToFieldIdMap(jsonFile) {
+  const data = loadJson(path.join(DATA_DIR, jsonFile));
+  const map = new Map();
+  if (data && data.data) {
+    for (const item of data.data) {
+      map.set(item.id, item.attributes?.field_id || item.id);
+    }
+  }
+  return map;
 }
 
 async function generateSpotsSheet(wb) {
@@ -74,7 +100,7 @@ async function generateSpotsSheet(wb) {
       field_utamakura_meaning: a.field_utamakura_meaning,
       field_utamakura_features: a.field_utamakura_features,
       field_utamakura_associations: a.field_utamakura_associations,
-      field_topography: a.field_topography,
+      field_topography: stripHtml(a.field_topography?.value || a.field_topography || ''),
       field_topography_ja: stripHtml(a.field_topography_ja?.value || ''),
       field_topography_en: stripHtml(a.field_topography_en?.value || ''),
       field_history_ja: stripHtml(a.field_history_ja?.value || ''),
@@ -141,7 +167,7 @@ async function generateDocumentsSheet(wb) {
   console.log(`  ✓ Documents: ${data.data.length} rows`);
 }
 
-async function generatePoemsSheet(wb) {
+async function generatePoemsSheet(wb, spotMap, docMap) {
   const data = loadJson(path.join(DATA_DIR, 'jsonapi/node/poems.json'));
   if (!data) return;
 
@@ -160,6 +186,8 @@ async function generatePoemsSheet(wb) {
     { header: '著者（ローマ字）', key: 'field_author_romaji', width: 20 },
     { header: '地名の形', key: 'field_place_form', width: 15 },
     { header: 'リンク', key: 'field_link', width: 40 },
+    { header: '名所ID', key: 'spot_id', width: 28 },
+    { header: '資料ID', key: 'document_id', width: 28 },
   ];
 
   styleHeader(ws);
@@ -167,6 +195,8 @@ async function generatePoemsSheet(wb) {
   for (const item of data.data) {
     const a = item.attributes;
     const links = Array.isArray(a.field_link) ? a.field_link : (a.field_link ? [a.field_link] : []);
+    const spotUuid = item.relationships?.field_spot?.data?.id;
+    const docUuid = item.relationships?.field_document?.data?.id;
     ws.addRow({
       nid: a.drupal_internal__nid,
       field_id: a.field_id,
@@ -181,13 +211,15 @@ async function generatePoemsSheet(wb) {
       field_author_romaji: a.field_author_romaji || '',
       field_place_form: a.field_place_form,
       field_link: links.map(l => l.uri).join(', '),
+      spot_id: spotUuid ? (spotMap.get(spotUuid) || '') : '',
+      document_id: docUuid ? (docMap.get(docUuid) || '') : '',
     });
   }
 
   console.log(`  ✓ Poems: ${data.data.length} rows`);
 }
 
-async function generateSanbunsSheet(wb) {
+async function generateSanbunsSheet(wb, spotMap, docMap) {
   const data = loadJson(path.join(DATA_DIR, 'jsonapi/node/sanbuns.json'));
   if (!data) return;
 
@@ -202,6 +234,8 @@ async function generateSanbunsSheet(wb) {
     { header: '地名の形', key: 'field_place_form', width: 15 },
     { header: '見出し（内部）', key: 'field_midashi_internal', width: 20 },
     { header: 'リンク', key: 'field_link', width: 40 },
+    { header: '名所ID', key: 'spot_id', width: 28 },
+    { header: '資料ID', key: 'document_id', width: 28 },
   ];
 
   styleHeader(ws);
@@ -209,6 +243,8 @@ async function generateSanbunsSheet(wb) {
   for (const item of data.data) {
     const a = item.attributes;
     const links = Array.isArray(a.field_link) ? a.field_link : (a.field_link ? [a.field_link] : []);
+    const spotUuid = item.relationships?.field_spot?.data?.id;
+    const docUuid = item.relationships?.field_document?.data?.id;
     ws.addRow({
       nid: a.drupal_internal__nid,
       field_id: a.field_id,
@@ -219,13 +255,15 @@ async function generateSanbunsSheet(wb) {
       field_place_form: a.field_place_form,
       field_midashi_internal: a.field_midashi_internal,
       field_link: links.map(l => l.uri).join(', '),
+      spot_id: spotUuid ? (spotMap.get(spotUuid) || '') : '',
+      document_id: docUuid ? (docMap.get(docUuid) || '') : '',
     });
   }
 
   console.log(`  ✓ Sanbuns: ${data.data.length} rows`);
 }
 
-async function generateYokyokusSheet(wb) {
+async function generateYokyokusSheet(wb, spotMap, docMap) {
   const data = loadJson(path.join(DATA_DIR, 'jsonapi/node/yokyokus.json'));
   if (!data) return;
 
@@ -245,6 +283,8 @@ async function generateYokyokusSheet(wb) {
     { header: 'セリフ別番号', key: 'field_line', width: 15 },
     { header: 'No examples', key: 'field_no_examples', width: 10 },
     { header: 'リンク', key: 'field_link', width: 40 },
+    { header: '名所ID', key: 'spot_id', width: 28 },
+    { header: '資料ID', key: 'document_id', width: 28 },
   ];
 
   styleHeader(ws);
@@ -252,9 +292,11 @@ async function generateYokyokusSheet(wb) {
   for (const item of data.data) {
     const a = item.attributes;
     const links = Array.isArray(a.field_link) ? a.field_link : (a.field_link ? [a.field_link] : []);
+    const spotUuid = item.relationships?.field_spot?.data?.id;
+    const docUuid = item.relationships?.field_document?.data?.id;
     ws.addRow({
       nid: a.drupal_internal__nid,
-      field_id: a.field_id,
+      field_id: a.field_id || item.id,
       field_document_numbering: a.field_document_numbering,
       title: a.title,
       field_text: stripHtml(a.field_text?.value || a.field_text || ''),
@@ -267,13 +309,15 @@ async function generateYokyokusSheet(wb) {
       field_line: a.field_line,
       field_no_examples: a.field_no_examples ? 'Yes' : 'No',
       field_link: links.map(l => l.uri).join(', '),
+      spot_id: spotUuid ? (spotMap.get(spotUuid) || '') : '',
+      document_id: docUuid ? (docMap.get(docUuid) || '') : '',
     });
   }
 
   console.log(`  ✓ Yokyokus: ${data.data.length} rows`);
 }
 
-async function generateImagesSheet(wb) {
+async function generateImagesSheet(wb, spotMap) {
   const data = loadJson(path.join(DATA_DIR, 'jsonapi/node/images.json'));
   if (!data) return;
 
@@ -286,6 +330,7 @@ async function generateImagesSheet(wb) {
     { header: 'IIIFマニフェスト', key: 'field_manifest', width: 50 },
     { header: 'リンク', key: 'field_link', width: 50 },
     { header: 'コマ', key: 'field_pos', width: 10 },
+    { header: '名所ID', key: 'spot_id', width: 28 },
   ];
 
   styleHeader(ws);
@@ -293,6 +338,7 @@ async function generateImagesSheet(wb) {
   for (const item of data.data) {
     const a = item.attributes;
     const links = Array.isArray(a.field_link) ? a.field_link : (a.field_link ? [a.field_link] : []);
+    const spotUuid = item.relationships?.field_spot?.data?.id;
     ws.addRow({
       nid: a.drupal_internal__nid,
       field_id: a.field_id,
@@ -301,13 +347,14 @@ async function generateImagesSheet(wb) {
       field_manifest: a.field_manifest?.uri || '',
       field_link: links.map(l => l.uri).join(', '),
       field_pos: a.field_pos,
+      spot_id: spotUuid ? (spotMap.get(spotUuid) || '') : '',
     });
   }
 
   console.log(`  ✓ Images: ${data.data.length} rows`);
 }
 
-async function generatePoemsTranslationsSheet(wb) {
+async function generatePoemsTranslationsSheet(wb, poemMap) {
   const data = loadJson(path.join(DATA_DIR, 'jsonapi/node/poems_translations.json'));
   if (!data) return;
 
@@ -318,25 +365,28 @@ async function generatePoemsTranslationsSheet(wb) {
     { header: '題名', key: 'title', width: 25 },
     { header: 'テクスト', key: 'field_text', width: 50 },
     { header: '出典', key: 'field_source', width: 30 },
+    { header: '和歌ID', key: 'poem_id', width: 28 },
   ];
 
   styleHeader(ws);
 
   for (const item of data.data) {
     const a = item.attributes;
+    const poemUuid = item.relationships?.field_poem?.data?.id;
     ws.addRow({
       nid: a.drupal_internal__nid,
       field_id: a.field_id,
       title: a.title,
       field_text: stripHtml(a.field_text?.value || a.field_text || ''),
       field_source: stripHtml(a.field_source?.value || a.field_source || ''),
+      poem_id: poemUuid ? (poemMap.get(poemUuid) || '') : '',
     });
   }
 
   console.log(`  ✓ Poems Translations: ${data.data.length} rows`);
 }
 
-async function generateSanbunsTranslationsSheet(wb) {
+async function generateSanbunsTranslationsSheet(wb, sanbunMap) {
   const data = loadJson(path.join(DATA_DIR, 'jsonapi/node/sanbuns_translations.json'));
   if (!data) return;
 
@@ -347,39 +397,88 @@ async function generateSanbunsTranslationsSheet(wb) {
     { header: '題名', key: 'title', width: 25 },
     { header: 'テクスト', key: 'field_text', width: 50 },
     { header: '出典', key: 'field_source', width: 30 },
+    { header: '物語ID', key: 'sanbun_id', width: 28 },
   ];
 
   styleHeader(ws);
 
   for (const item of data.data) {
     const a = item.attributes;
+    const sanbunUuid = item.relationships?.field_sanbun?.data?.id;
     ws.addRow({
       nid: a.drupal_internal__nid,
       field_id: a.field_id,
       title: a.title,
       field_text: stripHtml(a.field_text?.value || a.field_text || ''),
       field_source: stripHtml(a.field_source?.value || a.field_source || ''),
+      sanbun_id: sanbunUuid ? (sanbunMap.get(sanbunUuid) || '') : '',
     });
   }
 
   console.log(`  ✓ Sanbuns Translations: ${data.data.length} rows`);
 }
 
+async function generatePagesSheet(wb) {
+  const jaData = loadJson(path.join(DATA_DIR, 'jsonapi/node/page.json'));
+  const enData = loadJson(path.join(DATA_DIR, 'en/jsonapi/node/page.json'));
+  if (!jaData) return;
+
+  const enMap = new Map((enData?.data || []).map(item => [item.id, item]));
+
+  const ws = wb.addWorksheet('Pages (固定ページ)');
+  ws.columns = [
+    { header: 'NID', key: 'nid', width: 8 },
+    { header: 'UUID', key: 'uuid', width: 38 },
+    { header: 'ID', key: 'field_id', width: 20 },
+    { header: '題名（日本語）', key: 'title_ja', width: 30 },
+    { header: '題名（英語）', key: 'title_en', width: 30 },
+    { header: '本文（日本語）', key: 'body_ja', width: 60 },
+    { header: '本文（英語）', key: 'body_en', width: 60 },
+  ];
+
+  styleHeader(ws);
+
+  for (const item of jaData.data) {
+    const a = item.attributes;
+    const enItem = enMap.get(item.id);
+    const enA = enItem?.attributes || a;
+    ws.addRow({
+      nid: a.drupal_internal__nid,
+      uuid: item.id,
+      field_id: a.field_id || '',
+      title_ja: a.title || '',
+      title_en: enA.title || '',
+      body_ja: a.body?.value || '',
+      body_en: enA.body?.value || '',
+    });
+  }
+
+  console.log(`  ✓ Pages: ${jaData.data.length} rows`);
+}
+
 async function main() {
-  console.log('Generating Excel dataset...\n');
+  console.log('Generating Excel dataset from public/data...\n');
+
+  const spotMap = buildUuidToFieldIdMap('jsonapi/node/spots.json');
+  const docMap = buildUuidToFieldIdMap('jsonapi/node/documents.json');
+  const poemMap = buildUuidToFieldIdMap('jsonapi/node/poems.json');
+  const sanbunMap = buildUuidToFieldIdMap('jsonapi/node/sanbuns.json');
 
   const wb = new ExcelJS.Workbook();
   wb.creator = 'Digital Literary Map of Japan';
-  wb.created = new Date();
+  const datasetDate = new Date('2026-03-15T00:00:00Z');
+  wb.created = datasetDate;
+  wb.modified = datasetDate;
 
   await generateSpotsSheet(wb);
   await generateDocumentsSheet(wb);
-  await generatePoemsSheet(wb);
-  await generatePoemsTranslationsSheet(wb);
-  await generateSanbunsSheet(wb);
-  await generateSanbunsTranslationsSheet(wb);
-  await generateYokyokusSheet(wb);
-  await generateImagesSheet(wb);
+  await generatePoemsSheet(wb, spotMap, docMap);
+  await generatePoemsTranslationsSheet(wb, poemMap);
+  await generateSanbunsSheet(wb, spotMap, docMap);
+  await generateSanbunsTranslationsSheet(wb, sanbunMap);
+  await generateYokyokusSheet(wb, spotMap, docMap);
+  await generateImagesSheet(wb, spotMap);
+  await generatePagesSheet(wb);
 
   const outputPath = path.join(OUTPUT_DIR, 'dlm-dataset.xlsx');
   await wb.xlsx.writeFile(outputPath);
@@ -387,14 +486,16 @@ async function main() {
   const stats = fs.statSync(outputPath);
   console.log(`\n✅ Generated: ${outputPath} (${(stats.size / 1024).toFixed(0)} KB)`);
 
-  // Generate dataset-meta.json for the dataset page
-  const sheetsMeta = wb.worksheets.map(ws => ({
-    name: ws.name,
-    count: ws.rowCount - 1, // exclude header row
-  }));
+  // Generate dataset-meta.json for the dataset page (excluding Pages sheet)
+  const sheetsMeta = wb.worksheets
+    .filter(ws => ws.name !== 'Pages (固定ページ)')
+    .map(ws => ({
+      name: ws.name,
+      count: ws.rowCount - 1, // exclude header row
+    }));
 
   const meta = {
-    generatedAt: new Date().toISOString().split('T')[0],
+    generatedAt: datasetDate.toISOString().split('T')[0],
     fileSize: `${(stats.size / 1024).toFixed(0)} KB`,
     sheetCount: sheetsMeta.length,
     totalRows: sheetsMeta.reduce((sum, s) => sum + s.count, 0),

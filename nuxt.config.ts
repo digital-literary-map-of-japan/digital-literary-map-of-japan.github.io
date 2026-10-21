@@ -73,7 +73,7 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    exclude: ["/static/404.html", "/static/500.html", "/admin", "/admin/**", "/en/admin", "/en/admin/**"],
+    exclude: ["/static/404.html", "/static/500.html"],
     defaults: {
       lastmod: new Date().toISOString(),
       changefreq: "weekly",

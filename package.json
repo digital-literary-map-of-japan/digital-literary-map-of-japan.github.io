@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "prebuild": "node scripts/prebuild.js && node scripts/generate-excel.js",
+    "prebuild": "node scripts/prebuild.js",
+    "export:excel": "node scripts/generate-excel.js",
     "build": "nuxt build",
     "dev": "nuxt dev --dotenv .env.local",
     "generate": "nuxt generate --dotenv .env.production",

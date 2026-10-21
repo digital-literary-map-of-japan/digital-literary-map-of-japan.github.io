@@ -17,18 +17,9 @@ const getUrl = (field: any, pos: number = -1) => {
     Number(pos === -1 ? field.pos[0] : pos) - 1
   }`;
 };
-
-const params = {
-  "edit[field_spot][widget][0][target_id]": String(props.spotNId),
-  "edit[field_id][widget][0][value]": crypto.randomUUID(),
-};
 </script>
 <template>
   <div>
-    <div class="mb-4 text-right">
-      <CommonBtnAdd type="images" :params="params"></CommonBtnAdd>
-    </div>
-
     <v-card v-for="value in raw.data" variant="flat">
       <v-card-text v-if="value.attributes">
         <h3>

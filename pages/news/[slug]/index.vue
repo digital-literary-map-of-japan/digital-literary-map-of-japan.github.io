@@ -46,8 +46,6 @@ setBreadcrumbJsonLd(bh);
   <LayoutsCommon :title="`${localDateString} ${item.title}`" :items="bh">
     <!-- <ContentRenderer :value="item" /> -->
 
-    <CommonBlockEdit :id="did">
-      <span v-html="item.body.value"></span>
-    </CommonBlockEdit>
+    <span v-html="item.body.value"></span>
   </LayoutsCommon>
 </template>

@@ -35,10 +35,6 @@ withDefaults(defineProps<PropType>(), {
         </template>
 
         <v-card max-width="300">
-          <CommonBtnEdit
-            :id="legends[field.info]?.value?.attributes?.drupal_internal__nid"
-          />
-
           <v-card-text
             v-html="legends[field.info]?.value?.attributes?.body?.processed"
           ></v-card-text>
